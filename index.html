@@ -1462,10 +1462,13 @@
 
                 <div class="contact-form-container">
 
-                    <form
-                        name="contact"
-                        method="POST"
-                        data-netlify="true">
+                        <form
+                            id="contactForm"
+                            name="contact"
+                            method="POST"
+                            data-netlify="true"
+                            netlify
+                            action="/pages/thank-you.html">
 
                         <input
                             type="hidden"
@@ -1896,6 +1899,58 @@
     <script defer src="assets/js/modal.js"></script>
     <script defer src="assets/js/animations.js"></script>
     <script defer src="assets/js/wishlist.js"></script>
+
+
+    <script>
+
+    const contactForm =
+    document.getElementById(
+        "contactForm"
+    );
+
+    if(contactForm){
+
+        contactForm.addEventListener(
+            "submit",
+            async function(){
+
+                await fetch(
+                    "/.netlify/functions/contact",
+                    {
+                        method:"POST",
+
+                        headers:{
+                            "Content-Type":"application/json"
+                        },
+
+                        body:JSON.stringify({
+
+                            name:
+                            document.querySelector(
+                                '[name="name"]'
+                            ).value,
+
+                            email:
+                            document.querySelector(
+                                '[name="email"]'
+                            ).value,
+
+                            message:
+                            document.querySelector(
+                                '[name="message"]'
+                            ).value
+
+                        })
+
+                    }
+                );
+
+            }
+        );
+
+    }
+
+    </script>
 
 </body>
 </html>
