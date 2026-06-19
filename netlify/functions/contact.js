@@ -15,7 +15,7 @@ ${data.message}
 `;
 
     const url =
-    `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`;
+    `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`;
 
     await fetch(
         url,
@@ -26,7 +26,7 @@ ${data.message}
             },
             body:JSON.stringify({
                 chat_id:
-                process.env.TELEGRAM_CHAT_ID,
+                process.env.CHAT_ID,
                 text:message
             })
         }
