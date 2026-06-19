@@ -376,8 +376,7 @@ checkoutForm.addEventListener(
                 "petsyCart"
             );
 
-            window.location.href =
-            "order-completion.html";
+            checkoutForm.submit();
 
         }
 
