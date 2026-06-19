@@ -328,79 +328,11 @@ document.querySelector(
 
 if(checkoutForm){
     
-checkoutForm.addEventListener(
-    "submit",
-    async function(event){
-
-        event.preventDefault();
-
-        try{
-
-            await fetch(
-                "/.netlify/functions/send-order",
-                {
-                    method:"POST",
-
-                    headers:{
-                        "Content-Type":"application/json"
-                    },
-
-                    body:JSON.stringify({
-
-                        name:
-                        document.querySelector(
-                            '[name="full_name"]'
-                        ).value,
-
-                        phone:
-                        document.querySelector(
-                            '[name="phone"]'
-                        ).value,
-
-                        country:
-                        document.querySelector(
-                            '[name="country"]'
-                        ).value,
-
-                        payment:
-                        document.getElementById(
-                            "paymentMethod"
-                        ).value
-
-                    })
-
-                }
-            );
-
-            localStorage.removeItem(
-                "petsyCart"
-            );
-
-            checkoutForm.submit();
-
-        }
-
-        catch(error){
-
-            console.error(
-                error
-            );
-
-        }
-
-    }
-)
-
-}
-
-
-
-if(checkoutForm){
-
     checkoutForm.addEventListener(
         "submit",
-        function(event){
+        async function(event){
 
+            event.preventDefault();
             const age =
             Number(
                 document.getElementById(
@@ -410,18 +342,120 @@ if(checkoutForm){
 
             if(age < 18){
 
-                event.preventDefault();
-
                 alert(
                     "You must be at least 18 years old to adopt a pet."
+                );
+
+                return;
+            }
+
+            const phone =
+            phoneInput.value.trim();
+
+            const validPhone =
+            /^\+[1-9]\d{7,14}$/
+            .test(phone);
+
+            if(!validPhone){
+
+                const phoneError =
+                document.getElementById(
+                    "phoneError"
+                );
+
+                phoneError.style.display =
+                "block";
+
+                phoneInput.focus();
+
+                return;
+            }
+
+            try{
+
+                await fetch(
+                    "/.netlify/functions/send-order",
+                    {
+                        method:"POST",
+
+                        headers:{
+                            "Content-Type":"application/json"
+                        },
+
+                        body:JSON.stringify({
+
+                            name:
+                            document.querySelector(
+                                '[name="full_name"]'
+                            ).value,
+
+                            phone:
+                            document.querySelector(
+                                '[name="phone"]'
+                            ).value,
+
+                            country:
+                            document.querySelector(
+                                '[name="country"]'
+                            ).value,
+
+                            payment:
+                            document.getElementById(
+                                "paymentMethod"
+                            ).value
+
+                        })
+
+                    }
+                );
+
+                const formData =
+                new FormData(checkoutForm);
+
+                const netlifyResponse =
+                await fetch(
+                    "/",
+                    {
+                        method:"POST",
+                        body:formData
+                    }
+                );
+
+                if(netlifyResponse.ok){
+
+                    localStorage.removeItem(
+                        "petsyCart"
+                    );
+
+                    window.location.href =
+                    "order-completion.html";
+
+                }else{
+
+                    alert(
+                        "Submission failed. Please try again."
+                    );
+
+                }
+
+            }
+
+            catch(error){
+
+                console.error(
+                    error
                 );
 
             }
 
         }
-    );
+    )
 
-}
+};
+
+
+
+
 showPaymentDetails();
 
 const phoneInput =
@@ -485,60 +519,6 @@ phoneInput.addEventListener(
         ).style.display = "none";
 
         this.style.border = "";
-
-    }
-);
-
-
-
-checkoutForm.addEventListener(
-    "submit",
-    function(event){
-
-        const phone =
-        phoneInput.value.trim();
-
-        const validPhone =
-        /^\+[1-9]\d{7,14}$/
-        .test(phone);
-
-        if(!validPhone){
-
-            event.preventDefault();
-
-            const phoneField =
-            document.getElementById(
-                "phone"
-            );
-
-            const phoneError =
-            document.getElementById(
-                "phoneError"
-            );
-
-            phoneError.textContent =
-
-            "Please enter a valid phone number with country code. Example: +15551234567";
-
-            phoneError.style.display =
-            "block";
-
-            phoneField.style.border =
-            "2px solid #dc2626";
-
-            phoneField.scrollIntoView({
-
-                behavior:"smooth",
-
-                block:"center"
-
-            });
-
-            phoneField.focus();
-
-            return;
-
-        }
 
     }
 );
