@@ -11,7 +11,10 @@
 <link rel="stylesheet" href="../assets/css/responsive.css">
 <link rel="stylesheet" href="../assets/css/checkout.css">
  
-
+    <link
+    rel="icon"
+    type="image/png"
+    href="../favicon.png">
 </head>
 <body>
 
@@ -336,8 +339,9 @@
                     Shipping Address
                 </h2>
 
-                <select
-                id="countrySelect">
+               <select
+                id="countrySelect"
+                name="country">
 
                     <option value="">
                         Select Country
@@ -540,8 +544,10 @@
                 </select>
 
                 <textarea
+                name="address"
                 placeholder="Full Shipping Address"
-                rows="4"></textarea>
+                rows="4"
+                required></textarea>
 
             </div>
 
