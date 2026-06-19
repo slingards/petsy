@@ -13,7 +13,7 @@ const dogs = [
 {
     name:"Golden Retriever",
     category:"sporting",
-    price:950,
+    price:1600,
     image:"assets/images/dogs/golden-retriever.jpg",
     age:"6 Months",
     location:"Canada",

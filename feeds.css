@@ -1,0 +1,775 @@
+
+
+
+/* ==========================
+NAVIGATION
+========================== */
+
+.feed-header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:white;
+
+    box-shadow:
+    0 2px 20px
+    rgba(0,0,0,.05);
+
+}
+
+.feed-nav-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:25px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.feed-logo{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:#d97706;
+
+    text-decoration:none;
+
+}
+
+.feed-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+}
+
+.feed-nav a{
+
+    text-decoration:none;
+
+    color:#111827;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.feed-nav a:hover{
+
+    color:#d97706;
+
+}
+
+.feed-nav .active{
+
+    color:#d97706;
+
+}
+
+@media(max-width:768px){
+
+    .feed-nav{
+
+        gap:15px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .feed-nav-container{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+}
+
+/* ==========================
+FEED PAGE
+========================== */
+
+.feed-coming-soon{
+
+    padding:180px 0 100px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e293b
+    );
+
+    color:white;
+
+    min-height:100vh;
+
+}
+
+.feed-content{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    text-align:center;
+
+    animation:
+    fadeUp 1s ease;
+
+}
+
+.feed-badge{
+
+    display:inline-block;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    background:
+    rgba(255,255,255,.1);
+
+    margin-bottom:25px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+}
+
+.feed-content h1{
+
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+    line-height:1.1;
+
+}
+
+.feed-content p{
+
+    max-width:850px;
+
+    margin:0 auto 20px;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    opacity:.9;
+
+}
+
+/* ==========================
+FEATURES
+========================== */
+
+.feed-features{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:25px;
+
+    margin:70px 0;
+
+}
+
+.feature-card{
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:1px solid
+    rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    padding:35px;
+
+    backdrop-filter:
+    blur(12px);
+
+    transition:.3s;
+
+}
+
+.feature-card:hover{
+
+    transform:
+    translateY(-10px);
+
+}
+
+.feature-card h3{
+
+    margin:15px 0;
+
+    font-size:1.3rem;
+
+}
+
+.feature-card p{
+
+    font-size:.95rem;
+
+    margin:0;
+
+    opacity:.85;
+
+}
+
+/* ==========================
+CONTACT BOX
+========================== */
+
+.contact-box{
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:1px solid
+    rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    padding:60px;
+
+    margin-top:40px;
+
+    backdrop-filter:
+    blur(12px);
+
+}
+
+.contact-box h2{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.contact-box p{
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================
+BUTTONS
+========================== */
+
+.contact-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.contact-buttons a{
+
+    text-decoration:none;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.contact-buttons a:hover{
+
+    transform:
+    translateY(-5px);
+
+}
+
+.whatsapp-btn{
+
+    background:#25D366;
+
+}
+
+.email-btn{
+
+    background:#ea4335;
+
+}
+
+.signal-btn{
+
+    background:#3A76F0;
+
+}
+
+/* ==========================
+WHY PETSY
+========================== */
+
+.why-petsy{
+
+    padding:120px 0;
+
+    background:#f8fafc;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:0 auto 60px;
+
+}
+
+.section-heading h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+    color:#111827;
+
+}
+
+.section-heading p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+}
+
+.benefits-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.benefit-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.benefit-card:hover{
+
+    transform:
+    translateY(-10px);
+
+}
+
+.benefit-card h3{
+
+    margin:20px 0;
+
+    color:#111827;
+
+}
+
+.benefit-card p{
+
+    color:#64748b;
+
+    line-height:1.7;
+
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+.footer{
+
+    background:#111827;
+
+    color:white;
+
+    padding:70px 0;
+
+    text-align:center;
+
+}
+
+.footer-content h3{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    opacity:.8;
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================
+ANIMATION
+========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .feed-features,
+    .benefits-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+/* ==========================
+RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .feed-features,
+    .benefits-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    /* NAVIGATION */
+
+    .feed-nav-container{
+
+        flex-direction:column;
+
+        padding:15px;
+
+        gap:20px;
+
+    }
+
+    .feed-logo{
+
+        font-size:1.5rem;
+
+    }
+
+    .feed-nav{
+
+        width:100%;
+
+        display:grid;
+
+        grid-template-columns:
+        repeat(3,1fr);
+
+        gap:10px;
+
+    }
+
+.feed-nav a{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:42px;
+
+    background:white;
+
+    border:1px solid
+    rgba(0,0,0,.06);
+
+    border-radius:10px;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    box-shadow:
+    0 4px 12px
+    rgba(0,0,0,.05);
+
+}
+
+    /* HERO */
+
+    .feed-coming-soon{
+
+        padding-top:320px;
+
+        padding-right:20px;
+
+        padding-bottom:80px;
+
+        padding-left:20px;
+
+        background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e293b
+        );
+
+        color:white;
+
+    }
+
+    .feed-content{
+
+        width:100%;
+
+    }
+
+    .feed-content h1{
+
+        font-size:2rem;
+
+        line-height:1.2;
+
+        margin-bottom:20px;
+
+    }
+
+    .feed-content p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+    }
+
+    .feed-badge{
+
+        font-size:.8rem;
+
+        padding:10px 20px;
+
+    }
+
+    /* GRIDS */
+
+    .feed-features,
+    .benefits-grid{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+    .feature-card{
+
+        padding:25px;
+
+    }
+
+    .benefit-card{
+
+        padding:25px;
+
+    }
+
+    /* CONTACT BOX */
+
+    .contact-box{
+
+        max-width:100%;
+
+        padding:30px 20px;
+
+        border-radius:20px;
+
+        margin-top:30px;
+
+    }
+
+    .contact-box h2{
+
+        font-size:1.6rem;
+
+    }
+
+    /* CONTACT BUTTONS */
+
+    .contact-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+        gap:15px;
+
+    }
+
+    .contact-buttons a{
+
+        width:90%;
+
+        max-width:320px;
+
+        justify-content:center;
+
+        margin:auto;
+
+        padding:16px 20px;
+
+        border-radius:14px;
+
+    }
+
+    /* WHY PETSY */
+
+    .why-petsy{
+
+        padding:80px 20px;
+
+    }
+
+    .section-heading h2{
+
+        font-size:2rem;
+
+    }
+
+    .section-heading p{
+
+        font-size:1rem;
+
+    }
+
+    /* FOOTER */
+
+    .footer{
+
+        padding:50px 20px;
+
+    }
+
+}
+
+.feed-content{
+
+    max-width:650px;
+
+    margin:auto;
+
+}
+
+
+.feed-content h1{
+
+    font-size:2rem;
+
+    margin-bottom:20px;
+
+}
+
+.feed-content p{
+
+    font-size:.95rem;
+
+    line-height:1.9;
+
+}

@@ -3,7 +3,7 @@ const wildCats = [
 {
     name:"African Lion",
     category:"big-cat",
-    price:4500,
+    price:5000,
     image:"assets/images/wild-cats/african-lion.jpg",
     age:"8 Months",
     location:"South Africa",
