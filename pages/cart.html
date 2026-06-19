@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart | Petsy</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/cart.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+
+</head>
+
+<body>
+
+ 
+<!-- =====================
+     HEADER
+====================== -->
+
+<header class="header">
+
+    <div class="container">
+
+        <div class="logo">
+            <a href="../index.html">
+                <h2>Petsy</h2>
+            </a>
+        </div>
+
+         <div
+            class="hamburger"
+            id="hamburger">
+
+                ☰
+
+        </div>
+
+        <nav class="nav">
+
+            <ul class="nav-links">
+
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+                <li><a href="cats.html">Cats</a></li>
+                <li><a href="birds.html">Birds</a></li>
+                <li><a href="wild-cats.html">Wild Cats</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- =====================
+     CART PAGE
+====================== -->
+
+<section class="cart-page">
+
+    <div class="container">
+
+        <div class="breadcrumb">
+
+            <a href="../index.html">Home</a>
+
+            <span> / </span>
+
+            <span>Shopping Cart</span>
+
+        </div>
+
+        <div class="page-title">
+
+            <h1>Shopping Cart</h1>
+
+            <p>
+                Review your selected pets before proceeding to checkout.
+            </p>
+
+        </div>
+
+        <div class="cart-layout">
+
+            <!-- LEFT SIDE -->
+
+            <div class="cart-products">
+
+                <div class="cart-products">
+
+                 
+                <div class="cart-table-header">
+
+                    <span>Product</span>
+
+                    <span>Quantity</span>
+
+                    <span>Price</span>
+
+                    <span>Action</span>
+
+                </div>
+
+                <div id="cartItemsContainer">
+
+                    <!-- JS GENERATED ITEMS -->
+
+                </div>
+
+                <div class="coupon-section">
+
+                    <h3>
+                        Have a Coupon?
+                    </h3>
+
+                    <div class="coupon-box">
+
+                        <input
+                            type="text"
+                            placeholder="Enter coupon code">
+
+                        <button class="primary-btn">
+
+                            Apply Coupon
+
+                        </button>
+
+                    </div>
+
+                </div>
+                 
+
+                </div>
+
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+
+            <div class="order-summary">
+
+            <h2>
+                Order Summary
+            </h2>
+
+            <div class="summary-row">
+
+                <span>Subtotal</span>
+
+                <span id="subtotalPrice">
+                    $0.00
+                </span>
+
+            </div>
+
+            <div class="summary-row">
+
+                <span>Shipping</span>
+
+                <span id="shippingPrice">
+                    $250.00
+                </span>
+
+            </div>
+
+            <div class="summary-row">
+
+                <span>Insurance</span>
+
+                <span id="insurancePrice">
+                    $75.00
+                </span>
+
+            </div>
+
+            <div class="summary-row">
+
+                <span>Tax</span>
+
+                <span id="taxPrice">
+                    $0.00
+                </span>
+
+            </div>
+
+            <div class="summary-row total">
+
+                <span>Total</span>
+
+                <span id="grandTotal">
+                    $0.00
+                </span>
+
+            </div>
+            
+
+            </div>
+
+
+                <div class="shipping-estimate">
+
+                    <h4>
+                        Shipping Estimate
+                    </h4>
+
+                    <select>
+
+                        <option>Select Country</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>United Kingdom</option>
+                        <option>Germany</option>
+                        <option>Australia</option>
+
+                    </select>
+
+                </div>
+
+                <a
+                    href="checkout.html"
+                    class="primary-btn checkout-btn">
+
+                    Proceed To Checkout
+
+                </a>
+
+                <a
+                    href="../index.html"
+                    class="continue-shopping">
+
+                    Continue Shopping
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- EMPTY CART STATE -->
+
+<section class="empty-cart">
+
+    <div class="container">
+
+        <div class="empty-cart-box">
+
+            <h2>
+                Your Cart Is Empty
+            </h2>
+
+            <p>
+                Start browsing our available companions and add your favorites to the cart.
+            </p>
+
+            <a
+                href="../index.html#featured"
+                class="primary-btn">
+
+                Browse Pets
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================
+     FOOTER
+====================== -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Petsy. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script src="../assets/js/cart.js"></script>
+<script src="../assets/js/menu.js"></script>
+ 
+
+</body>
+
+</html>

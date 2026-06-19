@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Petsy | Find Your Perfect Companion</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script defer src="assets/js/app.js"></script>
+    <script defer src="assets/js/search.js"></script>
+</head>
+<div class="mobile-menu">
+
+    <a href="index.html">Home</a>
+
+    <a href="pages/dogs.html">Dogs</a>
+
+    <a href="pages/cats.html">Cats</a>
+
+    <a href="pages/birds.html">Birds</a>
+
+    <a href="pages/wild-cats.html">Wild Cats</a>
+
+    <a href="pages/reptiles.html">Reptiles</a>
+
+    <a href="pages/cart.html">Cart</a>
+
+    <a href="#contact">Contact</a>
+
+</div>
+<body>
+
+    <!-- =====================
+         MOBILE MENU OVERLAY
+    ====================== -->
+
+    <div class="mobile-overlay"></div>
+
+    <!-- =====================
+         HEADER
+    ====================== -->
+
+    <header class="header">
+
+        <div class="container">
+
+            <div class="logo">
+                <a href="index.html">
+                    <h2>Petsy</h2>
+                </a>
+            </div>
+
+            <nav class="nav">
+
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/dogs.html">Dogs</a></li>
+                    <li><a href="pages/cats.html">Cats</a></li>
+                    <li><a href="pages/birds.html">Birds</a></li>
+                    <li><a href="pages/wild-cats.html">Wild Cats</a></li>
+                    <li><a href="pages/reptiles.html">Reptiles</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+            </nav>
+
+            <div class="header-actions">
+
+                <a href="pages/wishlist.html" class="wishlist-btn">
+
+                    ❤
+
+                    <span id="wishlist-count">
+                        0
+                    </span>
+
+                </a>
+
+                <button
+                class="cart-btn"
+                id="openCart">
+
+                    🛒
+
+                    <span id="cart-count">
+                        0
+                    </span>
+
+                </button>
+
+                <button class="menu-btn">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- =====================
+         HERO SECTION
+    ====================== -->
+
+    <section class="hero reveal" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+
+            <span class="hero-tag">
+                Trusted Pet Marketplace
+            </span>
+
+            <h1>
+                Discover Your Perfect Companion
+            </h1>
+
+            <p>
+                Browse verified dogs, cats, birds, reptiles, and exotic pets from trusted sellers around the world.
+            </p>
+
+        <div class="hero-buttons">
+
+            <a href="#featured" class="primary-btn hero-main-btn">
+                Browse Pets
+            </a>
+
+        </div>
+
+        <div class="hero-animal-grid">
+
+            <a href="pages/dogs.html" class="animal-btn">
+                🐕 Dogs
+            </a>
+
+            <a href="pages/cats.html" class="animal-btn">
+                🐈 Cats
+            </a>
+
+            <a href="pages/birds.html" class="animal-btn">
+                🦜 Birds
+            </a>
+
+            <a href="pages/wild-cats.html" class="animal-btn">
+                🦁 Wild Cats
+            </a>
+
+            <a href="pages/reptiles.html" class="animal-btn">
+                🐍 Reptiles
+            </a>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================
+         SEARCH SECTION
+    ====================== -->
+
+    <section class="search-section reveal">
+
+        <div class="container">
+
+            <div class="search-card">
+
+                <h2>Find Your Ideal Pet</h2>
+
+                <form>
+
+                    <div class="search-grid">
+
+                        <div class="field">
+                            <label>Animal Type</label>
+
+                            <select id="animalType">
+
+                                <option value="all">All Animals</option>
+                                <option value="dog">Dogs</option>
+                                <option value="cat">Cats</option>
+                                <option value="bird">Birds</option>
+                                <option value="wildcat">Wild Cats</option>
+
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label>Breed</label>
+
+                            <input
+                            type="text"
+                            id="breedSearch"
+                            placeholder="German Shepherd">
+                        </div>
+
+                        <div class="field">
+                            <label>Country</label>
+
+                            <select id="countrySearch">
+
+                                <option value="all">Any Country</option>
+                                <option value="usa">United States</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">United Kingdom</option>
+                                <option value="germany">Germany</option>
+
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label>Price Range</label>
+
+                            <select id="priceSearch">
+
+                                <option value="all">
+                                    Any Price
+                                </option>
+
+                                <option value="0-500">
+                                    $0 - $500
+                                </option>
+
+                                <option value="500-1500">
+                                    $500 - $1500
+                                </option>
+
+                                <option value="1500-3000">
+                                    $1500 - $3000
+                                </option>
+
+                                <option value="3000+">
+                                    $3000+
+                                </option>
+
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <button
+                    type="button"
+                    id="searchPetsBtn"
+                    class="search-btn">
+
+                        Search Pets
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================
+         CATEGORIES
+    ====================== -->
+
+    <section class="categories reveal">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Browse Categories</span>
+
+                <h2>
+                    Explore Popular Pet Categories
+                </h2>
+
+                <p>
+                    Find trusted companions from verified breeders and sellers.
+                </p>
+
+            </div>
+
+            <div class="category-grid">
+
+                <div class="category-card">
+
+                    <img src="assets/images/dogs/dog.jpeg" alt="Dogs">
+
+                    <h3>Dogs</h3>
+
+                    <p>
+                        Loyal, loving, and perfect companions for families.
+                    </p>
+
+                    <a href="pages/dogs.html">
+                        Explore →
+                    </a>
+
+                </div>
+
+                <div class="category-card">
+
+                    <img src="assets/images/cats/cat.jpg" alt="Cats">
+
+                    <h3>Cats</h3>
+
+                    <p>
+                        Elegant, affectionate, and easy to care for.
+                    </p>
+
+                    <a href="pages/cats.html">
+                        Explore →
+                    </a>
+
+                </div>
+
+                <div class="category-card">
+
+                    <img src="assets/images/birds/bird.jpeg" alt="Birds">
+
+                    <h3>Birds</h3>
+
+                    <p>
+                        Colorful companions with unique personalities.
+                    </p>
+
+                    <a href="pages/birds.html">
+                        Explore →
+                    </a>
+
+                </div>
+
+                <div class="category-card">
+
+                    <img src="assets/images/wild-cats/lion-cub.jpg" alt="Wild Cats">
+
+                    <h3>Wild Cats</h3>
+
+                    <p>
+                        Discover rare and exotic feline species.
+                    </p>
+
+                    <a href="pages/wild-cats.html">
+                        Explore →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+        <!-- Featured Pets Section Starts Here -->
+        <!-- =====================
+        FEATURED PETS
+        ====================== -->
+
+    <section id="featured" class="featured-pets reveal">
+
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Featured Listings</span>
+
+                <h2>Popular Pets Available Now</h2>
+
+                <p>
+                    Browse some of our most viewed and highly rated companion animals.
+                </p>
+
+            </div>
+
+            <div class="pet-grid">
+
+                <div
+                class="pet-card"
+                data-category="dog"
+                data-name="german shepherd"
+                data-country="usa"
+                data-price="1200">
+
+                    <img src="assets/images/dogs/german-shepherd.jpg" alt="German Shepherd">
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">Dog</span>
+
+                        <h3>German Shepherd</h3>
+
+                        <p>
+                            Loyal, intelligent, and highly trainable family companion.
+                        </p>
+
+                        <div class="pet-info">
+                            <span>Age: 8 Months</span>
+                            <span>USA</span>
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>$1,200</h4>
+
+                            <button
+                            class="primary-btn add-cart-btn"
+
+                            data-name="German Shepherd"
+
+                            data-price="1200"
+
+                            data-image="assets/images/dogs/german-shepherd.jpg">
+
+                            Add To Cart
+
+                            </button>
+                            <button
+                            class="secondary-btn quick-view-btn"
+
+                            data-name="German Shepherd"
+                            data-price="1200"
+                            data-image="assets/images/dogs/german-shepherd.jpg"
+                            data-category="Dog"
+                            data-age="8 Months"
+                            data-location="USA">
+
+                                Quick View
+
+                            </button>
+                            <button
+
+                            class="wishlist-add-btn"
+
+                            data-name="German Shepherd"
+
+                            data-price="1200"
+
+                            data-image="assets/images/dogs/german-shepherd.jpg">
+
+                                ❤ Wishlist
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+                class="pet-card"
+                data-category="dog"
+                data-name="golden retriever"
+                data-country="canada"
+                data-price="950">
+
+                    <img src="assets/images/dogs/golden-retriever.jpg" alt="Golden Retriever">
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">Dog</span>
+
+                        <h3>Golden Retriever</h3>
+
+                        <p>
+                            Friendly, affectionate and excellent with children.
+                        </p>
+
+                        <div class="pet-info">
+                            <span>Age: 5 Months</span>
+                            <span>Canada</span>
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>$950</h4>
+
+                            <button
+                            class="primary-btn add-cart-btn"
+
+                            data-name="Golden Retriever"
+
+                            data-price="950"
+
+                            data-image="assets/images/dogs/golden-retriever.jpg">
+
+                            Add To Cart
+
+                            </button>
+                            <button
+                            class="secondary-btn quick-view-btn"
+
+                            data-name="Golden Retriever"
+                            data-price="950"
+                            data-image="assets/images/dogs/golden-retriever.jpg"
+                            data-category="Dog"
+                            data-age="8 Months"
+                            data-location="USA">
+
+                                Quick View
+
+                            </button>
+                            <button
+
+                            class="wishlist-add-btn"
+
+                            data-name="Golden Retriever"
+
+                            data-price="950"
+
+                            data-image="assets/images/dogs/golden-retriever.jpg">
+
+                                ❤ Wishlist
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+
+                class="pet-card"
+
+                data-category="cat"
+
+                data-name="maine coon"
+
+                data-country="uk"
+                data-price="1500">
+
+                    <img src="assets/images/cats/maine-coon.jpg" alt="Maine Coon">
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">Cat</span>
+
+                        <h3>Maine Coon</h3>
+
+                        <p>
+                            Gentle giant known for its affectionate personality.
+                        </p>
+
+                        <div class="pet-info">
+                            <span>Age: 7 Months</span>
+                            <span>UK</span>
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>$1,500</h4>
+
+                            <button
+                            class="primary-btn add-cart-btn"
+
+                            data-name="Maine coon"
+
+                            data-price="1200"
+
+                            data-image="assets/images/cats/maine-coon.jpg">
+
+                            Add To Cart
+
+                            </button>
+                            <button
+                            class="secondary-btn quick-view-btn"
+
+                            data-name="Maine coon"
+                            data-price="1200"
+                            data-image="assets/images/cats/Maine-coon.jpg"
+                            data-category="Dog"
+                            data-age="8 Months"
+                            data-location="USA">
+
+                                Quick View
+
+                            </button>
+                            <button
+
+                            class="wishlist-add-btn"
+
+                            data-name="Maine coon"
+
+                            data-price="1200"
+
+                            data-image="assets/images/cats/maine-coon.jpg">
+
+                                ❤ Wishlist
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+
+                class="pet-card"
+
+                data-category="cat"
+
+                data-name="bengal cat"
+
+                data-country="germany"
+                data-price="1800">
+
+                    <img src="assets/images/cats/bengal-cat.jpg" alt="Bengal Cat">
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">Cat</span>
+
+                        <h3>Bengal Cat</h3>
+
+                        <p>
+                            Beautiful spotted coat and energetic personality.
+                        </p>
+
+                        <div class="pet-info">
+                            <span>Age: 4 Months</span>
+                            <span>Germany</span>
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>$1,800</h4>
+
+                            <button
+                            class="primary-btn add-cart-btn"
+
+                            data-name="Bengal cat"
+
+                            data-price="1200"
+
+                            data-image="assets/images/cats/bengal-cat.jpg">
+
+                            Add To Cart
+
+                            </button>
+                            <button
+                            class="secondary-btn quick-view-btn"
+
+                            data-name="Bengal cat"
+                            data-price="1200"
+                            data-image="assets/images/cats/bengal-cat.jpg"
+                            data-category="Dog"
+                            data-age="8 Months"
+                            data-location="USA">
+
+                                Quick View
+
+                            </button>
+                            <button
+
+                            class="wishlist-add-btn"
+
+                            data-name="Bengal cat"
+
+                            data-price="1200"
+
+                            data-image="assets/images/cats/bengal-cat.jpg">
+
+                                ❤ Wishlist
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+
+                class="pet-card"
+
+                data-category="wildcat"
+
+                data-name="lion cub"
+
+                data-country="south africa"
+                data-price="4500">
+
+                    <img src="assets/images/wild-cats/lion-cub.jpg" alt="Lion Cub">
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">Wild Cat</span>
+
+                        <h3>Lion Cub</h3>
+
+                        <p>
+                            Rare exotic feline listing subject to local regulations.
+                        </p>
+
+                        <div class="pet-info">
+                            <span>Age: 6 Months</span>
+                            <span>South Africa</span>
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>$4,500</h4>
+
+                            <button
+                            class="primary-btn add-cart-btn"
+
+                            data-name="Lion Cub"
+
+                            data-price="1200"
+
+                            data-image="assets/images/wild-cats/lion-cub.jpg">
+
+                            Add To Cart
+
+                            </button>
+                            <button
+                            class="secondary-btn quick-view-btn"
+
+                            data-name="Lion Cub"
+                            data-price="1200"
+                            data-image="assets/images/wild-cats/lion-cub.jpg"
+                            data-category="Dog"
+                            data-age="8 Months"
+                            data-location="USA">
+
+                                Quick View
+
+                            </button>
+                            <button
+
+                            class="wishlist-add-btn"
+
+                            data-name="Bengal cat"
+
+                            data-price="1200"
+
+                            data-image="assets/images/wild-cats/lion-cub.jpg">
+
+                                ❤ Wishlist
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div
+
+                class="pet-card"
+
+                data-category="bird"
+
+                data-name="blue macaw"
+
+                data-country="brazil"
+                data-price="2100">
+
+                    <img src="assets/images/birds/Blue-macaw.jpg" alt="Macaw">
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">Bird</span>
+
+                        <h3>Blue Macaw</h3>
+
+                        <p>
+                            Intelligent and colorful companion bird.
+                        </p>
+
+                        <div class="pet-info">
+                            <span>Age: 1 Year</span>
+                            <span>Brazil</span>
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>$2,100</h4>
+
+                            <button
+                            class="primary-btn add-cart-btn"
+
+                            data-name="Blue Macaw"
+
+                            data-price="1200"
+
+                            data-image="assets/images/birds/Blue-macaw.jpg">
+
+                            Add To Cart
+
+                            </button>
+                            <button
+                            class="secondary-btn quick-view-btn"
+
+                            data-name="Blue Macaw"
+                            data-price="1200"
+                            data-image="assets/images/birds/Blue-macaw.jpg"
+                            data-category="Dog"
+                            data-age="8 Months"
+                            data-location="USA">
+
+                                Quick View
+
+                            </button>
+                            <button
+
+                            class="wishlist-add-btn"
+
+                            data-name="Blue Macaw"
+
+                            data-price="1200"
+
+                            data-image="assets/images/birds/Blue-macaw.jpg">
+
+                                ❤ Wishlist
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =====================
+     ABOUT PETSY
+    ====================== -->
+
+    <section id="about" class="about-petsy reveal">
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>About Petsy</span>
+
+                <h2>Where Trusted Connections Begin</h2>
+
+                <p>
+                    Petsy is a modern pet marketplace designed to help responsible animal lovers discover companions from trusted sources around the world.
+                </p>
+
+            </div>
+
+            <div class="about-wrapper">
+
+                <!-- LEFT -->
+
+                <div class="about-image">
+
+                    <img src="assets/images/gallery/gallery.jpg"
+                        alt="Petsy Marketplace">
+
+                </div>
+
+                <!-- RIGHT -->
+
+                <div class="about-content">
+
+                    <h3>
+                        More Than A Marketplace
+                    </h3>
+
+                    <p>
+                        At Petsy, we believe finding the right companion should be a simple, transparent, and enjoyable experience. Our platform brings together quality listings, trusted breeders, and animal enthusiasts through one professional marketplace.
+                    </p>
+
+                    <p>
+                        Whether you are searching for a loyal dog, an affectionate cat, an exotic bird, or a rare breed, Petsy helps you browse confidently while giving sellers a professional platform to showcase their animals.
+                    </p>
+
+                    <div class="about-features">
+
+                        <div class="feature-item">
+
+                            <div class="feature-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <h4>Trusted Listings</h4>
+
+                                <p>
+                                    Carefully presented listings with clear information.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="feature-item">
+
+                            <div class="feature-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <h4>Worldwide Reach</h4>
+
+                                <p>
+                                    Connect with buyers and sellers from different regions.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="feature-item">
+
+                            <div class="feature-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <h4>Secure Checkout</h4>
+
+                                <p>
+                                    Professional ordering process with buyer information verification.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="feature-item">
+
+                            <div class="feature-icon">
+                                ✓
+                            </div>
+
+                            <div>
+
+                                <h4>Modern Experience</h4>
+
+                                <p>
+                                    Designed for speed, convenience, and mobile accessibility.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <a href="#featured" class="primary-btn">
+                        Explore Available Pets
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+        <!-- =====================
+        MARKETPLACE STATS
+        ====================== -->
+
+    <section class="stats-section reveal">
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Our Numbers</span>
+
+                <h2>Growing Every Day</h2>
+
+                <p>
+                    Thousands of animal lovers use Petsy to discover trusted companions and connect with quality listings.
+                </p>
+
+            </div>
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🐾
+                    </div>
+
+                    <h3 class="counter">
+                        5,000+
+                    </h3>
+
+                    <p>
+                        Active Listings
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ❤️
+                    </div>
+
+                    <h3 class="counter">
+                        12,000+
+                    </h3>
+
+                    <p>
+                        Happy Families
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        🌎
+                    </div>
+
+                    <h3 class="counter">
+                        40+
+                    </h3>
+
+                    <p>
+                        Countries Reached
+                    </p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon">
+                        ⭐
+                    </div>
+
+                    <h3 class="counter">
+                        98%
+                    </h3>
+
+                    <p>
+                        Customer Satisfaction
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+                <!-- =====================
+        TESTIMONIALS
+    ====================== -->
+
+    <section id="reviews" class="testimonials reveal">
+
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Testimonials</span>
+
+                <h2>What Our Customers Say</h2>
+
+                <p>
+                    Hear from animal lovers who found their perfect companions through Petsy.
+                </p>
+
+            </div>
+
+            <div class="testimonials-grid">
+
+                <div class="testimonial-card">
+
+                    <div class="testimonial-top">
+
+                        <img src="assets/images/testimonials/img1.png"
+                            alt="Customer">
+
+                        <div>
+
+                            <h4>Michael Jan</h4>
+
+                            <span>Dog Owner</span>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        "The process was simple and professional. I found a wonderful German Shepherd and the communication throughout was excellent."
+                    </p>
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+
+                    <div class="testimonial-top">
+
+                        <img src="assets/images/testimonials/img2.png"
+                            alt="Customer">
+
+                        <div>
+
+                            <h4>Sarah Williams</h4>
+
+                            <span>Cat Owner</span>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        "Petsy made it easy to compare listings and find the perfect Maine Coon kitten for my family."
+                    </p>
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+                <div class="testimonial-card">
+
+                    <div class="testimonial-top">
+
+                        <img src="assets/images/testimonials/img3.png"
+                            alt="Customer">
+
+                        <div>
+
+                            <h4>Daniel Sean</h4>
+
+                            <span>Bird Enthusiast</span>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        "A beautiful platform with professional listings and detailed information. Highly recommended."
+                    </p>
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =====================
+     PET GALLERY
+    ====================== -->
+
+    <section class="gallery-section reveal">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Gallery</span>
+
+                <h2>Meet Some Of Our Beautiful Companions</h2>
+
+                <p>
+                    Explore a collection of wonderful animals available through Petsy.
+                </p>
+
+            </div>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item large">
+                    <img src="assets/images/gallery/gallery1.jpg" alt="Pet Gallery">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/gallery2.jpg" alt="Pet Gallery">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/gallery3.jpeg" alt="Pet Gallery">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/gallery4.jpg" alt="Pet Gallery">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="assets/images/gallery/gallery5.webp" alt="Pet Gallery">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =====================
+     CONTACT SECTION
+    ====================== -->
+
+    <section id="contact" class="contact-section reveal">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Contact Us</span>
+
+                <h2>Have Questions About A Pet?</h2>
+
+                <p>
+                    Send us a message and we'll get back to you as soon as possible.
+                </p>
+
+            </div>
+
+            <div class="contact-wrapper">
+
+                <div class="contact-info">
+
+                    <h3>
+                        Let's Talk
+                    </h3>
+
+                    <p>
+                        Whether you're searching for a new companion or need additional information about a listing, our team is here to help.
+                    </p>
+
+                    <div class="contact-item">
+
+                        <h4>Email</h4>
+
+                        <p>petsystores@proton.me</p>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <h4>WhatsApp</h4>
+
+                        <p>+1 (708) 768-3755</p>
+
+                    </div>
+
+                    <div class="contact-item">
+
+                        <h4>Availability</h4>
+
+                        <p>Monday - Sunday</p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-form-container">
+
+                    <form
+                        name="contact"
+                        method="POST"
+                        data-netlify="true">
+
+                        <input
+                            type="hidden"
+                            name="form-name"
+                            value="contact">
+
+                        <div class="form-group">
+
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Full Name"
+                                required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Email Address"
+                                required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <input
+                                type="text"
+                                name="subject"
+                                placeholder="Subject">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <textarea
+                                name="message"
+                                rows="6"
+                                placeholder="Write your message..."
+                                required></textarea>
+
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="primary-btn">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+
+    </section>
+    <!-- =====================
+     NEWSLETTER
+    ====================== -->
+
+    <section class="newsletter-section reveal">
+
+        <div class="container">
+
+            <div class="newsletter-box">
+
+                <div class="newsletter-content">
+
+                    <span>Stay Updated</span>
+
+                    <h2>
+                        Get New Pet Listings Delivered To Your Inbox
+                    </h2>
+
+                    <p>
+                        Be the first to discover newly listed pets, special offers, and important updates from Petsy.
+                    </p>
+
+                </div>
+
+                <form
+                    name="newsletter"
+                    method="POST"
+                    data-netlify="true"
+                    class="newsletter-form">
+
+                    <input
+                        type="hidden"
+                        name="form-name"
+                        value="newsletter">
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter your email address"
+                        required>
+
+                    <button
+                        type="submit"
+                        class="primary-btn">
+
+                        Subscribe
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =====================
+     FOOTER
+    ====================== -->
+
+    <footer class="footer reveal">
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <!-- COLUMN 1 -->
+
+                <div class="footer-column">
+
+                    <h2 class="footer-logo">
+                        Petsy
+                    </h2>
+
+                    <p>
+                        Petsy is a modern pet marketplace helping animal lovers discover trusted companions from around the world through a professional and easy-to-use platform.
+                    </p>
+
+                </div>
+
+                <!-- COLUMN 2 -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="#featured">Featured Pets</a>
+                        </li>
+
+                        <li>
+                            <a href="#about">About Petsy</a>
+                        </li>
+
+                        <li>
+                            <a href="#reviews">Testimonials</a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- COLUMN 3 -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Categories
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="pages/dogs.html">
+                                Dogs
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/cats.html">
+                                Cats
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/birds.html">
+                                Birds
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/reptiles.html">
+                                Reptiles
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/wild-cats.html">
+                                Wild Cats
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- COLUMN 4 -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Contact
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            petsystores@proton.me
+                        </li>
+
+                        <li>
+                            +1 (708) 768-3755
+                        </li>
+
+                        <li>
+                            Available 7 Days A Week
+                        </li>
+
+                    </ul>
+
+                    <div class="footer-socials">
+
+                        <a href="#">
+                            Facebook
+                        </a>
+
+                        <a href="#">
+                            Instagram
+                        </a>
+
+                        <a href="#">
+                            Pinterest
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Petsy. All Rights Reserved.
+                </p>
+
+                <div>
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms Of Service
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- BACK TO TOP -->
+
+    <a href="#home" class="back-to-top">
+        ↑
+    </a>
+
+    <!-- =====================
+     CART SIDEBAR
+    ====================== -->
+
+    <div class="cart-sidebar" id="cartSidebar">
+
+    <div class="cart-header">
+
+        <h3>Shopping Cart</h3>
+
+        <button id="closeCart">
+            ✕
+        </button>
+
+    </div>
+
+    <div class="cart-items">
+
+        <!-- JS ITEMS -->
+
+    </div>
+
+    <div class="cart-footer">
+
+        <div class="cart-total">
+
+            <span>Total:</span>
+
+            <strong id="cartTotal">
+                $0
+            </strong>
+
+        </div>
+        <a
+        href="pages/cart.html"
+        class="primary-btn">
+
+        View Full Cart
+
+        </a>
+
+        <a
+            href="pages/checkout.html"
+            class="primary-btn">
+
+            Proceed To Checkout
+
+        </a>
+
+    </div>
+
+    </div>
+
+    <div class="cart-overlay"></div>
+    <!-- =====================
+     QUICK VIEW MODAL
+    ====================== -->
+
+    <div class="modal" id="quickViewModal">
+
+        <div class="modal-content">
+
+            <button class="modal-close">
+                ✕
+            </button>
+
+            <div class="modal-grid">
+
+                <div class="modal-image">
+
+                    <img
+                        src="assets/images/dogs/german-shepherd.jpg"
+                        alt="Pet">
+
+                </div>
+
+                <div class="modal-details">
+
+                    <span class="pet-category">
+                        Dog
+                    </span>
+
+                    <h2>
+                        German Shepherd
+                    </h2>
+
+                    <h3>
+                        $1,200
+                    </h3>
+
+                    <p>
+                        Intelligent, loyal and highly trainable companion suitable for families and active lifestyles.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Age: 8 Months
+                        </li>
+
+                        <li>
+                            Vaccinated: Yes
+                        </li>
+
+                        <li>
+                            Gender: Male
+                        </li>
+
+                        <li>
+                            Location: USA
+                        </li>
+
+                    </ul>
+
+                    <button
+
+                    id="modalAddToCart"
+
+                    class="primary-btn">
+
+                        Add To Cart
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+ 
+    </div>
+
+    <script defer src="assets/js/cart.js"></script>
+    <script defer src="assets/js/modal.js"></script>
+    <script defer src="assets/js/animations.js"></script>
+    <script defer src="assets/js/wishlist.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Petsy</title>
+
+ 
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="stylesheet" href="../assets/css/checkout.css">
+ 
+
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <a href="../index.html">
+                <h2>Petsy</h2>
+            </a>
+        </div>
+    </div>
+</header>
+
+<section class="checkout-page">
+
+    <div class="container">
+
+        <div class="checkout-header">
+
+            <span class="checkout-badge">
+                Secure Checkout
+            </span>
+
+            <h1>
+                Complete Your Adoption Request
+            </h1>
+
+            <p>
+                Fill out the information below to reserve your companion and begin the delivery process.
+            </p>
+
+        </div>
+
+        <form
+        class="checkout-form"
+        name="checkout"
+        method="POST"
+        data-netlify="true"
+        action="order-completion.html">
+
+            <input
+            type="hidden"
+            name="form-name"
+            value="checkout">
+
+            <!-- ORDER SUMMARY -->
+
+            <div class="checkout-card">
+
+                <h2>
+                    Order Summary
+                </h2>
+
+                <div class="summary-row">
+
+                    <span>
+                        Cart Total
+                    </span>
+
+                    <strong id="cartSubtotal">
+                        $0
+                    </strong>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>
+                        Shipping
+                    </span>
+
+                    <strong id="shippingFee">
+                        $0
+                    </strong>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>
+                        Insurance
+                    </span>
+
+                    <strong>
+                        $250
+                    </strong>
+
+                </div>
+
+                <div class="summary-row total">
+
+                    <span>
+                        Grand Total
+                    </span>
+
+                    <strong id="grandTotal">
+                        $0
+                    </strong>
+
+                </div>
+
+            </div>
+
+            <!-- CUSTOMER -->
+
+            <div class="checkout-card">
+
+                <h2>
+                    Personal Information
+                </h2>
+
+                <div class="form-grid">
+
+                    <input
+                    type="text"
+                    name="full_name"
+                    placeholder="Full Name"
+                    required>
+
+                    <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required>
+
+                    <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="+1 5551234567"
+                    maxlength="16"
+                    required>
+
+                    <p
+                    id="phoneError"
+                    class="error-message">
+                    </p>
+
+                    <select
+                    id="contactMethod">
+
+                        <option value="">
+                            Preferred Contact Method
+                        </option>
+
+                        <option>
+                            WhatsApp
+                        </option>
+
+                        <option>
+                            Telegram
+                        </option>
+
+                        <option>
+                            Email
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADOPTION QUESTIONS -->
+
+            <div class="checkout-card">
+
+                <h2>
+                    Adoption Questionnaire
+                </h2>
+
+                <div class="form-grid">
+
+                    <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    min="18"
+                    placeholder="Age (18+ Only)"
+                    required>
+
+                    <select
+                    name="pet_experience"
+                    required>
+
+                        <option value="">
+                            Have you owned this type of pet before?
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                    </select>
+
+                    <select
+                    name="home_owner"
+                    required>
+
+                        <option value="">
+                            Do you own your residence?
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                    </select>
+
+                    <select
+                    name="landlord_permission"
+                    required>
+
+                        <option value="">
+                            If renting, do you have permission for pets?
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                        <option value="Not Applicable">
+                            Not Applicable
+                        </option>
+
+                    </select>
+
+                    <select
+                    name="other_pets"
+                    required>
+
+                        <option value="">
+                            Do you currently own other pets?
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                    </select>
+
+                    <select
+                    name="children"
+                    required>
+
+                        <option value="">
+                            Are children present in the home?
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                    </select>
+
+                    <select
+                    name="outdoor_space"
+                    required>
+
+                        <option value="">
+                            Do you have adequate space for this animal?
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                    </select>
+
+                    <select
+                    name="veterinarian"
+                    required>
+
+                        <option value="">
+                            Do you have access to veterinary care?
+                        </option>
+
+                        <option value="Yes">
+                            Yes
+                        </option>
+
+                        <option value="No">
+                            No
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- COUNTRY -->
+
+            <div class="checkout-card">
+
+                <h2>
+                    Shipping Address
+                </h2>
+
+                <select
+                id="countrySelect">
+
+                    <option value="">
+                        Select Country
+                    </option>
+                    <option>Afghanistan</option>
+                    <option>Albania</option>
+                    <option>Algeria</option>
+                    <option>Andorra</option>
+                    <option>Angola</option>
+                    <option>Antigua and Barbuda</option>
+                    <option>Argentina</option>
+                    <option>Armenia</option>
+                    <option>Australia</option>
+                    <option>Austria</option>
+                    <option>Azerbaijan</option>
+                    <option>Bahamas</option>
+                    <option>Bahrain</option>
+                    <option>Bangladesh</option>
+                    <option>Barbados</option>
+                    <option>Belarus</option>
+                    <option>Belgium</option>
+                    <option>Belize</option>
+                    <option>Benin</option>
+                    <option>Bhutan</option>
+                    <option>Bolivia</option>
+                    <option>Bosnia and Herzegovina</option>
+                    <option>Botswana</option>
+                    <option>Brazil</option>
+                    <option>Brunei</option>
+                    <option>Bulgaria</option>
+                    <option>Burkina Faso</option>
+                    <option>Burundi</option>
+                    <option>Cambodia</option>
+                    <option>Cameroon</option>
+                    <option>Canada</option>
+                    <option>Cape Verde</option>
+                    <option>Central African Republic</option>
+                    <option>Chad</option>
+                    <option>Chile</option>
+                    <option>China</option>
+                    <option>Colombia</option>
+                    <option>Comoros</option>
+                    <option>Congo</option>
+                    <option>Costa Rica</option>
+                    <option>Croatia</option>
+                    <option>Cuba</option>
+                    <option>Cyprus</option>
+                    <option>Czech Republic</option>
+                    <option>Denmark</option>
+                    <option>Djibouti</option>
+                    <option>Dominica</option>
+                    <option>Dominican Republic</option>
+                    <option>Ecuador</option>
+                    <option>Egypt</option>
+                    <option>El Salvador</option>
+                    <option>Equatorial Guinea</option>
+                    <option>Eritrea</option>
+                    <option>Estonia</option>
+                    <option>Eswatini</option>
+                    <option>Ethiopia</option>
+                    <option>Fiji</option>
+                    <option>Finland</option>
+                    <option>France</option>
+                    <option>Gabon</option>
+                    <option>Gambia</option>
+                    <option>Georgia</option>
+                    <option>Germany</option>
+                    <option>Ghana</option>
+                    <option>Greece</option>
+                    <option>Grenada</option>
+                    <option>Guatemala</option>
+                    <option>Guinea</option>
+                    <option>Guinea-Bissau</option>
+                    <option>Guyana</option>
+                    <option>Haiti</option>
+                    <option>Honduras</option>
+                    <option>Hungary</option>
+                    <option>Iceland</option>
+                    <option>India</option>
+                    <option>Indonesia</option>
+                    <option>Iran</option>
+                    <option>Iraq</option>
+                    <option>Ireland</option>
+                    <option>Israel</option>
+                    <option>Italy</option>
+                    <option>Ivory Coast</option>
+                    <option>Jamaica</option>
+                    <option>Japan</option>
+                    <option>Jordan</option>
+                    <option>Kazakhstan</option>
+                    <option>Kenya</option>
+                    <option>Kiribati</option>
+                    <option>Kuwait</option>
+                    <option>Kyrgyzstan</option>
+                    <option>Laos</option>
+                    <option>Latvia</option>
+                    <option>Lebanon</option>
+                    <option>Lesotho</option>
+                    <option>Liberia</option>
+                    <option>Libya</option>
+                    <option>Liechtenstein</option>
+                    <option>Lithuania</option>
+                    <option>Luxembourg</option>
+                    <option>Madagascar</option>
+                    <option>Malawi</option>
+                    <option>Malaysia</option>
+                    <option>Maldives</option>
+                    <option>Mali</option>
+                    <option>Malta</option>
+                    <option>Marshall Islands</option>
+                    <option>Mauritania</option>
+                    <option>Mauritius</option>
+                    <option>Mexico</option>
+                    <option>Micronesia</option>
+                    <option>Moldova</option>
+                    <option>Monaco</option>
+                    <option>Mongolia</option>
+                    <option>Montenegro</option>
+                    <option>Morocco</option>
+                    <option>Mozambique</option>
+                    <option>Myanmar</option>
+                    <option>Namibia</option>
+                    <option>Nauru</option>
+                    <option>Nepal</option>
+                    <option>Netherlands</option>
+                    <option>New Zealand</option>
+                    <option>Nicaragua</option>
+                    <option>Niger</option>
+                    <option>Nigeria</option>
+                    <option>North Korea</option>
+                    <option>North Macedonia</option>
+                    <option>Norway</option>
+                    <option>Oman</option>
+                    <option>Pakistan</option>
+                    <option>Palau</option>
+                    <option>Panama</option>
+                    <option>Papua New Guinea</option>
+                    <option>Paraguay</option>
+                    <option>Peru</option>
+                    <option>Philippines</option>
+                    <option>Poland</option>
+                    <option>Portugal</option>
+                    <option>Qatar</option>
+                    <option>Romania</option>
+                    <option>Russia</option>
+                    <option>Rwanda</option>
+                    <option>Saint Kitts and Nevis</option>
+                    <option>Saint Lucia</option>
+                    <option>Saint Vincent and the Grenadines</option>
+                    <option>Samoa</option>
+                    <option>San Marino</option>
+                    <option>Sao Tome and Principe</option>
+                    <option>Saudi Arabia</option>
+                    <option>Senegal</option>
+                    <option>Serbia</option>
+                    <option>Seychelles</option>
+                    <option>Sierra Leone</option>
+                    <option>Singapore</option>
+                    <option>Slovakia</option>
+                    <option>Slovenia</option>
+                    <option>Solomon Islands</option>
+                    <option>Somalia</option>
+                    <option>South Africa</option>
+                    <option>South Korea</option>
+                    <option>South Sudan</option>
+                    <option>Spain</option>
+                    <option>Sri Lanka</option>
+                    <option>Sudan</option>
+                    <option>Suriname</option>
+                    <option>Sweden</option>
+                    <option>Switzerland</option>
+                    <option>Syria</option>
+                    <option>Taiwan</option>
+                    <option>Tajikistan</option>
+                    <option>Tanzania</option>
+                    <option>Thailand</option>
+                    <option>Timor-Leste</option>
+                    <option>Togo</option>
+                    <option>Tonga</option>
+                    <option>Trinidad and Tobago</option>
+                    <option>Tunisia</option>
+                    <option>Turkey</option>
+                    <option>Turkmenistan</option>
+                    <option>Tuvalu</option>
+                    <option>Uganda</option>
+                    <option>Ukraine</option>
+                    <option>United Arab Emirates</option>
+                    <option>United Kingdom</option>
+                    <option>United States</option>
+                    <option>Uruguay</option>
+                    <option>Uzbekistan</option>
+                    <option>Vanuatu</option>
+                    <option>Vatican City</option>
+                    <option>Venezuela</option>
+                    <option>Vietnam</option>
+                    <option>Yemen</option>
+                    <option>Zambia</option>
+                    <option>Zimbabwe</option>
+
+                </select>
+
+                <textarea
+                placeholder="Full Shipping Address"
+                rows="4"></textarea>
+
+            </div>
+
+            <!-- PAYMENT -->
+
+            <div class="checkout-card">
+
+                <h2>
+                    Payment Method
+                </h2>
+
+                <select
+                id="paymentMethod"
+                onchange="showPaymentDetails()">
+
+                    <option value="">
+                        Select Payment Method
+                    </option>
+
+                    <option value="btc">
+                        Bitcoin (BTC)
+                    </option>
+
+                    <option value="eth">
+                        Ethereum (ETH)
+                    </option>
+
+                    <option value="usdt">
+                        USDT (ERC20)
+                    </option>
+
+                    <option value="giftcard">
+                        Apple / iTunes Gift Card
+                    </option>
+
+                </select>
+
+                <div
+                id="btcBox"
+                class="payment-box">
+
+                    <h3>
+                        Bitcoin Payment
+                    </h3>
+
+                    <img
+                    src="../assets/images/payments/btc-qr.jpeg"
+                    class="payment-qr">
+
+                    <div class="wallet-row">
+
+                        <input id="btcAddress"
+                        readonly
+                        value="bc1qm05ns5uuy7kvku2mrv3zh2zjnvwpw4qqzvwsf5">
+
+                        <button type="button"
+                        onclick="copyAddress('btcAddress')">
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                    <p class="payment-warning">
+
+                        ⚠ Send ONLY BTC using the Bitcoin network.
+
+                        ⚠ Sending funds through the wrong network may result in permanent loss of funds.
+
+                        ⚠ Transactions are verified manually.
+
+                    </p>
+
+                </div>
+
+
+                <div
+                id="ethBox"
+                class="payment-box">
+
+                    <h3>
+                        Ethereum Payment
+                    </h3>
+
+                    <img
+                    src="../assets/images/payments/eth-qr.jpeg"
+                    class="payment-qr">
+
+                    <div class="wallet-row">
+
+                        <input
+                        id="ethAddress"
+                        readonly
+                        value="0x1a4C1B630b9f8adFa228f6dC44296c618A54f548">
+
+                        <button type="button"
+                        onclick="copyAddress('ethAddress')">
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                    <p class="payment-warning">
+
+                        ⚠ Send ONLY Ethereum(ETH) using the Ethereum network.
+
+                        ⚠ Sending funds through the wrong network may result in permanent loss of funds.
+
+                        ⚠ Transactions are verified manually.
+
+                    </p>
+
+                </div>
+
+                <div
+                    id="usdtBox"
+                    class="payment-box">
+
+                    <h3>
+                        USDT Payment
+                    </h3>
+
+                    <img
+                    src="../assets/images/payments/usdt-qr.jpeg"
+                    class="payment-qr">
+
+                    <div class="wallet-row">
+
+                        <input
+                        id="usdtAddress"
+                        readonly
+                        value="0x1a4C1B630b9f8adFa228f6dC44296c618A54f548">
+
+                        <button type="button"
+                        onclick="copyAddress('usdtAddress')">
+
+                            Copy
+
+                        </button>
+
+                    </div>
+
+                    <p class="payment-warning">
+
+                        ⚠ Send ONLY USDT using the ERC20 network.
+
+                        ⚠ Sending funds through the wrong network may result in permanent loss of funds.
+
+                        ⚠ Transactions are verified manually.
+
+                    </p>
+
+                </div>
+
+                <div
+                    id="giftcardBox"
+                    class="payment-box">
+
+                        <h3>
+
+                            Apple / iTunes Gift Cards
+
+                        </h3>
+
+                        <img
+                        src="../assets/images/payments/gift-card.png"
+                        class="giftcard-image">
+
+                        <p>
+
+                            Purchase an Apple Gift Card or iTunes Gift Card from a trusted retailer.
+
+                        </p>
+
+                        <p>
+
+                            After purchase, upload a clear image showing the card and redemption code.
+
+                        </p>
+
+                        <p class="payment-warning">
+
+                            ⚠ Do not upload blurry images.
+
+                            ⚠ Ensure the redemption code is fully visible.
+
+                            ⚠ Scratched or partially hidden codes may delay verification.
+
+                        </p>
+
+                    </div>
+
+                    <div
+                    id="proofSection"
+                    class="payment-box"
+                    style="display:none;">
+
+                        <h3>
+                            Proof Of Payment
+                        </h3>
+
+                        <p>
+                            Upload a screenshot or receipt showing your completed payment.
+                        </p>
+
+                        <input
+                        type="file"
+                        name="payment_proof"
+                        accept="image/*,.pdf"
+                        required>
+
+                    </div>
+
+            </div>
+
+            <label class="checkbox-row">
+
+                <input
+                type="checkbox"
+                required>
+
+                I confirm that all information provided is accurate and that I am at least 18 years old.
+
+            </label>
+
+            <button
+            class="primary-btn checkout-submit">
+
+                Submit Adoption Request
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<script src="../assets/js/checkout.js"></script>
+
+</body>
+</html>

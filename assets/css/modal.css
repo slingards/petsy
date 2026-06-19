@@ -1,0 +1,23 @@
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    z-index:9999;
+
+}
+
+.modal.active{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}

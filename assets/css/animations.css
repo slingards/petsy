@@ -1,0 +1,539 @@
+/* ==========================
+   PETSY ANIMATIONS
+========================== */
+
+
+/* ==========================
+   GLOBAL TRANSITIONS
+========================== */
+
+*{
+    transition:
+    background-color .3s ease,
+    color .3s ease,
+    border-color .3s ease,
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+
+/* ==========================
+   FADE IN
+========================== */
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+}
+
+.fade-in{
+    animation:fadeIn 1s ease forwards;
+}
+
+
+/* ==========================
+   FADE UP
+========================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade-up{
+    animation:fadeUp 1s ease forwards;
+}
+
+
+/* ==========================
+   FADE DOWN
+========================== */
+
+@keyframes fadeDown{
+
+    from{
+        opacity:0;
+        transform:translateY(-50px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.fade-down{
+    animation:fadeDown 1s ease forwards;
+}
+
+
+/* ==========================
+   FADE LEFT
+========================== */
+
+@keyframes fadeLeft{
+
+    from{
+        opacity:0;
+        transform:translateX(-60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.fade-left{
+    animation:fadeLeft 1s ease forwards;
+}
+
+
+/* ==========================
+   FADE RIGHT
+========================== */
+
+@keyframes fadeRight{
+
+    from{
+        opacity:0;
+        transform:translateX(60px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+.fade-right{
+    animation:fadeRight 1s ease forwards;
+}
+
+
+/* ==========================
+   ZOOM IN
+========================== */
+
+@keyframes zoomIn{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.zoom-in{
+    animation:zoomIn .8s ease forwards;
+}
+
+
+/* ==========================
+   FLOATING EFFECT
+========================== */
+
+@keyframes floating{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+.floating{
+    animation:floating 4s ease-in-out infinite;
+}
+
+
+/* ==========================
+   HERO TITLE
+========================== */
+
+@keyframes heroTitle{
+
+    from{
+        opacity:0;
+        transform:translateY(70px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero h1{
+    animation:heroTitle 1s ease;
+}
+
+
+/* ==========================
+   HERO TEXT
+========================== */
+
+@keyframes heroText{
+
+    from{
+        opacity:0;
+        transform:translateY(90px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero p{
+    animation:heroText 1.2s ease;
+}
+
+
+/* ==========================
+   HERO BUTTONS
+========================== */
+
+@keyframes heroButtons{
+
+    from{
+        opacity:0;
+        transform:translateY(120px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero-buttons{
+    animation:heroButtons 1.4s ease;
+}
+
+
+/* ==========================
+   CATEGORY CARD HOVER
+========================== */
+
+.category-card{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.category-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.25),
+        transparent
+    );
+
+    transition:.8s;
+}
+
+.category-card:hover::before{
+
+    left:100%;
+}
+
+
+/* ==========================
+   PET CARD HOVER
+========================== */
+
+.pet-card img{
+
+    transition:transform .5s ease;
+}
+
+.pet-card:hover img{
+
+    transform:scale(1.08);
+}
+
+.pet-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.15);
+}
+
+
+/* ==========================
+   BUTTON GLOW
+========================== */
+
+.primary-btn{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.primary-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,.3),
+        transparent
+    );
+
+    transition:.7s;
+}
+
+.primary-btn:hover::before{
+
+    left:100%;
+}
+
+
+/* ==========================
+   CART BOUNCE
+========================== */
+
+@keyframes cartBounce{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.2);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.cart-bounce{
+    animation:cartBounce .5s ease;
+}
+
+
+/* ==========================
+   COUNTER PULSE
+========================== */
+
+@keyframes pulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.05);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+.pulse{
+    animation:pulse 2s infinite;
+}
+
+
+/* ==========================
+   NEWSLETTER GLOW
+========================== */
+
+@keyframes glow{
+
+    0%{
+        box-shadow:
+        0 0 0 rgba(217,119,6,.3);
+    }
+
+    50%{
+        box-shadow:
+        0 0 35px rgba(217,119,6,.4);
+    }
+
+    100%{
+        box-shadow:
+        0 0 0 rgba(217,119,6,.3);
+    }
+}
+
+.newsletter-form button{
+    animation:glow 3s infinite;
+}
+
+
+/* ==========================
+   MODAL OPEN
+========================== */
+
+@keyframes modalOpen{
+
+    from{
+        opacity:0;
+        transform:scale(.8);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+
+.modal-content{
+    animation:modalOpen .3s ease;
+}
+
+
+/* ==========================
+   SPINNER
+========================== */
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.spinner{
+
+    width:50px;
+    height:50px;
+
+    border:5px solid #eee;
+    border-top:5px solid var(--primary);
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+}
+
+
+/* ==========================
+   SCROLL REVEAL
+========================== */
+
+.reveal{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.active{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+
+/* ==========================
+   DELAYS
+========================== */
+
+.delay-1{
+    animation-delay:.2s;
+}
+
+.delay-2{
+    animation-delay:.4s;
+}
+
+.delay-3{
+    animation-delay:.6s;
+}
+
+.delay-4{
+    animation-delay:.8s;
+}
+
+.delay-5{
+    animation-delay:1s;
+}
+
+.cart-bounce{
+
+    animation:
+    cartBounce .5s ease;
+}
+
+@keyframes cartBounce{
+
+    0%{
+
+        transform:scale(1);
+    }
+
+    50%{
+
+        transform:scale(1.4);
+    }
+
+    100%{
+
+        transform:scale(1);
+    }
+
+}

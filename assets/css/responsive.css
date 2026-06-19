@@ -1,0 +1,557 @@
+/* =================================
+   LARGE LAPTOPS
+================================= */
+
+@media (max-width: 1400px){
+
+    .container{
+        width:95%;
+    }
+
+    .hero h1{
+        font-size:4rem;
+    }
+
+}
+
+
+/* =================================
+   LAPTOPS
+================================= */
+
+@media (max-width: 1200px){
+
+    .hero h1{
+        font-size:3.5rem;
+    }
+
+    .search-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .section-title h2{
+        font-size:2.5rem;
+    }
+
+}
+
+
+/* =================================
+   TABLETS
+================================= */
+
+@media (max-width: 992px){
+
+    section{
+        padding:80px 0;
+    }
+
+    .nav{
+        display:none;
+    }
+
+    .menu-btn{
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        width:50px;
+        height:50px;
+
+        border-radius:50%;
+
+        background:var(--light);
+
+        font-size:1.3rem;
+    }
+
+    .hero{
+
+        text-align:center;
+    }
+
+    .hero-content{
+        margin:auto;
+    }
+
+    .hero h1{
+        font-size:3rem;
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+    }
+
+    .search-card{
+        padding:30px;
+    }
+
+    .search-grid{
+        grid-template-columns:1fr;
+    }
+
+    .section-title h2{
+        font-size:2.2rem;
+    }
+
+    .category-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .pet-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 768px){
+
+    section{
+        padding:70px 0;
+    }
+
+    .header .container{
+        height:75px;
+    }
+
+    .logo h2{
+        font-size:1.8rem;
+    }
+
+    .hero{
+
+        min-height:90vh;
+        padding-top:100px;
+    }
+
+    .hero h1{
+
+        font-size:2.4rem;
+        line-height:1.2;
+    }
+
+    .hero p{
+
+        font-size:1rem;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+        width:100%;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        width:100%;
+    }
+
+    .search-section{
+
+        margin-top:-50px;
+    }
+
+    .search-card{
+
+        padding:25px;
+    }
+
+    .section-title{
+
+        margin-bottom:40px;
+    }
+
+    .section-title h2{
+
+        font-size:2rem;
+    }
+
+    .category-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .pet-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .category-card img{
+
+        height:220px;
+    }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 576px){
+
+    .container{
+        width:92%;
+    }
+
+    .hero h1{
+        font-size:2rem;
+    }
+
+    .hero-tag{
+
+        font-size:.8rem;
+        padding:8px 16px;
+    }
+
+    .hero p{
+
+        font-size:.95rem;
+    }
+
+    .section-title span{
+
+        font-size:.8rem;
+    }
+
+    .section-title h2{
+
+        font-size:1.7rem;
+    }
+
+    .section-title p{
+
+        font-size:.95rem;
+    }
+
+    .search-card h2{
+
+        font-size:1.3rem;
+    }
+
+    .field input,
+    .field select{
+
+        padding:12px;
+    }
+
+    .search-btn{
+
+        padding:14px;
+    }
+
+    .cart-btn,
+    .wishlist-btn{
+
+        width:45px;
+        height:45px;
+    }
+
+    .menu-btn{
+
+        width:45px;
+        height:45px;
+    }
+
+}
+
+
+/* =================================
+   EXTRA SMALL DEVICES
+================================= */
+
+@media (max-width: 400px){
+
+    .hero h1{
+
+        font-size:1.8rem;
+    }
+
+    .hero p{
+
+        font-size:.9rem;
+    }
+
+    .section-title h2{
+
+        font-size:1.5rem;
+    }
+
+    .search-card{
+
+        padding:20px;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        padding:14px 20px;
+    }
+
+}
+
+
+/* =================================
+   VERY SHORT SCREENS
+================================= */
+
+@media (max-height: 700px){
+
+    .hero{
+
+        min-height:100vh;
+    }
+
+    .hero h1{
+
+        font-size:2.5rem;
+    }
+
+}
+
+
+/* =================================
+   LANDSCAPE PHONES
+================================= */
+
+@media (max-width: 900px) and (orientation: landscape){
+
+    .hero{
+
+        min-height:120vh;
+    }
+
+    .hero h1{
+
+        font-size:2.8rem;
+    }
+
+}
+
+@media (max-width: 992px){
+
+
+.about-wrapper{
+
+    grid-template-columns:1fr;
+}
+
+.about-image img{
+
+    height:400px;
+}
+
+}
+
+@media (max-width: 992px){
+
+.stats-grid{
+
+    grid-template-columns:
+    repeat(2,1fr);
+}
+
+}
+
+@media (max-width: 768px){
+
+.stats-grid{
+
+    grid-template-columns:1fr;
+}
+
+}
+
+@media (max-width: 992px){
+
+.testimonials-grid{
+
+    grid-template-columns:1fr;
+}
+
+}
+
+@media (max-width: 768px){
+
+.gallery-grid{
+
+    grid-template-columns:1fr;
+}
+
+.gallery-item.large{
+
+    grid-column:auto;
+    grid-row:auto;
+}
+
+}
+
+@media (max-width: 992px){
+
+.contact-wrapper{
+
+    grid-template-columns:1fr;
+}
+
+}
+
+@media (max-width:768px){
+
+ .newsletter-box{
+
+    padding:40px 25px;
+}
+
+.newsletter-content h2{
+
+    font-size:2rem;
+}
+
+.newsletter-form{
+
+    flex-direction:column;
+}
+
+.newsletter-form input{
+
+    width:100%;
+}
+ 
+}
+
+
+@media (max-width:992px){
+
+ .footer-grid{
+
+    grid-template-columns:
+    repeat(2,1fr);
+}
+ 
+}
+
+@media (max-width:768px){
+
+ .footer-grid{
+
+    grid-template-columns:1fr;
+}
+
+.footer-bottom{
+
+    flex-direction:column;
+
+    text-align:center;
+}
+ 
+}
+
+@media (max-width:768px){
+
+ .modal-grid{
+
+    grid-template-columns:1fr;
+}
+
+.modal-details{
+
+    padding:25px;
+}
+ 
+}
+
+/* ==========================
+   MOBILE DROPDOWN MENU
+========================== */
+
+.mobile-menu{
+
+    position:fixed;
+
+    top:90px;
+    right:20px;
+
+    width:260px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.12);
+
+    overflow:hidden;
+
+    transform:
+    translateY(-20px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s ease;
+
+    z-index:1500;
+}
+
+.mobile-menu.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:
+    translateY(0);
+}
+
+.mobile-menu a{
+
+    display:block;
+
+    padding:18px 25px;
+
+    color:var(--secondary);
+
+    border-bottom:
+    1px solid #eee;
+
+    font-weight:500;
+}
+
+.mobile-menu a:last-child{
+
+    border-bottom:none;
+}
+
+.mobile-menu a:hover{
+
+    background:#f8fafc;
+
+    color:var(--primary);
+}
+
+@media(max-width:768px){
+
+    .nav{
+
+        display:none;
+    }
+
+    .menu-btn{
+
+        display:flex;
+    }
+
+}

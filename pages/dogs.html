@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+    Dogs Marketplace | Petsy
+</title>
+
+<link
+rel="stylesheet"
+href="../assets/css/style.css">
+
+<link
+rel="stylesheet"
+href="../assets/css/responsive.css">
+
+<link
+rel="stylesheet"
+href="../assets/css/dogs.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+ <!-- HEADER -->
+
+<header class="header">
+
+    <div class="container">
+
+        <div class="logo">
+
+            <a href="../index.html">
+
+                <h2>Petsy</h2>
+
+            </a>
+
+        </div>
+
+        <div
+        class="hamburger"
+        id="hamburger">
+
+            ☰
+
+        </div>
+
+        <nav class="nav">
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="../index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="birds.html">
+                        Birds
+                    </a>
+                </li>
+
+                <li>
+                    <a href="cats.html">
+                        Cats
+                    </a>
+                </li>
+
+                <li>
+                    <a href="wild-cats.html">
+                        wild cats
+                    </a>
+                </li>
+
+                <li>
+                    <a href="reptiles.html">
+                        Reptiles
+                    </a>
+                 </li>
+
+                <li>
+                    <a href="cart.html">
+                        Cart
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <div class="header-actions">
+
+            <button
+            class="cart-btn"
+            id="openCart">
+
+                🛒
+
+                <span id="cart-count">
+                    0
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="dogs-hero">
+
+    <div class="container">
+
+        <span>
+            Petsy Dog Marketplace
+        </span>
+
+        <h1>
+            Find Your Perfect Dog Companion
+        </h1>
+
+        <p>
+
+            Browse dozens of trusted dog listings from verified sellers and discover the ideal companion for your family.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SEARCH -->
+
+<section class="dogs-search-section">
+
+    <div class="container">
+
+        <div class="search-wrapper">
+
+            <input
+
+            type="text"
+
+            id="dogSearch"
+
+            placeholder="Search dog breeds...">
+
+            <select id="breedFilter">
+
+                <option value="all">
+
+                    All Breeds
+
+                </option>
+
+                <option value="working">
+
+                    Working Dogs
+
+                </option>
+
+                <option value="sporting">
+
+                    Sporting Dogs
+
+                </option>
+
+                <option value="toy">
+
+                    Toy Breeds
+
+                </option>
+
+                <option value="guard">
+
+                    Guard Dogs
+
+                </option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESULTS -->
+
+<section class="dogs-results">
+
+    <div class="container">
+
+        <div class="results-header">
+
+            <h2>
+
+                Available Dogs
+
+            </h2>
+
+            <span id="resultsCount">
+
+                50+ Breeds Available
+
+            </span>
+
+        </div>
+
+        <div
+        class="dogs-grid"
+
+        id="dogsGrid">
+
+            <!-- JS GENERATED DOGS -->
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- QUICK VIEW MODAL -->
+
+<div
+class="modal"
+
+id="quickViewModal">
+
+    <div class="modal-content">
+
+        <button
+        class="modal-close">
+
+            ✕
+
+        </button>
+
+        <div class="modal-grid">
+
+            <div class="modal-image">
+
+                <img
+
+                id="modalImage"
+
+                src="../assets/images/dogs/german-shepherd.jpg"
+
+                alt="Dog">
+
+            </div>
+
+            <div class="modal-details">
+
+                <span
+                id="modalCategory">
+
+                    Dog
+
+                </span>
+
+                <h2
+                id="modalName">
+
+                </h2>
+
+                <h3
+                id="modalPrice">
+
+                </h3>
+
+                <p
+                id="modalDescription">
+
+                </p>
+
+                <ul>
+
+                    <li>
+
+                        Age:
+                        <span id="modalAge">
+
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        Location:
+                        <span id="modalLocation">
+
+                        </span>
+
+                    </li>
+
+                </ul>
+
+                <button
+
+                id="modalAddCart"
+
+                class="primary-btn">
+
+                    Add To Cart
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CART SIDEBAR -->
+
+<div
+class="cart-sidebar"
+
+id="cartSidebar">
+
+    <div class="cart-header">
+
+        <h3>
+
+            Shopping Cart
+
+        </h3>
+
+        <button
+        id="closeCart">
+
+            ✕
+
+        </button>
+
+    </div>
+
+    <div
+    class="cart-items">
+
+    </div>
+
+    <div
+    class="cart-footer">
+
+        <div
+        class="cart-total">
+
+            <span>
+
+                Total:
+
+            </span>
+
+            <strong
+            id="cartTotal">
+
+                $0
+
+            </strong>
+
+        </div>
+
+        <a
+
+        href="cart.html"
+
+        class="primary-btn">
+
+            View Cart
+
+        </a>
+
+    </div>
+
+</div>
+
+<div
+class="cart-overlay">
+
+</div>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © 2026 Petsy
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+    <div
+    class="cart-sidebar"
+    id="cartSidebar">
+
+        <div class="cart-header">
+
+            <h3>
+                Shopping Cart
+            </h3>
+
+            <button id="closeCart">
+                ✕
+            </button>
+
+        </div>
+
+        <div class="cart-items"></div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+
+                <span>Total:</span>
+
+                <strong id="cartTotal">
+                    $0
+                </strong>
+
+            </div>
+
+            <a
+            href="cart.html"
+            class="primary-btn">
+
+                View Cart
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="cart-overlay"></div>
+
+
+<script src="../assets/js/cart.js"></script>
+
+<script src="../assets/js/modal.js"></script>
+
+<script src="../assets/js/dogs.js"></script>
+
+<script src="../assets/js/menu.js"></script>
+ 
+</body>
+
+</html>
