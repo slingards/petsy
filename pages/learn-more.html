@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Learn More | Petsy</title>
+
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/responsive.css">
+<link rel="icon" type="image/png" href="../favicon.png">
+
+<style>
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    font-size:2rem;
+    cursor:pointer;
+}
+
+@media(max-width:768px){
+
+    .header .container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        gap:15px;
+    }
+
+    .hamburger{
+        display:block;
+    }
+
+    .nav{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:white;
+        display:none;
+        box-shadow:0 15px 35px rgba(0,0,0,.1);
+        z-index:999;
+    }
+
+    .nav.active{
+        display:block;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        padding:25px;
+        gap:20px;
+    }
+
+    .learn-page{
+        padding-top:110px;
+    }
+
+    .learn-content{
+        padding:25px 18px;
+    }
+
+    .learn-image-box{
+        padding:12px;
+    }
+
+    .action-row a,
+    .action-row button{
+        width:100%;
+        text-align:center;
+    }
+}
+.learn-page{
+    padding:120px 0 70px;
+    background:#f8fafc;
+}
+
+.learn-layout{
+    display:grid;
+    grid-template-columns:1fr 1.1fr;
+    gap:40px;
+    align-items:start;
+}
+
+.learn-image-box{
+    background:white;
+    border-radius:25px;
+    padding:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.learn-image-box img{
+    width:100%;
+    border-radius:20px;
+    object-fit:cover;
+}
+
+.learn-content{
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.learn-badge{
+    display:inline-block;
+    background:#fff7ed;
+    color:#d97706;
+    padding:8px 18px;
+    border-radius:50px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.learn-content h1{
+    font-size:2.5rem;
+    margin-bottom:10px;
+}
+
+.learn-price{
+    font-size:1.8rem;
+    font-weight:800;
+    color:#d97706;
+    margin:20px 0;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:25px 0;
+}
+
+.info-card{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:16px;
+}
+
+.info-card strong{
+    display:block;
+    margin-bottom:5px;
+    color:#111827;
+}
+
+.detail-section{
+    margin-top:30px;
+}
+
+.detail-section h3{
+    margin-bottom:12px;
+    color:#111827;
+}
+
+.detail-section p,
+.detail-section li{
+    color:#64748b;
+    line-height:1.8;
+}
+
+.detail-section ul{
+    padding-left:20px;
+}
+
+.action-row{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.primary-btn,
+.secondary-btn{
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+.primary-btn{
+    background:#d97706;
+    color:white;
+}
+
+.secondary-btn{
+    background:#111827;
+    color:white;
+}
+
+.not-found{
+    text-align:center;
+    padding:150px 20px;
+}
+
+@media(max-width:900px){
+    .learn-layout{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .learn-content h1{
+        font-size:2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="container">
+
+        <div class="logo">
+            <a href="../index.html">
+                <h2>Petsy</h2>
+            </a>
+        </div>
+
+        <button class="hamburger" id="hamburger">
+            ☰
+        </button>
+
+        <nav class="nav" id="navMenu">
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="dogs.html">Dogs</a></li>
+                <li><a href="cats.html">Cats</a></li>
+                <li><a href="birds.html">Birds</a></li>
+                <li><a href="wild-cats.html">Wild Cats</a></li>
+                <li><a href="reptiles.html">Reptiles</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="cart.html" class="cart-btn" id="openCart">
+                🛒 <span id="cart-count">0</span>
+            </a>
+        </div>
+
+    </div>
+</header>
+
+<section class="learn-page">
+    <div class="container" id="learnMoreContainer">
+        <!-- JS will display animal details here -->
+    </div>
+</section>
+
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+let type = params.get("type");
+const name = params.get("name");
+
+const typeAliases = {
+    dog: "dogs",
+    cat: "cats",
+    bird: "birds",
+    reptile: "reptiles",
+    wildcat: "wild-cats",
+    wildcats: "wild-cats",
+    "wild-cat": "wild-cats"
+};
+
+type = typeAliases[type] || type;
+
+const script = document.createElement("script");
+
+if(type === "dogs") script.src = "../assets/js/dogs.js";
+if(type === "cats") script.src = "../assets/js/cats.js";
+if(type === "birds") script.src = "../assets/js/birds.js";
+if(type === "reptiles") script.src = "../assets/js/reptiles.js";
+if(type === "wild-cats") script.src = "../assets/js/wildcats.js";
+
+script.onload = function(){
+    loadAnimalDetails();
+};
+
+script.onerror = function(){
+    showNotFound();
+};
+
+document.body.appendChild(script);
+
+function getAnimalList(){
+    if(type === "dogs" && typeof dogs !== "undefined") return dogs;
+    if(type === "cats" && typeof cats !== "undefined") return cats;
+    if(type === "birds" && typeof birds !== "undefined") return birds;
+    if(type === "reptiles" && typeof reptiles !== "undefined") return reptiles;
+    if(type === "wild-cats" && typeof wildCats !== "undefined") return wildCats;
+
+    return [];
+}
+
+function showList(data){
+    if(Array.isArray(data)){
+        return data.map(item => `<li>${item}</li>`).join("");
+    }
+
+    if(data){
+        return `<li>${data}</li>`;
+    }
+
+    return `<li>Available on request</li>`;
+}
+
+function showParents(parents){
+    if(!parents){
+        return `
+            <p>
+                Parent background, bloodline, health condition, and temperament details are available on request.
+            </p>
+        `;
+    }
+
+    if(typeof parents === "object"){
+        return `
+            <p><strong>Father:</strong> ${parents.father || "Available on request"}</p>
+            <p><strong>Mother:</strong> ${parents.mother || "Available on request"}</p>
+        `;
+    }
+
+    return `<p>${parents}</p>`;
+}
+
+function fixImage(image){
+    if(!image){
+        return "../assets/images/no-image.jpg";
+    }
+
+    if(image.startsWith("../")){
+        return image;
+    }
+
+    return "../" + image;
+}
+
+function showNotFound(){
+    const container = document.getElementById("learnMoreContainer");
+
+    container.innerHTML = `
+        <div class="not-found">
+            <h1>Animal Not Found</h1>
+            <p>The animal details could not be loaded.</p>
+            <br>
+            <a href="../index.html" class="primary-btn">Back Home</a>
+        </div>
+    `;
+}
+
+function loadAnimalDetails(){
+
+    const animalList = getAnimalList();
+
+    const cleanName = decodeURIComponent(name || "")
+        .toLowerCase()
+        .trim();
+
+    const animal = animalList.find(item =>
+        item.name &&
+        item.name.toLowerCase().trim() === cleanName
+    );
+
+    const container = document.getElementById("learnMoreContainer");
+
+    if(!animal){
+        showNotFound();
+        return;
+    }
+
+    container.innerHTML = `
+        <div class="learn-layout">
+
+            <div class="learn-image-box">
+                <img src="${fixImage(animal.image)}" alt="${animal.name}">
+            </div>
+
+            <div class="learn-content">
+
+                <span class="learn-badge">
+                    ${type.replace("-", " ")}
+                </span>
+
+                <h1>${animal.name}</h1>
+
+                <p>${animal.description || "Beautiful companion animal available now."}</p>
+
+                <div class="learn-price">
+                    $${Number(animal.price).toLocaleString()}
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <strong>Age</strong>
+                        <span>${animal.age || "Available on request"}</span>
+                    </div>
+
+                    <div class="info-card">
+                        <strong>Location</strong>
+                        <span>${animal.location || "Available on request"}</span>
+                    </div>
+
+                    <div class="info-card">
+                        <strong>Available Colors</strong>
+                        <span>${animal.colors ? animal.colors.join(", ") : "Available on request"}</span>
+                    </div>
+
+                    <div class="info-card">
+                        <strong>Temperament / Agility</strong>
+                        <span>${animal.agility || animal.temperament || "Available on request"}</span>
+                    </div>
+
+                    <div class="info-card">
+                        <strong>Lifespan</strong>
+                        <span>${animal.lifespan || "Available on request"}</span>
+                    </div>
+
+                    <div class="info-card">
+                        <strong>Activity Level</strong>
+                        <span>${animal.activityLevel || "Available on request"}</span>
+                    </div>
+
+                </div>
+
+                <div class="detail-section">
+                    <h3>Full Description</h3>
+                    <p>${animal.fullDescription || animal.description || "More information available on request."}</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Health & Documents</h3>
+                    <ul>
+                        ${
+                            animal.documents
+                            ? showList(animal.documents)
+                            : `
+                            <li>Health certificate</li>
+                            <li>Vaccination or veterinary record where applicable</li>
+                            <li>Ownership or transfer document</li>
+                            <li>Care guide</li>
+                            `
+                        }
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Recommended Feed</h3>
+                    <p>${animal.feed || "A balanced diet suitable for this animal’s age, species, size, and health condition is recommended."}</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Feeding Schedule</h3>
+                    <ul>
+                        ${
+                            animal.feedingSchedule
+                            ? showList(animal.feedingSchedule)
+                            : `<li>Feeding schedule available on request</li>`
+                        }
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Parents Background</h3>
+                    ${showParents(animal.parents)}
+                </div>
+
+                <div class="detail-section">
+                    <h3>Care Requirement</h3>
+                    <ul>
+                        ${
+                            animal.care
+                            ? showList(animal.care)
+                            : `<li>Requires proper housing, clean water, regular feeding, safe handling, and professional veterinary care when needed.</li>`
+                        }
+                    </ul>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Shipping & Availability</h3>
+                    <p>${animal.shipping || "Delivery information available on request."}</p>
+                    <p><strong>Availability:</strong> ${animal.availability || "Available Now"}</p>
+                </div>
+
+                <div class="action-row">
+
+                    <button
+                    class="primary-btn"
+                    onclick="history.back()">
+                        ← Back to Listings
+                    </button>
+
+                    <a href="cart.html" class="secondary-btn">
+                        View Cart
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    `;
+}
+</script>
+<script src="../assets/js/cart.js"></script>
+
+<script>
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+if(hamburger && navMenu){
+    hamburger.addEventListener("click", function(){
+        navMenu.classList.toggle("active");
+    });
+}
+
+function refreshCartCount(){
+    const cart = JSON.parse(localStorage.getItem("petsyCart")) || [];
+
+    const total = cart.reduce((sum, item) => {
+        return sum + (item.quantity || 1);
+    }, 0);
+
+    const cartCount = document.getElementById("cart-count");
+
+    if(cartCount){
+        cartCount.textContent = total;
+    }
+}
+
+refreshCartCount();
+</script>
+
+</body>
+</html>

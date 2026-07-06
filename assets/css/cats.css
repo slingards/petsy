@@ -93,6 +93,27 @@
 
 }
 
+.pet-footer{
+
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items:center;
+    gap:10px;
+}
+
+.pet-actions{
+
+    display:flex;
+    gap:10px;
+}
+
+.pet-actions,button{
+    background-color: #e5e7eb;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow:var(--primary) 0.5px 0.5px 2px;
+}
+
 /* TABLET */
 
 @media(max-width:768px){
@@ -159,6 +180,8 @@
 }
 
 .pet-card{
+    display: grid;
+    gap: 30px;
 
     background:#fff;
 

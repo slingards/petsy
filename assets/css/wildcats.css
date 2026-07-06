@@ -78,6 +78,27 @@
 
 }
 
+.pet-footer{
+
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items:center;
+    gap:10px;
+}
+
+.pet-actions{
+
+    display:flex;
+    gap:10px;
+}
+
+.pet-actions,button{
+    background-color: #e5e7eb;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow:var(--primary) 0.5px 0.5px 2px;
+}
+
 .wildcats-hero p{
 
     max-width:700px;
@@ -168,6 +189,9 @@
     box-shadow:
     0 10px 30px
     rgba(0,0,0,.08);
+
+    display: grid;
+    gap: 20px;
 
 }
 

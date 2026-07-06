@@ -500,9 +500,9 @@ cart.forEach((item,index)=>{
 
 });
 
-const shipping = 450;
+const shipping = 252;
 
-const insurance = 250;
+const insurance = 150;
 
 document.getElementById(
     "shippingPrice"
