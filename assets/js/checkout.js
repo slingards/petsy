@@ -348,9 +348,24 @@ if(checkoutForm){
                                 '[name="full_name"]'
                             ).value,
 
-                            phone:
-                            document.querySelector(
-                                '[name="phone"]'
+                            contact_method:
+                            document.getElementById(
+                                "contactMethod"
+                            ).value,
+
+                            email:
+                            document.getElementById(
+                                "emailContact"
+                            ).value,
+
+                            whatsapp:
+                            document.getElementById(
+                                "whatsappContact"
+                            ).value,
+
+                            signal:
+                            document.getElementById(
+                                "signalContact"
                             ).value,
 
                             country:
@@ -403,6 +418,10 @@ if(checkoutForm){
 
                 console.error(
                     error
+                );
+
+                alert(
+                    "Something went wrong while submitting your adoption request. Please check your internet connection and try again."
                 );
 
             }
