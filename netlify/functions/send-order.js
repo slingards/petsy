@@ -5,15 +5,21 @@ exports.handler = async (event) => {
         const data =
         JSON.parse(event.body);
 
+        const contactLabel = {
+            email: "Email",
+            whatsapp: "WhatsApp",
+            signal: "Signal"
+        };
+
+        const selectedContactLabel =
+        contactLabel[data.contact_method] || "Contact";
+
         const message = `
-
-🐾 New Petsy Order
-
-Name: ${data.name}
-Phone: ${data.phone}
-Country: ${data.country}
-Payment: ${data.payment}
-
+        Name: ${data.name}
+        Preferred Contact Method: ${selectedContactLabel}
+        ${selectedContactLabel}: ${data.contact}
+        Country: ${data.country}
+        Payment: ${data.payment}
         `;
 
         const response =
