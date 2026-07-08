@@ -68,83 +68,28 @@ if(subtotalBox){
 PAYMENT BOXES
 ========================== */
 
-const paymentMethod =
-document.getElementById(
-    "paymentMethod"
-);
-
-const btcBox =
-document.getElementById(
-    "btcBox"
-);
-
-const ethBox =
-document.getElementById(
-    "ethBox"
-);
-
-const usdtBox =
-document.getElementById(
-    "usdtBox"
-);
-
-const giftcardBox =
-document.getElementById(
-    "giftcardBox"
-);
-
-function hidePayments(){
-
-    if(btcBox)
-        btcBox.classList.remove(
-            "active"
-        );
-
-    if(ethBox)
-        ethBox.classList.remove(
-            "active"
-        );
-
-    if(usdtBox)
-        usdtBox.classList.remove(
-            "active"
-        );
-
-    if(giftcardBox)
-        giftcardBox.classList.remove(
-            "active"
-);
-
-}
+const btcBox = document.getElementById("btcBox");
+const ethBox = document.getElementById("ethBox");
+const usdtBox = document.getElementById("usdtBox");
+const giftcardBox = document.getElementById("giftcardBox");
+const comingSoonBox = document.getElementById("comingSoonBox");
+const proofSection = document.getElementById("proofSection");
+const proofInput = document.querySelector('[name="payment_proof"]');
 
 function hideAllPayments(){
 
-    document.getElementById(
-        "btcBox"
-    ).style.display = "none";
+    if(btcBox) btcBox.style.display = "none";
+    if(ethBox) ethBox.style.display = "none";
+    if(usdtBox) usdtBox.style.display = "none";
+    if(giftcardBox) giftcardBox.style.display = "none";
+    if(comingSoonBox) comingSoonBox.style.display = "none";
 
-    document.getElementById(
-        "ethBox"
-    ).style.display = "none";
+    if(proofSection){
+        proofSection.style.display = "none";
+    }
 
-    document.getElementById(
-        "usdtBox"
-    ).style.display = "none";
-
-    document.getElementById(
-        "giftcardBox"
-    ).style.display = "none";
-
-    const proof =
-    document.getElementById(
-        "proofSection"
-    );
-
-    if(proof){
-
-        proof.style.display =
-        "none";
-
+    if(proofInput){
+        proofInput.required = false;
     }
 
 }
@@ -153,67 +98,37 @@ function showPaymentDetails(){
 
     hideAllPayments();
 
-    const payment =
-    document.getElementById(
-        "paymentMethod"
-    ).value;
+    const payment = document.getElementById("paymentMethod").value;
 
     if(payment === "btc"){
 
-        document.getElementById(
-            "btcBox"
-        ).style.display = "block";
+        btcBox.style.display = "block";
+        proofSection.style.display = "block";
+        proofInput.required = true;
 
-        document.getElementById(
-            "proofSection"
-        ).style.display = "block";
+    }else if(payment === "eth"){
 
-    }
+        ethBox.style.display = "block";
+        proofSection.style.display = "block";
+        proofInput.required = true;
 
-    else if(payment === "eth"){
+    }else if(payment === "usdt"){
 
-        document.getElementById(
-            "ethBox"
-        ).style.display = "block";
+        usdtBox.style.display = "block";
+        proofSection.style.display = "block";
+        proofInput.required = true;
 
-        document.getElementById(
-            "proofSection"
-        ).style.display = "block";
+    }else if(payment === "giftcard"){
 
-    }
+        giftcardBox.style.display = "block";
+        proofSection.style.display = "block";
+        proofInput.required = true;
 
-    else if(payment === "usdt"){
+    }else if(payment === "paypal" || payment === "bank"){
 
-        document.getElementById(
-            "usdtBox"
-        ).style.display = "block";
-
-        document.getElementById(
-            "proofSection"
-        ).style.display = "block";
+        comingSoonBox.style.display = "block";
 
     }
-
-    else if(payment === "giftcard"){
-
-        document.getElementById(
-            "giftcardBox"
-        ).style.display = "block";
-
-        document.getElementById(
-            "proofSection"
-        ).style.display = "block";
-
-    }
-
-}
-
-if(paymentMethod){
-
-    paymentMethod.addEventListener(
-        "change",
-        showPaymentDetails
-    );
 
 }
 
@@ -349,26 +264,70 @@ if(checkoutForm){
                 return;
             }
 
-            const phone =
-            phoneInput.value.trim();
+            const selectedContactMethod =
+            contactMethod.value;
 
-            const validPhone =
-            /^\+[1-9]\d{7,14}$/
-            .test(phone);
+            if(selectedContactMethod === "email"){
 
-            if(!validPhone){
-
-                const phoneError =
-                document.getElementById(
-                    "phoneError"
+                const validEmail =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                .test(
+                    emailContact.value.trim()
                 );
 
-                phoneError.style.display =
-                "block";
+                if(!validEmail){
 
-                phoneInput.focus();
+                    document.getElementById(
+                        "emailError"
+                    ).style.display =
+                    "block";
 
-                return;
+                    emailContact.focus();
+
+                    return;
+
+                }
+
+            }
+
+            else if(selectedContactMethod === "whatsapp"){
+
+                const validWhatsapp =
+                /^\+[1-9]\d{7,14}$/
+                .test(
+                    whatsappContact.value.trim()
+                );
+
+                if(!validWhatsapp){
+
+                    document.getElementById(
+                        "whatsappError"
+                    ).style.display =
+                    "block";
+
+                    whatsappContact.focus();
+
+                    return;
+
+                }
+
+            }
+
+            else if(selectedContactMethod === "signal"){
+
+                if(signalContact.value.trim().length < 3){
+
+                    document.getElementById(
+                        "signalError"
+                    ).style.display =
+                    "block";
+
+                    signalContact.focus();
+
+                    return;
+
+                }
+
             }
 
             try{
@@ -453,73 +412,184 @@ if(checkoutForm){
 
 };
 
+/* ==========================
+CONTACT METHOD FIELD
+========================== */
 
+const contactMethod =
+document.getElementById(
+    "contactMethod"
+);
+
+const emailContactBox =
+document.getElementById(
+    "emailContactBox"
+);
+
+const whatsappContactBox =
+document.getElementById(
+    "whatsappContactBox"
+);
+
+const signalContactBox =
+document.getElementById(
+    "signalContactBox"
+);
+
+const emailContact =
+document.getElementById(
+    "emailContact"
+);
+
+const whatsappContact =
+document.getElementById(
+    "whatsappContact"
+);
+
+const signalContact =
+document.getElementById(
+    "signalContact"
+);
+
+function hideContactFields(){
+
+    emailContactBox.classList.remove(
+        "active"
+    );
+
+    whatsappContactBox.classList.remove(
+        "active"
+    );
+
+    signalContactBox.classList.remove(
+        "active"
+    );
+
+    emailContact.required =
+    false;
+
+    whatsappContact.required =
+    false;
+
+    signalContact.required =
+    false;
+
+    emailContact.value =
+    "";
+
+    whatsappContact.value =
+    "";
+
+    signalContact.value =
+    "";
+
+}
+
+function showContactField(){
+
+    hideContactFields();
+
+    const method =
+    contactMethod.value;
+
+    if(method === "email"){
+
+        emailContactBox.classList.add(
+            "active"
+        );
+
+        emailContact.required =
+        true;
+
+    }
+
+    else if(method === "whatsapp"){
+
+        whatsappContactBox.classList.add(
+            "active"
+        );
+
+        whatsappContact.required =
+        true;
+
+    }
+
+    else if(method === "signal"){
+
+        signalContactBox.classList.add(
+            "active"
+        );
+
+        signalContact.required =
+        true;
+
+    }
+
+}
+
+if(contactMethod){
+
+    contactMethod.addEventListener(
+        "change",
+        showContactField
+    );
+
+}
 
 
 showPaymentDetails();
 
-const phoneInput =
-document.getElementById(
-    "phone"
-);
+if(whatsappContact){
 
-phoneInput.addEventListener(
-    "input",
-    function(){
+    whatsappContact.addEventListener(
+        "input",
+        function(){
 
-        let value =
-        this.value;
+            let value =
+            this.value;
 
-        if(
-            value.length === 1 &&
-            value !== "+"
-        ){
+            if(
+                value.length === 1 &&
+                value !== "+"
+            ){
+
+                value =
+                "+" +
+                value.replace(
+                    /\D/g,
+                    ""
+                );
+
+            }
 
             value =
-            "+" +
             value.replace(
-                /\D/g,
+                /[^\d+]/g,
                 ""
             );
 
+            if(
+                value.indexOf("+") > 0
+            ){
+
+                value =
+                "+" +
+                value.replace(
+                    /\+/g,
+                    ""
+                );
+
+            }
+
+            this.value =
+            value;
+
+            document.getElementById(
+                "whatsappError"
+            ).style.display =
+            "none";
+
         }
+    );
 
-        value =
-        value.replace(
-            /[^\d+]/g,
-            ""
-        );
-
-        if(
-            value.indexOf("+") > 0
-        ){
-
-            value =
-            "+" +
-            value.replace(
-                /\+/g,
-                ""
-            );
-
-        }
-
-        this.value =
-        value;
-
-    }
-);
-
-
-phoneInput.addEventListener(
-    "input",
-    function(){
-
-        document.getElementById(
-            "phoneError"
-        ).style.display = "none";
-
-        this.style.border = "";
-
-    }
-);
-
+}

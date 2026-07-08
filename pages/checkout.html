@@ -134,45 +134,88 @@
                     placeholder="Full Name"
                     required>
 
-                    <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address"
-                    required>
-
-                    <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    placeholder="+1 5551234567"
-                    maxlength="16"
-                    required>
-
                     <p
                     id="phoneError"
                     class="error-message">
                     </p>
 
                     <select
-                    id="contactMethod">
+                    id="contactMethod"
+                    name="contact_method"
+                    required>
 
                         <option value="">
                             Preferred Contact Method
                         </option>
 
-                        <option>
+                        <option value="whatsapp">
                             WhatsApp
                         </option>
 
-                        <option>
+                        <option value="signal">
                             Signal
                         </option>
 
-                        <option>
+                        <option value="email">
                             Email
                         </option>
 
                     </select>
+
+                    <div
+                    id="emailContactBox"
+                    class="contact-field-box">
+
+                        <input
+                        type="email"
+                        id="emailContact"
+                        name="email"
+                        placeholder="Email Address">
+
+                        <p
+                        id="emailError"
+                        class="error-message">
+                            Please enter a valid email address.
+                        </p>
+
+                    </div>
+
+                    <div
+                    id="whatsappContactBox"
+                    class="contact-field-box">
+
+                        <input
+                        type="tel"
+                        id="whatsappContact"
+                        name="whatsapp"
+                        placeholder="WhatsApp Number e.g. +1 5551234567"
+                        maxlength="16">
+
+                        <p
+                        id="whatsappError"
+                        class="error-message">
+                            Please enter a valid WhatsApp number with country code, for example +15551234567.
+                        </p>
+
+                    </div>
+
+                    <div
+                    id="signalContactBox"
+                    class="contact-field-box">
+
+                        <input
+                        type="text"
+                        id="signalContact"
+                        name="signal"
+                        placeholder="Signal username, email, or phone number">
+
+                        <p
+                        id="signalError"
+                        class="error-message">
+                            Please enter your Signal username, email, or phone number.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -584,6 +627,14 @@
                         Apple / iTunes Gift Card
                     </option>
 
+                    <option value="paypal">
+                        PayPal
+                    </option>
+
+                    <option value="bank">
+                        Bank Transfer
+                    </option>
+
                 </select>
 
                 <div
@@ -753,6 +804,31 @@
                     </div>
 
                     <div
+                    id="comingSoonBox"
+                    class="payment-box coming-soon-box"
+                    style="display:none;">
+
+                        <h3>
+                            Payment Option Coming Soon
+                        </h3>
+
+                        <p>
+                            This payment method is not available yet, but it is coming soon.
+                        </p>
+
+                        <p>
+                            If you have trouble using the available payment methods, or you need assistance completing your adoption request, please contact customer service for help.
+                        </p>
+
+                        <a
+                        href="../index.html#contact"
+                        class="coming-soon-link">
+                            Contact Customer Service
+                        </a>
+
+                    </div>
+
+                    <div
                     id="proofSection"
                     class="payment-box"
                     style="display:none;">
@@ -766,10 +842,10 @@
                         </p>
 
                         <input
+                        id="paymentProof"
                         type="file"
                         name="payment_proof"
-                        accept="image/*,.pdf"
-                        required>
+                        accept="image/*,.pdf">
 
                     </div>
 
@@ -799,6 +875,20 @@
 </section>
 
 <script src="../assets/js/checkout.js"></script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a4ec028edc2ff1d46ff2a22/1jt1pt7v0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
 </body>
 </html>
