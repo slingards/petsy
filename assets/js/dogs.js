@@ -135,6 +135,138 @@ const dogs = [
 },
 
 {
+    name: "Shiba Inu",
+
+    category: "non-sporting",
+
+    price: 2500,
+
+    image: "assets/images/dogs/shiba-inu.jpg",
+
+    age: "4-6 Months",
+
+    location: "Japan",
+
+    description: "A bold, alert, and intelligent Japanese breed known for its fox-like appearance, clean nature, loyalty, and confident personality.",
+
+    fullDescription:
+    "The Shiba Inu is a popular Japanese dog breed admired for its compact size, curled tail, fox-like face, and independent personality. Known for being loyal, alert, clean, and intelligent, Shiba Inus make wonderful companions for owners who understand their confident and sometimes stubborn nature. They are active, playful, and affectionate with their families, while also being naturally watchful and protective of their home environment.",
+
+    colors: [
+        "Red",
+        "Black & Tan",
+        "Cream",
+        "Sesame",
+        "Red Sesame",
+        "Black Sesame"
+    ],
+
+    availableAges: [
+        "8 Weeks",
+        "10 Weeks",
+        "12 Weeks",
+        "4 Months",
+        "6 Months",
+        "1 Year",
+        "Adult"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "8 - 11 kg",
+
+    height: "33 - 43 cm",
+
+    lifespan: "12 - 16 Years",
+
+    temperament:
+    "Alert, Loyal, Confident, Independent, Intelligent, Clean, Playful, Bold",
+
+    agility:
+    "High. Shiba Inus are quick, agile, and energetic, making them suitable for active play, obedience training, and controlled outdoor activities.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Good, but requires patience and consistency.",
+
+    goodWithChildren:
+    "Good when properly socialized and supervised.",
+
+    goodWithPets:
+    "Good with early socialization, though they may show strong independence around other animals.",
+
+    shedding:
+    "Moderate to Heavy, especially during seasonal coat shedding.",
+
+    climate:
+    "Adapts well to cool and moderate climates, and can live in warmer areas with shade, water, and proper care.",
+
+    health: [
+        "Veterinarian Examined",
+        "Fully Vaccinated",
+        "Dewormed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Regular Wellness Checks"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents",
+        "Sales Agreement"
+    ],
+
+    feed:
+    "Premium small-to-medium breed dog food rich in high-quality protein, healthy fats, vitamins, minerals, and omega fatty acids to support coat health, muscle development, and daily energy. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal (7:00 AM)",
+        "Afternoon Meal (1:00 PM)",
+        "Evening Meal (7:00 PM)"
+    ],
+
+    parents: {
+
+        father:
+        "Purebred Shiba Inu with excellent Japanese bloodlines, strong structure, bright coat color, confident temperament, and complete health screening.",
+
+        mother:
+        "Healthy registered Shiba Inu with a calm personality, excellent maternal care, beautiful coat quality, and strong family-friendly temperament."
+
+    },
+
+    care: [
+        "Brush coat 2–3 times weekly.",
+        "Provide daily walks and playtime.",
+        "Begin obedience training early.",
+        "Socialize with people and pets from a young age.",
+        "Routine veterinary examinations.",
+        "Trim nails every few weeks.",
+        "Clean ears regularly.",
+        "Maintain dental hygiene.",
+        "Provide a safe fenced area because Shiba Inus can be escape artists."
+    ],
+
+    shipping:
+    "Worldwide live-animal transportation available through licensed pet transport services. Every shipment includes travel documentation, veterinary clearance, and delivery updates.",
+
+    warranty:
+    "One-year congenital health guarantee with lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
     name: "Golden Retriever",
 
     category: "sporting",

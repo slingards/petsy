@@ -126,6 +126,2571 @@ const cats = [
 },
 
 {
+    name: "Siberian Cat",
+
+    category: "longhair",
+
+    price: 2700,
+
+    image: "assets/images/cats/Siberian-Cat.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Russia",
+
+    description: "A strong, affectionate, and intelligent long-haired cat breed known for its luxurious triple coat, playful nature, and loyal personality.",
+
+    fullDescription:
+    "The Siberian Cat is a beautiful and powerful natural breed that originated in Russia. Known for its thick triple-layer coat, strong body, affectionate temperament, and playful intelligence, the Siberian is loved by families around the world. This breed is friendly, loyal, and social without being overly demanding. Siberian Cats enjoy climbing, interactive play, and spending time with their owners, making them excellent companions for families, individuals, and homes with other pets.",
+
+    colors: [
+        "Brown Tabby",
+        "Silver Tabby",
+        "Blue",
+        "Black",
+        "White",
+        "Cream",
+        "Red",
+        "Tortoiseshell",
+        "Colorpoint",
+        "Neva Masquerade"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "4 - 9 kg",
+
+    height: "23 - 30 cm",
+
+    lifespan: "12 - 18 Years",
+
+    temperament:
+    "Affectionate, Intelligent, Loyal, Playful, Gentle, Social",
+
+    agility:
+    "High. Siberian Cats are strong jumpers and excellent climbers with great balance, curiosity, and natural athletic ability.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Moderate to Heavy, especially during seasonal coat changes.",
+
+    climate:
+    "Thrives in cool and moderate climates thanks to its dense triple coat, but also adapts well to comfortable indoor environments.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support strong muscles, healthy skin, and a thick glossy coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Imported champion Siberian Cat with exceptional Russian bloodlines, strong body structure, thick triple coat, calm temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Siberian queen with outstanding pedigree, affectionate personality, excellent maternal instincts, beautiful coat quality, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the thick coat 2–3 times each week to prevent tangles.",
+        "Increase grooming during seasonal shedding periods.",
+        "Provide cat trees, scratching posts, and climbing spaces.",
+        "Offer daily interactive play and mental stimulation.",
+        "Maintain regular nail trimming and ear cleaning.",
+        "Schedule routine veterinary examinations.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "American Curl",
+
+    category: "shorthair",
+
+    price: 2200,
+
+    image: "assets/images/cats/American-Curl.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A charming, affectionate, and intelligent cat breed known for its unique curled-back ears, playful personality, and loving nature.",
+
+    fullDescription:
+    "The American Curl is a rare and beautiful cat breed admired for its distinctive backward-curled ears, friendly temperament, and kitten-like personality. Originating in the United States, this breed is affectionate, social, and highly adaptable, making it a wonderful companion for families, individuals, and homes with other pets. American Curls enjoy interactive play, climbing, exploring, and spending time with their owners. Their sweet nature, unusual appearance, and intelligent personality make them one of the most attractive companion cat breeds.",
+
+    colors: [
+        "White",
+        "Black",
+        "Blue",
+        "Cream",
+        "Red",
+        "Chocolate",
+        "Lilac",
+        "Silver",
+        "Brown Tabby",
+        "Calico",
+        "Tortoiseshell",
+        "Bicolor",
+        "Colorpoint"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "2.5 - 5 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "12 - 16 Years",
+
+    temperament:
+    "Affectionate, Playful, Intelligent, Social, Gentle, Curious",
+
+    agility:
+    "High. American Curls are active and graceful cats that enjoy climbing, jumping, chasing toys, and interactive games with their families.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Low to Moderate",
+
+    climate:
+    "Adapts well to most comfortable indoor climates and should be protected from extreme cold, heat, and unsafe outdoor environments.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Ear Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support lean muscles, healthy skin, bright eyes, and a glossy coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion American Curl stud with excellent curled-ear structure, strong pedigree, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered American Curl queen with outstanding bloodlines, sweet personality, excellent maternal instincts, healthy ear structure, and proven strong lineage."
+    },
+
+    care: [
+        "Brush the coat once or twice each week.",
+        "Clean the ears gently and regularly without bending or forcing them.",
+        "Provide scratching posts, climbing trees, and interactive toys.",
+        "Offer daily playtime and mental stimulation.",
+        "Maintain regular nail trimming and ear checks.",
+        "Schedule routine veterinary examinations.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "American Bobtail",
+
+    category: "shorthair",
+
+    price: 1800,
+
+    image: "assets/images/cats/American-Bobtail.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A rare, intelligent, and affectionate cat breed known for its naturally short tail, wild appearance, and loyal personality.",
+
+    fullDescription:
+    "The American Bobtail is a distinctive and charming cat breed admired for its naturally short tail, strong body, wild-looking appearance, and affectionate personality. Despite its rugged look, this breed is gentle, social, and highly loyal to its family. American Bobtails are intelligent, playful, and adaptable, making them excellent companions for families, individuals, and homes with other pets. They enjoy interactive play, climbing, exploring, and bonding closely with their owners.",
+
+    colors: [
+        "Brown Tabby",
+        "Black",
+        "White",
+        "Blue",
+        "Cream",
+        "Red",
+        "Silver",
+        "Chocolate",
+        "Cinnamon",
+        "Calico",
+        "Tortoiseshell",
+        "Bicolor"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3.5 - 7.5 kg",
+
+    height: "23 - 30 cm",
+
+    lifespan: "13 - 15 Years",
+
+    temperament:
+    "Affectionate, Intelligent, Loyal, Playful, Gentle, Adaptable",
+
+    agility:
+    "High. American Bobtails are strong, athletic cats with excellent balance, climbing ability, and a playful nature that makes them enjoy interactive games and exploration.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Moderate",
+
+    climate:
+    "Adapts well to most indoor climates and does best in a comfortable home environment with safe climbing spaces, warm resting areas, and proper care.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Tail and Spine Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support strong muscles, healthy joints, bright eyes, and a glossy coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion American Bobtail stud with excellent bloodlines, strong muscular structure, naturally short tail, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered American Bobtail queen with outstanding pedigree, gentle personality, excellent maternal instincts, healthy body structure, and proven strong lineage."
+    },
+
+    care: [
+        "Brush the coat once or twice each week.",
+        "Provide scratching posts, climbing trees, and resting platforms.",
+        "Offer daily interactive play and puzzle toys.",
+        "Maintain regular nail trimming and ear cleaning.",
+        "Monitor weight with a balanced feeding routine.",
+        "Schedule routine veterinary examinations.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Japanese Bobtail",
+
+    category: "shorthair",
+
+    price: 1800,
+
+    image: "assets/images/cats/Japanese-Bobtail.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Japan",
+
+    description: "A friendly, intelligent, and playful cat breed known for its short pom-pom tail, elegant body, and charming personality.",
+
+    fullDescription:
+    "The Japanese Bobtail is a rare and historic cat breed from Japan, admired for its unique short pom-pom tail, graceful body, alert expression, and lively personality. This breed is affectionate, intelligent, and social, often forming close bonds with its family while remaining playful and curious. Japanese Bobtails enjoy interactive games, climbing, and spending time with people, making them excellent companions for families, singles, and homes with other friendly pets.",
+
+    colors: [
+        "Mi-Ke",
+        "Calico",
+        "White",
+        "Black",
+        "Red",
+        "Cream",
+        "Blue",
+        "Tortoiseshell",
+        "Tabby",
+        "Bicolor",
+        "Van Pattern"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "2.5 - 5 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "12 - 16 Years",
+
+    temperament:
+    "Friendly, Intelligent, Playful, Social, Curious, Affectionate",
+
+    agility:
+    "High. Japanese Bobtails are athletic, quick, and graceful cats that enjoy climbing, jumping, chasing toys, and interactive play.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Low to Moderate",
+
+    climate:
+    "Adapts well to warm, cool, and moderate indoor climates, especially when provided with a clean and comfortable home environment.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and essential minerals to support lean muscles, healthy eyes, strong energy, and a shiny coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Japanese Bobtail stud with excellent Japanese bloodlines, a beautiful pom-pom tail, strong body structure, friendly temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Japanese Bobtail queen with outstanding pedigree, affectionate personality, excellent maternal instincts, elegant coat pattern, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the coat once each week to remove loose hair.",
+        "Provide scratching posts and climbing furniture.",
+        "Offer daily interactive play and puzzle toys.",
+        "Keep the litter box clean and comfortable.",
+        "Maintain regular nail trimming and ear cleaning.",
+        "Schedule routine veterinary examinations.",
+        "Spend quality time daily, as Japanese Bobtails enjoy companionship.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Pixie-bob",
+
+    category: "exotic",
+
+    price: 2500,
+
+    image: "assets/images/cats/Pixie-bob.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A rare, loyal, and intelligent cat breed admired for its wild bobcat-like appearance, gentle personality, and dog-like devotion.",
+
+    fullDescription:
+    "The Pixie-bob is a rare and fascinating domestic cat breed known for its wild-looking appearance, short bobbed tail, muscular body, and affectionate personality. Although it has the look of a small bobcat, the Pixie-bob is a loving, loyal, and social companion that forms strong bonds with its family. These cats are intelligent, playful, and often described as dog-like because they enjoy following their owners, learning routines, and interacting closely with people. Their calm confidence, unique appearance, and affectionate nature make them a wonderful choice for families and cat lovers looking for something special.",
+
+    colors: [
+        "Brown Spotted Tabby",
+        "Reddish Brown",
+        "Tawny",
+        "Fawn",
+        "Gray Brown",
+        "Black Spotted Tabby",
+        "Muted Tabby"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "4 - 8 kg",
+
+    height: "25 - 30 cm",
+
+    lifespan: "13 - 16 Years",
+
+    temperament:
+    "Loyal, Intelligent, Gentle, Social, Playful, Confident",
+
+    agility:
+    "High. Pixie-bobs are strong, athletic cats with excellent balance, climbing ability, and a playful nature that enjoys interactive activities.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Very Good",
+
+    shedding:
+    "Moderate",
+
+    climate:
+    "Adapts well to most comfortable indoor climates and does well in cool to moderate environments with proper care.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support strong muscles, healthy digestion, and a glossy coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Pixie-bob stud with excellent bloodlines, strong muscular build, beautiful spotted coat pattern, natural bobbed tail, and complete genetic health testing.",
+
+        mother:
+        "Registered Pixie-bob queen with outstanding pedigree, gentle temperament, strong maternal instincts, excellent coat quality, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the coat once or twice each week to remove loose hair.",
+        "Provide scratching posts, cat trees, and climbing spaces.",
+        "Offer daily interactive play and mental stimulation.",
+        "Maintain regular nail trimming and ear cleaning.",
+        "Schedule routine veterinary examinations.",
+        "Provide a calm indoor environment with enough space to explore.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Somali",
+
+    category: "longhair",
+
+    price: 1800,
+
+    image: "assets/images/cats/Somali.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Somalia",
+
+    description: "A lively, intelligent, and elegant long-haired cat breed admired for its fox-like appearance, playful energy, and affectionate personality.",
+
+    fullDescription:
+    "The Somali Cat is a graceful and energetic breed closely related to the Abyssinian, known for its soft semi-long coat, bushy tail, alert expression, and fox-like appearance. This breed is highly intelligent, curious, and playful, making it an excellent companion for active homes. Somali Cats enjoy climbing, exploring, interactive toys, and spending quality time with their families. Their affectionate nature, athletic ability, and striking coat make them one of the most charming and eye-catching cat breeds.",
+
+    colors: [
+        "Ruddy",
+        "Red",
+        "Blue",
+        "Fawn",
+        "Sorrel",
+        "Silver",
+        "Chocolate",
+        "Lilac"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3 - 5.5 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "12 - 16 Years",
+
+    temperament:
+    "Active, Intelligent, Curious, Affectionate, Playful, Social",
+
+    agility:
+    "Very High. Somali Cats are excellent climbers and jumpers with strong athletic ability, sharp curiosity, and a love for interactive games.",
+
+    activityLevel:
+    "High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Moderate",
+
+    climate:
+    "Adapts well to warm and moderate indoor climates, but should be kept in a comfortable environment with proper grooming and care.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support their active lifestyle, lean muscles, healthy digestion, and glossy coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Somali stud with exceptional bloodlines, beautiful ticked coat, strong athletic build, playful temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Somali queen with outstanding pedigree, affectionate personality, excellent maternal instincts, rich coat color, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the semi-long coat two to three times each week.",
+        "Provide tall cat trees and safe climbing spaces.",
+        "Offer daily interactive play and puzzle toys.",
+        "Maintain regular nail trimming and ear cleaning.",
+        "Schedule routine veterinary examinations.",
+        "Provide mental stimulation to satisfy their active curiosity.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Singapura",
+
+    category: "shorthair",
+
+    price: 2800,
+
+    image: "assets/images/cats/Singapura.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Singapore",
+
+    description: "A rare, affectionate, and intelligent small cat breed known for its large expressive eyes, ticked coat, and playful personality.",
+
+    fullDescription:
+    "The Singapura is one of the smallest recognized cat breeds in the world, but it carries a big personality. Originating from Singapore, this beautiful breed is admired for its warm sepia-toned ticked coat, large eyes, alert expression, and affectionate nature. Singapura cats are playful, curious, social, and deeply attached to their families. They enjoy climbing, exploring, interactive toys, and spending time close to their owners, making them excellent companions for loving homes.",
+
+    colors: [
+        "Sepia Agouti",
+        "Warm Ivory",
+        "Ticked Tabby",
+        "Light Brown",
+        "Dark Brown Ticking"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "2 - 4 kg",
+
+    height: "15 - 20 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Affectionate, Intelligent, Curious, Playful, Social, Gentle",
+
+    agility:
+    "High. Singapura cats are energetic, quick, and excellent climbers that enjoy jumping, exploring, and interactive play.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Very Good",
+
+    shedding:
+    "Low",
+
+    climate:
+    "Prefers warm to moderate indoor climates and adapts well to comfortable home environments.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and minerals to support healthy muscles, bright eyes, strong immunity, and daily energy. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Singapura stud with excellent pedigree, beautiful sepia ticked coat, strong structure, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Singapura queen with outstanding bloodlines, gentle personality, excellent maternal instincts, clear eyes, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the short coat once each week.",
+        "Provide cat trees, scratching posts, and climbing spaces.",
+        "Offer daily interactive toys and play sessions.",
+        "Trim nails and clean ears regularly.",
+        "Maintain a clean litter box and indoor environment.",
+        "Schedule routine veterinary examinations.",
+        "Give plenty of attention, as Singapura cats enjoy companionship."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Korat",
+
+    category: "shorthair",
+
+    price: 1800,
+
+    image: "assets/images/cats/Korat.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Thailand",
+
+    description: "A rare, intelligent, and affectionate Thai cat breed known for its silver-blue coat, bright green eyes, and loyal personality.",
+
+    fullDescription:
+    "The Korat is a rare and treasured natural cat breed from Thailand, admired for its shimmering silver-blue coat, heart-shaped face, and brilliant green eyes. Often known as a symbol of good luck, the Korat is affectionate, intelligent, playful, and deeply loyal to its family. This breed forms strong bonds with its owners and enjoys companionship, interactive play, and a calm home environment. Korats are elegant, athletic, and loving cats that make excellent companions for families and individuals who want a devoted feline friend.",
+
+    colors: [
+        "Silver Blue",
+        "Blue Gray",
+        "Slate Blue"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "2.5 - 4.5 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Affectionate, Intelligent, Loyal, Playful, Gentle, Alert",
+
+    agility:
+    "High. Korats are agile, active, and naturally athletic cats that enjoy climbing, jumping, chasing toys, and interactive play.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Very Good",
+
+    goodWithPets:
+    "Very Good",
+
+    shedding:
+    "Low",
+
+    climate:
+    "Adapts well to warm and moderate indoor climates and prefers a comfortable, peaceful home environment.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and minerals to support lean muscles, bright eyes, healthy skin, and a glossy silver-blue coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Korat stud with excellent Thai bloodlines, brilliant green eyes, strong body structure, silver-blue coat quality, and complete genetic health testing.",
+
+        mother:
+        "Registered Korat queen with outstanding pedigree, affectionate temperament, excellent maternal instincts, beautiful coat tone, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the short coat once each week.",
+        "Provide scratching posts, climbing trees, and interactive toys.",
+        "Offer daily play sessions and mental stimulation.",
+        "Trim nails and clean ears regularly.",
+        "Maintain a calm indoor environment.",
+        "Schedule routine veterinary examinations.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Toyger",
+
+    category: "exotic",
+
+    price: 3000,
+
+    image: "assets/images/cats/Toyger.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A rare, intelligent, and affectionate cat breed admired for its tiger-like striped coat, athletic body, and playful personality.",
+
+    fullDescription:
+    "The Toyger is a unique and eye-catching domestic cat breed developed to resemble a miniature tiger while maintaining a loving and friendly household temperament. Known for its bold striped coat, muscular body, confident movement, and playful intelligence, the Toyger is both beautiful and affectionate. This breed enjoys interactive play, climbing, exploring, and bonding closely with its family. Toygers are social, trainable, and energetic, making them excellent companions for owners who want a rare and striking cat with a loving personality.",
+
+    colors: [
+        "Brown Mackerel Tabby",
+        "Black Stripes on Orange",
+        "Golden Brown",
+        "Reddish Brown",
+        "Dark Brown Stripes",
+        "Glittered Coat"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3.5 - 7 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Affectionate, Intelligent, Playful, Social, Confident, Friendly",
+
+    agility:
+    "High. Toygers are athletic, agile, and active cats that enjoy climbing, jumping, chasing toys, and interactive play sessions.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Very Good",
+
+    shedding:
+    "Low to Moderate",
+
+    climate:
+    "Adapts well to warm and moderate indoor climates and thrives in a comfortable home environment.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support lean muscles, healthy skin, glossy coat condition, and daily energy. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Toyger stud with outstanding tiger-like markings, strong body structure, confident temperament, excellent pedigree, and complete genetic health testing.",
+
+        mother:
+        "Registered Toyger queen with beautiful striped coat quality, affectionate personality, strong maternal instincts, excellent bloodlines, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the short coat once each week to maintain shine.",
+        "Provide cat trees, scratching posts, and climbing spaces.",
+        "Offer daily interactive play and puzzle toys.",
+        "Trim nails and clean ears regularly.",
+        "Maintain a clean indoor environment and litter box.",
+        "Schedule routine veterinary examinations.",
+        "Give regular attention and enrichment, as Toygers enjoy companionship."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Burmilla",
+
+    category: "shorthair",
+
+    price: 2500,
+
+    image: "assets/images/cats/Burmilla.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United Kingdom",
+
+    description: "A rare, elegant, and affectionate cat breed known for its shimmering silver coat, expressive green eyes, and gentle personality.",
+
+    fullDescription:
+    "The Burmilla is a beautiful and rare cat breed that originated in the United Kingdom. Known for its soft shaded or tipped coat, bright green eyes, and sweet expression, the Burmilla combines elegance with a playful and affectionate nature. This breed is friendly, intelligent, gentle, and enjoys spending time with its family without being overly demanding. Burmillas adapt well to indoor homes, families, singles, and seniors, making them wonderful companions for loving households.",
+
+    colors: [
+        "Silver Shaded",
+        "Silver Tipped",
+        "Black Shaded",
+        "Blue Shaded",
+        "Chocolate Shaded",
+        "Lilac Shaded",
+        "Cream",
+        "Tortoiseshell",
+        "Brown Tipped",
+        "Blue Tipped"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3 - 6 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "12 - 16 Years",
+
+    temperament:
+    "Affectionate, Gentle, Playful, Intelligent, Social, Easygoing",
+
+    agility:
+    "Moderate to High. Burmilla cats are playful, agile, and enjoy climbing, chasing toys, and interactive games while still maintaining a calm indoor nature.",
+
+    activityLevel:
+    "Moderate",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Low to Moderate",
+
+    climate:
+    "Adapts well to most comfortable indoor climates and does best in a clean, safe, temperature-controlled home environment.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and essential minerals to support healthy muscles, bright eyes, a soft glossy coat, and overall wellbeing. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Burmilla stud with excellent British bloodlines, beautiful shaded coat, bright green eyes, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Burmilla queen with outstanding pedigree, gentle personality, excellent maternal instincts, soft coat quality, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the coat once or twice each week to maintain shine.",
+        "Provide scratching posts, climbing trees, and cozy resting areas.",
+        "Offer daily interactive toys and gentle play sessions.",
+        "Trim nails and clean ears regularly.",
+        "Maintain a clean litter box and indoor environment.",
+        "Schedule routine veterinary examinations.",
+        "Give regular attention and companionship, as Burmillas enjoy bonding with their families."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Ragamuffin",
+
+    category: "longhair",
+
+    price: 2500,
+
+    image: "assets/images/cats/Ragamuffin.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A sweet, gentle, and affectionate long-haired cat breed known for its plush coat, relaxed nature, and loving family personality.",
+
+    fullDescription:
+    "The Ragamuffin is a large, affectionate, and gentle companion cat loved for its soft plush coat, expressive eyes, and calm temperament. Often described as a teddy bear-like cat, the Ragamuffin enjoys being close to people and forms strong bonds with its family. This breed is patient, friendly, and adaptable, making it an excellent choice for homes with children, other cats, and cat-friendly dogs. Ragamuffins enjoy gentle play, cuddling, and relaxed indoor living, making them wonderful companions for families and individuals alike.",
+
+    colors: [
+        "White",
+        "Black",
+        "Blue",
+        "Cream",
+        "Red",
+        "Chocolate",
+        "Lilac",
+        "Silver",
+        "Tabby",
+        "Bicolor",
+        "Calico",
+        "Tortoiseshell",
+        "Mink",
+        "Sepia"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "4.5 - 9 kg",
+
+    height: "23 - 30 cm",
+
+    lifespan: "12 - 18 Years",
+
+    temperament:
+    "Gentle, Affectionate, Calm, Friendly, Patient, Loyal",
+
+    agility:
+    "Moderate. Ragamuffins enjoy climbing, gentle play, and interactive toys, but they are generally relaxed and prefer a calm indoor lifestyle.",
+
+    activityLevel:
+    "Moderate",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Moderate",
+
+    climate:
+    "Thrives in cool to moderate indoor climates and adapts well to comfortable home environments.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and minerals to support healthy muscles, a soft coat, strong immunity, and overall wellbeing. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Ragamuffin stud with excellent pedigree, strong body structure, soft plush coat, gentle temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Ragamuffin queen with outstanding bloodlines, affectionate personality, excellent maternal instincts, beautiful coat quality, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the coat 2–3 times each week to prevent tangles.",
+        "Provide scratching posts and comfortable resting areas.",
+        "Offer gentle daily play and interactive toys.",
+        "Trim nails and clean ears regularly.",
+        "Maintain a clean litter box and peaceful indoor environment.",
+        "Schedule routine veterinary examinations.",
+        "Give plenty of affection, as Ragamuffins enjoy close companionship."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Nebelung",
+
+    category: "longhair",
+
+    price: 1200,
+
+    image: "assets/images/cats/Nebelung.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A rare, elegant, and affectionate cat breed known for its shimmering blue-gray coat, graceful body, and loyal personality.",
+
+    fullDescription:
+    "The Nebelung is a rare and beautiful cat breed admired for its silky blue-gray semi-long coat, bright green eyes, graceful appearance, and calm affectionate nature. Often compared to a long-haired Russian Blue, the Nebelung is loyal, intelligent, and deeply attached to its family. This breed enjoys peaceful indoor living, gentle play, climbing spaces, and daily companionship. Nebelungs are known for being loving with their owners while remaining slightly reserved around strangers, making them excellent companions for calm and caring homes.",
+
+    colors: [
+        "Blue Gray",
+        "Silver Blue",
+        "Slate Blue",
+        "Blue with Silver Tipping"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3 - 7 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "13 - 18 Years",
+
+    temperament:
+    "Loyal, Gentle, Intelligent, Calm, Affectionate, Reserved",
+
+    agility:
+    "Moderate to High. Nebelungs are graceful climbers and agile jumpers that enjoy cat trees, gentle play, and interactive toys.",
+
+    activityLevel:
+    "Moderate",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Very Good",
+
+    goodWithPets:
+    "Very Good",
+
+    shedding:
+    "Moderate",
+
+    climate:
+    "Thrives in cool to moderate indoor climates and adapts well to peaceful home environments.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and minerals to support healthy muscles, bright eyes, strong immunity, and a silky blue-gray coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Nebelung stud with excellent pedigree, shimmering blue-gray coat, bright green eyes, calm temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Nebelung queen with outstanding bloodlines, affectionate personality, graceful structure, excellent maternal instincts, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the semi-long coat 2–3 times each week to prevent tangles.",
+        "Provide cat trees, scratching posts, and quiet resting spaces.",
+        "Offer gentle daily play and interactive toys.",
+        "Trim nails and clean ears regularly.",
+        "Maintain a clean litter box and calm indoor environment.",
+        "Schedule routine veterinary examinations.",
+        "Give consistent attention, as Nebelungs bond strongly with their families."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Snowshoe",
+
+    category: "shorthair",
+
+    price: 3000,
+
+    image: "assets/images/cats/Snowshoe.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A rare, affectionate, and intelligent cat breed known for its white paws, blue eyes, colorpoint coat, and loving personality.",
+
+    fullDescription:
+    "The Snowshoe is a beautiful and rare cat breed developed from Siamese and American Shorthair lines. Known for its striking blue eyes, white paws, colorpoint markings, and charming facial patterns, the Snowshoe combines elegance with a friendly and affectionate temperament. These cats are intelligent, social, playful, and deeply attached to their families. Snowshoes enjoy interactive play, companionship, climbing, and being involved in daily home life, making them excellent companions for families, individuals, and homes with other pets.",
+
+    colors: [
+        "Seal Point",
+        "Blue Point",
+        "Chocolate Point",
+        "Lilac Point",
+        "Seal Point & White",
+        "Blue Point & White",
+        "Mitted Pattern",
+        "Bicolor Pattern"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3 - 6 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "14 - 19 Years",
+
+    temperament:
+    "Affectionate, Intelligent, Social, Playful, Loyal, Gentle",
+
+    agility:
+    "High. Snowshoe cats are active, agile, and playful, enjoying climbing structures, interactive toys, jumping, and family activities.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Low to Moderate",
+
+    climate:
+    "Adapts well to warm and moderate indoor climates and enjoys comfortable home environments.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and minerals to support lean muscles, bright eyes, healthy skin, and daily energy. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Snowshoe stud with excellent pedigree, bright blue eyes, strong body structure, balanced white markings, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Snowshoe queen with outstanding bloodlines, beautiful colorpoint pattern, gentle personality, excellent maternal instincts, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the short coat once each week.",
+        "Provide cat trees, scratching posts, and climbing spaces.",
+        "Offer daily interactive toys and play sessions.",
+        "Trim nails and clean ears regularly.",
+        "Maintain a clean litter box and comfortable indoor environment.",
+        "Schedule routine veterinary examinations.",
+        "Give daily attention, as Snowshoe cats enjoy close companionship."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Havana Brown",
+
+    category: "shorthair",
+
+    price: 2200,
+
+    image: "assets/images/cats/Havana-Brown.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United Kingdom",
+
+    description: "A rare, elegant, and affectionate shorthair cat breed known for its rich chocolate-brown coat, green eyes, and loyal personality.",
+
+    fullDescription:
+    "The Havana Brown is a rare and beautiful cat breed admired for its warm chocolate-brown coat, bright green eyes, and affectionate temperament. This breed is intelligent, curious, playful, and deeply people-oriented, often forming strong bonds with its family. Havana Browns enjoy companionship, interactive toys, gentle play, and being involved in daily home activities. Their unique appearance, loyal nature, and charming personality make them excellent indoor companions for families, couples, and individuals looking for a rare premium cat breed.",
+
+    colors: [
+        "Chocolate Brown",
+        "Mahogany Brown",
+        "Chestnut Brown",
+        "Rich Brown"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "2.5 - 4.5 kg",
+
+    height: "20 - 28 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Affectionate, Intelligent, Curious, Playful, Loyal, Social",
+
+    agility:
+    "Moderate to High. Havana Browns are active, balanced, and playful cats that enjoy climbing, chasing toys, and exploring their surroundings.",
+
+    activityLevel:
+    "Moderate",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Very Good",
+
+    shedding:
+    "Low",
+
+    climate:
+    "Adapts well to warm and moderate indoor climates and prefers a comfortable, calm home environment.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and minerals to support lean muscles, healthy skin, glossy coat quality, and overall wellbeing. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Havana Brown stud with excellent pedigree, rich chocolate-brown coat, bright green eyes, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Havana Brown queen with outstanding bloodlines, gentle personality, excellent maternal instincts, smooth coat quality, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the short coat once each week to maintain its glossy finish.",
+        "Provide scratching posts, climbing furniture, and interactive toys.",
+        "Offer daily play sessions and gentle companionship.",
+        "Trim nails and clean ears regularly.",
+        "Maintain a clean litter box and peaceful indoor environment.",
+        "Schedule routine veterinary examinations.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+{
+    name: "Cymric",
+
+    category: "longhair",
+
+    price: 1200,
+
+    image: "assets/images/cats/Cymric.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Isle of Man",
+
+    description: "A rare, affectionate, and playful long-haired cat breed known for its rounded appearance, soft coat, and naturally short or tailless look.",
+
+    fullDescription:
+    "The Cymric is a beautiful long-haired variety of the Manx cat, admired for its rounded body, soft double coat, playful personality, and naturally short or tailless appearance. This breed is friendly, loyal, and highly social, making it a wonderful companion for families, individuals, and homes with other pets. Cymric cats are intelligent, affectionate, and often keep their kitten-like playfulness well into adulthood. With proper care, regular grooming, and responsible breeding, they make charming and loving indoor companions.",
+
+    colors: [
+        "White",
+        "Black",
+        "Blue",
+        "Cream",
+        "Red",
+        "Silver",
+        "Brown Tabby",
+        "Blue Tabby",
+        "Calico",
+        "Tortoiseshell",
+        "Bicolor",
+        "Smoke"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3.5 - 6 kg",
+
+    height: "25 - 35 cm",
+
+    lifespan: "10 - 15 Years",
+
+    temperament:
+    "Affectionate, Playful, Loyal, Gentle, Intelligent, Social",
+
+    agility:
+    "Moderate to High. Cymric cats are strong jumpers and playful climbers with excellent balance, curiosity, and natural hunting instincts.",
+
+    activityLevel:
+    "Moderate",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Very Good",
+
+    shedding:
+    "Moderate to Heavy",
+
+    climate:
+    "Thrives in cool to moderate indoor climates thanks to its dense long coat, while also adapting well to comfortable home environments.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Spinal Health Checked",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and minerals to support healthy muscles, strong bones, a soft coat, and daily energy. Measured feeding is recommended to help maintain a healthy weight. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Cymric stud with excellent Manx bloodlines, strong rounded structure, beautiful long coat, friendly temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Cymric queen with outstanding pedigree, affectionate personality, excellent maternal instincts, healthy structure, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the long coat 2–3 times each week to prevent tangles.",
+        "Provide scratching posts, climbing trees, and soft resting areas.",
+        "Offer daily interactive play and mental stimulation.",
+        "Monitor weight with balanced feeding and regular activity.",
+        "Trim nails and clean ears regularly.",
+        "Schedule routine veterinary examinations.",
+        "Request spinal health assurance because the tailless gene can be linked to spinal issues.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Burmese",
+
+    category: "shorthair",
+
+    price: 2000,
+
+    image: "assets/images/cats/Burmese.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Myanmar",
+
+    description: "A loving, social, and intelligent short-haired cat breed known for its silky coat, golden eyes, and playful personality.",
+
+    fullDescription:
+    "The Burmese is a charming and affectionate cat breed admired for its sleek muscular body, silky short coat, expressive golden eyes, and loyal personality. Known for being people-oriented, playful, and highly social, Burmese cats form strong bonds with their families and enjoy being involved in daily activities. They are intelligent, curious, and energetic while still being loving companions, making them excellent pets for families, singles, and homes with other friendly animals.",
+
+    colors: [
+        "Sable",
+        "Champagne",
+        "Blue",
+        "Platinum",
+        "Chocolate",
+        "Lilac",
+        "Brown",
+        "Cream",
+        "Red",
+        "Tortoiseshell"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3 - 6 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "12 - 18 Years",
+
+    temperament:
+    "Affectionate, Social, Intelligent, Playful, Loyal, Curious",
+
+    agility:
+    "High. Burmese cats are agile, playful, and athletic, enjoying climbing, jumping, chasing toys, and interactive games with their owners.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Low",
+
+    climate:
+    "Thrives in warm to moderate indoor climates and should be protected from extreme cold due to its short coat.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support lean muscles, healthy eyes, strong energy, and a glossy coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Burmese stud with excellent bloodlines, strong muscular structure, rich coat color, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Burmese queen with outstanding pedigree, sweet personality, excellent maternal instincts, beautiful coat quality, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush the short silky coat once each week.",
+        "Provide scratching posts and climbing furniture.",
+        "Offer daily interactive play and puzzle toys.",
+        "Spend quality time daily, as Burmese cats enjoy companionship.",
+        "Maintain regular nail trimming and ear cleaning.",
+        "Schedule routine veterinary examinations.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Peterbald",
+
+    category: "exotic",
+
+    price: 3200,
+
+    image: "assets/images/cats/Peterbald.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Russia",
+
+    description: "A rare, elegant, and affectionate cat breed known for its hairless or fine-coated body, large ears, and social personality.",
+
+    fullDescription:
+    "The Peterbald is a rare and graceful cat breed that originated in Russia. Known for its slender body, large ears, almond-shaped eyes, and unique coat types ranging from completely hairless to fine velvety fur, the Peterbald is both exotic and affectionate. This breed is highly intelligent, social, playful, and loyal, often forming strong bonds with its family. Peterbald cats enjoy companionship, interactive play, climbing, and staying close to their owners, making them excellent indoor pets for loving homes.",
+
+    colors: [
+        "Black",
+        "White",
+        "Blue",
+        "Cream",
+        "Chocolate",
+        "Lilac",
+        "Red",
+        "Seal",
+        "Tabby",
+        "Tortoiseshell",
+        "Bicolor",
+        "Colorpoint"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3 - 5.5 kg",
+
+    height: "20 - 30 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Affectionate, Intelligent, Social, Curious, Playful, Loyal",
+
+    agility:
+    "Very High. Peterbald cats are athletic, quick, and graceful, enjoying climbing, jumping, interactive toys, and active indoor play.",
+
+    activityLevel:
+    "High",
+
+    trainability:
+    "Very Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Very Low to None, depending on coat type.",
+
+    climate:
+    "Best suited for warm indoor environments and should be protected from cold weather, direct sunlight, and rough outdoor conditions.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and minerals to support lean muscles, healthy skin, strong immunity, and daily energy. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Peterbald stud with exceptional Russian bloodlines, elegant body structure, excellent skin quality, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Peterbald queen with outstanding pedigree, graceful appearance, social personality, excellent maternal instincts, and proven healthy lineage."
+    },
+
+    care: [
+        "Wipe or bathe the skin regularly to remove natural oils.",
+        "Keep indoors and protect from cold temperatures.",
+        "Avoid long exposure to direct sunlight.",
+        "Provide warm bedding and cozy resting areas.",
+        "Clean ears regularly to prevent wax buildup.",
+        "Trim nails and maintain dental hygiene.",
+        "Offer daily interactive play and climbing spaces.",
+        "Schedule routine veterinary examinations."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+{
+    name: "Lykoi",
+
+    category: "exotic",
+
+    price: 2600,
+
+    image: "assets/images/cats/Lykoi.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A rare, intelligent, and playful cat breed known for its unique wolf-like appearance, roan coat, and loyal personality.",
+
+    fullDescription:
+    "The Lykoi, often called the 'werewolf cat,' is a rare and fascinating breed admired for its naturally sparse roan coat, expressive eyes, and unique wolf-like appearance. Despite its unusual look, the Lykoi is a loving, playful, and intelligent domestic cat that forms strong bonds with its family. This breed is curious, active, and enjoys exploring, climbing, hunting-style games, and interactive play. Lykois are best suited for owners who can provide attention, enrichment, and a comfortable indoor environment.",
+
+    colors: [
+        "Black Roan",
+        "Blue Roan",
+        "White Roan",
+        "Silver Roan",
+        "Black",
+        "Gray",
+        "Partially Hairless"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "2.5 - 5.5 kg",
+
+    height: "20 - 25 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Curious, Intelligent, Playful, Loyal, Affectionate, Active",
+
+    agility:
+    "High. Lykoi cats are agile, quick, and highly curious, enjoying climbing, chasing toys, stalking games, and interactive activities.",
+
+    activityLevel:
+    "High",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Very Good with gentle and respectful children.",
+
+    goodWithPets:
+    "Very Good with early socialization.",
+
+    shedding:
+    "Low to Moderate, with occasional seasonal coat changes and natural sparse hair patterns.",
+
+    climate:
+    "Best suited for comfortable indoor environments. Because of their sparse coat, they should be protected from cold temperatures and excessive direct sunlight.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Genetic Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food enriched with taurine, omega fatty acids, vitamins, and essential minerals to support lean muscles, healthy skin, strong immunity, and daily energy. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Lykoi stud with excellent bloodlines, distinct black roan coat, strong body structure, confident temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Lykoi queen with outstanding pedigree, affectionate personality, healthy skin quality, excellent maternal instincts, and proven healthy lineage."
+    },
+
+    care: [
+        "Brush gently when needed to remove loose hair.",
+        "Clean skin, ears, and paws regularly to manage natural oil buildup.",
+        "Protect from cold weather and excessive sunlight.",
+        "Provide scratching posts, climbing trees, and interactive toys.",
+        "Offer daily play and mental stimulation.",
+        "Trim nails and clean ears regularly.",
+        "Schedule routine veterinary examinations.",
+        "Keep indoors in a clean, comfortable environment."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Manx",
+
+    category: "shorthair",
+
+    price: 1800,
+
+    image: "assets/images/cats/Manx.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "Isle of Man",
+
+    description: "A rare, affectionate, and intelligent cat breed famous for its naturally tailless appearance, rounded body, and loyal personality.",
+
+    fullDescription:
+    "The Manx is a unique and charming cat breed that originated from the Isle of Man. Best known for its naturally tailless appearance, rounded body, strong hind legs, and playful movement, the Manx is both beautiful and highly affectionate. This breed is loyal, intelligent, and social, often forming strong bonds with its family. Manx cats are playful without being overly demanding and make excellent companions for families, individuals, and homes with other friendly pets.",
+
+    colors: [
+        "White",
+        "Black",
+        "Blue",
+        "Cream",
+        "Red",
+        "Silver",
+        "Brown Tabby",
+        "Calico",
+        "Tortoiseshell",
+        "Bicolor",
+        "Smoke"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "3.5 - 6.5 kg",
+
+    height: "25 - 35 cm",
+
+    lifespan: "12 - 16 Years",
+
+    temperament:
+    "Loyal, Intelligent, Playful, Affectionate, Gentle, Social",
+
+    agility:
+    "High. Manx cats are strong jumpers with powerful hind legs, excellent balance, and a playful nature that makes them enjoy climbing, chasing toys, and interactive activities.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Excellent",
+
+    shedding:
+    "Moderate",
+
+    climate:
+    "Adapts well to most indoor climates and does best in a comfortable home environment with warm resting areas and proper care.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Spinal Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support strong muscles, healthy joints, and overall wellbeing. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Manx stud with excellent Isle of Man bloodlines, strong rounded structure, affectionate temperament, and complete genetic health testing.",
+
+        mother:
+        "Registered Manx queen with outstanding pedigree, calm personality, excellent maternal instincts, healthy body structure, and proven strong lineage."
+    },
+
+    care: [
+        "Brush the coat once or twice each week.",
+        "Provide scratching posts and climbing furniture.",
+        "Offer daily interactive play and puzzle toys.",
+        "Monitor weight with a balanced feeding routine.",
+        "Maintain regular nail trimming and ear cleaning.",
+        "Schedule routine veterinary examinations.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Munchkin",
+
+    category: "shorthair",
+
+    price: 2500,
+
+    image: "assets/images/cats/Munchkin.jpg",
+
+    age: "4 - 8 Months",
+
+    location: "United States",
+
+    description: "A playful, affectionate, and unique cat breed known for its short legs, curious personality, and kitten-like charm.",
+
+    fullDescription:
+    "The Munchkin is a distinctive and lovable cat breed best known for its naturally short legs, playful attitude, and affectionate personality. Despite its small stature, the Munchkin is active, curious, and full of energy, enjoying toys, tunnels, climbing spaces, and interactive play with its family. This breed is social, intelligent, and friendly, making it a wonderful companion for families, individuals, and homes with other gentle pets.",
+
+    colors: [
+        "White",
+        "Black",
+        "Blue",
+        "Cream",
+        "Red",
+        "Chocolate",
+        "Lilac",
+        "Silver",
+        "Brown Tabby",
+        "Calico",
+        "Tortoiseshell",
+        "Bicolor"
+    ],
+
+    availableAges: [
+        "4 Months",
+        "5 Months",
+        "6 Months",
+        "7 Months",
+        "8 Months"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "2.5 - 4.5 kg",
+
+    height: "15 - 23 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Playful, Affectionate, Curious, Intelligent, Social, Gentle",
+
+    agility:
+    "Moderate to High. Munchkin cats are playful, quick, and energetic, enjoying running, chasing toys, tunnels, and interactive games, though they may not jump as high as longer-legged breeds.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Easy",
+
+    goodWithChildren:
+    "Excellent",
+
+    goodWithPets:
+    "Very Good",
+
+    shedding:
+    "Low to Moderate",
+
+    climate:
+    "Adapts well to comfortable indoor environments and should be protected from extreme heat, cold, and unsafe outdoor spaces.",
+
+    health: [
+        "Vaccinated",
+        "Dewormed",
+        "Veterinary Exam Completed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Joint and Spine Health Checked"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents"
+    ],
+
+    feed:
+    "Premium high-protein cat food rich in real animal protein, taurine, omega fatty acids, vitamins, and minerals to support lean muscles, healthy joints, strong energy, and a glossy coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal",
+        "Midday Meal",
+        "Evening Meal"
+    ],
+
+    parents: {
+        father:
+        "Champion Munchkin stud with excellent short-legged structure, affectionate temperament, strong pedigree, and complete health screening.",
+
+        mother:
+        "Registered Munchkin queen with outstanding bloodlines, sweet personality, excellent maternal instincts, healthy body structure, and proven strong lineage."
+    },
+
+    care: [
+        "Brush the coat once each week.",
+        "Provide tunnels, scratching posts, and low climbing furniture.",
+        "Offer daily interactive play and puzzle toys.",
+        "Keep floors safe and avoid very high jumping areas.",
+        "Maintain regular nail trimming and ear cleaning.",
+        "Schedule routine veterinary examinations.",
+        "Monitor weight carefully to support healthy joints.",
+        "Keep fresh drinking water available at all times."
+    ],
+
+    shipping:
+    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+
+    warranty:
+    "One-year congenital health guarantee and lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+
+
+{
     name: "Persian",
 
     category: "longhair",
