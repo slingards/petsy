@@ -332,6 +332,22 @@ if(checkoutForm){
 
             try{
 
+                let contactValue = "";
+
+                if(contactMethod.value === "email"){
+
+                    contactValue = emailContact.value.trim();
+
+                }else if(contactMethod.value === "whatsapp"){
+
+                    contactValue = whatsappContact.value.trim();
+
+                }else if(contactMethod.value === "signal"){
+
+                    contactValue = signalContact.value.trim();
+
+                }
+
                 await fetch(
                     "/.netlify/functions/send-order",
                     {
@@ -349,24 +365,13 @@ if(checkoutForm){
                             ).value,
 
                             contact_method:
-                            document.getElementById(
-                                "contactMethod"
-                            ).value,
+                            contactMethod.value,
 
-                            email:
-                            document.getElementById(
-                                "emailContact"
-                            ).value,
+                            contact:
+                            contactValue,
 
-                            whatsapp:
-                            document.getElementById(
-                                "whatsappContact"
-                            ).value,
-
-                            signal:
-                            document.getElementById(
-                                "signalContact"
-                            ).value,
+                            phone:
+                            contactValue,
 
                             country:
                             document.querySelector(
