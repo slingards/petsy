@@ -104,15 +104,15 @@ function searchPets(e){
             }
 
             if(
-                priceRange === "500-1500" &&
-                (cardPrice < 500 || cardPrice > 1500)
+                priceRange === "500-1800" &&
+                (cardPrice < 500 || cardPrice > 1800)
             ){
                 show = false;
             }
 
             if(
-                priceRange === "1500-3000" &&
-                (cardPrice < 1500 || cardPrice > 3000)
+                priceRange === "1800-3000" &&
+                (cardPrice < 1800 || cardPrice > 3000)
             ){
                 show = false;
             }
@@ -144,18 +144,18 @@ function searchPets(e){
 
     updateResults(resultsFound);
 
-    const featured =
+    const resultBox =
     document.getElementById(
-        "featured"
+        "searchResultsInfo"
     );
 
-    if(featured){
+    if(resultBox){
 
-        featured.scrollIntoView({
+        resultBox.scrollIntoView({
 
             behavior: "smooth",
 
-            block: "start"
+            block: "center"
 
         });
 
@@ -180,24 +180,6 @@ function updateResults(count){
         resultBox.id =
         "searchResultsInfo";
 
-        resultBox.style.textAlign =
-        "center";
-
-        resultBox.style.margin =
-        "25px 0";
-
-        resultBox.style.padding =
-        "15px";
-
-        resultBox.style.borderRadius =
-        "12px";
-
-        resultBox.style.fontWeight =
-        "600";
-
-        resultBox.style.fontSize =
-        "18px";
-
         const featured =
         document.getElementById(
             "featured"
@@ -214,30 +196,80 @@ function updateResults(count){
 
     }
 
+    const featured =
+    document.getElementById(
+        "featured"
+    );
+
+    resultBox.className =
+    "search-results-info";
+
     if(count > 0){
 
-        resultBox.style.background =
-        "#e8fff0";
+        if(featured){
+            featured.style.display = "block";
+        }
 
-        resultBox.style.color =
-        "#0f7b3f";
+        resultBox.classList.remove(
+            "no-results"
+        );
+
+        resultBox.classList.add(
+            "has-results"
+        );
 
         resultBox.innerHTML =
-
-        `Showing ${count} result(s)`;
+        `
+            Showing ${count} result(s)
+        `;
 
     }else{
 
-        resultBox.style.background =
-        "#fff1f1";
+        if(featured){
+            featured.style.display = "none";
+        }
 
-        resultBox.style.color =
-        "#cc0000";
+        resultBox.classList.remove(
+            "has-results"
+        );
+
+        resultBox.classList.add(
+            "no-results"
+        );
 
         resultBox.innerHTML =
+        `
+            <h3>No animals found matching your search.</h3>
 
-        `No animals found matching your search.<br>
-        Try another breed, country, category, or price range.`;
+            <p>
+                This pet may still be available in one of our full category pages.
+                Try another breed, country, category, or price range.
+            </p>
+
+            <div class="search-category-buttons">
+
+                <a href="pages/dogs.html">
+                    Search Dogs
+                </a>
+
+                <a href="pages/cats.html">
+                    Search Cats
+                </a>
+
+                <a href="pages/birds.html">
+                    Search Birds
+                </a>
+
+                <a href="pages/wild-cats.html">
+                    Search Wild Cats
+                </a>
+
+                <a href="pages/reptiles.html">
+                    Search Reptiles
+                </a>
+
+            </div>
+        `;
 
     }
 

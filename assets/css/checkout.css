@@ -625,3 +625,170 @@ COMING SOON PAYMENT MESSAGE
     transform:translateY(-2px);
 
 }
+
+
+/* ==========================
+   CHECKOUT DARK MODE FIX
+========================== */
+
+.dark-mode .checkout-page{
+    background:#020617;
+    color:#f8fafc;
+}
+
+.dark-mode .checkout-header h1,
+.dark-mode .checkout-card h2,
+.dark-mode .empty-checkout h2,
+.dark-mode .empty-checkout-page h1{
+    color:#f8fafc;
+}
+
+.dark-mode .checkout-header p,
+.dark-mode .empty-checkout p,
+.dark-mode .empty-checkout-page p{
+    color:#cbd5e1;
+}
+
+.dark-mode .checkout-badge{
+    background:#1e293b;
+    color:#fbbf24;
+}
+
+.dark-mode .checkout-card,
+.dark-mode .empty-checkout{
+    background:#0f172a;
+    color:#f8fafc;
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.35);
+}
+
+.dark-mode .summary-row{
+    border-bottom:1px solid #334155;
+    color:#f8fafc;
+}
+
+.dark-mode .summary-row span,
+.dark-mode .summary-row strong{
+    color:#f8fafc;
+}
+
+.dark-mode .summary-row.total,
+.dark-mode .summary-row.total span,
+.dark-mode .summary-row.total strong{
+    color:#fbbf24;
+}
+
+/* FORM INPUTS */
+
+.dark-mode .form-grid input,
+.dark-mode .form-grid select,
+.dark-mode .checkout-card input,
+.dark-mode .checkout-card select,
+.dark-mode .checkout-card textarea{
+    background:#111827;
+    color:#f8fafc;
+    border:1px solid #334155;
+}
+
+.dark-mode .form-grid input::placeholder,
+.dark-mode .checkout-card input::placeholder,
+.dark-mode .checkout-card textarea::placeholder{
+    color:#94a3b8;
+}
+
+.dark-mode .form-grid input:focus,
+.dark-mode .form-grid select:focus,
+.dark-mode .checkout-card input:focus,
+.dark-mode .checkout-card select:focus,
+.dark-mode .checkout-card textarea:focus{
+    border-color:#d97706;
+    box-shadow:
+    0 0 0 4px rgba(217,119,6,.18);
+}
+
+.dark-mode .checkout-card select option,
+.dark-mode .form-grid select option{
+    background:#111827;
+    color:#f8fafc;
+}
+
+/* PAYMENT BOX */
+
+.dark-mode .payment-box{
+    background:#111827;
+    color:#f8fafc;
+    border:1px solid #334155;
+}
+
+.dark-mode .payment-box h3{
+    color:#f8fafc;
+}
+
+.dark-mode .payment-qr,
+.dark-mode .giftcard-image{
+    background:#0f172a;
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.45);
+}
+
+.dark-mode .wallet-row input{
+    background:#020617;
+    color:#f8fafc;
+    border:1px solid #334155;
+}
+
+.dark-mode .wallet-row button{
+    background:#d97706;
+    color:#fff;
+}
+
+.dark-mode .wallet-row button:hover{
+    background:#b45309;
+}
+
+/* WARNING / ERROR BOXES */
+
+.dark-mode .payment-warning{
+    background:#450a0a;
+    color:#fecaca;
+    border-left:4px solid #ef4444;
+}
+
+.dark-mode .error-message{
+    color:#f87171;
+}
+
+/* COMING SOON BOX */
+
+.dark-mode .coming-soon-box{
+    background:#1e293b;
+    border-left:4px solid #d97706;
+}
+
+.dark-mode .coming-soon-box h3{
+    color:#fbbf24;
+}
+
+.dark-mode .coming-soon-box p{
+    color:#cbd5e1;
+}
+
+.dark-mode .coming-soon-link{
+    background:#d97706;
+    color:#fff;
+}
+
+.dark-mode .coming-soon-link:hover{
+    background:#b45309;
+}
+
+/* SUBMIT BUTTON */
+
+.dark-mode .checkout-submit{
+    background:#d97706;
+    color:#fff;
+}
+
+.dark-mode .checkout-submit:hover{
+    background:#b45309;
+}

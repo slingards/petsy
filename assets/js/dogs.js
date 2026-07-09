@@ -135,6 +135,270 @@ const dogs = [
 },
 
 {
+    name: "Greyhound",
+
+    category: "hound",
+
+    price: 2500,
+
+    image: "assets/images/dogs/Greyhound.jpg",
+
+    age: "4-6 Months",
+
+    location: "United Kingdom",
+
+    description: "A graceful, gentle, and athletic hound breed known for its incredible speed, calm nature, and affectionate companionship.",
+
+    fullDescription:
+    "The Greyhound is an elegant and athletic dog breed best known for its exceptional speed, slim build, and gentle personality. Despite being one of the fastest dog breeds in the world, Greyhounds are calm, affectionate, and often enjoy relaxing indoors with their families. They are intelligent, sensitive, loyal companions that do well with proper socialization, regular exercise, soft bedding, and a peaceful home environment.",
+
+    colors: [
+        "Black",
+        "White",
+        "Fawn",
+        "Blue",
+        "Red",
+        "Brindle",
+        "Grey",
+        "White & Black",
+        "White & Fawn",
+        "White & Brindle"
+    ],
+
+    availableAges: [
+        "8 Weeks",
+        "10 Weeks",
+        "12 Weeks",
+        "4 Months",
+        "6 Months",
+        "1 Year",
+        "Adult"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "27 - 40 kg",
+
+    height: "68 - 76 cm",
+
+    lifespan: "10 - 14 Years",
+
+    temperament:
+    "Gentle, Calm, Affectionate, Intelligent, Athletic, Quiet, Loyal, Sensitive",
+
+    agility:
+    "High. Excellent in sprinting, lure coursing, racing, obedience, and controlled athletic activities.",
+
+    activityLevel:
+    "Moderate to High",
+
+    trainability:
+    "Good",
+
+    goodWithChildren:
+    "Very good when properly socialized and treated gently.",
+
+    goodWithPets:
+    "Good with early socialization, but supervision is recommended around smaller pets due to prey drive.",
+
+    shedding:
+    "Low to Moderate. Short coat is easy to maintain with regular brushing.",
+
+    climate:
+    "Best suited to moderate climates. Needs protection from extreme cold due to thin coat and low body fat.",
+
+    health: [
+        "Veterinarian Examined",
+        "Fully Vaccinated",
+        "Dewormed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Regular Wellness Checks"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents",
+        "Sales Agreement"
+    ],
+
+    feed:
+    "Premium large-breed dog food with high-quality protein, healthy fats, vitamins, minerals, and joint-supporting nutrients to maintain lean muscle, energy, heart health, and overall condition. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal (7:00 AM)",
+        "Afternoon Meal (1:00 PM)",
+        "Evening Meal (7:00 PM)"
+    ],
+
+    parents: {
+
+        father:
+        "Healthy purebred Greyhound with excellent speed, strong athletic structure, calm temperament, and proven hound bloodline.",
+
+        mother:
+        "Gentle purebred Greyhound with elegant build, affectionate personality, healthy genetics, and excellent maternal instincts."
+
+    },
+
+    care: [
+        "Brush short coat weekly.",
+        "Provide daily walks and safe sprinting opportunities.",
+        "Use a secure fenced area for off-leash exercise.",
+        "Provide soft bedding to protect joints and skin.",
+        "Keep warm in cold weather with proper dog clothing.",
+        "Trim nails regularly.",
+        "Maintain dental hygiene.",
+        "Use gentle training because Greyhounds are sensitive dogs."
+    ],
+
+    shipping:
+    "Worldwide live-animal transportation available through licensed pet transport services. Every shipment includes travel documentation, veterinary clearance, and delivery updates.",
+
+    warranty:
+    "One-year congenital health guarantee with lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
+    name: "Bichon Frise",
+
+    category: "companion",
+
+    price: 2200,
+
+    image: "assets/images/dogs/Bichon-Frise.jpg",
+
+    age: "3-5 Months",
+
+    location: "France",
+
+    description: "A cheerful, affectionate, and playful companion dog loved for its fluffy white coat, friendly nature, and charming personality.",
+
+    fullDescription:
+    "The Bichon Frise is a small, elegant companion breed known for its soft curly white coat, joyful personality, and affectionate temperament. Originally developed as a companion dog, the Bichon Frise is friendly, playful, intelligent, and well-suited for families, singles, and apartment living. This breed enjoys attention, bonds closely with its owners, and thrives with gentle training, regular grooming, and daily interaction.",
+
+    colors: [
+        "White",
+        "White & Cream",
+        "White & Apricot",
+        "White & Buff"
+    ],
+
+    availableAges: [
+        "8 Weeks",
+        "10 Weeks",
+        "12 Weeks",
+        "4 Months",
+        "6 Months",
+        "1 Year",
+        "Adult"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "5 - 8 kg",
+
+    height: "23 - 30 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Affectionate, Cheerful, Playful, Gentle, Friendly, Intelligent, Sociable",
+
+    agility:
+    "Moderate to High. Enjoys playful activities, obedience training, light agility, tricks, and interactive games.",
+
+    activityLevel:
+    "Moderate",
+
+    trainability:
+    "Very Good",
+
+    goodWithChildren:
+    "Excellent when handled gently and properly socialized.",
+
+    goodWithPets:
+    "Very good with early socialization.",
+
+    shedding:
+    "Low shedding, but requires frequent grooming to prevent matting.",
+
+    climate:
+    "Adapts well to most climates but should be protected from extreme heat and cold due to its small size.",
+
+    health: [
+        "Veterinarian Examined",
+        "Fully Vaccinated",
+        "Dewormed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Regular Wellness Checks"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents",
+        "Sales Agreement"
+    ],
+
+    feed:
+    "Premium small-breed dog food rich in quality protein, healthy fats, vitamins, minerals, and omega fatty acids to support healthy skin, coat condition, energy, and digestion. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal (7:00 AM)",
+        "Afternoon Meal (1:00 PM)",
+        "Evening Meal (7:00 PM)"
+    ],
+
+    parents: {
+
+        father:
+        "Healthy purebred Bichon Frise with excellent temperament, bright white coat, strong companion bloodline, and vet-checked genetic background.",
+
+        mother:
+        "Gentle and affectionate purebred Bichon Frise with excellent maternal instincts, healthy structure, soft curly coat, and well-socialized family temperament."
+
+    },
+
+    care: [
+        "Brush coat several times weekly.",
+        "Schedule professional grooming every 4–6 weeks.",
+        "Provide daily playtime and short walks.",
+        "Use gentle positive training methods.",
+        "Clean eyes regularly to reduce tear staining.",
+        "Trim nails every few weeks.",
+        "Maintain dental hygiene.",
+        "Provide companionship and avoid long periods of isolation."
+    ],
+
+    shipping:
+    "Worldwide live-animal transportation available through licensed pet transport services. Every shipment includes travel documentation, veterinary clearance, and delivery updates.",
+
+    warranty:
+    "One-year congenital health guarantee with lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
     name: "Shiba Inu",
 
     category: "non-sporting",
