@@ -25,7 +25,7 @@ if(cart.length === 0){
         </p>
 
         <a
-        href="../index.html"
+        href="../index.html#browse-pets"
         class="primary-btn">
 
             Browse Profiles
