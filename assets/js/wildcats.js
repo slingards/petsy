@@ -1317,6 +1317,14 @@ wildCatsArray.forEach(
                 data-image="../${wildCat.image}">
                     Request Compliance Review
                 </button>
+
+                    <button
+                    class="wishlist-add-btn"
+                    data-name="${wildCat.name}"
+                    data-price="${wildCat.price}"
+                    data-image="${wildCat.image}">
+                        ❤ Save For Review
+                    </button>
                 </div>
                  <a
                 href="learn-more.html?type=wild-cats&name=${encodeURIComponent(wildCat.name)}" 
@@ -1334,6 +1342,8 @@ wildCatsArray.forEach(
 });
 
 attachButtons();
+
+attachWishlistButtons();
 
 animateCards();
  
@@ -1425,6 +1435,261 @@ if(breedFilter){
 renderWildCats(
 wildCats
 );
+
+
+
+/* ==========================
+WISHLIST SUPPORT
+========================== */
+
+function normalizeAnimalWishlistImagePath(path){
+
+    let cleanPath =
+    String(path || "")
+    .trim();
+
+    const assetIndex =
+    cleanPath.indexOf(
+        "assets/images/"
+    );
+
+    if(assetIndex !== -1){
+
+        cleanPath =
+        cleanPath.substring(
+            assetIndex
+        );
+
+    }
+
+    cleanPath =
+    cleanPath
+    .replace(/^\.\.\//g, "")
+    .replace(/^\.\//g, "")
+    .replace(/^\//g, "");
+
+    return cleanPath;
+
+}
+
+function getAnimalWishlist(){
+
+    return JSON.parse(
+        localStorage.getItem(
+            "CompanionReviewHubWishlist"
+        )
+    ) || [];
+
+}
+
+function saveAnimalWishlist(list){
+
+    localStorage.setItem(
+        "CompanionReviewHubWishlist",
+        JSON.stringify(list)
+    );
+
+    updateAnimalWishlistCount();
+
+}
+
+function updateAnimalWishlistCount(){
+
+    const count =
+    document.getElementById(
+        "wishlist-count"
+    );
+
+    if(!count) return;
+
+    const list =
+    getAnimalWishlist();
+
+    count.textContent =
+    list.length;
+
+}
+
+function showAnimalWishlistMessage(message){
+
+    let messageBox =
+    document.querySelector(
+        ".wishlist-action-message"
+    );
+
+    if(!messageBox){
+
+        messageBox =
+        document.createElement(
+            "div"
+        );
+
+        messageBox.className =
+        "wishlist-action-message";
+
+        document.body.appendChild(
+            messageBox
+        );
+
+        const style =
+        document.createElement(
+            "style"
+        );
+
+        style.textContent =
+        `
+            .wishlist-action-message{
+                position:fixed;
+                top:100px;
+                left:50%;
+                transform:translate(-50%, -18px);
+                max-width:92%;
+                width:430px;
+                padding:15px 20px;
+                border-radius:999px;
+                background:#111827;
+                color:#ffffff;
+                text-align:center;
+                font-size:.95rem;
+                line-height:1.5;
+                box-shadow:0 18px 45px rgba(0,0,0,.22);
+                opacity:0;
+                visibility:hidden;
+                pointer-events:none;
+                z-index:99999;
+                transition:.35s ease;
+            }
+
+            .wishlist-action-message.show{
+                opacity:1;
+                visibility:visible;
+                transform:translate(-50%, 0);
+            }
+
+            .dark-mode .wishlist-action-message{
+                background:#f8fafc;
+                color:#111827;
+            }
+
+            @media(max-width:600px){
+                .wishlist-action-message{
+                    top:85px;
+                    width:calc(100% - 28px);
+                    border-radius:18px;
+                    font-size:.9rem;
+                }
+            }
+        `;
+
+        document.head.appendChild(
+            style
+        );
+
+    }
+
+    messageBox.innerHTML =
+    `<strong>${message}</strong>`;
+
+    messageBox.classList.add(
+        "show"
+    );
+
+    clearTimeout(
+        messageBox.hideTimer
+    );
+
+    messageBox.hideTimer =
+    setTimeout(()=>{
+
+        messageBox.classList.remove(
+            "show"
+        );
+
+    }, 2600);
+
+}
+
+function addProfileToWishlist(item){
+
+    const wishlist =
+    getAnimalWishlist();
+
+    const cleanItem = {
+
+        name:
+        item.name,
+
+        price:
+        item.price,
+
+        image:
+        normalizeAnimalWishlistImagePath(
+            item.image
+        )
+
+    };
+
+    const exists =
+    wishlist.some(
+        profile =>
+        String(profile.name).toLowerCase() ===
+        String(cleanItem.name).toLowerCase()
+    );
+
+    if(exists){
+
+        showAnimalWishlistMessage(
+            "This profile is already saved for later review."
+        );
+
+        return;
+
+    }
+
+    wishlist.push(
+        cleanItem
+    );
+
+    saveAnimalWishlist(
+        wishlist
+    );
+
+    showAnimalWishlistMessage(
+        "Profile saved for later review. You can view it in your wishlist."
+    );
+
+}
+
+function attachWishlistButtons(){
+
+    document
+    .querySelectorAll(
+        ".wishlist-add-btn"
+    )
+    .forEach(button=>{
+
+        button.onclick = ()=>{
+
+            addProfileToWishlist({
+
+                name:
+                button.dataset.name,
+
+                price:
+                button.dataset.price,
+
+                image:
+                button.dataset.image
+
+            });
+
+        };
+
+    });
+
+}
+
+updateAnimalWishlistCount();
 
 function attachButtons(){
 

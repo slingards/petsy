@@ -555,3 +555,151 @@
     }
 
 }
+
+
+/* =========================================================
+   MOBILE HEADER FIX
+   Fixes long CompanionReview text covering dark mode/cart buttons
+   Paste this at the bottom of assets/css/responsive.css
+   or assets/css/style.css
+========================================================= */
+
+.header .container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+}
+
+.logo,
+.n-logo{
+    min-width:0;
+    flex:1 1 auto;
+}
+
+.logo a,
+.n-logo a{
+    display:block;
+    min-width:0;
+}
+
+.logo h2,
+.n-logo h2{
+    max-width:100%;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+.header-actions{
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:10px;
+    margin-left:auto;
+}
+
+/* Tablet and phone */
+@media(max-width:768px){
+
+    .header .container{
+        width:94%;
+        height:74px;
+        gap:8px;
+    }
+
+    .logo h2,
+    .n-logo h2{
+        font-size:1.15rem !important;
+        line-height:1.1;
+        max-width:145px;
+    }
+
+    .header-actions{
+        gap:7px;
+    }
+
+    .dark-mode-btn,
+    .cart-btn,
+    .wishlist-btn,
+    .menu-btn,
+    #darkModeToggle{
+        width:40px !important;
+        height:40px !important;
+        min-width:40px !important;
+        flex:0 0 40px !important;
+        border-radius:50%;
+        font-size:1rem !important;
+    }
+
+    .cart-btn span,
+    .wishlist-btn span{
+        width:18px;
+        height:18px;
+        top:-4px;
+        right:-4px;
+        font-size:.65rem;
+    }
+
+}
+
+/* Small phones */
+@media(max-width:480px){
+
+    .header .container{
+        width:95%;
+        height:70px;
+        gap:6px;
+    }
+
+    .logo h2,
+    .n-logo h2{
+        font-size:1rem !important;
+        max-width:118px;
+    }
+
+    .header-actions{
+        gap:5px;
+    }
+
+    .dark-mode-btn,
+    .cart-btn,
+    .wishlist-btn,
+    .menu-btn,
+    #darkModeToggle{
+        width:36px !important;
+        height:36px !important;
+        min-width:36px !important;
+        flex-basis:36px !important;
+        font-size:.92rem !important;
+    }
+
+}
+
+/* Very small phones */
+@media(max-width:360px){
+
+    .logo h2,
+    .n-logo h2{
+        font-size:.92rem !important;
+        max-width:95px;
+    }
+
+    .header-actions{
+        gap:4px;
+    }
+
+    .dark-mode-btn,
+    .cart-btn,
+    .wishlist-btn,
+    .menu-btn,
+    #darkModeToggle{
+        width:34px !important;
+        height:34px !important;
+        min-width:34px !important;
+        flex-basis:34px !important;
+        font-size:.85rem !important;
+    }
+
+}

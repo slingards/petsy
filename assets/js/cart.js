@@ -54,6 +54,233 @@ function updateCartCount(){
 
 }
 
+
+/* ==========================
+REQUEST ADDED MESSAGE
+========================== */
+
+let requestMessageTimer = null;
+
+function showRequestAddedMessage(productName){
+
+    const existingMessage =
+    document.getElementById(
+        "requestAddedMessage"
+    );
+
+    if(existingMessage){
+
+        existingMessage.remove();
+
+    }
+
+    if(requestMessageTimer){
+
+        clearTimeout(
+            requestMessageTimer
+        );
+
+    }
+
+    const message =
+    document.createElement(
+        "div"
+    );
+
+    message.id =
+    "requestAddedMessage";
+
+    message.className =
+    "request-added-message";
+
+    message.setAttribute(
+        "role",
+        "status"
+    );
+
+    message.setAttribute(
+        "aria-live",
+        "polite"
+    );
+
+    message.innerHTML =
+    `
+    <div class="request-added-message-icon">
+        ✓
+    </div>
+
+    <div class="request-added-message-text">
+        <strong>
+            Profile added for review.
+        </strong>
+
+        <span>
+            You can view it anytime in the request list section.
+        </span>
+    </div>
+    `;
+
+    document.body.appendChild(
+        message
+    );
+
+    requestAnimationFrame(()=>{
+
+        message.classList.add(
+            "show"
+        );
+
+    });
+
+    requestMessageTimer =
+    setTimeout(()=>{
+
+        message.classList.remove(
+            "show"
+        );
+
+        setTimeout(()=>{
+
+            if(message.parentNode){
+
+                message.remove();
+
+            }
+
+        },350);
+
+    },3200);
+
+}
+
+function addRequestMessageStyles(){
+
+    if(
+        document.getElementById(
+            "requestAddedMessageStyles"
+        )
+    ){
+
+        return;
+
+    }
+
+    const style =
+    document.createElement(
+        "style"
+    );
+
+    style.id =
+    "requestAddedMessageStyles";
+
+    style.textContent =
+    `
+    .request-added-message{
+        position:fixed;
+        top:96px;
+        left:50%;
+        z-index:999999;
+        transform:translate(-50%, -25px);
+        opacity:0;
+        pointer-events:none;
+        display:flex;
+        align-items:center;
+        gap:14px;
+        width:calc(100% - 32px);
+        max-width:520px;
+        padding:16px 18px;
+        border-radius:18px;
+        background:#ffffff;
+        color:#111827;
+        border:1px solid #bbf7d0;
+        box-shadow:0 20px 55px rgba(15,23,42,.22);
+        transition:opacity .35s ease, transform .35s ease;
+    }
+
+    .request-added-message.show{
+        opacity:1;
+        transform:translate(-50%, 0);
+    }
+
+    .request-added-message-icon{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex:0 0 38px;
+        width:38px;
+        height:38px;
+        border-radius:50%;
+        background:#16a34a;
+        color:#ffffff;
+        font-size:1.05rem;
+        font-weight:900;
+    }
+
+    .request-added-message-text{
+        display:flex;
+        flex-direction:column;
+        gap:4px;
+        line-height:1.35;
+    }
+
+    .request-added-message-text strong{
+        font-size:.98rem;
+        color:#111827;
+    }
+
+    .request-added-message-text span{
+        font-size:.9rem;
+        color:#4b5563;
+    }
+
+    .dark-mode .request-added-message{
+        background:#0f172a;
+        color:#f8fafc;
+        border-color:#166534;
+        box-shadow:0 20px 50px rgba(0,0,0,.45);
+    }
+
+    .dark-mode .request-added-message-text strong{
+        color:#f8fafc;
+    }
+
+    .dark-mode .request-added-message-text span{
+        color:#cbd5e1;
+    }
+
+    @media(max-width:600px){
+
+        .request-added-message{
+            top:86px;
+            padding:14px 15px;
+            border-radius:16px;
+        }
+
+        .request-added-message-icon{
+            flex-basis:34px;
+            width:34px;
+            height:34px;
+        }
+
+        .request-added-message-text strong{
+            font-size:.92rem;
+        }
+
+        .request-added-message-text span{
+            font-size:.82rem;
+        }
+
+    }
+    `;
+
+    document.head.appendChild(
+        style
+    );
+
+}
+
+addRequestMessageStyles();
+
 /* ==========================
 ADD PROFILE TO REQUEST LIST
 ========================== */
@@ -101,6 +328,10 @@ function addToCart(product){
     updateCartSidebar();
 
     animateCartCount();
+
+    showRequestAddedMessage(
+        product.name
+    );
 
 }
 
@@ -380,38 +611,56 @@ if(cartOverlay && cartSidebar){
 
 /* ==========================
 PROFILE REQUEST BUTTONS
+Works for existing and JS-generated cards
 ========================== */
 
-document
-.querySelectorAll(
-    ".add-cart-btn"
-)
-.forEach(button=>{
+document.addEventListener(
+    "click",
+    event=>{
 
-    button.addEventListener(
+        const button =
+        event.target.closest(
+            ".add-cart-btn, .start-request-btn, [data-request-button='true']"
+        );
 
-        "click",
+        if(!button) return;
 
-        ()=>{
+        event.preventDefault();
 
-            addToCart({
+        const card =
+        button.closest(
+            ".pet-card, .animal-card, .profile-card, .product-card"
+        );
 
-                name:
-                button.dataset.name,
+        const cardImage =
+        card
+        ?
+        card.querySelector("img")
+        :
+        null;
 
-                price:
-                button.dataset.price,
+        addToCart({
 
-                image:
-                button.dataset.image
+            name:
+            button.dataset.name ||
+            card?.dataset?.name ||
+            button.getAttribute("aria-label") ||
+            "Selected Profile",
 
-            });
+            price:
+            button.dataset.price ||
+            card?.dataset?.price ||
+            0,
 
-        }
+            image:
+            button.dataset.image ||
+            cardImage?.getAttribute("src") ||
+            ""
 
-    );
+        });
 
-});
+    }
+);
 
 /* ==========================
 COUNT ANIMATION
@@ -808,3 +1057,14 @@ if(checkoutBtn){
     );
 
 }
+
+
+/* ==========================
+GLOBAL ACCESS
+========================== */
+
+window.showRequestAddedMessage =
+showRequestAddedMessage;
+
+window.addToCart =
+addToCart;
