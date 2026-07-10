@@ -1,40 +1,82 @@
 exports.handler = async (event) => {
 
-    const data =
-    JSON.parse(event.body);
+    try{
 
-    const message = `
-📩 NEW CONTACT MESSAGE
+        const data =
+        JSON.parse(event.body);
+
+        const message = `
+📩 NEW CompanionReviewHub CONTACT MESSAGE
 
 Name: ${data.name}
 Email: ${data.email}
-Subject: ${data.subject}
+Phone / WhatsApp: ${data.phone || "Not provided"}
+
+Topic: ${data.topic || "General Inquiry"}
+Pet / Listing: ${data.listing || "Not provided"}
 
 Message:
 ${data.message}
 `;
 
-    const url =
-    `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`;
+        const response =
+        await fetch(
+            `https://api.telegram.org/bot${process.env.BOT_TOKEN}/sendMessage`,
+            {
+                method:"POST",
 
-    await fetch(
-        url,
-        {
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
+                headers:{
+                    "Content-Type":"application/json"
+                },
+
+                body:JSON.stringify({
+
+                    chat_id:
+                    process.env.CHAT_ID,
+
+                    text:
+                    message
+
+                })
+
+            }
+        );
+
+        const result =
+        await response.json();
+
+        return {
+
+            statusCode:200,
+
             body:JSON.stringify({
-                chat_id:
-                process.env.CHAT_ID,
-                text:message
-            })
-        }
-    );
 
-    return {
-        statusCode:200,
-        body:"ok"
-    };
+                success:true,
+
+                telegram:result
+
+            })
+
+        };
+
+    }
+
+    catch(error){
+
+        return {
+
+            statusCode:500,
+
+            body:JSON.stringify({
+
+                success:false,
+
+                error:error.message
+
+            })
+
+        };
+
+    }
 
 };

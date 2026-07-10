@@ -330,3 +330,377 @@ body{
 .dark-mode .policy-links a:hover{
     color:#d97706;
 }
+
+
+/* ==========================
+   SHARED TRUST PAGES IMPROVEMENT
+========================== */
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+body.dark-mode{
+    background:#020617;
+    color:#f8fafc;
+}
+
+.policy-page{
+    background:#f8fafc;
+}
+
+.policy-card{
+    overflow:hidden;
+}
+
+.policy-card a:not(.contact-btn){
+    color:#d97706;
+    font-weight:700;
+    text-decoration:none;
+}
+
+.policy-card a:not(.contact-btn):hover{
+    text-decoration:underline;
+}
+
+.policy-card strong{
+    color:#111827;
+}
+
+.policy-card section:last-child{
+    margin-bottom:0;
+}
+
+.policy-card ul li::marker{
+    color:#d97706;
+}
+
+.policy-footer p{
+    margin-bottom:8px;
+    line-height:1.7;
+}
+
+.policy-footer p:last-child{
+    margin-bottom:0;
+}
+
+
+/* ==========================
+   CONTACT / FORM STYLES
+========================== */
+
+.policy-card form{
+    margin-top:25px;
+}
+
+.policy-card label{
+    display:inline-block;
+    font-weight:700;
+    color:#111827;
+    margin-bottom:8px;
+}
+
+.policy-card input,
+.policy-card select,
+.policy-card textarea{
+    width:100%;
+    padding:15px 16px;
+    border:1px solid #e5e7eb;
+    border-radius:12px;
+    background:#ffffff;
+    color:#111827;
+    font-family:inherit;
+    font-size:1rem;
+    outline:none;
+    transition:.3s ease;
+}
+
+.policy-card textarea{
+    resize:none;
+    min-height:160px;
+}
+
+.policy-card input:focus,
+.policy-card select:focus,
+.policy-card textarea:focus{
+    border-color:#d97706;
+    box-shadow:0 0 0 4px rgba(217,119,6,.12);
+}
+
+.policy-card input::placeholder,
+.policy-card textarea::placeholder{
+    color:#94a3b8;
+}
+
+
+/* ==========================
+   PREMIUM INFO BOXES
+========================== */
+
+.notice-box,
+.trust-box,
+.warning-box{
+    background:#fff7ed;
+    border:1px solid #fed7aa;
+    border-left:5px solid #d97706;
+    padding:22px;
+    border-radius:16px;
+    margin:25px 0;
+}
+
+.notice-box strong,
+.trust-box strong,
+.warning-box strong{
+    display:block;
+    color:#92400e;
+    margin-bottom:8px;
+}
+
+
+/* ==========================
+   DESKTOP NAV IMPROVEMENT
+========================== */
+
+@media(min-width:769px){
+
+    .policy-links{
+        display:flex !important;
+        align-items:center;
+        justify-content:flex-end;
+    }
+
+    .policy-links a{
+        white-space:nowrap;
+    }
+
+}
+
+
+/* ==========================
+   TABLET RESPONSIVE
+========================== */
+
+@media(max-width:992px){
+
+    .policy-nav{
+        max-width:100%;
+        padding:20px;
+    }
+
+    .policy-hero h1{
+        font-size:2.5rem;
+    }
+
+    .policy-hero p{
+        font-size:1rem;
+    }
+
+    .policy-card{
+        padding:40px 32px;
+    }
+
+}
+
+
+/* ==========================
+   MOBILE RESPONSIVE FIX
+========================== */
+
+@media(max-width:768px){
+
+    body{
+        font-size:15px;
+    }
+
+    .policy-header{
+        position:sticky;
+        top:0;
+    }
+
+    .policy-nav{
+        padding:18px 20px;
+    }
+
+    .logo{
+        font-size:1.7rem;
+    }
+
+    .policy-hero{
+        padding:70px 18px;
+    }
+
+    .policy-hero span{
+        font-size:.85rem;
+        padding:9px 16px;
+    }
+
+    .policy-hero h1{
+        font-size:2rem;
+        line-height:1.25;
+    }
+
+    .policy-hero p{
+        font-size:.98rem;
+        line-height:1.75;
+    }
+
+    .policy-page{
+        padding:45px 15px;
+    }
+
+    .policy-card{
+        padding:28px 20px;
+        border-radius:20px;
+    }
+
+    .updated{
+        font-size:.9rem;
+        padding:9px 15px;
+        margin-bottom:28px;
+    }
+
+    .policy-card section{
+        margin-bottom:32px;
+    }
+
+    .policy-card h2{
+        font-size:1.25rem;
+        line-height:1.35;
+    }
+
+    .policy-card p,
+    .policy-card li{
+        font-size:.96rem;
+        line-height:1.8;
+    }
+
+    .policy-card ul{
+        padding-left:18px;
+    }
+
+    .contact-btn{
+        width:100%;
+        text-align:center;
+        padding:15px 20px;
+    }
+
+    .policy-card input,
+    .policy-card select,
+    .policy-card textarea{
+        font-size:16px;
+    }
+
+    .policy-links{
+        max-height:75vh;
+        overflow-y:auto;
+    }
+
+}
+
+
+/* ==========================
+   SMALL PHONE FIX
+========================== */
+
+@media(max-width:480px){
+
+    .policy-nav{
+        padding:16px;
+    }
+
+    .logo{
+        font-size:1.5rem;
+    }
+
+    .policy-menu-btn{
+        font-size:1.35rem;
+        padding:7px 12px;
+    }
+
+    .policy-links{
+        left:12px;
+        right:12px;
+        top:68px;
+        padding:20px;
+    }
+
+    .policy-hero{
+        padding:60px 15px;
+    }
+
+    .policy-hero h1{
+        font-size:1.7rem;
+    }
+
+    .policy-card{
+        padding:24px 17px;
+    }
+
+    .policy-card h2{
+        font-size:1.15rem;
+    }
+
+    .policy-footer{
+        padding:25px 15px;
+        font-size:.9rem;
+    }
+
+}
+
+
+/* ==========================
+   DARK MODE FORM + TRUST PAGE FIX
+========================== */
+
+.dark-mode .policy-card strong,
+.dark-mode .policy-card label{
+    color:#f8fafc;
+}
+
+.dark-mode .policy-card input,
+.dark-mode .policy-card select,
+.dark-mode .policy-card textarea{
+    background:#111827;
+    color:#f8fafc;
+    border:1px solid #334155;
+}
+
+.dark-mode .policy-card input::placeholder,
+.dark-mode .policy-card textarea::placeholder{
+    color:#94a3b8;
+}
+
+.dark-mode .policy-card input:focus,
+.dark-mode .policy-card select:focus,
+.dark-mode .policy-card textarea:focus{
+    border-color:#d97706;
+    box-shadow:0 0 0 4px rgba(217,119,6,.2);
+}
+
+.dark-mode .policy-card select option{
+    background:#111827;
+    color:#f8fafc;
+}
+
+.dark-mode .policy-card a:not(.contact-btn){
+    color:#fbbf24;
+}
+
+.dark-mode .notice-box,
+.dark-mode .trust-box,
+.dark-mode .warning-box{
+    background:#1e293b;
+    border:1px solid #334155;
+    border-left:5px solid #d97706;
+    color:#cbd5e1;
+}
+
+.dark-mode .notice-box strong,
+.dark-mode .trust-box strong,
+.dark-mode .warning-box strong{
+    color:#fbbf24;
+}

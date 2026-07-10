@@ -12,7 +12,17 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Checkout | Petsy</title>
+    <title>
+        Submit Pet Request For Review | CompanionReviewHub
+    </title>
+
+    <meta
+    name="description"
+    content="Submit a CompanionReviewHub pet request for review. CompanionReviewHub support will review availability, contact details, delivery location, care readiness, animal welfare requirements, and legal compliance before final arrangements.">
+
+    <meta
+    name="robots"
+    content="noindex, follow">
 
  
 <link rel="stylesheet" href="../assets/css/style.css">
@@ -30,7 +40,7 @@
     <div class="container">
         <div class="logo">
             <a href="../index.html">
-                <h2>Petsy</h2>
+                <h2>CompanionReviewHub</h2>
             </a>
         </div>
     </div>
@@ -42,17 +52,17 @@
 
         <div class="checkout-header">
 
-            <span class="checkout-badge">
-                Secure Checkout
-            </span>
+        <span class="checkout-badge">
+            Secure Adoption Request
+        </span>
 
-            <h1>
-                Complete Your Adoption Request
-            </h1>
+        <h1>
+            Submit Your Pet Request For Review
+        </h1>
 
-            <p>
-                Fill out the information below to reserve your companion and begin the delivery process.
-            </p>
+        <p>
+            Complete the form below so CompanionReviewHub support can review your request, confirm availability, check basic ownership details, and guide you through the next steps.
+        </p>
 
         </div>
 
@@ -68,18 +78,44 @@
             name="form-name"
             value="checkout">
 
+            <input
+            type="hidden"
+            id="paymentMethod"
+            name="payment_method"
+            value="Pending review">
+
+            <div class="checkout-card">
+
+                <h2>
+                    Important Before You Continue
+                </h2>
+
+                <p>
+                    Submitting this form does not automatically approve an adoption, confirm delivery, or guarantee availability. CompanionReviewHub may review the request, confirm pet details, verify contact information, and provide guidance before any final arrangement is completed.
+                </p>
+
+                <p>
+                    Please make sure you have reviewed the animal’s care needs, local ownership rules, shipping policy, refund policy, and animal welfare requirements before continuing.
+                </p>
+
+                <p>
+                    Safety reminder: CompanionReviewHub will not ask for unexpected extra fees through random emails, unknown numbers, or unofficial messages. If you receive any message claiming that an additional payment is required, please contact CompanionReviewHub support directly before taking action.
+                </p>
+
+            </div>
+
             <!-- ORDER SUMMARY -->
 
             <div class="checkout-card">
 
                 <h2>
-                    Order Summary
+                    Request Summary
                 </h2>
 
                 <div class="summary-row">
 
                     <span>
-                        Cart Total
+                        Estimated Animal Request Amount
                     </span>
 
                     <strong id="cartSubtotal">
@@ -91,7 +127,7 @@
                 <div class="summary-row">
 
                     <span>
-                        Shipping
+                        Estimated Delivery Support
                     </span>
 
                     <strong id="shippingFee">
@@ -103,7 +139,7 @@
                 <div class="summary-row">
 
                     <span>
-                        Insurance
+                        Care / Travel Support Estimate
                     </span>
 
                     <strong>
@@ -115,7 +151,7 @@
                 <div class="summary-row total">
 
                     <span>
-                        Grand Total
+                        Estimated Total For Review
                     </span>
 
                     <strong id="grandTotal">
@@ -123,6 +159,10 @@
                     </strong>
 
                 </div>
+
+                <p class="checkout-note">
+                    These amounts are displayed for request review only. Please do not send payment at this stage. CompanionReviewHub support will contact you after reviewing availability, delivery requirements, and the details you submit.
+                </p>
 
             </div>
 
@@ -237,6 +277,10 @@
                 <h2>
                     Adoption Questionnaire
                 </h2>
+
+                <p class="checkout-note">
+                    These questions help CompanionReviewHub understand your readiness and basic care environment before any final arrangement is discussed.
+                </p>
 
                 <div class="form-grid">
 
@@ -386,13 +430,18 @@
 
             <div class="checkout-card">
 
-                <h2>
-                    Shipping Address
-                </h2>
+            <h2>
+                Delivery Location
+            </h2>
+
+                <p class="checkout-note">
+                    Delivery, pickup, or transport guidance may depend on your location, animal welfare requirements, weather, documentation, and legal compliance.
+                </p>
 
                <select
                 id="countrySelect"
-                name="country">
+                name="country"
+                required>
 
                     <option value="">
                         Select Country
@@ -596,266 +645,31 @@
 
                 <textarea
                 name="address"
-                placeholder="Full Shipping Address"
+                placeholder="Full Estimated Delivery Support Address"
                 rows="4"
                 required></textarea>
 
             </div>
 
-            <!-- PAYMENT -->
+            <!-- PAYMENT AFTER REVIEW NOTICE -->
 
-            <div class="checkout-card">
+            <div class="checkout-card payment-review-card">
 
                 <h2>
-                    Payment Method
+                    Payment After Review
                 </h2>
 
-                    <select
-                    id="paymentMethod"
-                    name="payment_method"
-                    onchange="showPaymentDetails()">
-
-                    <option value="">
-                        Select Payment Method
-                    </option>
-
-                    <option value="btc">
-                        Bitcoin (BTC)
-                    </option>
-
-                    <option value="eth">
-                        Ethereum (ETH)
-                    </option>
-
-                    <option value="usdt">
-                        USDT (ERC20)
-                    </option>
-
-                    <option value="giftcard">
-                        Apple / iTunes Gift Card
-                    </option>
-
-                    <option value="paypal">
-                        PayPal
-                    </option>
-
-                    <option value="bank">
-                        Bank Transfer
-                    </option>
-
-                </select>
-
-                <div
-                id="btcBox"
-                class="payment-box">
-
-                    <h3>
-                        Bitcoin Payment
-                    </h3>
-
-                    <img
-                    src="../assets/images/payments/btc-qr.jpeg"
-                    class="payment-qr">
-
-                    <div class="wallet-row">
-
-                        <input id="btcAddress"
-                        readonly
-                        value="bc1qc70kuwzvaedv70n5ka8fpzex5cy87vpt433e4k">
-
-                        <button type="button"
-                        onclick="copyAddress('btcAddress')">
-
-                            Copy
-
-                        </button>
-
-                    </div>
-
-                    <p class="payment-warning">
-
-                        ⚠ Send ONLY BTC using the Bitcoin network.
-
-                        ⚠ Sending funds through the wrong network may result in permanent loss of funds.
-
-                        ⚠ Transactions are verified manually.
-
-                        ⚠ for guidance and questions please <a href="../index.html#contact" style="text-decoration: underline; color: rgb(255, 19, 19);">contact us</a> from the home page.
-
-                    </p>
-
-                </div>
-
-
-                <div
-                id="ethBox"
-                class="payment-box">
-
-                    <h3>
-                        Ethereum Payment
-                    </h3>
-
-                    <img
-                    src="../assets/images/payments/eth-qr.jpeg"
-                    class="payment-qr">
-
-                    <div class="wallet-row">
-
-                        <input
-                        id="ethAddress"
-                        readonly
-                        value="0xA1d2a35c85be0892b3aa3B861FCC0BD8412b54CC">
-
-                        <button type="button"
-                        onclick="copyAddress('ethAddress')">
-
-                            Copy
-
-                        </button>
-
-                    </div>
-
-                    <p class="payment-warning">
-
-                        ⚠ Send ONLY Ethereum(ETH) using the Ethereum network.
-
-                        ⚠ Sending funds through the wrong network may result in permanent loss of funds.
-
-                        ⚠ Transactions are verified manually.
-
-                       ⚠ for guidance and questions please <a href="../index.html#contact" style="text-decoration: underline; color: rgb(255, 19, 19);">contact us</a> from the home page.
-
-                    </p>
-
-                </div>
-
-                <div
-                    id="usdtBox"
-                    class="payment-box">
-
-                    <h3>
-                        USDT Payment
-                    </h3>
-
-                    <img
-                    src="../assets/images/payments/usdt-qr.jpeg"
-                    class="payment-qr">
-
-                    <div class="wallet-row">
-
-                        <input
-                        id="usdtAddress"
-                        readonly
-                        value="0xA1d2a35c85be0892b3aa3B861FCC0BD8412b54CC">
-
-                        <button type="button"
-                        onclick="copyAddress('usdtAddress')">
-
-                            Copy
-
-                        </button>
-
-                    </div>
-
-                    <p class="payment-warning">
-
-                        ⚠ Send ONLY USDT using the ERC20 network.
-
-                        ⚠ Sending funds through the wrong network may result in permanent loss of funds.
-
-                        ⚠ Transactions are verified manually.
-
-                        ⚠ for guidance and questions please <a href="../index.html#contact" style="text-decoration: underline; color: rgb(255, 19, 19);">contact us</a> from the home page.
-
-                    </p>
-
-                </div>
-
-                <div
-                    id="giftcardBox"
-                    class="payment-box">
-
-                        <h3>
-
-                            Apple / iTunes Gift Cards
-
-                        </h3>
-
-                        <img
-                        src="../assets/images/payments/gift-card.png"
-                        class="giftcard-image">
-
-                        <p>
-
-                            Purchase an Apple Gift Card or iTunes Gift Card from a trusted retailer.
-
-                        </p>
-
-                        <p>
-
-                            After purchase, upload a clear image showing the card and redemption code.
-
-                        </p>
-
-                        <p class="payment-warning">
-
-                            ⚠ Do not upload blurry images.
-
-                            ⚠ Ensure the redemption code is fully visible.
-
-                            ⚠ Scratched or partially hidden codes may delay verification.
-
-                            ⚠ for guidance and questions please <a href="../index.html#contact" style="text-decoration: underline; color: rgb(255, 19, 19);">contact us</a> from the home page.
-
-                        </p>
-
-                    </div>
-
-                    <div
-                    id="comingSoonBox"
-                    class="payment-box coming-soon-box"
-                    style="display:none;">
-
-                        <h3>
-                            Payment Option Coming Soon
-                        </h3>
-
-                        <p>
-                            This payment method is not available yet, but it is coming soon.
-                        </p>
-
-                        <p>
-                            If you have trouble using the available payment methods, or you need assistance completing your adoption request, please contact customer service for help.
-                        </p>
-
-                        <a
-                        href="../index.html#contact"
-                        class="coming-soon-link">
-                            Contact Customer Service
-                        </a>
-
-                    </div>
-
-                    <div
-                    id="proofSection"
-                    class="payment-box"
-                    style="display:none;">
-
-                        <h3>
-                            Proof Of Payment
-                        </h3>
-
-                        <p>
-                            Upload a screenshot or receipt showing your completed payment.
-                        </p>
-
-                        <input
-                        id="paymentProof"
-                        type="file"
-                        name="payment_proof"
-                        accept="image/*,.pdf">
-
-                    </div>
+                <p>
+                    Please do not send payment at this stage. This form is only used to submit your pet request for review.
+                </p>
+
+                <p>
+                    CompanionReviewHub support will review your request, confirm availability, check delivery requirements, and contact you through your selected contact method before any final payment arrangement is made.
+                </p>
+
+                <p>
+                    Payment instructions are only provided after your request has been reviewed and confirmed by CompanionReviewHub support.
+                </p>
 
             </div>
 
@@ -865,14 +679,14 @@
                 type="checkbox"
                 required>
 
-                I confirm that all information provided is accurate and that I am at least 18 years old.
+               I confirm that all information provided is accurate, I am at least 18 years old, and I understand that this submission is a request subject to availability, review, animal welfare standards, delivery rules, and legal compliance.
 
             </label>
 
             <button
             class="primary-btn checkout-submit">
 
-                Submit Adoption Request
+                Submit Request For Review
 
             </button>
 

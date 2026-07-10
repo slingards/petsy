@@ -1,153 +1,156 @@
 /* ==========================
-CART STORAGE
+REQUEST STORAGE
 ========================== */
 
 let cart =
 JSON.parse(
-localStorage.getItem(
-"petsyCart"
-)
+    localStorage.getItem(
+        "CompanionReviewHubCart"
+    )
 ) || [];
 
 /* ==========================
-SAVE CART
+SAVE REQUEST LIST
 ========================== */
 
 function saveCart(){
 
-localStorage.setItem(
+    localStorage.setItem(
+        "CompanionReviewHubCart",
+        JSON.stringify(cart)
+    );
 
-    "petsyCart",
-
-    JSON.stringify(cart)
-
-);
-
-updateCartCount();
+    updateCartCount();
 
 }
 
 /* ==========================
-UPDATE CART COUNT
+UPDATE REQUEST COUNT
 ========================== */
 
 function updateCartCount(){
 
-const countElement =
-document.getElementById(
-    "cart-count"
-);
+    const countElement =
+    document.getElementById(
+        "cart-count"
+    );
 
-if(!countElement) return;
+    if(!countElement) return;
 
-const totalItems =
-cart.reduce(
+    const totalItems =
+    cart.reduce(
 
-    (total,item)=>
+        (total,item)=>
 
-    total +
-    (item.quantity || 1),
+        total +
+        (item.quantity || 1),
 
-    0
+        0
 
-);
+    );
 
-countElement.textContent =
-totalItems;
+    countElement.textContent =
+    totalItems;
 
 }
 
 /* ==========================
-ADD TO CART
+ADD PROFILE TO REQUEST LIST
 ========================== */
 
 function addToCart(product){
 
-const existing =
-cart.find(
-    item =>
-    item.name === product.name
-);
+    const existing =
+    cart.find(
+        item =>
+        item.name === product.name
+    );
 
-if(existing){
+    if(existing){
 
-    existing.quantity =
-    (existing.quantity || 1)
-    + 1;
+        existing.quantity =
+        (existing.quantity || 1)
+        + 1;
 
-}else{
+    }else{
 
-    cart.push({
+        cart.push({
 
-        name:
-        product.name,
+            name:
+            product.name,
 
-        price:
-        Number(product.price),
+            price:
+            Number(product.price),
 
-    image:
-    product.image.startsWith("../")
-    ?
-    product.image
-    :
-    "../" + product.image,
+            image:
+            product.image.startsWith("../")
+            ?
+            product.image
+            :
+            "../" + product.image,
 
-        quantity:1
+            quantity:
+            1
 
-    });
+        });
 
-}
+    }
 
-saveCart();
+    saveCart();
 
-updateCartSidebar();
+    updateCartSidebar();
 
-animateCartCount();
+    animateCartCount();
 
 }
 
 /* ==========================
-REMOVE FROM SIDEBAR
+REMOVE FROM REQUEST SIDEBAR
 ========================== */
 
 function removeFromCart(index){
 
-cart.splice(index,1);
+    cart.splice(
+        index,
+        1
+    );
 
-saveCart();
+    saveCart();
 
-updateCartSidebar();
+    updateCartSidebar();
 
 }
 
 /* ==========================
-TOTAL
+REQUEST ESTIMATE TOTAL
 ========================== */
 
 function calculateTotal(){
 
-return cart.reduce(
+    return cart.reduce(
 
-    (total,item)=>
+        (total,item)=>
 
-    total +
+        total +
 
-    (
-        Number(item.price) *
-        (item.quantity || 1)
-    ),
+        (
+            Number(item.price) *
+            (item.quantity || 1)
+        ),
 
-    0
+        0
 
-);
+    );
 
 }
 
 /* ==========================
-UPDATE SIDEBAR
+IMAGE PATH HELPER
 ========================== */
 
 function fixImagePath(path){
+
+    if(!path) return "";
 
     const isHomePage =
 
@@ -160,7 +163,7 @@ function fixImagePath(path){
 
     ||
 
-    window.location.pathname.endsWith("/petsy/");
+    window.location.pathname.endsWith("/CompanionReviewHub/");
 
     if(isHomePage){
 
@@ -175,72 +178,113 @@ function fixImagePath(path){
 
 }
 
+/* ==========================
+UPDATE REQUEST SIDEBAR
+========================== */
+
 function updateCartSidebar(){
 
-const cartItems =
-document.querySelector(
-    ".cart-items"
-);
+    const cartItems =
+    document.querySelector(
+        ".cart-items"
+    );
 
-const totalElement =
-document.getElementById(
-    "cartTotal"
-);
+    const totalElement =
+    document.getElementById(
+        "cartTotal"
+    );
 
-if(!cartItems) return;
+    if(!cartItems) return;
 
-cartItems.innerHTML = "";
+    cartItems.innerHTML = "";
 
-cart.forEach((item,index)=>{
+    if(cart.length === 0){
 
-    cartItems.innerHTML +=
-
-    `
-    <div class="cart-product-item">
-
-        <img
-        src="${fixImagePath(item.image)}"
-        alt="${item.name}">
-
-        <div>
-
-            <h4>
-            ${item.name}
-            </h4>
+        cartItems.innerHTML =
+        `
+        <div class="cart-empty-message">
 
             <p>
-            Qty:
-            ${item.quantity || 1}
+                No profiles selected yet.
             </p>
 
             <p>
-            $${item.price}
+                Browse CompanionReviewHub profiles and start a request when you find a companion animal you would like CompanionReviewHub support to review.
             </p>
 
         </div>
+        `;
 
-        <button
-        onclick="removeFromCart(${index})">
+        if(totalElement){
 
-            ✕
+            totalElement.textContent =
+            "$0.00";
 
-        </button>
+        }
 
-    </div>
-    `;
+        return;
 
-});
+    }
 
-if(totalElement){
+    cart.forEach((item,index)=>{
 
-    totalElement.textContent =
+        cartItems.innerHTML +=
 
-    "$" +
+        `
+        <div class="cart-product-item">
 
-    calculateTotal()
-    .toFixed(2);
+            <img
+            src="${fixImagePath(item.image)}"
+            alt="${item.name}">
 
-}
+            <div>
+
+                <h4>
+                    ${item.name}
+                </h4>
+
+                <p>
+                    Selected:
+                    ${item.quantity || 1}
+                </p>
+
+                <p>
+                    Review estimate:
+                    $${Number(item.price).toLocaleString()}
+                </p>
+
+            </div>
+
+            <button
+            type="button"
+            aria-label="Remove ${item.name} from request list"
+            onclick="removeFromCart(${index})">
+
+                ✕
+
+            </button>
+
+        </div>
+        `;
+
+    });
+
+    if(totalElement){
+
+        totalElement.textContent =
+
+        "$" +
+
+        calculateTotal()
+        .toLocaleString(
+            undefined,
+            {
+                minimumFractionDigits:2,
+                maximumFractionDigits:2
+            }
+        );
+
+    }
 
 }
 
@@ -250,313 +294,485 @@ SIDEBAR TOGGLE
 
 const openCartButton =
 document.getElementById(
-"openCart"
+    "openCart"
 );
 
 const closeCartButton =
 document.getElementById(
-"closeCart"
+    "closeCart"
 );
 
 const cartSidebar =
 document.getElementById(
-"cartSidebar"
+    "cartSidebar"
 );
 
 const cartOverlay =
 document.querySelector(
-".cart-overlay"
+    ".cart-overlay"
 );
 
-if(openCartButton){
+if(openCartButton && cartSidebar && cartOverlay){
 
-openCartButton.addEventListener(
+    openCartButton.addEventListener(
 
-    "click",
+        "click",
 
-    ()=>{
+        ()=>{
 
-        cartSidebar.classList.add(
-            "active"
-        );
+            cartSidebar.classList.add(
+                "active"
+            );
 
-        cartOverlay.classList.add(
-            "active"
-        );
+            cartOverlay.classList.add(
+                "active"
+            );
 
-    }
+        }
 
-);
+    );
 
 }
 
-if(closeCartButton){
+if(closeCartButton && cartSidebar && cartOverlay){
 
-closeCartButton.addEventListener(
+    closeCartButton.addEventListener(
 
-    "click",
+        "click",
 
-    ()=>{
+        ()=>{
 
-        cartSidebar.classList.remove(
-            "active"
-        );
+            cartSidebar.classList.remove(
+                "active"
+            );
 
-        cartOverlay.classList.remove(
-            "active"
-        );
+            cartOverlay.classList.remove(
+                "active"
+            );
 
-    }
+        }
 
-);
+    );
 
 }
 
-if(cartOverlay){
+if(cartOverlay && cartSidebar){
 
-cartOverlay.addEventListener(
+    cartOverlay.addEventListener(
 
-    "click",
+        "click",
 
-    ()=>{
+        ()=>{
 
-        cartSidebar.classList.remove(
-            "active"
-        );
+            cartSidebar.classList.remove(
+                "active"
+            );
 
-        cartOverlay.classList.remove(
-            "active"
-        );
+            cartOverlay.classList.remove(
+                "active"
+            );
 
-    }
+        }
 
-);
+    );
 
 }
 
 /* ==========================
-BUTTONS
+PROFILE REQUEST BUTTONS
 ========================== */
 
 document
 .querySelectorAll(
-".add-cart-btn"
+    ".add-cart-btn"
 )
 .forEach(button=>{
 
-button.addEventListener(
+    button.addEventListener(
 
-    "click",
+        "click",
 
-    ()=>{
+        ()=>{
 
-        addToCart({
+            addToCart({
 
-            name:
-            button.dataset.name,
+                name:
+                button.dataset.name,
 
-            price:
-            button.dataset.price,
+                price:
+                button.dataset.price,
 
-            image:
-            button.dataset.image
+                image:
+                button.dataset.image
 
-        });
+            });
 
-    }
+        }
 
-);
+    );
 
 });
 
 /* ==========================
-ANIMATION
+COUNT ANIMATION
 ========================== */
 
 function animateCartCount(){
 
-const cartCount =
-document.getElementById(
-    "cart-count"
-);
+    const cartCount =
+    document.getElementById(
+        "cart-count"
+    );
 
-if(!cartCount) return;
+    if(!cartCount) return;
 
-cartCount.classList.add(
-    "cart-bounce"
-);
-
-setTimeout(()=>{
-
-    cartCount.classList.remove(
+    cartCount.classList.add(
         "cart-bounce"
     );
 
-},500);
+    setTimeout(()=>{
+
+        cartCount.classList.remove(
+            "cart-bounce"
+        );
+
+    },500);
 
 }
 
 /* ==========================
-CART PAGE
+REQUEST REVIEW PAGE
 ========================== */
 
 function loadCartPage(){
 
-const container =
-document.getElementById(
-    "cartItemsContainer"
-);
+    const container =
+    document.getElementById(
+        "cartItemsContainer"
+    );
 
-if(!container) return;
+    if(!container) return;
 
-const emptyCart =
-document.querySelector(
-    ".empty-cart"
-);
+    const emptyCart =
+    document.querySelector(
+        ".empty-cart"
+    );
 
-const cartPage =
-document.querySelector(
-    ".cart-page"
-);
+    const cartPage =
+    document.querySelector(
+        ".cart-page"
+    );
 
-if(cart.length === 0){
+    if(cart.length === 0){
 
-    if(cartPage)
-    cartPage.style.display =
-    "none";
+        if(cartPage){
 
-    if(emptyCart)
-    emptyCart.style.display =
-    "block";
+            cartPage.style.display =
+            "none";
 
-    return;
+        }
 
-}
+        if(emptyCart){
 
-let subtotal = 0;
+            emptyCart.style.display =
+            "block";
 
-container.innerHTML = "";
+        }
 
-cart.forEach((item,index)=>{
+        return;
 
-    const quantity =
-    item.quantity || 1;
+    }
 
-    subtotal +=
+    if(cartPage){
 
-    Number(item.price)
-    * quantity;
+        cartPage.style.display =
+        "block";
 
-    container.innerHTML +=
+    }
 
-    `
-    <div class="cart-item">
+    if(emptyCart){
 
-        <div class="cart-product">
+        emptyCart.style.display =
+        "none";
 
-            <img
-            src="${item.image}"
-            alt="${item.name}">
+    }
+
+    let subtotal = 0;
+
+    container.innerHTML = "";
+
+    cart.forEach((item,index)=>{
+
+        const quantity =
+        item.quantity || 1;
+
+        subtotal +=
+
+        Number(item.price)
+        * quantity;
+
+        container.innerHTML +=
+
+        `
+        <div class="cart-item">
+
+            <div class="cart-product">
+
+                <img
+                src="${item.image}"
+                alt="${item.name}">
+
+                <div>
+
+                    <h3>
+                        ${item.name}
+                    </h3>
+
+                    <p class="request-status-text">
+                        Selected for CompanionReviewHub review
+                    </p>
+
+                </div>
+
+            </div>
 
             <div>
 
-                <h3>
-                ${item.name}
-                </h3>
+                ${quantity}
+
+            </div>
+
+            <div class="price">
+
+                Review estimate:
+                $
+                ${(Number(item.price) * quantity).toLocaleString(
+                    undefined,
+                    {
+                        minimumFractionDigits:2,
+                        maximumFractionDigits:2
+                    }
+                )}
+
+            </div>
+
+            <div>
+
+                <button
+                type="button"
+                class="remove-btn"
+                onclick="removeCartItem(${index})">
+
+                    Remove
+
+                </button>
 
             </div>
 
         </div>
+        `;
 
-        <div>
+    });
 
-            ${quantity}
+    const deliveryReviewEstimate =
+    252;
 
-        </div>
+    const careSupportEstimate =
+    150;
 
-        <div class="price">
+    const tax =
+    0;
 
-            $
-            ${(item.price * quantity).toFixed(2)}
+    const total =
+    subtotal +
+    deliveryReviewEstimate +
+    careSupportEstimate +
+    tax;
 
-        </div>
+    const shippingPrice =
+    document.getElementById(
+        "shippingPrice"
+    );
 
-        <div>
+    const insurancePrice =
+    document.getElementById(
+        "insurancePrice"
+    );
 
-            <button
+    const subtotalPrice =
+    document.getElementById(
+        "subtotalPrice"
+    );
 
-            class="remove-btn"
+    const taxPrice =
+    document.getElementById(
+        "taxPrice"
+    );
 
-            onclick="removeCartItem(${index})">
+    const grandTotal =
+    document.getElementById(
+        "grandTotal"
+    );
 
-                Remove
+    if(shippingPrice){
 
-            </button>
+        shippingPrice.textContent =
+        "$" +
+        deliveryReviewEstimate.toLocaleString(
+            undefined,
+            {
+                minimumFractionDigits:2,
+                maximumFractionDigits:2
+            }
+        );
 
-        </div>
+    }
 
-    </div>
-    `;
+    if(insurancePrice){
 
-});
+        insurancePrice.textContent =
+        "$" +
+        careSupportEstimate.toLocaleString(
+            undefined,
+            {
+                minimumFractionDigits:2,
+                maximumFractionDigits:2
+            }
+        );
 
-const shipping = 252;
+    }
 
-const insurance = 150;
+    if(subtotalPrice){
 
-document.getElementById(
-    "shippingPrice"
-).textContent =
-"$" +
-shipping.toFixed(2);
+        subtotalPrice.textContent =
+        "$" +
+        subtotal.toLocaleString(
+            undefined,
+            {
+                minimumFractionDigits:2,
+                maximumFractionDigits:2
+            }
+        );
 
-document.getElementById(
-    "insurancePrice"
-).textContent =
-"$" +
-insurance.toFixed(2);
+    }
 
-const tax = 0;
+    if(taxPrice){
 
-const total =
-subtotal +
-shipping +
-insurance +
-tax;
+        taxPrice.textContent =
+        "$" +
+        tax.toLocaleString(
+            undefined,
+            {
+                minimumFractionDigits:2,
+                maximumFractionDigits:2
+            }
+        );
 
-document.getElementById(
-    "subtotalPrice"
-).textContent =
-"$" +
-subtotal.toFixed(2);
+    }
 
-document.getElementById(
-    "taxPrice"
-).textContent =
-"$" +
-tax.toFixed(2);
+    if(grandTotal){
 
-document.getElementById(
-    "grandTotal"
-).textContent =
-"$" +
-total.toFixed(2);
+        grandTotal.textContent =
+        "$" +
+        total.toLocaleString(
+            undefined,
+            {
+                minimumFractionDigits:2,
+                maximumFractionDigits:2
+            }
+        );
+
+    }
+
+    addRequestReviewNotice();
 
 }
+
+/* ==========================
+REQUEST NOTICE ON CART PAGE
+========================== */
+
+function addRequestReviewNotice(){
+
+    const cartPage =
+    document.querySelector(
+        ".cart-page"
+    );
+
+    if(!cartPage) return;
+
+    if(
+        document.getElementById(
+            "requestReviewNotice"
+        )
+    ){
+
+        return;
+
+    }
+
+    const notice =
+    document.createElement(
+        "div"
+    );
+
+    notice.id =
+    "requestReviewNotice";
+
+    notice.className =
+    "request-review-notice";
+
+    notice.innerHTML =
+    `
+    <h3>
+        Request Review Notice
+    </h3>
+
+    <p>
+        This page only shows the companion animal profiles you selected for review. Submitting a request does not automatically confirm availability, ownership, delivery, or approval.
+    </p>
+
+    <p>
+        Please do not send payment at this stage. CompanionReviewHub support will review your request and contact you through your selected contact method before any final arrangement is made.
+    </p>
+    `;
+
+    cartPage.prepend(
+        notice
+    );
+
+}
+
+/* ==========================
+REMOVE FROM REQUEST PAGE
+========================== */
 
 function removeCartItem(index){
 
-cart.splice(index,1);
+    cart.splice(
+        index,
+        1
+    );
 
-saveCart();
+    saveCart();
 
-loadCartPage();
+    loadCartPage();
 
 }
 
+/* ==========================
+INITIAL LOAD
+========================== */
+
 updateCartCount();
+
 updateCartSidebar();
+
 loadCartPage();
+
+/* ==========================
+CHECKOUT BUTTON
+========================== */
 
 const checkoutBtn =
 document.querySelector(
@@ -569,20 +785,22 @@ if(checkoutBtn){
         "click",
         function(event){
 
-            const cart =
+            const savedCart =
             JSON.parse(
                 localStorage.getItem(
-                    "petsyCart"
+                    "CompanionReviewHubCart"
                 )
             ) || [];
 
-            if(cart.length === 0){
+            if(savedCart.length === 0){
 
                 event.preventDefault();
 
                 alert(
-                    "Your cart is empty. Please add an animal before proceeding to checkout."
+                    "No pet request selected yet. Please choose at least one companion animal profile before continuing to request review."
                 );
+
+                return;
 
             }
 

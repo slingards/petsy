@@ -15,7 +15,7 @@ exports.handler = async (event) => {
         contactLabel[data.contact_method] || "Contact";
 
         const message = `
-    🐾 New Petsy Order
+    🐾 New CompanionReviewHub Order
         Name: ${data.name}
         Preferred Contact Method: ${selectedContactLabel}
         ${selectedContactLabel}: ${data.contact}

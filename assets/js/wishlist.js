@@ -3,7 +3,7 @@ let wishlist =
 JSON.parse(
 
 localStorage.getItem(
-"petsyWishlist"
+"CompanionReviewHubWishlist"
 )
 
 ) || [];
@@ -12,7 +12,7 @@ function saveWishlist(){
 
  localStorage.setItem(
 
-    "petsyWishlist",
+    "CompanionReviewHubWishlist",
 
     JSON.stringify(wishlist)
 

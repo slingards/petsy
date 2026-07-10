@@ -1,5 +1,5 @@
 /* ==========================
-   PETSY DESIGN SYSTEM
+   CompanionReviewHub DESIGN SYSTEM
 ========================== */
 
 :root{
@@ -222,7 +222,7 @@ section{
 
     color:var(--primary);
 
-    font-size:2rem;
+    font-size:1.5rem;
 
     font-weight:700;
 }
@@ -573,7 +573,7 @@ section{
 }
 
 /* ==========================
-ABOUT PETSY
+ABOUT CompanionReviewHub
 ========================== */
 
 .about-wrapper{

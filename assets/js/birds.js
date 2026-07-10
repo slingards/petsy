@@ -73,20 +73,20 @@ const birds = [
     "Thrives in warm tropical and subtropical climates but adapts well to indoor environments with proper temperature control.",
 
     health: [
-        "Veterinary Health Examination",
-        "Disease Tested",
-        "DNA Sexed",
-        "Microchipped (where available)",
-        "Health Guaranteed"
+        "Veterinary health record available",
+        "Disease screening records available where applicable",
+        "DNA sexing information available where applicable",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "DNA Gender Certificate",
-        "Transfer of Ownership",
-        "Captive Breeding Certificate",
+        "Veterinary health documentation",
+        "DNA gender documentation where available",
+        "Ownership or transfer documentation",
+        "Captive-bred documentation where applicable",
         "Import/Export Documentation (where applicable)",
-        "Care Guide"
+        "Care guidance notes"
     ],
 
     feed:
@@ -117,13 +117,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-bird transportation services with veterinary supervision and climate-controlled travel where permitted by local regulations.",
+    "Delivery review may be available through licensed live-bird transportation services with veterinary supervision and climate-controlled travel where permitted by local regulations.",
 
     warranty:
-    "Health guarantee provided at the time of purchase together with lifetime care guidance and breeder support.",
+    "Health information and care guidance may be provided after review where applicable and care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -139,7 +139,7 @@ const birds = [
 
     location: "Congo",
 
-    description: "A remarkably intelligent and affectionate parrot renowned for its exceptional talking ability, problem-solving skills, and lifelong companionship.",
+    description: "A remarkably intelligent and affectionate parrot renowned for its strong talking ability, problem-solving skills, and lifelong companionship.",
 
     fullDescription:
     "The African Grey Parrot is widely regarded as one of the most intelligent bird species in the world. Famous for its extraordinary ability to mimic human speech, recognize words, and solve complex problems, this remarkable companion forms deep emotional bonds with its owner. African Greys thrive on daily interaction, mental enrichment, and social engagement. Their calm temperament, combined with their curiosity and intelligence, makes them one of the most rewarding companion birds for dedicated owners.",
@@ -198,20 +198,20 @@ const birds = [
     "Thrives in warm tropical and indoor environments with stable temperatures between 20°C and 28°C.",
 
     health: [
-        "Veterinary Health Examination",
-        "Disease Tested",
-        "DNA Sexed",
-        "Microchipped (where available)",
-        "Health Guaranteed"
+        "Veterinary health record available",
+        "Disease screening records available where applicable",
+        "DNA sexing information available where applicable",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "DNA Gender Certificate",
-        "Captive Breeding Certificate",
-        "Transfer of Ownership",
+        "Veterinary health documentation",
+        "DNA gender documentation where available",
+        "Captive-bred documentation where applicable",
+        "Ownership or transfer documentation",
         "Import/Export Documentation (where applicable)",
-        "Lifetime Care Guide"
+        "Lifetime Care guidance notes"
     ],
 
     feed:
@@ -242,13 +242,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-bird transportation services with veterinary supervision and climate-controlled travel where permitted by local wildlife regulations.",
+    "Delivery review may be available through licensed live-bird transportation services with veterinary supervision and climate-controlled travel where permitted by local wildlife regulations.",
 
     warranty:
-    "Health guarantee provided at the time of purchase together with lifetime breeder support and comprehensive care guidance.",
+    "Health information may be provided after review where applicable together with lifetime care support and comprehensive care guidance.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -327,19 +327,19 @@ const birds = [
     "Prefers warm indoor environments free from drafts and sudden temperature changes.",
 
     health: [
-        "Veterinary Health Examination",
-        "Disease Screened",
-        "DNA Sexed (Upon Request)",
+        "Veterinary health record available",
+        "Disease screening records available where applicable",
+        "DNA sexing information available where applicable (Upon Request)",
         "Healthy Feathers and Beak",
-        "Health Guaranteed"
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Transfer of Ownership",
-        "Captive Breeding Certificate",
-        "Care Guide",
-        "DNA Gender Certificate (where available)"
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Captive-bred documentation where applicable",
+        "Care guidance notes",
+        "DNA gender documentation where available (where available)"
     ],
 
     feed:
@@ -370,13 +370,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-bird transportation services with climate-controlled travel and veterinary supervision where permitted by local regulations.",
+    "Delivery review may be available through licensed live-bird transportation services with climate-controlled travel and veterinary supervision where permitted by local regulations.",
 
     warranty:
-    "Health guarantee provided at the time of purchase together with lifetime care advice and breeder support.",
+    "Health information and care guidance may be provided after review where applicable and care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -453,19 +453,19 @@ const birds = [
     "Thrives in moderate indoor temperatures between 18°C and 27°C (65°F–80°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Sales Receipt",
-        "Ownership Transfer Document",
-        "Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Request Receipt",
+        "Ownership or transfer documentation",
+        "Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -497,13 +497,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through certified live-bird transportation services with climate-controlled travel.",
+    "Delivery review may be available through certified live-bird transportation services with climate-controlled travel.",
 
     warranty:
-    "14-day health guarantee and lifetime care support.",
+    "Health information, review guidance, and ongoing care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -576,19 +576,19 @@ const birds = [
     "Thrives in warm indoor environments between 20°C and 28°C (68°F–82°F). Avoid cold drafts and sudden temperature changes.",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Sales Receipt",
-        "Ownership Transfer Document",
-        "Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Request Receipt",
+        "Ownership or transfer documentation",
+        "Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -620,13 +620,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through certified live-bird transportation with climate-controlled travel and health monitoring.",
+    "Delivery review may be available through certified live-bird transportation with climate-controlled travel and health monitoring.",
 
     warranty:
-    "14-day health guarantee and lifetime breeder support.",
+    "Health information, review guidance, and ongoing care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -704,19 +704,19 @@ const birds = [
     "Best suited to indoor temperatures between 20°C and 28°C (68°F–82°F). Avoid cold drafts and sudden temperature changes.",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Sales Receipt",
-        "Ownership Transfer Document",
-        "Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Request Receipt",
+        "Ownership or transfer documentation",
+        "Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -748,13 +748,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through licensed live-bird transportation with climate-controlled travel and health monitoring.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel and health monitoring.",
 
     warranty:
-    "14-day health guarantee and lifetime breeder support.",
+    "Health information, review guidance, and ongoing care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -830,19 +830,19 @@ const birds = [
     "Prefers indoor temperatures between 18°C and 26°C (65°F–79°F) and should be protected from drafts and extreme temperatures.",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Sales Receipt",
-        "Ownership Transfer Document",
-        "Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Request Receipt",
+        "Ownership or transfer documentation",
+        "Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -874,13 +874,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through certified live-bird transportation services with climate-controlled travel.",
+    "Delivery review may be available through certified live-bird transportation services with climate-controlled travel.",
 
     warranty:
-    "14-day health guarantee and lifetime care support.",
+    "Health information, review guidance, and ongoing care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -956,19 +956,19 @@ const birds = [
     "Thrives in moderate indoor temperatures between 18°C and 28°C (65°F–82°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Receipt",
-        "Bird Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Receipt",
+        "Bird Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -1000,13 +1000,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through licensed live-bird transportation with climate-controlled travel.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel.",
 
     warranty:
-    "14-day health guarantee and lifetime bird care support.",
+    "Health information, review guidance, and ongoing bird care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1022,7 +1022,7 @@ const birds = [
 
     location: "Indonesia",
 
-    description: "A highly intelligent and remarkably beautiful parrot famous for its striking colors, calm personality, and exceptional talking ability.",
+    description: "A highly intelligent and remarkably beautiful parrot famous for its striking colors, calm personality, and strong talking ability.",
 
     fullDescription:
     "The Eclectus Parrot is one of the most unique parrot species in the world due to the dramatic color differences between males and females. Males display brilliant emerald-green feathers, while females showcase vivid red and purple plumage. They are gentle, intelligent, and highly social birds capable of learning a large vocabulary when properly trained. Eclectus parrots thrive on interaction, mental stimulation, and a nutritious diet, making them outstanding companions for dedicated bird owners.",
@@ -1080,19 +1080,19 @@ const birds = [
     "Prefers warm, humid environments between 20°C and 30°C (68°F–86°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Routine Parasite Prevention",
-        "Excellent Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Excellent Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Receipt",
-        "Bird Care Guide",
-        "Breeder Certificate",
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Receipt",
+        "Bird Care guidance notes",
+        "Source Documentation",
         "CITES Documentation (where required)",
         "Import/Export Documentation (if applicable)"
     ],
@@ -1109,7 +1109,7 @@ const birds = [
 
     parents: {
         father:
-        "Healthy imported Eclectus male with exceptional talking ability, calm temperament, and outstanding genetics.",
+        "Healthy imported Eclectus male with strong talking ability, calm temperament, and outstanding genetics.",
 
         mother:
         "Healthy breeding female with vibrant plumage, excellent maternal instincts, and disease-free bloodline."
@@ -1126,13 +1126,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-bird transportation with climate-controlled travel and all necessary documentation.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel and all necessary documentation.",
 
     warranty:
-    "30-day health guarantee with lifetime breeder support and after-sale care advice.",
+    "30-day health guarantee with lifetime care support and after-review care guidance.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1207,19 +1207,19 @@ const birds = [
     "Thrives in warm indoor environments between 20°C and 28°C (68°F–82°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "DNA Sexed (where available)",
-        "Dewormed"
+        "DNA sexing information available where applicable (where available)",
+        "Parasite prevention information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Breeder Certificate",
-        "Bird Care Guide",
-        "Sales Receipt",
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Source Documentation",
+        "Bird Care guidance notes",
+        "Request Receipt",
         "CITES Documentation (where applicable)"
     ],
 
@@ -1252,13 +1252,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through licensed live-bird transportation services using climate-controlled travel and approved carriers.",
+    "Delivery review may be available through licensed live-bird transportation services using climate-controlled travel and approved carriers.",
 
     warranty:
     "14-day health guarantee with lifetime customer support and bird care guidance.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1277,7 +1277,7 @@ const birds = [
     description: "An intelligent, affectionate, and highly social parrot renowned for its remarkable talking ability and vibrant green plumage.",
 
     fullDescription:
-    "The Amazon Parrot is one of the world's most sought-after companion parrots due to its exceptional intelligence, playful personality, and impressive ability to mimic human speech. These parrots form deep bonds with their owners and thrive on daily interaction, mental stimulation, and enrichment activities. With proper care and socialization, Amazon Parrots become loyal lifelong companions capable of learning extensive vocabularies, tricks, and routines.",
+    "The Amazon Parrot is one of the world's most well-known companion parrots due to its exceptional intelligence, playful personality, and impressive ability to mimic human speech. These parrots form deep bonds with their owners and thrive on daily interaction, mental stimulation, and enrichment activities. With proper care and socialization, Amazon Parrots become loyal lifelong companions capable of learning extensive vocabularies, tricks, and routines.",
 
     colors: [
         "Green",
@@ -1333,19 +1333,19 @@ const birds = [
     "Thrives in warm indoor environments between 20°C and 28°C (68°F–82°F). Avoid cold drafts.",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "DNA Sexed (when requested)"
+        "Parasite prevention information available where applicable",
+        "DNA sexing information available where applicable (when requested)"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Sales Receipt",
-        "Ownership Transfer Document",
-        "Care Guide",
-        "Breeder Information",
+        "Veterinary health documentation",
+        "Request Receipt",
+        "Ownership or transfer documentation",
+        "Care guidance notes",
+        "Source Information",
         "DNA Certificate (where applicable)"
     ],
 
@@ -1361,7 +1361,7 @@ const birds = [
 
     parents: {
         father:
-        "Healthy breeding Amazon Parrot with exceptional talking ability, vibrant coloration, and excellent bloodlines.",
+        "Healthy breeding Amazon Parrot with strong talking ability, vibrant coloration, and excellent bloodlines.",
 
         mother:
         "Experienced breeding female with calm temperament, strong maternal instincts, and outstanding overall health."
@@ -1378,13 +1378,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through licensed live-bird transportation with climate-controlled travel and health monitoring.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel and health monitoring.",
 
     warranty:
-    "14-day health guarantee and lifetime breeder support.",
+    "Health information, review guidance, and ongoing care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1462,19 +1462,19 @@ const birds = [
     "Thrives in moderate indoor temperatures between 20°C and 28°C (68°F–82°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Receipt",
-        "Bird Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Receipt",
+        "Bird Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -1489,7 +1489,7 @@ const birds = [
 
     parents: {
         father:
-        "Healthy breeding Indian Ringneck with exceptional talking ability, vibrant coloration, and strong genetic lineage.",
+        "Healthy breeding Indian Ringneck with strong talking ability, vibrant coloration, and strong genetic lineage.",
 
         mother:
         "Healthy breeding female with excellent temperament, beautiful plumage, and disease-free bloodline."
@@ -1506,13 +1506,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through licensed live-bird transportation with climate-controlled travel.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel.",
 
     warranty:
-    "14-day health guarantee and lifetime bird care support.",
+    "Health information, review guidance, and ongoing bird care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1588,19 +1588,19 @@ const birds = [
     "Prefers moderate indoor temperatures between 18°C and 28°C (64°F–82°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Receipt",
-        "Bird Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Receipt",
+        "Bird Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -1632,13 +1632,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through licensed live-bird transportation with climate-controlled travel.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel.",
 
     warranty:
-    "14-day health guarantee and lifetime bird care support.",
+    "Health information, review guidance, and ongoing bird care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1709,23 +1709,23 @@ const birds = [
     "Thrives in warm tropical climates and indoor temperatures between 20°C and 30°C (68°F–86°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
-        "DNA Sexed",
+        "Veterinary Health reviewed",
+        "Health screening records available",
+        "DNA sexing information available where applicable",
         "Healthy Plumage",
-        "Dewormed",
-        "Microchipped",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Microchip information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "DNA Sexing Certificate",
-        "Ownership Transfer Document",
-        "Sales Invoice",
-        "Bird Care Guide",
-        "Breeder Certificate",
-        "Microchip Registration",
+        "Veterinary health documentation",
+        "DNA sexing documentation where available",
+        "Ownership or transfer documentation",
+        "Request Invoice",
+        "Bird Care guidance notes",
+        "Source Documentation",
+        "Microchip registration information where applicable",
         "CITES Documentation (where applicable)"
     ],
 
@@ -1760,13 +1760,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-bird transportation with climate-controlled travel and specialized handling for large parrots.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel and specialized handling for large parrots.",
 
     warranty:
-    "30-day health guarantee with lifetime breeder support and after-sale care guidance.",
+    "30-day health guarantee with lifetime care support and after-review care guidance.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1842,19 +1842,19 @@ const birds = [
     "Thrives in moderate to warm indoor temperatures between 20°C and 28°C (68°F–82°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Receipt",
-        "Bird Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Receipt",
+        "Bird Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -1886,13 +1886,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through licensed live-bird transportation with climate-controlled travel.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel.",
 
     warranty:
-    "14-day health guarantee and lifetime bird care support.",
+    "Health information, review guidance, and ongoing bird care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1911,7 +1911,7 @@ const birds = [
     description: "The world's largest flying parrot, admired for its brilliant cobalt-blue feathers, remarkable intelligence, and gentle personality.",
 
     fullDescription:
-    "The Hyacinth Macaw is the largest and one of the most sought-after parrots in the world. Famous for its stunning cobalt-blue plumage and bright yellow facial markings, this magnificent bird is highly intelligent, affectionate, and capable of forming lifelong bonds with its owner. Hyacinth Macaws require spacious housing, daily interaction, mental stimulation, and proper nutrition. Their playful and curious nature makes them exceptional companions for experienced bird keepers who can provide the attention they deserve.",
+    "The Hyacinth Macaw is the largest and one of the most well-known parrots in the world. Famous for its stunning cobalt-blue plumage and bright yellow facial markings, this magnificent bird is highly intelligent, affectionate, and capable of forming lifelong bonds with its owner. Hyacinth Macaws require spacious housing, daily interaction, mental stimulation, and proper nutrition. Their playful and curious nature makes them exceptional companions for experienced bird keepers who can provide the attention they deserve.",
 
     colors: [
         "Cobalt Blue",
@@ -1963,23 +1963,23 @@ const birds = [
     "Thrives in warm, humid environments and comfortable indoor temperatures between 20°C and 30°C (68°F–86°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
-        "DNA Sexed",
+        "Veterinary Health reviewed",
+        "Health screening records available",
+        "DNA sexing information available where applicable",
         "Healthy Plumage",
-        "Dewormed",
-        "Microchipped",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Microchip information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "DNA Sexing Certificate",
-        "Ownership Transfer Document",
-        "Sales Invoice",
-        "Bird Care Guide",
-        "Breeder Certificate",
-        "Microchip Registration",
+        "Veterinary health documentation",
+        "DNA sexing documentation where available",
+        "Ownership or transfer documentation",
+        "Request Invoice",
+        "Bird Care guidance notes",
+        "Source Documentation",
+        "Microchip registration information where applicable",
         "CITES Documentation (where applicable)"
     ],
 
@@ -2014,13 +2014,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-bird transportation with climate-controlled travel and specialized handling for large parrots.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel and specialized handling for large parrots.",
 
     warranty:
-    "30-day health guarantee with lifetime breeder support and after-sale care guidance.",
+    "30-day health guarantee with lifetime care support and after-review care guidance.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2039,7 +2039,7 @@ const birds = [
     description: "An exotic tropical bird recognized for its enormous colorful bill, playful personality, and striking appearance.",
 
     fullDescription:
-    "The Toucan is one of the most recognizable tropical birds in the world. Famous for its oversized colorful beak and vibrant plumage, this intelligent species is both curious and active. Toucans require spacious aviaries, specialized nutrition, and daily enrichment to thrive. They form strong bonds with experienced keepers and are admired for their calm yet inquisitive personalities. Their unique beauty and gentle temperament make them one of the most sought-after exotic birds.",
+    "The Toucan is one of the most recognizable tropical birds in the world. Famous for its oversized colorful beak and vibrant plumage, this intelligent species is both curious and active. Toucans require spacious aviaries, specialized nutrition, and daily enrichment to thrive. They form strong bonds with experienced keepers and are admired for their calm yet inquisitive personalities. Their unique beauty and gentle temperament make them one of the most well-known exotic birds.",
 
     colors: [
         "Black & Yellow",
@@ -2094,19 +2094,19 @@ const birds = [
     "Prefers warm tropical climates and indoor temperatures between 22°C and 30°C (72°F–86°F).",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Microchipped (where applicable)"
+        "Parasite prevention information available where applicable",
+        "Microchip information available where applicable (where applicable)"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Invoice",
-        "Bird Care Guide",
-        "Breeder Certificate",
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Invoice",
+        "Bird Care guidance notes",
+        "Source Documentation",
         "Import/Export Documentation (where applicable)",
         "CITES Documentation (where required)"
     ],
@@ -2141,13 +2141,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed exotic bird transportation with climate-controlled travel and specialized handling.",
+    "Delivery review may be available through licensed exotic bird transportation with climate-controlled travel and specialized handling.",
 
     warranty:
-    "30-day health guarantee with lifetime exotic bird care support.",
+    "Health information, review guidance, and exotic bird care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2222,19 +2222,19 @@ const birds = [
     "Depends on species. Most adapt well to temperate climates with appropriate shelter.",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
+        "Parasite prevention information available where applicable",
         "Routine Health Assessment Completed"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Receipt",
-        "Care Guide",
-        "Breeder Information",
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Receipt",
+        "Care guidance notes",
+        "Source Information",
         "Applicable Wildlife Permit Information (where required)"
     ],
 
@@ -2266,13 +2266,13 @@ const birds = [
     ],
 
     shipping:
-    "Delivery is available only where legally permitted and in compliance with all applicable wildlife transportation regulations.",
+    "Delivery review is only considered where legally permitted and in compliance with all applicable wildlife transportation regulations.",
 
     warranty:
-    "30-day health guarantee with ongoing care guidance.",
+    "Health information, review guidance, and ongoing care support may be provided where applicable.",
 
     availability:
-    "Available Where Legally Permitted"
+    "Subject to legal review"
 },
 
 {
@@ -2349,19 +2349,19 @@ const birds = [
     "Adaptable to most climates with proper shelter from extreme cold and prolonged wet conditions.",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
-        "Dewormed",
+        "Veterinary Health reviewed",
+        "Health screening records available",
+        "Parasite prevention information available where applicable",
         "Healthy Plumage",
-        "Breeding Quality"
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Invoice",
-        "Bird Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Invoice",
+        "Bird Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -2393,13 +2393,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-bird transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "30-day health guarantee with lifetime breeder support and husbandry guidance.",
+    "30-day health guarantee with lifetime care support and husbandry guidance.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2471,19 +2471,19 @@ const birds = [
     "Thrives in moderate climates and should be protected from extreme cold and excessive heat.",
 
     health: [
-        "Veterinary Health Checked",
-        "Disease Free",
+        "Veterinary Health reviewed",
+        "Health screening records available",
         "Healthy Plumage",
-        "Dewormed",
-        "Breeding Quality"
+        "Parasite prevention information available where applicable",
+        "Care and health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Ownership Transfer Document",
-        "Sales Receipt",
-        "Bird Care Guide",
-        "Breeder Information"
+        "Veterinary health documentation",
+        "Ownership or transfer documentation",
+        "Request Receipt",
+        "Bird Care guidance notes",
+        "Source Information"
     ],
 
     feed:
@@ -2515,13 +2515,13 @@ const birds = [
     ],
 
     shipping:
-    "Worldwide shipping available through licensed live-bird transportation with climate-controlled travel.",
+    "Delivery review may be available through licensed live-bird transportation with climate-controlled travel.",
 
     warranty:
-    "14-day health guarantee and lifetime bird care support.",
+    "Health information, review guidance, and ongoing bird care support may be provided where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 }
 
 ];
@@ -2590,7 +2590,7 @@ function renderBirds(birdsArray){
 
                     <h4>
 
-                        $${bird.price}
+                        Estimated: $${Number(bird.price).toLocaleString()}
 
                     </h4>
 
@@ -2601,7 +2601,7 @@ function renderBirds(birdsArray){
                     data-name="${bird.name}"
                     data-price="${bird.price}"
                     data-image="../${bird.image}">
-                        Add To Cart
+                        Start Request
                     </button>                      
                         </div>
                 <a href="learn-more.html?type=birds&name=${encodeURIComponent(bird.name)}" class="learn-more-btn" style="color:var(--primary);">
@@ -2683,7 +2683,7 @@ function filterBirds(){
 
         results.textContent =
 
-        `${filteredBirds.length} Birds Available`;
+        `${filteredBirds.length} Bird Profiles`;
 
     }
 

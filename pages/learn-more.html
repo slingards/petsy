@@ -12,7 +12,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Learn More | Petsy</title>
+<title>Pet Details, Care Guidance & Adoption Review | CompanionReviewHub</title>
+
+<meta
+name="description"
+content="Review pet details, care requirements, health document guidance, feeding information, availability notes, and responsible adoption support on CompanionReviewHub.">
 
 <link rel="stylesheet" href="../assets/css/style.css">
 <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -304,7 +308,7 @@
 
         <div class="logo">
             <a href="../index.html">
-                <h2>Petsy</h2>
+                <h2>CompanionReviewHub</h2>
             </a>
         </div>
 
@@ -477,10 +481,10 @@ function loadAnimalDetails(){
 
                 <h1>${animal.name}</h1>
 
-                <p>${animal.description || "Beautiful companion animal available now."}</p>
+                <p>${animal.description || "Companion animal profile available for review. Please confirm care needs, availability, and ownership requirements before submitting a request."}</p>
 
                 <div class="learn-price">
-                    $${Number(animal.price).toLocaleString()}
+                    Estimated Request Amount: $${Number(animal.price).toLocaleString()}
                 </div>
 
                 <div class="info-grid">
@@ -529,10 +533,10 @@ function loadAnimalDetails(){
                             animal.documents
                             ? showList(animal.documents)
                             : `
-                            <li>Health certificate</li>
+                            <li>Health certificate where available or required</li>
                             <li>Vaccination or veterinary record where applicable</li>
-                            <li>Ownership or transfer document</li>
-                            <li>Care guide</li>
+                            <li>Ownership, transfer, or permit document where required</li>
+                            <li>Care guide and responsible ownership notes</li>
                             `
                         }
                     </ul>
@@ -555,7 +559,7 @@ function loadAnimalDetails(){
                 </div>
 
                 <div class="detail-section">
-                    <h3>Parents Background</h3>
+                    <h3>Background Information</h3>
                     ${showParents(animal.parents)}
                 </div>
 
@@ -571,9 +575,16 @@ function loadAnimalDetails(){
                 </div>
 
                 <div class="detail-section">
-                    <h3>Shipping & Availability</h3>
-                    <p>${animal.shipping || "Delivery information available on request."}</p>
-                    <p><strong>Availability:</strong> ${animal.availability || "Available Now"}</p>
+                    <h3>Delivery, Availability & Review</h3>
+                    <p>${animal.shipping || "Delivery or pickup information is available on request and may depend on location, animal welfare requirements, documentation, and legal compliance."}</p>
+                    <p><strong>Availability:</strong> ${animal.availability || "Subject to confirmation"}</p>
+                </div>
+
+                <div class="detail-section">
+                    <h3>Important Review Notice</h3>
+                    <p>
+                        Submitting a request does not automatically confirm ownership, delivery, or availability. CompanionReviewHub encourages every user to review care needs, ask questions, and follow animal welfare and legal requirements before continuing.
+                    </p>
                 </div>
 
                 <div class="action-row">
@@ -585,7 +596,7 @@ function loadAnimalDetails(){
                     </button>
 
                     <a href="cart.html" class="secondary-btn">
-                        View Cart
+                        Review Request
                     </a>
 
                 </div>
@@ -609,7 +620,7 @@ if(hamburger && navMenu){
 }
 
 function refreshCartCount(){
-    const cart = JSON.parse(localStorage.getItem("petsyCart")) || [];
+    const cart = JSON.parse(localStorage.getItem("CompanionReviewHubCart")) || [];
 
     const total = cart.reduce((sum, item) => {
         return sum + (item.quantity || 1);

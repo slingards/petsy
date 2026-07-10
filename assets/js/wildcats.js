@@ -13,10 +13,10 @@ const wildCats = [
 
     location: "South Africa",
 
-    description: "The world's most iconic big cat, admired for its strength, majestic appearance, and commanding presence.",
+    description: "A regulated big cat species, admired for its strength, majestic appearance, and commanding presence.",
 
     fullDescription:
-    "The African Lion (Panthera leo) is one of the most recognizable and respected wild cats on Earth. Known as the 'King of the Jungle,' lions are intelligent, highly social animals that naturally live in prides. Young captive-bred lions raised under professional care can become accustomed to human interaction, although they always require experienced handlers and secure facilities. Their impressive mane, muscular build, and confident demeanor make them one of the most sought-after exotic animals for licensed zoological collections, wildlife parks, conservation programs, and private facilities where legally permitted.",
+    "The African Lion (Panthera leo) is one of the most recognizable and respected wild cats on Earth. Known as the 'King of the Jungle,' lions are intelligent, highly social animals that naturally live in prides. Young captive-bred lions raised under professional care can become accustomed to human interaction, although they always require experienced handlers and secure facilities. Their impressive mane, muscular build, and confident demeanor make them one of the regulated exotic animals for licensed zoological collections, wildlife parks, conservation programs, and qualified licensed facilities where legally permitted.",
 
     colors: [
         "Golden",
@@ -69,21 +69,21 @@ const wildCats = [
     "Thrives in warm climates with spacious secure outdoor habitats and sheltered resting areas.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -114,13 +114,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided upon veterinary examination before transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -136,7 +136,7 @@ const wildCats = [
 
     location: "India",
 
-    description: "The Bengal Tiger is the largest wild cat species, admired for its striking orange coat, bold black stripes, and unmatched strength.",
+    description: "A regulated big cat species, admired for its striking orange coat, bold black stripes, and unmatched strength.",
 
     fullDescription:
     "The Bengal Tiger (Panthera tigris tigris) is one of the world's most magnificent big cats and a symbol of power and beauty. Every tiger has a unique stripe pattern, making each individual instantly recognizable. Captive-bred Bengal Tigers are maintained only in professionally managed zoological parks, conservation centers, educational facilities, and licensed wildlife collections. They require highly experienced handlers, secure enclosures, specialized veterinary care, and strict adherence to all wildlife regulations.",
@@ -192,21 +192,21 @@ const wildCats = [
     "Best suited to warm and tropical climates with access to spacious secure habitats, shade, and freshwater.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -237,13 +237,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -259,7 +259,7 @@ const wildCats = [
 
     location: "India",
 
-    description: "An exceptionally rare color variant of the Bengal Tiger, admired for its striking white coat, dark stripes, and piercing blue eyes.",
+    description: "A regulated color variant of the Bengal Tiger, admired for its striking white coat, dark stripes, and piercing blue eyes.",
 
     fullDescription:
     "The White Tiger is a rare color variation of the Bengal Tiger resulting from a naturally occurring recessive gene. Renowned for its snow-white coat, bold charcoal stripes, and brilliant blue eyes, the White Tiger is one of the most breathtaking big cats in the world. Captive-bred White Tigers are maintained exclusively in licensed zoological parks, conservation facilities, and professionally managed wildlife collections. They require expert handling, specialized veterinary care, spacious secure habitats, and strict compliance with wildlife regulations.",
@@ -315,21 +315,21 @@ const wildCats = [
     "Thrives in spacious habitats with shaded areas, freshwater access, and moderate to warm climates.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -360,13 +360,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -382,7 +382,7 @@ const wildCats = [
 
     location: "Namibia",
 
-    description: "The fastest land animal in the world, admired for its incredible speed, slender build, and distinctive spotted coat.",
+    description: "A regulated wild cat species, admired for its incredible speed, slender build, and distinctive spotted coat.",
 
     fullDescription:
     "The Cheetah (Acinonyx jubatus) is renowned for being the fastest land mammal, capable of reaching extraordinary speeds over short distances. Its lightweight body, long legs, deep chest, and distinctive black tear marks make it one of the most recognizable wild cats. Captive-bred cheetahs require expert wildlife care, spacious habitats, and specialized management. They are highly active animals that benefit from professional enrichment, veterinary supervision, and secure facilities designed for large carnivores.",
@@ -438,21 +438,21 @@ const wildCats = [
     "Thrives in warm grasslands and open savannah environments with large secure exercise areas.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -483,13 +483,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -562,21 +562,21 @@ const wildCats = [
     "Adapts well to tropical forests, savannahs, mountainous regions, and warm climates with secure, spacious habitats.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -607,13 +607,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -686,21 +686,21 @@ const wildCats = [
     "Requires cool to cold climates with mountainous, spacious, and secure habitats designed for alpine species.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -731,13 +731,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -810,21 +810,21 @@ const wildCats = [
     "Thrives in tropical forests, wetlands, and warm climates with spacious secure habitats and access to water.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -855,13 +855,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -932,21 +932,21 @@ const wildCats = [
     "Thrives in tropical forests, dense woodlands, and warm climates with spacious secure habitats and abundant environmental enrichment.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -977,13 +977,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -1057,21 +1057,21 @@ const wildCats = [
     "Thrives in cool and cold climates with spacious forest-like habitats and sheltered resting areas.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -1102,13 +1102,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 },
 
 {
@@ -1180,21 +1180,21 @@ const wildCats = [
     "Thrives in warm and semi-arid climates with spacious secure habitats and shaded resting areas.",
 
     health: [
-        "Veterinary Exam Completed",
-        "Vaccinated",
-        "Dewormed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Veterinary record available",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Microchip Registration",
-        "Captive Breeding Certificate",
-        "Ownership Transfer Documents",
-        "Export Documentation",
-        "CITES Documentation"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Microchip registration information where applicable",
+        "Captive-bred documentation where applicable",
+        "Ownership or legal eligibility documentation where required",
+        "Export documentation where applicable",
+        "CITES documentation where applicable"
     ],
 
     feed:
@@ -1225,13 +1225,13 @@ const wildCats = [
     ],
 
     shipping:
-    "Worldwide delivery available with live-animal transportation.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, permit, carrier, and regulatory requirements.",
 
     warranty:
-    "Health guarantee provided following veterinary examination prior to transportation.",
+    "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Available."
+    "Legal review required."
 }
 
 ];
@@ -1268,7 +1268,7 @@ wildCatsArray.forEach(
 
             <span class="pet-category">
 
-                Wild Cat
+                Regulated Exotic Feline Profile
 
             </span>
 
@@ -1304,7 +1304,7 @@ wildCatsArray.forEach(
 
                 <h4>
 
-                    $${wildCat.price}
+                    Review estimate: $${Number(wildCat.price).toLocaleString()}
 
                 </h4>
 
@@ -1315,7 +1315,7 @@ wildCatsArray.forEach(
                 data-name="${wildCat.name}"
                 data-price="${wildCat.price}"
                 data-image="../${wildCat.image}">
-                    Add To Cart
+                    Request Compliance Review
                 </button>
                 </div>
                  <a
@@ -1352,11 +1352,14 @@ document.getElementById(
 function filterWildCats(){
 
  const searchTerm =
-searchInput.value
-.toLowerCase();
+searchInput ?
+searchInput.value.toLowerCase()
+: "";
 
 const category =
-breedFilter.value;
+breedFilter ?
+breedFilter.value
+: "all";
 
 const filteredWildCats =
 wildCats.filter(
@@ -1387,11 +1390,17 @@ renderWildCats(
     filteredWildCats
 );
 
+const results =
 document.getElementById(
     "resultsCount"
-).textContent =
+);
 
-`${filteredWildCats.length} Species Available`;
+if(results){
+
+    results.textContent =
+    `${filteredWildCats.length} Regulated Profiles`;
+
+}
  
 }
 

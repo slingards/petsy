@@ -10,6 +10,7 @@
 
     gtag('config', 'G-HVWY42V725');
     </script>
+
     <meta charset="UTF-8">
 
     <meta
@@ -17,9 +18,56 @@
     content="width=device-width, initial-scale=1.0">
 
     <title>
-        Premium Pet Feed | Petsy Nutrition
+        Pet Nutrition Guidance & Feed Resources | CompanionReviewHub
     </title>
 
+    <meta
+    name="description"
+    content="CompanionReviewHub provides responsible pet nutrition guidance, feed resource updates, and support for pet owners preparing suitable diets for dogs, cats, birds, reptiles, fish, rabbits, and other companion animals.">
+
+    <meta
+    name="keywords"
+    content="pet nutrition guidance, dog food guidance, cat food guidance, bird feed guidance, reptile nutrition, responsible pet care, CompanionReviewHub feed resources">
+
+    <meta
+    name="robots"
+    content="index, follow">
+
+    <link
+    rel="canonical"
+    href="https://CompanionReviewHub.netlify.app/feeds.html">
+
+    <meta
+    property="og:title"
+    content="Pet Nutrition Guidance & Feed Resources | CompanionReviewHub">
+
+    <meta
+    property="og:description"
+    content="Review responsible pet nutrition guidance and feed resource updates from CompanionReviewHub.">
+
+    <meta
+    property="og:type"
+    content="website">
+
+    <meta
+    property="og:url"
+    content="https://CompanionReviewHub.netlify.app/feeds.html">
+
+    <meta
+    property="og:image"
+    content="https://CompanionReviewHub.netlify.app/favicon.png">
+
+    <meta
+    name="twitter:card"
+    content="summary_large_image">
+
+    <meta
+    name="twitter:title"
+    content="Pet Nutrition Guidance | CompanionReviewHub">
+
+    <meta
+    name="twitter:description"
+    content="Responsible feed guidance, care reminders, and nutrition support for companion animals.">
 
     <link
     rel="stylesheet"
@@ -33,6 +81,146 @@
     rel="icon"
     type="image/png"
     href="favicon.png">
+
+
+<style>
+
+/* ==========================
+FEED HAMBURGER MENU FIX
+========================== */
+
+.feed-nav-container{
+    position:relative;
+}
+
+.feed-menu-btn{
+    display:none;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    height:44px;
+    border:none;
+    border-radius:14px;
+    background:#fff7ed;
+    color:#92400e;
+    cursor:pointer;
+    font-size:1.4rem;
+    font-weight:900;
+    line-height:1;
+    transition:.3s ease;
+}
+
+.feed-menu-btn:hover{
+    background:#fed7aa;
+    color:#7c2d12;
+}
+
+.dark-mode .feed-menu-btn{
+    background:#1e293b;
+    color:#fbbf24;
+    border:1px solid #334155;
+}
+
+.dark-mode .feed-menu-btn:hover{
+    background:#334155;
+    color:#ffffff;
+}
+
+@media(max-width:768px){
+
+    .feed-header{
+        position:fixed;
+    }
+
+    .feed-nav-container{
+        flex-direction:row !important;
+        justify-content:space-between !important;
+        align-items:center !important;
+        padding:16px 20px !important;
+        gap:12px !important;
+    }
+
+    .feed-logo{
+        font-size:1.65rem !important;
+        line-height:1;
+    }
+
+    .feed-menu-btn{
+        display:flex;
+        flex-shrink:0;
+    }
+
+    .feed-nav{
+        position:absolute;
+        top:72px;
+        left:20px;
+        right:20px;
+        width:auto !important;
+        display:none !important;
+        grid-template-columns:1fr !important;
+        flex-direction:column !important;
+        gap:10px !important;
+        padding:18px;
+        background:#ffffff;
+        border:1px solid rgba(0,0,0,.08);
+        border-radius:20px;
+        box-shadow:0 20px 45px rgba(0,0,0,.14);
+        z-index:1001;
+    }
+
+    .feed-nav.active{
+        display:grid !important;
+    }
+
+    .feed-nav a{
+        width:100%;
+        display:flex !important;
+        align-items:center;
+        justify-content:center;
+        min-height:46px;
+        background:#f8fafc !important;
+        border:1px solid #e5e7eb !important;
+        border-radius:14px !important;
+        padding:12px 14px;
+        text-align:center;
+        font-size:.95rem !important;
+        font-weight:800;
+        box-shadow:none !important;
+    }
+
+    .feed-nav a:hover,
+    .feed-nav .active{
+        background:#fff7ed !important;
+        color:#92400e !important;
+        border-color:#fed7aa !important;
+    }
+
+    .feed-coming-soon{
+        padding-top:150px !important;
+    }
+
+    .dark-mode .feed-nav{
+        background:#0f172a;
+        border-color:#334155;
+        box-shadow:0 20px 45px rgba(0,0,0,.45);
+    }
+
+    .dark-mode .feed-nav a{
+        background:#111827 !important;
+        border-color:#334155 !important;
+        color:#f8fafc !important;
+    }
+
+    .dark-mode .feed-nav a:hover,
+    .dark-mode .feed-nav .active{
+        background:#1e293b !important;
+        color:#fbbf24 !important;
+        border-color:#d97706 !important;
+    }
+
+}
+
+</style>
 
 </head>
 
@@ -50,17 +238,29 @@ HEADER
         href="index.html"
         class="feed-logo">
 
-            Petsy
+            CompanionReviewHub
 
         </a>
 
-        <nav class="feed-nav">
+        <button
+        class="feed-menu-btn"
+        id="feedMenuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+
+            ☰
+
+        </button>
+
+        <nav class="feed-nav" id="feedNav">
 
             <a href="index.html">
                 Home
             </a>
 
-            <a href="feeds.html"
+            <a
+            href="feeds.html"
             class="active">
                 Feed
             </a>
@@ -74,7 +274,7 @@ HEADER
             </a>
 
             <a href="pages/wild-cats.html">
-                Wild cats
+                Exotic Felines
             </a>
 
             <a href="pages/birds.html">
@@ -85,7 +285,7 @@ HEADER
                 Reptiles
             </a>
 
-            <a href="index.html#contact">
+            <a href="pages/contact.html">
                 Contact
             </a>
 
@@ -94,6 +294,7 @@ HEADER
     </div>
 
 </header>
+
 <!-- ==========================
 COMING SOON SECTION
 ========================== -->
@@ -106,31 +307,37 @@ COMING SOON SECTION
 
             <span class="feed-badge">
 
-                Premium Nutrition Marketplace
+                Pet Nutrition Resources
 
             </span>
 
             <h1>
 
-                Premium Feed Listings Coming Soon contact us if you would like to purchase the perfect feed for your pet.
+                Responsible Pet Feed Guidance Coming Soon
 
             </h1>
 
             <p>
 
-                At Petsy, we understand that proper nutrition plays a critical role in the health, growth, and wellbeing of every companion animal. Our team is currently building a professional feed marketplace designed to connect pet owners with trusted nutrition products from reputable brands around the world.
+                CompanionReviewHub is preparing a pet nutrition resource section designed to help owners understand suitable feeding options, basic diet needs, and responsible care considerations for different companion animals.
 
             </p>
 
             <p>
 
-                Soon you will be able to browse premium diets, supplements, specialty nutrition plans, and feed products for dogs, cats, birds, reptiles, fish, rabbits, and exotic animals directly through our platform.
+                Our goal is to provide clear, helpful, and responsible feed information for dogs, cats, birds, reptiles, fish, rabbits, and other companion animals. This section will focus on care guidance, nutrition awareness, feeding reminders, and support resources.
 
             </p>
 
             <p>
 
-                While our feed catalog is being prepared, our support team can still help you source quality nutrition products through our direct communication channels.
+                The full feed catalog is still being prepared. Until it is available, users can contact CompanionReviewHub support for general guidance on suitable nutrition options and responsible feeding considerations.
+
+            </p>
+
+            <p>
+
+                Nutrition needs can vary by species, breed, age, size, health condition, activity level, and environment. For medical, allergy, weight, or health-related feeding concerns, please speak with a qualified veterinarian.
 
             </p>
 
@@ -139,10 +346,13 @@ COMING SOON SECTION
                 <div class="feature-card">
 
                     🐕
-                    <h3>Dog Nutrition</h3>
+
+                    <h3>
+                        Dog Nutrition Guidance
+                    </h3>
 
                     <p>
-                        Premium kibble, wet food, treats, and supplements.
+                        General guidance for puppy food, adult dog diets, treats, feeding routines, and responsible care.
                     </p>
 
                 </div>
@@ -150,10 +360,13 @@ COMING SOON SECTION
                 <div class="feature-card">
 
                     🐈
-                    <h3>Cat Nutrition</h3>
+
+                    <h3>
+                        Cat Nutrition Guidance
+                    </h3>
 
                     <p>
-                        Complete diets, grain-free options, and healthy treats.
+                        Helpful information for kitten diets, adult cat feeding, hydration, treats, and daily nutrition needs.
                     </p>
 
                 </div>
@@ -161,10 +374,13 @@ COMING SOON SECTION
                 <div class="feature-card">
 
                     🦜
-                    <h3>Bird Feed</h3>
+
+                    <h3>
+                        Bird Feed Guidance
+                    </h3>
 
                     <p>
-                        Premium seed blends and nutritional supplements.
+                        Feeding reminders for companion birds, seed blends, pellets, fresh foods, and species-appropriate diets.
                     </p>
 
                 </div>
@@ -172,10 +388,13 @@ COMING SOON SECTION
                 <div class="feature-card">
 
                     🦎
-                    <h3>Reptile Nutrition</h3>
+
+                    <h3>
+                        Reptile Nutrition Guidance
+                    </h3>
 
                     <p>
-                        Specialized nutrition for reptiles and amphibians.
+                        Care-focused feeding information for reptiles, including species-specific diet and habitat considerations.
                     </p>
 
                 </div>
@@ -183,21 +402,27 @@ COMING SOON SECTION
                 <div class="feature-card">
 
                     🐠
-                    <h3>Fish Feed</h3>
+
+                    <h3>
+                        Fish Feed Guidance
+                    </h3>
 
                     <p>
-                        Quality nutrition for freshwater and marine species.
+                        Basic feeding awareness for freshwater and marine species, including portion control and water quality reminders.
                     </p>
 
                 </div>
 
                 <div class="feature-card">
 
-                    🦁
-                    <h3>Exotic Animal Feed</h3>
+                    🐾
+
+                    <h3>
+                        Specialized Diet Guidance
+                    </h3>
 
                     <p>
-                        Nutrition solutions for rare and exotic companions.
+                        General guidance for animals with special care needs, subject to animal welfare, legal, and veterinary considerations.
                     </p>
 
                 </div>
@@ -208,21 +433,30 @@ COMING SOON SECTION
 
                 <h2>
 
-                    Need Feed Recommendations Today?
+                    Need Nutrition Guidance Today?
 
                 </h2>
 
                 <p>
 
-                    Contact our support team and we will help you locate suitable nutrition products for your companion animal.
+                    Contact CompanionReviewHub support if you need general feed guidance for a companion animal. Please include the animal type, age, size, current diet, and any known care concerns so we can respond more clearly.
 
                 </p>
 
-                <div class="contact-buttons" id="contact">
+                <p>
+
+                    CompanionReviewHub support can provide general guidance, but veterinary advice should come from a qualified animal health professional.
+
+                </p>
+
+                <div
+                class="contact-buttons"
+                id="contact">
 
                     <a
                     href="https://wa.me/17087683755"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="whatsapp-btn">
 
                         <i class="fab fa-whatsapp"></i>
@@ -232,7 +466,7 @@ COMING SOON SECTION
                     </a>
 
                     <a
-                    href="mailto:petsystores@proton.me"
+                    href="mailto:CompanionReviewHubstores@proton.me"
                     class="email-btn">
 
                         <i class="fas fa-envelope"></i>
@@ -244,6 +478,7 @@ COMING SOON SECTION
                     <a
                     href="https://signal.me/#p/+15402775680"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="signal-btn">
 
                         <i class="fas fa-comment-dots"></i>
@@ -263,10 +498,10 @@ COMING SOON SECTION
 </section>
 
 <!-- ==========================
-WHY PETSY
+WHY CompanionReviewHub
 ========================== -->
 
-<section class="why-petsy">
+<section class="why-CompanionReviewHub">
 
     <div class="container">
 
@@ -274,13 +509,13 @@ WHY PETSY
 
             <h2>
 
-                Why Pet Owners Choose Petsy
+                Why CompanionReviewHub Focuses On Responsible Nutrition
 
             </h2>
 
             <p>
 
-                We are committed to helping families find healthy companions and trusted nutrition resources through a safe and professional platform.
+                Good feeding choices support healthier pets, better daily care, and more responsible ownership. CompanionReviewHub encourages pet owners to learn before making diet changes.
 
             </p>
 
@@ -290,17 +525,17 @@ WHY PETSY
 
             <div class="benefit-card">
 
-                🏆
+                🐾
 
                 <h3>
 
-                    Trusted Sources
+                    Care-Focused Guidance
 
                 </h3>
 
                 <p>
 
-                    Carefully selected providers and verified recommendations.
+                    We focus on practical feeding awareness, animal welfare, and responsible ownership reminders.
 
                 </p>
 
@@ -308,17 +543,17 @@ WHY PETSY
 
             <div class="benefit-card">
 
-                🌍
+                📋
 
                 <h3>
 
-                    Worldwide Support
+                    Clear Information
 
                 </h3>
 
                 <p>
 
-                    Assistance for pet owners across multiple countries.
+                    Feed resources are being prepared to help users compare needs by animal type, age, and care requirements.
 
                 </p>
 
@@ -336,11 +571,45 @@ WHY PETSY
 
                 <p>
 
-                    Focused on healthy nutrition and responsible care.
+                    CompanionReviewHub encourages safe feeding habits, proper hydration, suitable diets, and veterinary guidance when needed.
 
                 </p>
 
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+NUTRITION NOTICE
+========================== -->
+
+<section class="why-CompanionReviewHub">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+
+                Important Nutrition Notice
+
+            </h2>
+
+            <p>
+
+                Feed information on CompanionReviewHub is provided for general awareness and responsible ownership support. It should not replace professional veterinary advice, diagnosis, or treatment.
+
+            </p>
+
+            <p>
+
+                Always check ingredients, feeding instructions, storage guidance, age suitability, and species suitability before using any feed product. If your pet has a health condition, allergy, pregnancy, weight issue, appetite change, or unusual symptoms, consult a qualified veterinarian.
+
+            </p>
 
         </div>
 
@@ -360,42 +629,179 @@ FOOTER
 
             <h3>
 
-                Petsy
+                CompanionReviewHub
 
             </h3>
 
             <p>
 
-                Connecting families with trusted companions and professional pet resources.
+                Supporting responsible pet discovery, animal welfare, care guidance, and safer ownership decisions.
 
             </p>
 
             <p>
 
-                © 2026 Petsy. All Rights Reserved.
+                © 2026 CompanionReviewHub. All Rights Reserved.
 
             </p>
+
+            <div class="footer-links">
+
+                <a href="pages/about.html">
+                    About Us
+                </a>
+
+                <a href="pages/contact.html">
+                    Contact
+                </a>
+
+                <a href="pages/trust-safety.html">
+                    Trust & Safety
+                </a>
+
+                <a href="pages/terms-of-service.html">
+                    Terms Of Service
+                </a>
+
+                <a href="pages/refund-policy.html">
+                    Refund Policy
+                </a>
+
+                <a href="pages/shipping-policy.html">
+                    Shipping Policy
+                </a>
+
+                <a href="pages/animal-welfare-policy.html">
+                    Animal Welfare Policy
+                </a>
+
+                <a href="pages/legal-compliance.html">
+                    Legal Compliance
+                </a>
+
+                <a href="pages/privacy-policy.html">
+                    Privacy Policy
+                </a>
+
+            </div>
 
         </div>
 
     </div>
 
 </footer>
-<script defer src="../assets/js/dark-mode.js"></script>
+
+
+<script>
+
+const feedMenuBtn =
+document.getElementById(
+    "feedMenuBtn"
+);
+
+const feedNav =
+document.getElementById(
+    "feedNav"
+);
+
+function closeFeedMenu(){
+
+    if(!feedMenuBtn || !feedNav) return;
+
+    feedNav.classList.remove(
+        "active"
+    );
+
+    feedMenuBtn.setAttribute(
+        "aria-expanded",
+        "false"
+    );
+
+    feedMenuBtn.textContent =
+    "☰";
+
+    feedMenuBtn.setAttribute(
+        "aria-label",
+        "Open navigation menu"
+    );
+
+}
+
+if(feedMenuBtn && feedNav){
+
+    feedMenuBtn.addEventListener(
+        "click",
+        () => {
+
+            const isOpen =
+            feedNav.classList.toggle(
+                "active"
+            );
+
+            feedMenuBtn.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+            feedMenuBtn.textContent =
+            isOpen ? "✕" : "☰";
+
+            feedMenuBtn.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+        }
+    );
+
+    feedNav
+    .querySelectorAll(
+        "a"
+    )
+    .forEach(link=>{
+
+        link.addEventListener(
+            "click",
+            closeFeedMenu
+        );
+
+    });
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if(window.innerWidth > 768){
+
+                closeFeedMenu();
+
+            }
+
+        }
+    );
+
+}
+
+</script>
+
+<script defer src="assets/js/dark-mode.js"></script>
+
 <script src="feed-js/feed.js"></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6a4ec028edc2ff1d46ff2a22/1jt1pt7v0';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a4ec028edc2ff1d46ff2a22/1jt1pt7v0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
 </body>
 
 </html>

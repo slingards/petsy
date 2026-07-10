@@ -73,20 +73,20 @@ const cats = [
     "Thrives in cool to moderate climates thanks to its dense water-resistant coat.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -116,13 +116,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -200,21 +200,21 @@ const cats = [
     "Thrives in cool and moderate climates thanks to its dense triple coat, but also adapts well to comfortable indoor environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -245,13 +245,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -332,21 +332,21 @@ const cats = [
     "Adapts well to most comfortable indoor climates and should be protected from extreme cold, heat, and unsafe outdoor environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Ear Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Ear health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -377,13 +377,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -463,21 +463,21 @@ const cats = [
     "Adapts well to most indoor climates and does best in a comfortable home environment with safe climbing spaces, warm resting areas, and proper care.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Tail and Spine Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Tail and spine health information available"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -508,13 +508,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -593,21 +593,21 @@ const cats = [
     "Adapts well to warm, cool, and moderate indoor climates, especially when provided with a clean and comfortable home environment.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -639,13 +639,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -720,21 +720,21 @@ const cats = [
     "Adapts well to most comfortable indoor climates and does well in cool to moderate environments with proper care.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -765,13 +765,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -847,21 +847,21 @@ const cats = [
     "Adapts well to warm and moderate indoor climates, but should be kept in a comfortable environment with proper grooming and care.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -892,13 +892,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -971,21 +971,21 @@ const cats = [
     "Prefers warm to moderate indoor climates and adapts well to comfortable home environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -1016,13 +1016,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1093,21 +1093,21 @@ const cats = [
     "Adapts well to warm and moderate indoor climates and prefers a comfortable, peaceful home environment.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -1138,13 +1138,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1218,21 +1218,21 @@ const cats = [
     "Adapts well to warm and moderate indoor climates and thrives in a comfortable home environment.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -1263,13 +1263,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1347,21 +1347,21 @@ const cats = [
     "Adapts well to most comfortable indoor climates and does best in a clean, safe, temperature-controlled home environment.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -1392,13 +1392,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1480,21 +1480,21 @@ const cats = [
     "Thrives in cool to moderate indoor climates and adapts well to comfortable home environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -1525,13 +1525,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1603,21 +1603,21 @@ const cats = [
     "Thrives in cool to moderate indoor climates and adapts well to peaceful home environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -1648,13 +1648,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1730,21 +1730,21 @@ const cats = [
     "Adapts well to warm and moderate indoor climates and enjoys comfortable home environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -1775,13 +1775,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -1853,21 +1853,21 @@ const cats = [
     "Adapts well to warm and moderate indoor climates and prefers a comfortable, calm home environment.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -1898,13 +1898,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 {
     name: "Cymric",
@@ -1983,22 +1983,22 @@ const cats = [
     "Thrives in cool to moderate indoor climates thanks to its dense long coat, while also adapting well to comfortable home environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
         "Spinal Health Checked",
-        "Genetic Health Checked"
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -2030,13 +2030,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2114,21 +2114,21 @@ const cats = [
     "Thrives in warm to moderate indoor climates and should be protected from extreme cold due to its short coat.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -2159,13 +2159,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2245,21 +2245,21 @@ const cats = [
     "Best suited for warm indoor environments and should be protected from cold weather, direct sunlight, and rough outdoor conditions.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -2291,13 +2291,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 {
     name: "Lykoi",
@@ -2371,21 +2371,21 @@ const cats = [
     "Best suited for comfortable indoor environments. Because of their sparse coat, they should be protected from cold temperatures and excessive direct sunlight.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
-        "Genetic Health Checked"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
+        "Genetic health information available where applicable"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -2417,13 +2417,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2502,21 +2502,21 @@ const cats = [
     "Adapts well to most indoor climates and does best in a comfortable home environment with warm resting areas and proper care.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
         "Spinal Health Checked"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -2547,13 +2547,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2633,21 +2633,21 @@ const cats = [
     "Adapts well to comfortable indoor environments and should be protected from extreme heat, cold, and unsafe outdoor spaces.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed",
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review",
         "Joint and Spine Health Checked"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -2679,13 +2679,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel, professional handling, veterinary clearance, and complete travel documentation.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 
@@ -2767,20 +2767,20 @@ const cats = [
     "Prefers cool indoor environments due to its thick double coat.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -2810,13 +2810,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2891,20 +2891,20 @@ const cats = [
     "Adapts well to most climates but prefers comfortable indoor temperatures.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -2934,13 +2934,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -3016,20 +3016,20 @@ const cats = [
     "Prefers warm to moderate climates and enjoys comfortable indoor living.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -3059,13 +3059,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -3143,20 +3143,20 @@ const cats = [
     "Thrives in cool to moderate climates and prefers comfortable indoor environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -3186,13 +3186,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -3272,20 +3272,20 @@ const cats = [
     "Thrives in cool to moderate climates and adapts well to indoor environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -3315,13 +3315,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -3401,20 +3401,20 @@ const cats = [
     "Adapts well to cool and moderate climates and thrives as an indoor companion.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -3444,13 +3444,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -3530,20 +3530,20 @@ const cats = [
     "Best suited for warm indoor environments. Requires protection from cold weather and excessive direct sunlight.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -3574,13 +3574,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -3651,20 +3651,20 @@ const cats = [
     "Thrives in cool to moderate climates thanks to its dense double coat, while also adapting well to comfortable indoor living.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -3694,13 +3694,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -3778,20 +3778,20 @@ const cats = [
     "Thrives in cool and cold climates thanks to its thick double-layered water-resistant coat.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -3822,13 +3822,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -3902,25 +3902,25 @@ const cats = [
     "Adapts well to warm and moderate climates but should primarily live indoors with adequate temperature control.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents",
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation",
         "Legal Ownership Documentation (where required)"
     ],
 
     feed:
-    "Premium high-protein diet consisting of quality commercial cat food or breeder-approved nutrition plans. Rich animal protein, taurine, omega fatty acids, vitamins, and minerals are essential for maintaining their athletic physique. Fresh clean water should always be available.",
+    "Premium high-protein diet consisting of quality commercial cat food or care source-approved nutrition plans. Rich animal protein, taurine, omega fatty acids, vitamins, and minerals are essential for maintaining their athletic physique. Fresh clean water should always be available.",
 
     feedingSchedule: [
         "Morning Meal",
@@ -3947,13 +3947,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel. Buyers are responsible for complying with all local, state, and national regulations regarding Savannah Cat ownership.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel. Requesters are responsible for complying with all local, state, and national regulations regarding Savannah Cat ownership.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -4029,20 +4029,20 @@ const cats = [
     "Adapts well to most climates but thrives in warm and moderate indoor environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -4073,13 +4073,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -4157,20 +4157,20 @@ const cats = [
     "Thrives in cool to moderate climates and prefers comfortable indoor living.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -4200,13 +4200,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -4288,20 +4288,20 @@ const cats = [
     "Thrives in warm to moderate climates and is best suited for indoor living.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -4331,13 +4331,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -4416,20 +4416,20 @@ const cats = [
     "Thrives in cool to moderate climates and adapts well to comfortable indoor environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -4459,13 +4459,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -4538,20 +4538,20 @@ const cats = [
     "Thrives in cool to moderate climates thanks to its naturally water-resistant semi-long coat.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -4582,13 +4582,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -4671,20 +4671,20 @@ const cats = [
     "Best suited for warm indoor environments due to its short curly coat and limited insulation against cold weather.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -4715,13 +4715,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -4804,20 +4804,20 @@ const cats = [
     "Prefers warm indoor environments due to its fine single-layer curly coat and limited protection from cold temperatures.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -4848,13 +4848,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -4933,20 +4933,20 @@ const cats = [
     "Adapts well to a wide variety of climates and thrives as an indoor companion.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -4977,13 +4977,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -5066,20 +5066,20 @@ const cats = [
     "Thrives in cool to moderate indoor environments and should be protected from excessive heat because of its flat facial structure.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -5110,13 +5110,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -5187,20 +5187,20 @@ const cats = [
     "Thrives in cool to moderate climates thanks to its dense double coat.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -5230,13 +5230,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -5312,20 +5312,20 @@ const cats = [
     "Prefers cool to moderate indoor climates due to its thick luxurious coat.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -5356,13 +5356,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -5442,20 +5442,20 @@ const cats = [
     "Adapts well to warm and moderate climates and thrives as an indoor companion.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -5486,13 +5486,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -5565,20 +5565,20 @@ const cats = [
     "Thrives in warm to moderate climates and adapts well to indoor living with regular exercise.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -5609,13 +5609,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -5691,20 +5691,20 @@ const cats = [
     "Thrives in warm to moderate climates and is best suited for comfortable indoor living.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -5735,13 +5735,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -5821,20 +5821,20 @@ const cats = [
     "Thrives in warm to moderate climates and is best suited for indoor living.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -5865,13 +5865,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -5940,20 +5940,20 @@ const cats = [
     "Thrives in warm to moderate climates and enjoys comfortable indoor environments.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -5984,13 +5984,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -6072,20 +6072,20 @@ const cats = [
     "Adapts well to most climates but thrives in moderate indoor environments where its delicate curly coat can be properly maintained.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -6116,13 +6116,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -6203,20 +6203,20 @@ const cats = [
     "Thrives in cool to moderate climates. Their dense curly coat provides good insulation but still benefits from comfortable indoor living.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -6247,13 +6247,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -6322,20 +6322,20 @@ const cats = [
     "Thrives in warm to moderate climates and prefers a comfortable indoor environment.",
 
     health: [
-        "Vaccinated",
-        "Dewormed",
-        "Veterinary Exam Completed",
-        "Microchipped",
-        "Health Guaranteed"
+        "Vaccination records available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Microchip information available where applicable",
+        "Health records available for review"
     ],
 
     documents: [
-        "Veterinary Health Certificate",
-        "Vaccination Record",
-        "Pedigree Certificate",
-        "Registration Papers",
-        "Microchip Registration",
-        "Transfer of Ownership Documents"
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation"
     ],
 
     feed:
@@ -6366,13 +6366,13 @@ const cats = [
     ],
 
     shipping:
-    "Worldwide delivery available through licensed live-animal transportation with climate-controlled travel and professional handling.",
+    "Delivery review may be available through licensed live-animal transportation with climate-controlled travel and professional handling.",
 
     warranty:
-    "One-year congenital health guarantee and lifetime breeder support.",
+    "One-year congenital health information and ongoing care support.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 }
 
 ];
@@ -6405,7 +6405,7 @@ function renderCats(catsArray){
 
                 <span class="pet-category">
 
-                    Cat
+                    Cat Profile
 
                 </span>
 
@@ -6441,7 +6441,7 @@ function renderCats(catsArray){
 
                     <h4>
 
-                        $${cat.price}
+                        Estimated: $${Number(cat.price).toLocaleString()}
 
                     </h4>
 
@@ -6452,7 +6452,7 @@ function renderCats(catsArray){
                     data-name="${cat.name}"
                     data-price="${cat.price}"
                     data-image="../${cat.image}">
-                        Add To Cart
+                        Start Request
                     </button>
 
                     </div>
@@ -6537,7 +6537,7 @@ function filterCats(){
 
         results.textContent =
 
-        `${filteredCats.length} Cats Available`;
+        `${filteredCats.length} Cat Profiles`;
 
     }
 

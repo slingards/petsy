@@ -13,13 +13,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Petsy | Find Your Perfect Companion</title>
+    <title>CompanionReview | Responsible Profile Discovery & Request Review</title>
 
+    <link rel="icon" href="/favicon.ico" sizes="any">
 
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
     <meta
     name="description"
-    content="Petsy helps pet lovers find puppies, kittens, wild cats and companion animals with adoption request support, delivery guidance, and customer service assistance.">
+    content="CompanionReview helps animal lovers review companion animal profiles, care needs, welfare guidance, delivery requirements, and legal compliance before submitting a responsible pet request.">
 
     <meta
     name="robots"
@@ -27,7 +33,15 @@
 
     <link
     rel="canonical"
-    href="https://getpetsy.netlify.app/">
+    href="https://CompanionReviewHub.netlify.app/">
+
+    <meta property="og:title" content="CompanionReview | Responsible Profile Discovery & Request Review">
+    <meta property="og:description" content="Review companion animal profiles with care guidance, welfare reminders, delivery review, and legal compliance support before submitting a request.">
+    <meta property="og:url" content="https://CompanionReviewHub.netlify.app/">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:title" content="CompanionReview | Responsible Profile Discovery">
+    <meta name="twitter:description" content="Browse pet profiles, review care needs, and submit responsible requests through CompanionReview.">
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
@@ -38,33 +52,140 @@
     <script defer src="assets/js/app.js"></script>
     <script defer src="assets/js/search.js"></script>
 
-    <link
-    rel="icon"
-    type="image/png"
-    href="favicon.png">
-
     <meta name="google-site-verification" content="mDiGaZfoy-CpiC70qxAw4wuWnh3kMdUcqm-6q3Q9z9k" />
+
+    <style>
+        .home-trust-notice{
+            padding:70px 0;
+            background:#fff7ed;
+        }
+
+        .trust-notice-box{
+            background:#ffffff;
+            border-left:6px solid #d97706;
+            border-radius:26px;
+            padding:40px;
+            box-shadow:0 15px 40px rgba(0,0,0,.08);
+        }
+
+        .trust-notice-box span{
+            display:inline-block;
+            color:#92400e;
+            background:#ffedd5;
+            padding:9px 16px;
+            border-radius:999px;
+            font-weight:800;
+            margin-bottom:15px;
+        }
+
+        .trust-notice-box h2{
+            color:#111827;
+            margin-bottom:15px;
+            line-height:1.3;
+        }
+
+        .trust-notice-box p{
+            color:#4b5563;
+            line-height:1.8;
+            margin-bottom:14px;
+        }
+
+        .trust-notice-actions{
+            display:flex;
+            flex-wrap:wrap;
+            gap:14px;
+            margin-top:22px;
+        }
+
+        .cart-review-note{
+            padding:18px;
+            background:#fff7ed;
+            border-top:1px solid #fed7aa;
+            border-bottom:1px solid #fed7aa;
+        }
+
+        .cart-review-note p{
+            color:#92400e;
+            line-height:1.7;
+            font-weight:700;
+            font-size:.92rem;
+        }
+
+        .dark-mode .home-trust-notice{
+            background:#020617;
+        }
+
+        .dark-mode .trust-notice-box{
+            background:#0f172a;
+            border-left-color:#d97706;
+            box-shadow:0 15px 40px rgba(0,0,0,.4);
+        }
+
+        .dark-mode .trust-notice-box span{
+            background:#1e293b;
+            color:#fbbf24;
+        }
+
+        .dark-mode .trust-notice-box h2{
+            color:#f8fafc;
+        }
+
+        .dark-mode .trust-notice-box p{
+            color:#cbd5e1;
+        }
+
+        .dark-mode .cart-review-note{
+            background:#1e293b;
+            border-color:#334155;
+        }
+
+        .dark-mode .cart-review-note p{
+            color:#fbbf24;
+        }
+
+        @media(max-width:768px){
+            .home-trust-notice{
+                padding:50px 0;
+            }
+
+            .trust-notice-box{
+                padding:28px 20px;
+                border-radius:20px;
+            }
+
+            .trust-notice-actions a{
+                width:100%;
+                text-align:center;
+            }
+        }
+    </style>
+
 </head>
+<body>
+
 <div class="mobile-menu">
 
     <a href="index.html">Home</a>
 
-    <a href="pages/dogs.html">Dogs</a>
+    <a href="pages/dogs.html">Dog Profiles</a>
 
-    <a href="pages/cats.html">Cats</a>
+    <a href="pages/cats.html">Cat Profiles</a>
 
-    <a href="pages/birds.html">Birds</a>
+    <a href="pages/birds.html">Bird Profiles</a>
 
-    <a href="pages/wild-cats.html">Wild Cats</a>
+    <a href="pages/wild-cats.html">Regulated Exotic Felines</a>
 
     <a href="pages/reptiles.html">Reptiles</a>
 
     <a href="pages/cart.html">Cart</a>
 
+    <a href="feeds.html" class="animal-btn">
+        Feeds
+    </a>
+
     <a href="#contact">Contact</a>
 
 </div>
-<body>
 
     <!-- =====================
          MOBILE MENU OVERLAY
@@ -80,9 +201,9 @@
 
         <div class="container">
 
-            <div class="logo">
+            <div class="logo n-logo">
                 <a href="index.html">
-                    <h2>Petsy</h2>
+                    <h2>CompanionR</h2>
                 </a>
             </div>
 
@@ -90,11 +211,14 @@
 
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/dogs.html">Dogs</a></li>
-                    <li><a href="pages/cats.html">Cats</a></li>
-                    <li><a href="pages/birds.html">Birds</a></li>
-                    <li><a href="pages/wild-cats.html">Wild Cats</a></li>
+                    <li><a href="pages/dogs.html">Dog Profiles</a></li>
+                    <li><a href="pages/cats.html">Cat Profiles</a></li>
+                    <li><a href="pages/birds.html">Bird Profiles</a></li>
+                    <li><a href="pages/wild-cats.html">Regulated Exotic Felines</a></li>
                     <li><a href="pages/reptiles.html">Reptiles</a></li>
+                    <a href="feeds.html">
+                        Feeds
+                    </a>
                     <li><a href="#contact">Contact</a></li>
 
                 </ul>
@@ -149,21 +273,21 @@
         <div class="container hero-content">
 
             <span class="hero-tag">
-                Trusted Pet Marketplace Worldwide
+                Responsible Profile Discovery & Request Review
             </span>
 
             <h1>
-                Discover Your Perfect Companion
+                Review Companion Animal Profiles Responsibly
             </h1>
 
             <p>
-                Browse verified dogs, cats, birds, reptiles, and exotic pets from trusted sellers around the world.
+                Browse dogs, cats, birds, reptiles, and regulated exotic feline profiles with care reminders, request review, delivery guidance, and legal compliance support.
             </p>
 
         <div class="hero-buttons">
 
         <a href="#browse-pets" class="primary-btn hero-main-btn">
-            Browse Pets
+            Browse Profiles
         </a>
 
         </div>
@@ -171,19 +295,19 @@
         <div class="hero-animal-grid">
 
             <a href="pages/dogs.html" class="animal-btn">
-                Dogs
+                Dog Profiles
             </a>
 
             <a href="pages/cats.html" class="animal-btn">
-                Cats
+                Cat Profiles
             </a>
 
             <a href="pages/birds.html" class="animal-btn">
-                Birds
+                Bird Profiles
             </a>
 
             <a href="pages/wild-cats.html" class="animal-btn">
-                Wild Cats
+                Regulated Exotic Felines
             </a>
 
             <a href="pages/reptiles.html" class="animal-btn">
@@ -210,7 +334,7 @@
 
             <div class="search-card">
 
-                <h2>Find Your Ideal Pet</h2>
+                <h2>Find A Companion Profile</h2>
 
                 <form>
 
@@ -221,11 +345,12 @@
 
                             <select id="animalType">
 
-                                <option value="all">All Animals</option>
-                                <option value="dog">Dogs</option>
-                                <option value="cat">Cats</option>
-                                <option value="bird">Birds</option>
-                                <option value="wildcat">Wild Cats</option>
+                                <option value="all">All Profiles</option>
+                                <option value="dog">Dog Profiles</option>
+                                <option value="cat">Cat Profiles</option>
+                                <option value="bird">Bird Profiles</option>
+                                <option value="wildcat">Regulated Exotic Felines</option>
+                                <option value="reptile">Reptile Profiles</option>
 
                             </select>
                         </div>
@@ -236,7 +361,7 @@
                             <input
                             type="text"
                             id="breedSearch"
-                            placeholder="Any breed">
+                            placeholder="Search by breed or name">
                         </div>
 
                         <div class="field">
@@ -430,12 +555,12 @@
                         </div>
 
                         <div class="field">
-                            <label>Price Range</label>
+                            <label>Review Estimate Range</label>
 
                             <select id="priceSearch">
 
                                 <option value="all">
-                                    Any Price
+                                    Any Estimate
                                 </option>
 
                                 <option value="0-500">
@@ -461,10 +586,10 @@
 
                     <button
                     type="button"
-                    id="searchPetsBtn"
+                    id="searchProfilesBtn"
                     class="search-btn">
 
-                        Search Pets
+                        Search Profiles
 
                     </button>
 
@@ -476,7 +601,52 @@
 
     </section>
 
-    
+
+
+    <!-- =====================
+         TRUST & SAFETY NOTICE
+    ====================== -->
+
+    <section class="home-trust-notice reveal">
+
+        <div class="container">
+
+            <div class="trust-notice-box">
+
+                <span>
+                    Safety Reminder
+                </span>
+
+                <h2>
+                    Requests Are Reviewed Before Final Arrangements
+                </h2>
+
+                <p>
+                    CompanionReviewHub does not ask visitors to send unexpected fees through random emails, unknown numbers, or unofficial messages. Any request update, delivery guidance, or payment instruction should come only through verified CompanionReviewHub support after review.
+                </p>
+
+                <p>
+                    Availability, delivery, ownership eligibility, documentation, and animal welfare requirements may vary by location and animal type. Regulated exotic animal profiles require legal and compliance review where applicable.
+                </p>
+
+                <div class="trust-notice-actions">
+
+                    <a href="pages/trust-safety.html" class="primary-btn">
+                        Read Trust & Safety
+                    </a>
+
+                    <a href="pages/legal-compliance.html" class="animal-btn">
+                        Legal Compliance
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
 
     <!-- =====================
         PREMIUM BROWSE PETS SECTION
@@ -488,14 +658,14 @@
 
             <div class="section-title">
 
-                <span>Choose Your Companion</span>
+                <span>Choose A Cat Profileegory</span>
 
                 <h2>
-                    Browse Pets By Category
+                    Browse Profiles By Cat Profileegory
                 </h2>
 
                 <p>
-                    Select a pet category below to explore available companions, compare listings, and find the right animal for your home or lifestyle.
+                    Select a category below to review companion animal profiles, compare care needs, and choose which request you would like CompanionReview support to review.
                 </p>
 
             </div>
@@ -505,22 +675,22 @@
                 <a href="pages/dogs.html" class="premium-category-card">
 
                     <div class="premium-category-image">
-                        <img src="assets/images/dogs/tibetan-mastiff.jpg" alt="Dogs">
+                        <img src="assets/images/dogs/tibetan-mastiff.jpg" alt="Dog Profiles">
                     </div>
 
                     <div class="premium-category-content">
 
-                        <span>Most Popular</span>
+                        <span>Companion Profiles</span>
 
-                        <h3>Dogs</h3>
+                        <h3>Dog Profiles</h3>
 
                         <p>
                             Loyal, intelligent, protective, playful, and loving companions for families, homes, and active owners.
                         </p>
 
                         <div class="premium-category-footer">
-                            <strong>Explore Dogs</strong>
-                            <small>View breeds →</small>
+                            <strong>Review Dog Profiles</strong>
+                            <small>View profiles →</small>
                         </div>
 
                     </div>
@@ -530,22 +700,22 @@
                 <a href="pages/cats.html" class="premium-category-card">
 
                     <div class="premium-category-image">
-                        <img src="assets/images/cats/persian.jpg" alt="Cats">
+                        <img src="assets/images/cats/persian.jpg" alt="Cat Profiles">
                     </div>
 
                     <div class="premium-category-content">
 
-                        <span>Elegant Companions</span>
+                        <span>Calm Companions</span>
 
-                        <h3>Cats</h3>
+                        <h3>Cat Profiles</h3>
 
                         <p>
                             Beautiful, affectionate, calm, and independent pets perfect for apartments, families, and cozy homes.
                         </p>
 
                         <div class="premium-category-footer">
-                            <strong>Explore Cats</strong>
-                            <small>View breeds →</small>
+                            <strong>Review Cat Profiles</strong>
+                            <small>View profiles →</small>
                         </div>
 
                     </div>
@@ -555,22 +725,22 @@
                 <a href="pages/birds.html" class="premium-category-card">
 
                     <div class="premium-category-image">
-                        <img src="assets/images/birds/amazon-parrot.jpg" alt="Birds">
+                        <img src="assets/images/birds/amazon-parrot.jpg" alt="Bird Profiles">
                     </div>
 
                     <div class="premium-category-content">
 
-                        <span>Colorful & Social</span>
+                        <span>Bird Profiles</span>
 
-                        <h3>Birds</h3>
+                        <h3>Bird Profiles</h3>
 
                         <p>
                             Bright, intelligent, vocal, and charming birds with unique personalities and beautiful colors.
                         </p>
 
                         <div class="premium-category-footer">
-                            <strong>Explore Birds</strong>
-                            <small>View birds →</small>
+                            <strong>Review Bird Profiles</strong>
+                            <small>View profiles →</small>
                         </div>
 
                     </div>
@@ -580,22 +750,22 @@
                 <a href="pages/wild-cats.html" class="premium-category-card premium-featured-card">
 
                     <div class="premium-category-image">
-                        <img src="assets/images/wild-cats/bengal-tiger.jpg" alt="Wild Cats">
+                        <img src="assets/images/wild-cats/bengal-tiger.jpg" alt="Regulated Exotic Felines">
                     </div>
 
                     <div class="premium-category-content">
 
-                        <span>Rare Listings</span>
+                        <span>Regulated Profiles</span>
 
-                        <h3>Wild Cats</h3>
+                        <h3>Regulated Exotic Felines</h3>
 
                         <p>
-                            Exotic feline listings for serious buyers, collectors, and capable owners.
+                            Educational regulated exotic feline profiles for qualified facilities where ownership, transport, documentation, and permits are legally allowed.
                         </p>
 
                         <div class="premium-category-footer">
-                            <strong>Explore Wild Cats</strong>
-                            <small>View listings →</small>
+                            <strong>Review Regulated Profiles</strong>
+                            <small>Compliance review →</small>
                         </div>
 
                     </div>
@@ -610,17 +780,17 @@
 
                     <div class="premium-category-content">
 
-                        <span>Unique Pets</span>
+                        <span>Reptile Profiles</span>
 
                         <h3>Reptiles</h3>
 
                         <p>
-                            Discover snakes, lizards, tortoises, and other fascinating reptiles for experienced pet lovers.
+                            Review snakes, lizards, tortoises, and other reptiles with care, enclosure, feeding, and legal ownership reminders.
                         </p>
 
                         <div class="premium-category-footer">
-                            <strong>Explore Reptiles</strong>
-                            <small>View reptiles →</small>
+                            <strong>Review Reptiles</strong>
+                            <small>View profiles →</small>
                         </div>
 
                     </div>
@@ -630,22 +800,22 @@
                 <a href="feeds.html" class="premium-category-card">
 
                     <div class="premium-category-image">
-                        <img src="assets/images/feeds/feeds.jpg" alt="Pet Feeds">
+                        <img src="assets/images/feeds/feeds.jpg" alt="Profile Feeds">
                     </div>
 
                     <div class="premium-category-content">
 
-                        <span>Care Essentials</span>
+                        <span>Nutrition Resources</span>
 
-                        <h3>Feeds & Supplies</h3>
+                        <h3>Feed Guidance</h3>
 
                         <p>
-                            Premium food, care items, and essential supplies to keep your pets healthy, happy, and comfortable.
+                            Helpful pet nutrition resources and care guidance for owners preparing suitable feeding routines.
                         </p>
 
                         <div class="premium-category-footer">
-                            <strong>Explore Feeds</strong>
-                            <small>View products →</small>
+                            <strong>Review Feed Guidance</strong>
+                            <small>View guidance →</small>
                         </div>
 
                     </div>
@@ -658,7 +828,7 @@
 
     </section>
 
-        <!-- Featured Pets Section Starts Here -->
+        <!-- Featured Profiles Section Starts Here -->
         <!-- =====================
         FEATURED PETS
         ====================== -->
@@ -670,12 +840,12 @@
 
             <div class="section-title">
 
-                <span>Featured Listings</span>
+                <span>Featured Profiles</span>
 
-                <h2>Popular Pets Available Now</h2>
+                <h2>Popular Profiles For Review</h2>
 
                 <p>
-                    Browse some of our most viewed and highly rated companion animals.
+                    Review selected companion animal profiles. Availability, care requirements, delivery, and documentation may still need confirmation.
                 </p>
 
             </div>
@@ -693,7 +863,7 @@
 
                     <div class="pet-content">
 
-                        <span class="pet-category">Dog</span>
+                        <span class="pet-category">Dog Profile</span>
 
                         <h3>German Shepherd</h3>
 
@@ -708,7 +878,7 @@
 
                         <div class="pet-footer">
 
-                            <h4>$2,800</h4>
+                            <h4>Est. $2,800</h4>
 
                             <button
                             class="primary-btn add-cart-btn"
@@ -719,7 +889,7 @@
 
                             data-image="assets/images/dogs/german-shepherd.jpg">
 
-                            Add To Cart
+                            Start Request
 
                             </button>
                             <button
@@ -728,11 +898,11 @@
                             data-name="German Shepherd"
                             data-price="2800"
                             data-image="assets/images/dogs/german-shepherd.jpg"
-                            data-category="Dog"
+                            data-category="Dog Profile"
                             data-age="8 Months"
                             data-location="USA">
 
-                                Quick View
+                                Review Details
 
                             </button>
                             <button
@@ -745,7 +915,7 @@
 
                             data-image="assets/images/dogs/german-shepherd.jpg">
 
-                                ❤ Wishlist
+                                ❤ Save Profile
 
                             </button>
                             <span style="display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; ">
@@ -753,15 +923,15 @@
                             href="#"
                             onclick="openLearnMore('dogs','German Shepherd')"
                             class="learn-more-btn" style="color:var(--primary);">
-                                Learn More →
+                                Review Profile →
                             </a>
                             <a href="pages/dogs.html" class="animal-btn" style="color:var(--primary);">
-                                View page for more breeds →
+                                View more profiles →
                             </a>
                             </span>
 
                         </div>
-                        <div class="color-opt" style="font-style:bold;">Available color options are listed on the Learn More page. After purchase, we'll contact you using your provided email or preferred contact method to finalize your color choice.</div>
+                        <div class="color-opt" style="font-style:bold;">Color options and availability are listed on the Learn More page where applicable. After your request is reviewed, CompanionReview support may contact you through your selected contact method to discuss profile details, care needs, and availability.</div>
 
                     </div>
 
@@ -778,7 +948,7 @@
 
                     <div class="pet-content">
 
-                        <span class="pet-category">Dog</span>
+                        <span class="pet-category">Dog Profile</span>
 
                         <h3>Golden Retriever</h3>
 
@@ -793,7 +963,7 @@
 
                         <div class="pet-footer">
 
-                            <h4>$2,500</h4>
+                            <h4>Est. $2,500</h4>
 
                             <button
                             class="primary-btn add-cart-btn"
@@ -804,7 +974,7 @@
 
                             data-image="assets/images/dogs/golden-retriever.jpg">
 
-                            Add To Cart
+                            Start Request
 
                             </button>
                             <button
@@ -813,11 +983,11 @@
                             data-name="Golden Retriever"
                             data-price="2500"
                             data-image="assets/images/dogs/golden-retriever.jpg"
-                            data-category="Dog"
+                            data-category="Dog Profile"
                             data-age="8 Months"
                             data-location="USA">
 
-                                Quick View
+                                Review Details
 
                             </button>
                             <button
@@ -830,7 +1000,7 @@
 
                             data-image="assets/images/dogs/golden-retriever.jpg">
 
-                                ❤ Wishlist
+                                ❤ Save Profile
 
                             </button>
 
@@ -839,15 +1009,15 @@
                             href="#"
                             onclick="openLearnMore('dogs','Golden Retriever')"
                             class="learn-more-btn" style="color:var(--primary);">
-                                Learn More →
+                                Review Profile →
                             </a>
                             <a href="pages/dogs.html" class="animal-btn" style="color:var(--primary);">
-                                View page for more breeds →
+                                View more profiles →
                             </a>
                             </span>                            
 
                         </div>
-                        <div class="color-opt" style="font-style:bold;">Available color options are listed on the Learn More page. After purchase, we'll contact you using your provided email or preferred contact method to finalize your color choice.</div>
+                        <div class="color-opt" style="font-style:bold;">Color options and availability are listed on the Learn More page where applicable. After your request is reviewed, CompanionReview support may contact you through your selected contact method to discuss profile details, care needs, and availability.</div>
 
 
                     </div>
@@ -869,7 +1039,7 @@
 
                     <div class="pet-content">
 
-                        <span class="pet-category">Cat</span>
+                        <span class="pet-category">Cat Profile</span>
 
                         <h3>Maine Coon</h3>
 
@@ -884,7 +1054,7 @@
 
                         <div class="pet-footer">
 
-                            <h4>$1,800</h4>
+                            <h4>Est. $1,800</h4>
 
                             <button
                             class="primary-btn add-cart-btn"
@@ -895,7 +1065,7 @@
 
                             data-image="assets/images/cats/maine-coon.jpg">
 
-                            Add To Cart
+                            Start Request
 
                             </button>
                             <button
@@ -904,11 +1074,11 @@
                             data-name="Maine coon"
                             data-price="1800"
                             data-image="assets/images/cats/Maine-coon.jpg"
-                            data-category="Cat"
+                            data-category="Cat Profile"
                             data-age="8 Months"
                             data-location="USA">
 
-                                Quick View
+                                Review Details
 
                             </button>
                             <button
@@ -921,7 +1091,7 @@
 
                             data-image="assets/images/cats/maine-coon.jpg">
 
-                                ❤ Wishlist
+                                ❤ Save Profile
 
                             </button>
 
@@ -930,15 +1100,15 @@
                             href="#"
                             onclick="openLearnMore('cats','Maine coon')"
                             class="learn-more-btn" style="color:var(--primary);">
-                                Learn More →
+                                Review Profile →
                             </a>
                             <a href="pages/cats.html" class="animal-btn" style="color:var(--primary);">
-                                View page for more breeds →
+                                View more profiles →
                             </a>
                             </span>                           
 
                         </div>
-                        <div class="color-opt" style="font-style:bold;">Available color options are listed on the Learn More page. After purchase, we'll contact you using your provided email or preferred contact method to finalize your color choice.</div>
+                        <div class="color-opt" style="font-style:bold;">Color options and availability are listed on the Learn More page where applicable. After your request is reviewed, CompanionReview support may contact you through your selected contact method to discuss profile details, care needs, and availability.</div>
 
 
                     </div>
@@ -956,13 +1126,13 @@
                 data-country="USA"
                 data-price="2500">
 
-                    <img src="assets/images/cats/bengal-cat.jpg" alt="Bengal Cat">
+                    <img src="assets/images/cats/bengal-cat.jpg" alt="Bengal Cat Profile">
 
                     <div class="pet-content">
 
-                        <span class="pet-category">Cat</span>
+                        <span class="pet-category">Cat Profile</span>
 
-                        <h3>Bengal Cat</h3>
+                        <h3>Bengal Cat Profile</h3>
 
                         <p>
                             Beautiful spotted coat and energetic personality.
@@ -975,7 +1145,7 @@
 
                         <div class="pet-footer">
 
-                            <h4>$2,500</h4>
+                            <h4>Est. $2,500</h4>
 
                             <button
                             class="primary-btn add-cart-btn"
@@ -986,7 +1156,7 @@
 
                             data-image="assets/images/cats/bengal-cat.jpg">
 
-                            Add To Cart
+                            Start Request
 
                             </button>
                             <button
@@ -995,11 +1165,11 @@
                             data-name="Bengal cat"
                             data-price="2500"
                             data-image="assets/images/cats/bengal-cat.jpg"
-                            data-category="Dog"
+                            data-category="Dog Profile"
                             data-age="8 Months"
                             data-location="USA">
 
-                                Quick View
+                                Review Details
 
                             </button>
                             <button
@@ -1012,7 +1182,7 @@
 
                             data-image="assets/images/cats/bengal-cat.jpg">
 
-                                ❤ Wishlist
+                                ❤ Save Profile
 
                             </button>
 
@@ -1021,15 +1191,15 @@
                             href="#"
                             onclick="openLearnMore('cats','Bengal')"
                             class="learn-more-btn" style="color:var(--primary);">
-                                Learn More →
+                                Review Profile →
                             </a>
                             <a href="pages/cats.html" class="animal-btn" style="color:var(--primary);">
-                               View page for more breeds →
+                               View more profiles →
                             </a>
                             </span>                           
 
                         </div>
-                        <div class="color-opt" style="font-style:bold;">Available color options are listed on the Learn More page. After purchase, we'll contact you using your provided email or preferred contact method to finalize your color choice.</div>
+                        <div class="color-opt" style="font-style:bold;">Color options and availability are listed on the Learn More page where applicable. After your request is reviewed, CompanionReview support may contact you through your selected contact method to discuss profile details, care needs, and availability.</div>
 
 
                     </div>
@@ -1042,21 +1212,21 @@
 
                 data-category="wildcat"
 
-                data-name="lion cub"
+                data-name="african lion"
 
                 data-country="south africa"
                 data-price="45000">
 
-                    <img src="assets/images/wild-cats/lion-cub.jpg" alt="Lion Cub">
+                    <img src="assets/images/wild-cats/lion-cub.jpg" alt="African Lion regulated exotic feline profile">
 
                     <div class="pet-content">
 
-                        <span class="pet-category">Wild Cat</span>
+                        <span class="pet-category">Wild Cat Profile</span>
 
-                        <h3>Lion Cub</h3>
+                        <h3>African Lion</h3>
 
                         <p>
-                            Rare exotic feline listing subject to local regulations.
+                            Regulated exotic feline profile subject to legal review, permits, documentation, and animal welfare requirements.
                         </p>
 
                         <div class="pet-info">
@@ -1066,18 +1236,18 @@
 
                         <div class="pet-footer">
 
-                            <h4>$45,000</h4>
+                            <h4>Review Est. $45,000</h4>
 
                             <button
                             class="primary-btn add-cart-btn"
 
-                            data-name="Lion Cub"
+                            data-name="African Lion"
 
                             data-price="45000"
 
                             data-image="assets/images/wild-cats/lion-cub.jpg">
 
-                            Add To Cart
+                            Start Request
 
                             </button>
                             <button
@@ -1086,24 +1256,24 @@
                             data-name="African Lion"
                             data-price="45000"
                             data-image="assets/images/wild-cats/lion-cub.jpg"
-                            data-category="Dog"
+                            data-category="Dog Profile"
                             data-age="8 Months"
                             data-location="USA">
 
-                                Quick View
+                                Review Details
 
                             </button>
                             <button
 
                             class="wishlist-add-btn"
 
-                            data-name="Africa Lion"
+                            data-name="African Lion"
 
                             data-price="45000"
 
                             data-image="assets/images/wild-cats/lion-cub.jpg">
 
-                                ❤ Wishlist
+                                ❤ Save Profile
 
                             </button>
                             <span style="display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; ">
@@ -1111,15 +1281,15 @@
                             href="#"
                             onclick="openLearnMore('wild-cats','African Lion')"
                             class="learn-more-btn" style="color:var(--primary);">
-                                Learn More →
+                                Review Profile →
                             </a>
                             <a href="pages/wild-cats.html" class="animal-btn" style="color:var(--primary);">
-                                View page for more breeds →
+                                View more profiles →
                             </a>
                             </span>    
 
                         </div>
-                        <div class="color-opt" style="font-style:bold;">Available color options are listed on the Learn More page. After purchase, we'll contact you using your provided email or preferred contact method to finalize your color choice.</div>
+                        <div class="color-opt" style="font-style:bold;">Color options and availability are listed on the Learn More page where applicable. After your request is reviewed, CompanionReview support may contact you through your selected contact method to discuss profile details, care needs, and availability.</div>
 
 
                     </div>
@@ -1141,7 +1311,7 @@
 
                     <div class="pet-content">
 
-                        <span class="pet-category">Bird</span>
+                        <span class="pet-category">Bird Profile</span>
 
                         <h3>Blue Macaw</h3>
 
@@ -1156,7 +1326,7 @@
 
                         <div class="pet-footer">
 
-                            <h4>$2,100</h4>
+                            <h4>Est. $2,100</h4>
 
                             <button
                             class="primary-btn add-cart-btn"
@@ -1167,7 +1337,7 @@
 
                             data-image="assets/images/birds/Blue-macaw.jpg">
 
-                            Add To Cart
+                            Start Request
 
                             </button>
                             <button
@@ -1176,11 +1346,11 @@
                             data-name="Blue Macaw"
                             data-price="2100"
                             data-image="assets/images/birds/Blue-macaw.jpg"
-                            data-category="Dog"
+                            data-category="Dog Profile"
                             data-age="8 Months"
                             data-location="USA">
 
-                                Quick View
+                                Review Details
 
                             </button>
                             <button
@@ -1193,7 +1363,7 @@
 
                             data-image="assets/images/birds/Blue-macaw.jpg">
 
-                                ❤ Wishlist
+                                ❤ Save Profile
 
                             </button>
 
@@ -1202,15 +1372,15 @@
                             href="#"
                             onclick="openLearnMore('birds','Blue Macaw')"
                             class="learn-more-btn" style="color:var(--primary);">
-                                Learn More →
+                                Review Profile →
                             </a>
                             <a href="pages/birds.html" class="animal-btn" style="color:var(--primary);">
-                                View page for more breeds →
+                                View more profiles →
                             </a>
                             </span> 
 
                         </div>
-                        <div class="color-opt" style="font-style:bold;">Available color options are listed on the Learn More page. After purchase, we'll contact you using your provided email or preferred contact method to finalize your color choice.</div>
+                        <div class="color-opt" style="font-style:bold;">Color options and availability are listed on the Learn More page where applicable. After your request is reviewed, CompanionReview support may contact you through your selected contact method to discuss profile details, care needs, and availability.</div>
 
 
                     </div>
@@ -1223,20 +1393,20 @@
 
     </section>
     <!-- =====================
-     ABOUT PETSY
+     ABOUT CompanionReviewHub
     ====================== -->
 
-    <section id="about" class="about-petsy reveal">
+    <section id="about" class="about-CompanionReviewHub reveal">
         <div class="container">
 
             <div class="section-title">
 
-                <span>About Petsy</span>
+                <span>About CompanionReview</span>
 
-                <h2>Where Trusted Connections Begin</h2>
+                <h2>Responsible Requests Start With Better Information</h2>
 
                 <p>
-                    Petsy is a modern pet marketplace designed to help responsible animal lovers discover companions from trusted sources around the world.
+                    CompanionReview is a responsible pet discovery and request-review platform built to help animal lovers review companion profiles, care needs, welfare guidance, and support information before continuing.
                 </p>
 
             </div>
@@ -1248,7 +1418,7 @@
                 <div class="about-image">
 
                     <img src="assets/images/gallery/gallery.jpg"
-                        alt="Petsy Marketplace">
+                        alt="CompanionReview Marketplace">
 
                 </div>
 
@@ -1257,15 +1427,15 @@
                 <div class="about-content">
 
                     <h3>
-                        More Than A Marketplace
+                        More Than A Listing Page
                     </h3>
 
                     <p>
-                        At Petsy, we believe finding the right companion should be a simple, transparent, and enjoyable experience. Our platform brings together quality listings, trusted breeders, and animal enthusiasts through one professional marketplace.
+                        At CompanionReview, we believe choosing a companion animal should be careful, transparent, and informed. Our platform helps visitors review profile details, care expectations, location notes, and responsible ownership reminders before submitting a request.
                     </p>
 
                     <p>
-                        Whether you are searching for a loyal dog, an affectionate cat, an exotic bird, or a rare breed, Petsy helps you browse confidently while giving sellers a professional platform to showcase their animals.
+                        Whether you are reviewing a dog, cat, bird, reptile, or regulated exotic profile, CompanionReview encourages users to ask questions, confirm records, understand care needs, and follow local animal ownership rules.
                     </p>
 
                     <div class="about-features">
@@ -1278,10 +1448,10 @@
 
                             <div>
 
-                                <h4>Trusted Listings</h4>
+                                <h4>Clear Profile Information</h4>
 
                                 <p>
-                                    Carefully presented listings with clear information.
+                                    Profiles are presented with care details, age, location, review estimates, and support notes where available.
                                 </p>
 
                             </div>
@@ -1296,10 +1466,10 @@
 
                             <div>
 
-                                <h4>Worldwide Reach</h4>
+                                <h4>Location Guidance</h4>
 
                                 <p>
-                                    Connect with buyers and sellers from different regions.
+                                    Review profile locations and understand that delivery or pickup may depend on animal welfare, documentation, and local rules.
                                 </p>
 
                             </div>
@@ -1314,10 +1484,10 @@
 
                             <div>
 
-                                <h4>Secure Checkout</h4>
+                                <h4>Request Review Flow</h4>
 
                                 <p>
-                                    Professional ordering process with buyer information verification.
+                                    Requests are submitted for review first. CompanionReview does not ask for surprise payments through random or unofficial messages.
                                 </p>
 
                             </div>
@@ -1332,10 +1502,10 @@
 
                             <div>
 
-                                <h4>Modern Experience</h4>
+                                <h4>Simple Experience</h4>
 
                                 <p>
-                                    Designed for speed, convenience, and mobile accessibility.
+                                    Designed to make browsing, saving, and submitting review requests easier on mobile and desktop.
                                 </p>
 
                             </div>
@@ -1345,7 +1515,7 @@
                     </div>
 
                     <a href="#browse-pets" class="primary-btn">
-                        Explore Available Pets
+                        Browse Companion Profiles
                     </a>
 
                 </div>
@@ -1358,92 +1528,92 @@
         MARKETPLACE STATS
         ====================== -->
 
-    <section class="stats-section reveal">
-        <div class="container">
+        <section class="stats-section reveal">
+            <div class="container">
 
-            <div class="section-title">
+                <div class="section-title">
 
-                <span>Our Numbers</span>
+                    <span>Our Focus</span>
 
-                <h2>Growing Every Day</h2>
+                    <h2>Built Around Responsible Discovery</h2>
 
-                <p>
-                    Thousands of animal lovers use Petsy to discover trusted companions and connect with quality listings.
-                </p>
+                    <p>
+                        CompanionReviewHub focuses on clear profile information, care guidance, safety reminders, and responsible request review.
+                    </p>
+
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            🐾
+                        </div>
+
+                        <h3>
+                            Care
+                        </h3>
+
+                        <p>
+                            Focused Profiles
+                        </p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            🛡️
+                        </div>
+
+                        <h3>
+                            Safety
+                        </h3>
+
+                        <p>
+                            Review Guidance
+                        </p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            🌎
+                        </div>
+
+                        <h3>
+                            Global
+                        </h3>
+
+                        <p>
+                            Location Awareness
+                        </p>
+
+                    </div>
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon">
+                            💬
+                        </div>
+
+                        <h3>
+                            Support
+                        </h3>
+
+                        <p>
+                            Help Available
+                        </p>
+
+                    </div>
+
+                </div>
 
             </div>
-
-            <div class="stats-grid">
-
-                <div class="stat-card">
-
-                    <div class="stat-icon">
-                        🐾
-                    </div>
-
-                    <h3 class="counter">
-                        5,000+
-                    </h3>
-
-                    <p>
-                        Active Listings
-                    </p>
-
-                </div>
-
-                <div class="stat-card">
-
-                    <div class="stat-icon">
-                        ❤️
-                    </div>
-
-                    <h3 class="counter">
-                        12,000+
-                    </h3>
-
-                    <p>
-                        Happy Families
-                    </p>
-
-                </div>
-
-                <div class="stat-card">
-
-                    <div class="stat-icon">
-                        🌎
-                    </div>
-
-                    <h3 class="counter">
-                        40+
-                    </h3>
-
-                    <p>
-                        Countries Reached
-                    </p>
-
-                </div>
-
-                <div class="stat-card">
-
-                    <div class="stat-icon">
-                        ⭐
-                    </div>
-
-                    <h3 class="counter">
-                        98%
-                    </h3>
-
-                    <p>
-                        Customer Satisfaction
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-                <!-- =====================
+        </section>
+    <!-- =====================
         TESTIMONIALS
     ====================== -->
 
@@ -1454,12 +1624,12 @@
 
             <div class="section-title">
 
-                <span>Testimonials</span>
+                <span>Platform Highlights</span>
 
-                <h2>What Our Customers Say</h2>
+                <h2>What CompanionReview Helps Users Do</h2>
 
                 <p>
-                    Hear from animal lovers who found their perfect companions through Petsy.
+                    CompanionReview is designed to help visitors compare profiles, ask better questions, and continue only when they feel ready.
                 </p>
 
             </div>
@@ -1477,14 +1647,14 @@
 
                             <h4>Michael Jan</h4>
 
-                            <span>Dog Owner</span>
+                            <span>Dog Profile Owner</span>
 
                         </div>
 
                     </div>
 
                     <p>
-                        "The process was simple and professional. I found a wonderful German Shepherd and the communication throughout was excellent."
+                        "The platform makes it easier to review profile details, compare care needs, and understand the next steps before submitting a request."
                     </p>
 
                     <div class="stars">
@@ -1504,14 +1674,14 @@
 
                             <h4>Sarah Williams</h4>
 
-                            <span>Cat Owner</span>
+                            <span>Cat Profile Owner</span>
 
                         </div>
 
                     </div>
 
                     <p>
-                        "Petsy made it easy to compare listings and find the perfect Maine Coon kitten for my family."
+                        "The profile pages are helpful for checking age, location, care notes, and availability details before contacting support."
                     </p>
 
                     <div class="stars">
@@ -1531,14 +1701,14 @@
 
                             <h4>Daniel Sean</h4>
 
-                            <span>Bird Enthusiast</span>
+                            <span>Bird Profile Enthusiast</span>
 
                         </div>
 
                     </div>
 
                     <p>
-                        "A beautiful platform with professional listings and detailed information. Highly recommended."
+                        "The request-review approach feels more responsible because it encourages users to confirm details before making arrangements."
                     </p>
 
                     <div class="stars">
@@ -1564,10 +1734,10 @@
 
                 <span>Gallery</span>
 
-                <h2>Meet Some Of Our Beautiful Companions</h2>
+                <h2>Explore Companion Animal Profiles</h2>
 
                 <p>
-                    Explore a collection of wonderful animals available through Petsy.
+                    Explore profile images and categories while remembering that availability and final arrangements are subject to review.
                 </p>
 
             </div>
@@ -1575,23 +1745,23 @@
             <div class="gallery-grid">
 
                 <div class="gallery-item large">
-                    <img src="assets/images/gallery/gallery1.jpg" alt="Pet Gallery">
+                    <img src="assets/images/gallery/gallery1.jpg" alt="Profile Gallery">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/gallery2.jpg" alt="Pet Gallery">
+                    <img src="assets/images/gallery/gallery2.jpg" alt="Profile Gallery">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/gallery3.jpeg" alt="Pet Gallery">
+                    <img src="assets/images/gallery/gallery3.jpeg" alt="Profile Gallery">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/gallery4.jpg" alt="Pet Gallery">
+                    <img src="assets/images/gallery/gallery4.jpg" alt="Profile Gallery">
                 </div>
 
                 <div class="gallery-item">
-                    <img src="assets/images/gallery/gallery5.webp" alt="Pet Gallery">
+                    <img src="assets/images/gallery/gallery5.webp" alt="Profile Gallery">
                 </div>
 
             </div>
@@ -1611,10 +1781,10 @@
 
                 <span>Contact Us</span>
 
-                <h2>Have Questions About A Pet?</h2>
+                <h2>Have Questions About A Profile?</h2>
 
                 <p>
-                    Send us a message and we'll get back to you as soon as possible.
+                    Send CompanionReview support a message if you need help understanding a profile, care needs, delivery review, or request process.
                 </p>
 
             </div>
@@ -1624,18 +1794,18 @@
                 <div class="contact-info">
 
                     <h3>
-                        Let's Talk
+                        Contact CompanionReview Support
                     </h3>
 
                     <p>
-                        Whether you're searching for a new companion or need additional information about a listing, our team is here to help.
+                        Whether you are reviewing a companion profile or need more information before submitting a request, CompanionReview support is here to help.
                     </p>
 
                     <div class="contact-item">
 
                         <h4>Email</h4>
 
-                        <p>petsystores@proton.me</p>
+                        <p>CompanionReviewHubstores@proton.me</p>
 
                     </div>
 
@@ -1744,11 +1914,11 @@
                     <span>Stay Updated</span>
 
                     <h2>
-                        Get New Pet Listings Delivered To Your Inbox
+                        Get Profile & Care Updates From CompanionReview
                     </h2>
 
                     <p>
-                        Be the first to discover newly listed pets, special offers, and important updates from Petsy.
+                        Receive profile updates, care reminders, welfare guidance, and important CompanionReview support information.
                     </p>
 
                 </div>
@@ -1799,11 +1969,11 @@
                 <div class="footer-column">
 
                     <h2 class="footer-logo">
-                        Petsy
+                        CompanionReview
                     </h2>
 
                     <p>
-                        Petsy is a modern pet marketplace helping animal lovers discover trusted companions from around the world through a professional and easy-to-use platform.
+                        CompanionReview helps animal lovers review companion animal profiles, care needs, welfare reminders, and responsible request information through a simple online platform.
                     </p>
 
                 </div>
@@ -1823,15 +1993,15 @@
                         </li>
 
                         <li>
-                            <a href="#featured">Featured Pets</a>
+                            <a href="#featured">Featured Profiles</a>
                         </li>
 
                         <li>
-                            <a href="#about">About Petsy</a>
+                            <a href="#about">About CompanionReview</a>
                         </li>
 
                         <li>
-                            <a href="#reviews">Testimonials</a>
+                            <a href="#reviews">Platform Highlights</a>
                         </li>
 
                         <li>
@@ -1847,26 +2017,26 @@
                 <div class="footer-column">
 
                     <h3>
-                        Categories
+                        Cat Profileegories
                     </h3>
 
                     <ul>
 
                         <li>
                             <a href="pages/dogs.html">
-                                Dogs
+                                Dog Profiles
                             </a>
                         </li>
 
                         <li>
                             <a href="pages/cats.html">
-                                Cats
+                                Cat Profiles
                             </a>
                         </li>
 
                         <li>
                             <a href="pages/birds.html">
-                                Birds
+                                Bird Profiles
                             </a>
                         </li>
 
@@ -1878,7 +2048,7 @@
 
                         <li>
                             <a href="pages/wild-cats.html">
-                                Wild Cats
+                                Regulated Exotic Felines
                             </a>
                         </li>
 
@@ -1897,7 +2067,7 @@
                     <ul>
 
                         <li>
-                            petsystores@proton.me
+                            CompanionReviewHubstores@proton.me
                         </li>
 
                         <li>
@@ -1912,19 +2082,42 @@
 
                 </div>
 
+
+                <div class="footer-column">
+
+                    <h3>
+                        Articles
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="pages/health-care-article.html">Health-care-article</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
             </div>
 
             <div class="footer-bottom">
 
                 <p>
-                    © 2026 Petsy. All Rights Reserved.
+                    © 2026 CompanionReview. All Rights Reserved.
                 </p>
 
                 <div>
 
-                    <a href="pages/privacy-policy.html">
-                        Privacy Policy
-                    </a>
+                <a href="pages/about.html">About Us</a>
+                <a href="pages/contact.html">Contact</a>
+                <a href="pages/trust-safety.html">Trust & Safety</a>
+                <a href="pages/terms-of-service.html">Terms Of Service</a>
+                <a href="pages/refund-policy.html">Refund Policy</a>
+                <a href="pages/shipping-policy.html">Shipping Policy</a>
+                <a href="pages/animal-welfare-policy.html">Animal Welfare Policy</a>
+                <a href="pages/legal-compliance.html">Legal Compliance</a>
+                <a href="pages/privacy-policy.html">Privacy Policy</a>
 
                 </div>
 
@@ -1948,7 +2141,7 @@
 
     <div class="cart-header">
 
-        <h3>Shopping Cart</h3>
+        <h3>Request List</h3>
 
         <button id="closeCart">
             ✕
@@ -1962,11 +2155,17 @@
 
     </div>
 
+    <div class="cart-review-note">
+        <p>
+            This is a request list. Please do not send payment until CompanionReviewHub support reviews your request and contacts you through your selected contact method.
+        </p>
+    </div>
+
     <div class="cart-footer">
 
         <div class="cart-total">
 
-            <span>Total:</span>
+            <span>Estimated Total:</span>
 
             <strong id="cartTotal">
                 $0
@@ -1977,7 +2176,7 @@
         href="pages/cart.html"
         class="primary-btn">
 
-        View Full Cart
+        View Request List
 
         </a>
 
@@ -1985,7 +2184,7 @@
             href="pages/checkout.html"
             class="primary-btn">
 
-            Proceed To Checkout
+            Continue To Request Review
 
         </a>
 
@@ -2012,14 +2211,14 @@
 
                     <img
                         src="assets/images/dogs/german-shepherd.jpg"
-                        alt="Pet">
+                        alt="Profile">
 
                 </div>
 
                 <div class="modal-details">
 
                     <span class="pet-category">
-                        Dog
+                        Dog Profile
                     </span>
 
                     <h2>
@@ -2027,11 +2226,11 @@
                     </h2>
 
                     <h3>
-                        $2,800
+                        Review estimate: $2,800
                     </h3>
 
                     <p>
-                        Intelligent, loyal and highly trainable companion suitable for families and active lifestyles.
+                        Review profile details, age, location, care notes, and availability before submitting a request.
                     </p>
 
                     <ul>
@@ -2041,7 +2240,7 @@
                         </li>
 
                         <li>
-                            Vaccinated: Yes
+                            Vaccination records: where available
                         </li>
 
                         <li>
@@ -2060,7 +2259,7 @@
 
                     class="primary-btn">
 
-                        Add To Cart
+                        Start Request
 
                     </button>
 
@@ -2154,7 +2353,7 @@
                         );
 
                         alert(
-                            "Failed to send message."
+                            "Your message could not be sent. Please check your connection and try again."
                         );
 
                     }

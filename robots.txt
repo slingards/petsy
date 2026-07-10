@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://getpetsy.netlify.app/sitemap.xml
+Sitemap: https://CompanionReviewHub.netlify.app/sitemap.xml

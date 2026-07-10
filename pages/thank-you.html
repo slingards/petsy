@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HVWY42V725"></script>
     <script>
@@ -9,15 +10,33 @@
 
     gtag('config', 'G-HVWY42V725');
     </script>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Thank You | Petsy</title>
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
 
-    <link
-    rel="icon"
-    type="image/png"
-    href="../favicon.png">
+<title>
+Message Received | CompanionReviewHub
+</title>
+
+<meta
+name="description"
+content="Your message has been received by CompanionReviewHub support. This confirmation page is intended for users who submit a contact form.">
+
+<meta
+name="robots"
+content="noindex, nofollow">
+
+<meta
+name="googlebot"
+content="noindex, nofollow">
+
+<link
+rel="icon"
+type="image/png"
+href="../favicon.png">
 
 <style>
 
@@ -52,7 +71,7 @@ body{
 
 .thank-you-card{
 
-    max-width:700px;
+    max-width:720px;
 
     width:100%;
 
@@ -75,9 +94,27 @@ body{
 
 .checkmark{
 
-    font-size:5rem;
+    width:100px;
 
-    margin-bottom:20px;
+    height:100px;
+
+    margin:0 auto 25px;
+
+    border-radius:50%;
+
+    background:#dcfce7;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#166534;
+
+    font-size:3.5rem;
+
+    font-weight:800;
 
 }
 
@@ -87,7 +124,7 @@ body{
 
     margin-bottom:20px;
 
-    font-size:2.8rem;
+    font-size:2.6rem;
 
 }
 
@@ -100,6 +137,38 @@ body{
     margin-bottom:15px;
 
     font-size:1.05rem;
+
+}
+
+.notice-box{
+
+    background:#fff7ed;
+
+    border:1px solid #fdba74;
+
+    border-left:5px solid #d97706;
+
+    color:#7c2d12;
+
+    border-radius:15px;
+
+    padding:20px;
+
+    margin:28px 0 0;
+
+    text-align:left;
+
+    line-height:1.8;
+
+}
+
+.notice-box strong{
+
+    display:block;
+
+    color:#92400e;
+
+    margin-bottom:8px;
 
 }
 
@@ -125,7 +194,7 @@ body{
 
     border-radius:12px;
 
-    font-weight:600;
+    font-weight:700;
 
     transition:.3s;
 
@@ -145,7 +214,7 @@ body{
 
 }
 
-.feed-btn{
+.support-btn{
 
     background:#111827;
 
@@ -153,7 +222,7 @@ body{
 
 }
 
-.feed-btn:hover{
+.support-btn:hover{
 
     background:#1f2937;
 
@@ -195,34 +264,116 @@ body{
 
     }
 
+    .checkmark{
+
+        width:85px;
+
+        height:85px;
+
+        font-size:3rem;
+
+    }
+
+}
+
+/* DARK MODE */
+
+.dark-mode{
+    background:#020617;
+    color:#f8fafc;
+}
+
+.dark-mode body{
+    background:#020617;
+    color:#f8fafc;
+}
+
+.dark-mode .thank-you-card{
+    background:#0f172a;
+    color:#f8fafc;
+    border:1px solid #1e293b;
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.dark-mode .thank-you-card h1{
+    color:#f8fafc;
+}
+
+.dark-mode .thank-you-card p{
+    color:#cbd5e1;
+}
+
+.dark-mode .checkmark{
+    background:#064e3b;
+    color:#bbf7d0;
+}
+
+.dark-mode .notice-box{
+    background:#1e293b;
+    color:#f8fafc;
+    border:1px solid #d97706;
+    border-left:5px solid #d97706;
+}
+
+.dark-mode .notice-box strong{
+    color:#fbbf24;
+}
+
+.dark-mode .home-btn{
+    background:#d97706;
+    color:#ffffff;
+}
+
+.dark-mode .home-btn:hover{
+    background:#b45309;
+}
+
+.dark-mode .support-btn{
+    background:#334155;
+    color:#f8fafc;
+}
+
+.dark-mode .support-btn:hover{
+    background:#475569;
 }
 
 </style>
 
 </head>
+
 <body>
 
 <div class="thank-you-card">
 
     <div class="checkmark">
-        🎉
+        ✓
     </div>
 
     <h1>
-        Thank You For Contacting Petsy
+        Message Received
     </h1>
 
     <p>
-        Your message has been successfully submitted and received by our team.
+        Thank you for contacting CompanionReviewHub. Your message has been submitted to our support team for review.
     </p>
 
     <p>
-        We carefully review every inquiry and will respond as soon as possible through the contact details you provided.
+        We review inquiries carefully and will respond through the contact details you provided where a reply is needed.
     </p>
 
     <p>
-        If your request is urgent, you may also reach us directly through WhatsApp, Telegram, or email.
+        If your message relates to a pet listing, order request, animal welfare concern, payment question, or legal compliance matter, please keep any screenshots, references, or message details available.
     </p>
+
+    <div class="notice-box">
+
+        <strong>
+            Important Notice
+        </strong>
+
+        This page is only a confirmation page shown after a user submits the contact form. It is not a public information page, product page, or pet listing page.
+
+    </div>
 
     <div class="action-buttons">
 
@@ -235,30 +386,32 @@ body{
         </a>
 
         <a
-        href="../feeds.html"
-        class="feed-btn">
+        href="contact.html"
+        class="support-btn">
 
-            Browse Feed Center
+            Contact Support Again
 
         </a>
 
     </div>
 
 </div>
+
 <script defer src="../assets/js/dark-mode.js"></script>
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6a4ec028edc2ff1d46ff2a22/1jt1pt7v0';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-    </script>
-    <!--End of Tawk.to Script-->
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/6a4ec028edc2ff1d46ff2a22/1jt1pt7v0';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 
 </body>
 </html>

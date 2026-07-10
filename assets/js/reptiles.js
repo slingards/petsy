@@ -78,18 +78,18 @@ const reptiles = [
     uvbRequired:"Not Required",
 
     health:[
-        "Veterinary Exam Completed",
-        "Healthy Feeding Response",
-        "Captive Bred",
-        "Parasite Free"
+        "Veterinary record available",
+        "Feeding response information available",
+        "Captive-bred information available where applicable",
+        "Parasite prevention information available"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Shedding History",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Shedding history where available",
+        "Request receipt"
     ],
 
     feed:"Appropriately sized frozen-thawed mice or rats once every 5–7 days with constant access to fresh water.",
@@ -107,11 +107,11 @@ const reptiles = [
         "Monitor shedding."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted using insulated overnight transport.",
+    shipping:"Transport review may be available where legally permitted, using safe temperature-controlled handling where appropriate.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -189,18 +189,18 @@ const reptiles = [
     uvbRequired:"Optional",
 
     health:[
-        "Veterinary Exam Completed",
-        "Healthy Feeding Response",
-        "Captive Bred",
-        "Parasite Free"
+        "Veterinary record available",
+        "Feeding response information available",
+        "Captive-bred information available where applicable",
+        "Parasite prevention information available"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Shedding History",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Shedding history where available",
+        "Request receipt"
     ],
 
     feed:"Appropriately sized frozen-thawed rats or rabbits depending on age and size with fresh water always available.",
@@ -218,11 +218,11 @@ const reptiles = [
         "Suitable for experienced keepers."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -301,18 +301,18 @@ const reptiles = [
     uvbRequired:"Not Required",
 
     health:[
-        "Veterinary Exam Completed",
-        "Healthy Feeding Response",
-        "Captive Bred",
-        "Parasite Free"
+        "Veterinary record available",
+        "Feeding response information available",
+        "Captive-bred information available where applicable",
+        "Parasite prevention information available"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Shedding History",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Shedding history where available",
+        "Request receipt"
     ],
 
     feed:"Frozen-thawed mice of appropriate size with clean drinking water available at all times.",
@@ -330,11 +330,11 @@ const reptiles = [
         "Handle regularly to maintain a calm temperament."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -416,17 +416,17 @@ const reptiles = [
     permitRequired:"Usually No (depends on country)",
 
     health:[
-        "Captive Bred",
-        "Healthy Feeding Response",
-        "Complete Shed History",
-        "Veterinary Checked"
+        "Captive-bred information available where applicable",
+        "Feeding response information available",
+        "Shed history available",
+        "Veterinary record available"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Care Guide",
-        "Feeding Record"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Care guidance notes",
+        "Feeding record where available"
     ],
 
     care:[
@@ -438,11 +438,11 @@ const reptiles = [
         "Replace water every day."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival guarantee and health guarantee.",
+    warranty:"Arrival review may be available where applicable and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -522,15 +522,15 @@ const reptiles = [
     permitRequired:"Depends on Local Laws",
 
     health:[
-        "Captive Bred",
-        "Healthy Feeding Response",
-        "Veterinary Checked"
+        "Captive-bred information available where applicable",
+        "Feeding response information available",
+        "Veterinary record available"
     ],
 
     documents:[
-        "Health Certificate",
-        "Care Guide",
-        "Captive Breeding Record"
+        "Health documentation",
+        "Care guidance notes",
+        "Captive-bred documentation where applicable"
     ],
 
     care:[
@@ -542,11 +542,11 @@ const reptiles = [
         "Fresh water daily."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival guarantee and health guarantee.",
+    warranty:"Arrival review may be available where applicable and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -625,15 +625,15 @@ const reptiles = [
     permitRequired:"Depends on Local Laws",
 
     health:[
-        "Captive Bred",
-        "Healthy Feeding Response",
-        "Veterinary Checked"
+        "Captive-bred information available where applicable",
+        "Feeding response information available",
+        "Veterinary record available"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available"
     ],
 
     care:[
@@ -645,11 +645,11 @@ const reptiles = [
         "Fresh drinking water."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival guarantee and health guarantee.",
+    warranty:"Arrival review may be available where applicable and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -729,15 +729,15 @@ const reptiles = [
     permitRequired:"Usually No",
 
     health:[
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Checked"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available"
     ],
 
     documents:[
-        "Health Certificate",
-        "Care Guide",
-        "Captive Breeding Record"
+        "Health documentation",
+        "Care guidance notes",
+        "Captive-bred documentation where applicable"
     ],
 
     care:[
@@ -749,11 +749,11 @@ const reptiles = [
         "Perform regular aquarium maintenance."
     ],
 
-    shipping:"Live aquatic reptile shipping available where legally permitted.",
+    shipping:"Aquatic reptile transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival guarantee and health guarantee.",
+    warranty:"Arrival review may be available where applicable and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -814,17 +814,17 @@ const reptiles = [
     climate:"Warm freshwater aquatic setup.",
 
     health:[
-        "Captive Bred",
-        "Veterinary Exam Completed",
-        "Healthy Shell",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Veterinary record available",
+        "Shell health information available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt"
     ],
 
     feed:"Commercial turtle pellets, insects, shrimp, worms, snails, and occasional aquatic plants.",
@@ -842,11 +842,11 @@ const reptiles = [
         "Replace water regularly."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -907,17 +907,17 @@ const reptiles = [
     climate:"Warm dry environment with UVB lighting.",
 
     health:[
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt"
     ],
 
     feed:"Leafy greens, grasses, weeds, edible flowers, calcium supplements, and fresh water.",
@@ -934,11 +934,11 @@ const reptiles = [
         "Provide shallow water dish."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -999,17 +999,17 @@ const reptiles = [
     climate:"Warm dry savannah environment.",
 
     health:[
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt"
     ],
 
     feed:"Grasses, hay, leafy greens, cactus pads, edible flowers, calcium supplements.",
@@ -1026,11 +1026,11 @@ const reptiles = [
         "Maintain clean water source."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -1091,17 +1091,17 @@ const reptiles = [
     climate:"Warm tropical environment with moderate humidity.",
 
     health:[
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt"
     ],
 
     feed:"Leafy greens, vegetables, fruits in moderation, mushrooms, calcium supplements, and occasional protein sources as recommended.",
@@ -1118,11 +1118,11 @@ const reptiles = [
         "Regular shell health monitoring."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -1181,19 +1181,19 @@ const reptiles = [
     climate: "Warm dry enclosure with proper heat gradient.",
 
     health: [
-        "Captive Bred",
-        "Healthy Feeding Response",
-        "Parasite Free",
-        "Veterinary Exam Completed",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Feeding response information available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Health records available for review"
     ],
 
     documents: [
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Shedding History",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Shedding history where available",
+        "Request receipt"
     ],
 
     feed:
@@ -1213,11 +1213,11 @@ const reptiles = [
         "Keep fresh water available."
     ],
 
-    shipping: "Live reptile shipping available where legally permitted.",
+    shipping: "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty: "Live arrival and health guarantee.",
+    warranty: "Live arrival and health information.",
 
-    availability: "Available Now"
+    availability: "Subject to confirmation"
 },
 
 {
@@ -1273,17 +1273,17 @@ const reptiles = [
     climate: "Warm freshwater aquatic habitat with basking area.",
 
     health: [
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents: [
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt"
     ],
 
     feed:
@@ -1303,11 +1303,11 @@ const reptiles = [
         "Perform regular water changes."
     ],
 
-    shipping: "Live reptile shipping available where legally permitted.",
+    shipping: "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty: "Live arrival and health guarantee.",
+    warranty: "Live arrival and health information.",
 
-    availability: "Available Now"
+    availability: "Subject to confirmation"
 },
 
 {
@@ -1363,17 +1363,17 @@ const reptiles = [
     climate: "Warm dry environment with strong UVB lighting.",
 
     health: [
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents: [
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt"
     ],
 
     feed:
@@ -1394,11 +1394,11 @@ const reptiles = [
         "Prepare for very large adult size."
     ],
 
-    shipping: "Live reptile shipping available where legally permitted.",
+    shipping: "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty: "Live arrival and health guarantee.",
+    warranty: "Live arrival and health information.",
 
-    availability: "Available Now"
+    availability: "Subject to confirmation"
 },
 
 {
@@ -1458,19 +1458,19 @@ const reptiles = [
     climate: "Warm temperate enclosure with secure hides.",
 
     health: [
-        "Captive Bred",
-        "Healthy Feeding Response",
-        "Parasite Free",
-        "Veterinary Exam Completed",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Feeding response information available",
+        "Parasite prevention information available",
+        "Veterinary record available",
+        "Health records available for review"
     ],
 
     documents: [
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Shedding History",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Shedding history where available",
+        "Request receipt"
     ],
 
     feed:
@@ -1490,11 +1490,11 @@ const reptiles = [
         "Avoid handling immediately after feeding."
     ],
 
-    shipping: "Live reptile shipping available where legally permitted.",
+    shipping: "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty: "Live arrival and health guarantee.",
+    warranty: "Live arrival and health information.",
 
-    availability: "Available Now"
+    availability: "Subject to confirmation"
 },
 
 {
@@ -1543,9 +1543,9 @@ const reptiles = [
 
     climate: "Warm temperate enclosure with secure hides.",
 
-    health: ["Captive Bred", "Healthy Feeding Response", "Parasite Free", "Veterinary Exam Completed", "Health Guaranteed"],
+    health: ["Captive-bred information available where applicable", "Feeding response information available", "Parasite prevention information available", "Veterinary record available", "Health records available for review"],
 
-    documents: ["Health Certificate", "Captive Breeding Record", "Feeding Record", "Shedding History", "Ownership Receipt"],
+    documents: ["Health documentation", "Captive-bred documentation where applicable", "Feeding record where available", "Shedding history where available", "Request receipt"],
 
     feed: "Frozen-thawed mice appropriately sized for the snake. Fresh clean water should always be available.",
 
@@ -1560,11 +1560,11 @@ const reptiles = [
         "Avoid handling immediately after feeding."
     ],
 
-    shipping: "Live reptile shipping available where legally permitted.",
+    shipping: "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty: "Live arrival and health guarantee.",
+    warranty: "Live arrival and health information.",
 
-    availability: "Available Now"
+    availability: "Subject to confirmation"
 },
 
 {
@@ -1613,9 +1613,9 @@ const reptiles = [
 
     climate: "Warm temperate enclosure with moderate humidity.",
 
-    health: ["Captive Bred", "Healthy Feeding Response", "Parasite Free", "Veterinary Exam Completed", "Health Guaranteed"],
+    health: ["Captive-bred information available where applicable", "Feeding response information available", "Parasite prevention information available", "Veterinary record available", "Health records available for review"],
 
-    documents: ["Health Certificate", "Captive Breeding Record", "Feeding Record", "Shedding History", "Ownership Receipt"],
+    documents: ["Health documentation", "Captive-bred documentation where applicable", "Feeding record where available", "Shedding history where available", "Request receipt"],
 
     feed: "Frozen-thawed mice appropriately sized for the snake. Fresh clean water should always be available.",
 
@@ -1630,11 +1630,11 @@ const reptiles = [
         "Avoid handling right after feeding."
     ],
 
-    shipping: "Live reptile shipping available where legally permitted.",
+    shipping: "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty: "Live arrival and health guarantee.",
+    warranty: "Live arrival and health information.",
 
-    availability: "Available Now"
+    availability: "Subject to confirmation"
 },
 
 {
@@ -1683,9 +1683,9 @@ const reptiles = [
 
     climate: "Warm tropical enclosure with controlled humidity.",
 
-    health: ["Captive Bred", "Healthy Feeding Response", "Parasite Free", "Veterinary Exam Completed", "Health Guaranteed"],
+    health: ["Captive-bred information available where applicable", "Feeding response information available", "Parasite prevention information available", "Veterinary record available", "Health records available for review"],
 
-    documents: ["Health Certificate", "Captive Breeding Record", "Feeding Record", "Shedding History", "Ownership Receipt"],
+    documents: ["Health documentation", "Captive-bred documentation where applicable", "Feeding record where available", "Shedding history where available", "Request receipt"],
 
     feed: "Frozen-thawed rats appropriately sized for the snake. Fresh clean water should always be available.",
 
@@ -1700,11 +1700,11 @@ const reptiles = [
         "Avoid handling immediately after feeding."
     ],
 
-    shipping: "Live reptile shipping available where legally permitted.",
+    shipping: "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty: "Live arrival and health guarantee.",
+    warranty: "Live arrival and health information.",
 
-    availability: "Available Now"
+    availability: "Subject to confirmation"
 },
 
 {
@@ -1753,9 +1753,9 @@ const reptiles = [
 
     climate: "Moderate tropical enclosure with good humidity.",
 
-    health: ["Captive Bred", "Healthy Feeding Response", "Parasite Free", "Veterinary Exam Completed", "Health Guaranteed"],
+    health: ["Captive-bred information available where applicable", "Feeding response information available", "Parasite prevention information available", "Veterinary record available", "Health records available for review"],
 
-    documents: ["Health Certificate", "Captive Breeding Record", "Feeding Record", "Shedding History", "Ownership Receipt"],
+    documents: ["Health documentation", "Captive-bred documentation where applicable", "Feeding record where available", "Shedding history where available", "Request receipt"],
 
     feed: "Prepared crested gecko diet, occasional crickets or dubia roaches, and fresh clean water.",
 
@@ -1770,11 +1770,11 @@ const reptiles = [
         "Handle gently because geckos can drop their tails."
     ],
 
-    shipping: "Live reptile shipping available where legally permitted.",
+    shipping: "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty: "Live arrival and health guarantee.",
+    warranty: "Live arrival and health information.",
 
-    availability: "Available Now"
+    availability: "Subject to confirmation"
 },
 
 {
@@ -1830,18 +1830,18 @@ const reptiles = [
     climate:"Warm tropical enclosure with 70-80% humidity.",
 
     health:[
-        "Captive Bred",
-        "Veterinary Exam Completed",
-        "Healthy Feeding Response",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Veterinary record available",
+        "Feeding response information available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Request receipt"
     ],
 
     feed:"Crickets, dubia roaches, mealworms, waxworms, and occasional fruit-based gecko diet with calcium supplementation.",
@@ -1859,11 +1859,11 @@ const reptiles = [
         "Avoid excessive handling."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -1922,18 +1922,18 @@ const reptiles = [
     climate:"Warm arid enclosure with strong UVB lighting.",
 
     health:[
-        "Captive Bred",
-        "Healthy Feeding Response",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Feeding response information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Request receipt"
     ],
 
     feed:"Leafy greens, vegetables, dubia roaches, crickets, mealworms, calcium, and vitamin supplements.",
@@ -1952,11 +1952,11 @@ const reptiles = [
         "Provide fresh vegetables daily."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -2012,18 +2012,18 @@ const reptiles = [
     climate:"Warm tropical enclosure with high humidity.",
 
     health:[
-        "Captive Bred",
-        "Healthy Feeding Response",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Feeding response information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Request receipt"
     ],
 
     feed:"Leafy greens, squash, hibiscus flowers, vegetables, fruits in moderation, calcium supplementation, and fresh water.",
@@ -2041,11 +2041,11 @@ const reptiles = [
         "Handle consistently for socialization."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -2104,18 +2104,18 @@ const reptiles = [
     climate:"Warm tropical enclosure with high humidity and excellent airflow.",
 
     health:[
-        "Captive Bred",
-        "Healthy Feeding Response",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Feeding response information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents:[
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Feeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Feeding record where available",
+        "Request receipt"
     ],
 
     feed:"Gut-loaded crickets, dubia roaches, silkworms, hornworms, calcium supplementation, vitamin D3, and proper hydration through misting.",
@@ -2134,11 +2134,11 @@ const reptiles = [
         "Limit handling to reduce stress."
     ],
 
-    shipping:"Live reptile shipping available where legally permitted.",
+    shipping:"Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
-    warranty:"Live arrival and health guarantee.",
+    warranty:"Live arrival and health information.",
 
-    availability:"Available Now"
+    availability:"Subject to confirmation"
 },
 
 {
@@ -2211,17 +2211,17 @@ const reptiles = [
     "Warm freshwater habitat with UVB lighting and basking platform.",
 
     health: [
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents: [
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt"
     ],
 
     feed:
@@ -2242,13 +2242,13 @@ const reptiles = [
     ],
 
     shipping:
-    "Live reptile shipping available where legally permitted.",
+    "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
     warranty:
-    "Live arrival and health guarantee.",
+    "Live arrival and health information.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2320,17 +2320,17 @@ const reptiles = [
     "Warm dry enclosure with UVB lighting.",
 
     health: [
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents: [
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt"
     ],
 
     feed:
@@ -2350,13 +2350,13 @@ const reptiles = [
     ],
 
     shipping:
-    "Live reptile shipping available where legally permitted.",
+    "Transport review may be available where legally permitted and subject to animal welfare requirements.",
 
     warranty:
-    "Live arrival and health guarantee.",
+    "Live arrival and health information.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 },
 
 {
@@ -2428,18 +2428,18 @@ const reptiles = [
     "Warm tropical environment with abundant outdoor grazing space.",
 
     health: [
-        "Captive Bred",
-        "Healthy Shell",
-        "Veterinary Exam Completed",
-        "Parasite Free",
-        "Health Guaranteed"
+        "Captive-bred information available where applicable",
+        "Shell health information available",
+        "Veterinary record available",
+        "Parasite prevention information available",
+        "Health records available for review"
     ],
 
     documents: [
-        "Health Certificate",
-        "Captive Breeding Record",
-        "Ownership Receipt",
-        "CITES Documentation (where applicable)"
+        "Health documentation",
+        "Captive-bred documentation where applicable",
+        "Request receipt",
+        "CITES documentation where applicable (where applicable)"
     ],
 
     feed:
@@ -2459,13 +2459,13 @@ const reptiles = [
     ],
 
     shipping:
-    "Transportation available only where legally permitted using licensed live-animal reptile transport specialists.",
+    "Transport is reviewed only where legally permitted and subject to animal welfare, documentation, and carrier requirements.",
 
     warranty:
-    "Live arrival and health guarantee where applicable.",
+    "Live arrival and health information where applicable.",
 
     availability:
-    "Available Now"
+    "Subject to confirmation"
 }
 
 ];
@@ -2486,6 +2486,8 @@ RENDER REPTILES
 function renderReptiles(
     reptilesArray
 ){
+
+    if(!reptilesGrid) return;
 
     reptilesGrid.innerHTML = "";
 
@@ -2510,7 +2512,7 @@ function renderReptiles(
 
                 <span class="pet-category">
 
-                    Reptile
+                    Reptile Profile
 
                 </span>
 
@@ -2546,7 +2548,7 @@ function renderReptiles(
 
                     <h4>
 
-                        $${reptile.price}
+                        Estimated: $${Number(reptile.price).toLocaleString()}
 
                     </h4>
 
@@ -2557,7 +2559,7 @@ function renderReptiles(
                     data-name="${reptile.name}"
                     data-price="${reptile.price}"
                     data-image="../${reptile.image}">
-                        Add To Cart
+                        Start Request
                     </button>
                     </div>
 

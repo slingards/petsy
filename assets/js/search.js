@@ -1,18 +1,82 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    /*
+        Your HTML button currently uses:
+        id="searchProfilesBtn"
+
+        Older versions of this script expected:
+        id="searchPetsBtn"
+
+        This script supports both names so the search button works.
+    */
+
     const button =
-    document.getElementById(
-        "searchPetsBtn"
-    );
+    document.getElementById("searchProfilesBtn") ||
+    document.getElementById("searchPetsBtn");
 
-    if(!button) return;
+    const searchForm =
+    button ? button.closest("form") : null;
 
-    button.addEventListener(
-        "click",
-        searchPets
-    );
+    if(button){
+
+        button.addEventListener(
+            "click",
+            searchPets
+        );
+
+    }
+
+    /*
+        This also allows the search to work if a user presses Enter
+        inside the breed input field.
+    */
+
+    if(searchForm){
+
+        searchForm.addEventListener(
+            "submit",
+            searchPets
+        );
+
+    }
 
 });
+
+function normalizeText(value){
+
+    return String(value || "")
+    .trim()
+    .toLowerCase();
+
+}
+
+function normalizeCountry(value){
+
+    const country =
+    normalizeText(value);
+
+    const countryAliases = {
+
+        "usa":"united-states",
+        "u.s.a":"united-states",
+        "u.s.":"united-states",
+        "us":"united-states",
+        "united states":"united-states",
+        "united-states":"united-states",
+
+        "uk":"united-kingdom",
+        "u.k.":"united-kingdom",
+        "united kingdom":"united-kingdom",
+        "united-kingdom":"united-kingdom",
+
+        "south africa":"south-africa",
+        "south-africa":"south-africa"
+
+    };
+
+    return countryAliases[country] || country;
+
+}
 
 function searchPets(e){
 
@@ -20,25 +84,58 @@ function searchPets(e){
         e.preventDefault();
     }
 
-    const type =
+    const typeInput =
     document.getElementById(
         "animalType"
-    ).value.toLowerCase();
+    );
 
-    const breed =
+    const breedInput =
     document.getElementById(
         "breedSearch"
-    ).value.trim().toLowerCase();
+    );
 
-    const country =
+    const countryInput =
     document.getElementById(
         "countrySearch"
-    ).value.toLowerCase();
+    );
 
-    const priceRange =
+    const priceInput =
     document.getElementById(
         "priceSearch"
-    ).value;
+    );
+
+    const featured =
+    document.getElementById(
+        "featured"
+    );
+
+    if(!typeInput || !breedInput || !countryInput || !priceInput){
+
+        console.warn(
+            "Search fields are missing. Please check animalType, breedSearch, countrySearch, and priceSearch IDs."
+        );
+
+        return;
+
+    }
+
+    const type =
+    normalizeText(
+        typeInput.value
+    );
+
+    const breed =
+    normalizeText(
+        breedInput.value
+    );
+
+    const country =
+    normalizeCountry(
+        countryInput.value
+    );
+
+    const priceRange =
+    priceInput.value;
 
     const cards =
     document.querySelectorAll(
@@ -50,13 +147,19 @@ function searchPets(e){
     cards.forEach(card => {
 
         const cardType =
-        card.dataset.category || "";
+        normalizeText(
+            card.dataset.category
+        );
 
         const cardName =
-        card.dataset.name || "";
+        normalizeText(
+            card.dataset.name
+        );
 
         const cardCountry =
-        card.dataset.country || "";
+        normalizeCountry(
+            card.dataset.country
+        );
 
         const cardPrice =
         Number(
@@ -74,7 +177,7 @@ function searchPets(e){
             show = false;
         }
 
-        /* BREED */
+        /* NAME / BREED */
 
         if(
             breed !== "" &&
@@ -83,7 +186,7 @@ function searchPets(e){
             show = false;
         }
 
-        /* COUNTRY */
+        /* COUNTRY / LOCATION */
 
         if(
             country !== "all" &&
@@ -92,7 +195,7 @@ function searchPets(e){
             show = false;
         }
 
-        /* PRICE */
+        /* REVIEW ESTIMATE */
 
         if(priceRange !== "all"){
 
@@ -144,18 +247,34 @@ function searchPets(e){
 
     updateResults(resultsFound);
 
+    /*
+        Scroll behavior:
+        - If there are results, scroll to the featured profiles section.
+        - If there are no results, scroll to the no-results message.
+    */
+
     const resultBox =
     document.getElementById(
         "searchResultsInfo"
     );
 
-    if(resultBox){
+    if(resultsFound > 0 && featured){
+
+        featured.scrollIntoView({
+
+            behavior:"smooth",
+
+            block:"start"
+
+        });
+
+    }else if(resultBox){
 
         resultBox.scrollIntoView({
 
-            behavior: "smooth",
+            behavior:"smooth",
 
-            block: "center"
+            block:"center"
 
         });
 
@@ -170,6 +289,11 @@ function updateResults(count){
         "searchResultsInfo"
     );
 
+    const featured =
+    document.getElementById(
+        "featured"
+    );
+
     if(!resultBox){
 
         resultBox =
@@ -179,11 +303,6 @@ function updateResults(count){
 
         resultBox.id =
         "searchResultsInfo";
-
-        const featured =
-        document.getElementById(
-            "featured"
-        );
 
         if(featured){
 
@@ -196,18 +315,16 @@ function updateResults(count){
 
     }
 
-    const featured =
-    document.getElementById(
-        "featured"
-    );
-
     resultBox.className =
     "search-results-info";
 
     if(count > 0){
 
         if(featured){
-            featured.style.display = "block";
+
+            featured.style.display =
+            "block";
+
         }
 
         resultBox.classList.remove(
@@ -220,13 +337,22 @@ function updateResults(count){
 
         resultBox.innerHTML =
         `
-            Showing ${count} result(s)
+            <h3>
+                ${count} Matching Profile(s) Found
+            </h3>
+
+            <p>
+                These companion animal profiles are shown for review. Availability, delivery, care needs, and legal requirements may still need to be confirmed by Profilesy support.
+            </p>
         `;
 
     }else{
 
         if(featured){
-            featured.style.display = "none";
+
+            featured.style.display =
+            "none";
+
         }
 
         resultBox.classList.remove(
@@ -239,33 +365,38 @@ function updateResults(count){
 
         resultBox.innerHTML =
         `
-            <h3>No animals found matching your search.</h3>
+            <h3>
+                No matching profiles found.
+            </h3>
 
             <p>
-                This pet may still be available in one of our full category pages.
-                Try another breed, country, category, or price range.
+                We could not find an exact match for your current search. The companion animal you are looking for may still appear in one of our full category pages, or availability may need to be confirmed by Profilesy support.
+            </p>
+
+            <p>
+                Try another breed, country, category, or review estimate range.
             </p>
 
             <div class="search-category-buttons">
 
                 <a href="pages/dogs.html">
-                    Search Dogs
+                    Review Dog Profiles
                 </a>
 
                 <a href="pages/cats.html">
-                    Search Cats
+                    Review Cat Profiles
                 </a>
 
                 <a href="pages/birds.html">
-                    Search Birds
+                    Review Bird Profiles
                 </a>
 
                 <a href="pages/wild-cats.html">
-                    Search Wild Cats
+                    Regulated Exotic Feline Profiles
                 </a>
 
                 <a href="pages/reptiles.html">
-                    Search Reptiles
+                    Review Reptile Profiles
                 </a>
 
             </div>

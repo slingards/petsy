@@ -1,19 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<urlset
+xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://getpetsy.netlify.app/</loc>
+        <loc>https://CompanionReviewHub.netlify.app/</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>
 
     <url>
-        <loc>https://getpetsy.netlify.app/index.html</loc>
-        <priority>1.00</priority>
+        <loc>https://CompanionReviewHub.netlify.app/index.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.95</priority>
     </url>
 
     <url>
-        <loc>https://getpetsy.netlify.app/pages/checkout.html</loc>
-        <priority>0.60</priority>
+        <loc>https://CompanionReviewHub.netlify.app/pages/dogs.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/cats.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/birds.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/reptiles.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/wild-cats.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/feeds.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/health-care-article.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/about.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/contact.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/trust-safety.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.75</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/animal-welfare-policy.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/legal-compliance.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/terms-of-service.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.55</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/privacy-policy.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.55</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/refund-policy.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
+    </url>
+
+    <url>
+        <loc>https://CompanionReviewHub.netlify.app/pages/shipping-policy.html</loc>
+        <lastmod>2026-07-10</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.50</priority>
     </url>
 
 </urlset>

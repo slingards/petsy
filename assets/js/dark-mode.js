@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("darkModeToggle");
 
     const savedMode =
-    localStorage.getItem("petsyDarkMode");
+    localStorage.getItem("CompanionReviewHubDarkMode");
 
     /*
         Default mode is dark.
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if(document.body.classList.contains("dark-mode")){
 
                 localStorage.setItem(
-                    "petsyDarkMode",
+                    "CompanionReviewHubDarkMode",
                     "dark"
                 );
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }else{
 
                 localStorage.setItem(
-                    "petsyDarkMode",
+                    "CompanionReviewHubDarkMode",
                     "light"
                 );
 
