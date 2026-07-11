@@ -19,58 +19,12 @@ exports.handler = async (event) => {
             event.body || "{}"
         );
 
-        const contactLabel = {
-            email:"Email",
-            whatsapp:"WhatsApp",
-            signal:"Signal"
-        };
-
-        const selectedContactLabel =
-        contactLabel[data.contact_method] ||
-        "Contact";
-
         const items =
         Array.isArray(data.items)
         ?
         data.items
         :
         [];
-
-        const totalQuantity =
-        Number(
-            data.total_quantity ||
-            items.reduce(
-                (total,item)=>
-                total +
-                Number(item.quantity || 1),
-                0
-            )
-        );
-
-        const subtotal =
-        Number(data.subtotal || 0);
-
-        const deliveryReviewEstimate =
-        Number(
-            data.delivery_review_estimate ||
-            0
-        );
-
-        const careTravelReviewEstimate =
-        Number(
-            data.care_travel_review_estimate ||
-            0
-        );
-
-        const reviewTotal =
-        Number(
-            data.review_total ||
-            (
-                subtotal +
-                deliveryReviewEstimate +
-                careTravelReviewEstimate
-            )
-        );
 
         const itemLines =
         items.length
@@ -98,29 +52,48 @@ exports.handler = async (event) => {
         "No animal profiles were included.";
 
         const message = `
-🐾 NEW CompanionReviewHub REQUEST
+💳 NEW CompanionReviewHub PAYMENT PROOF
 
 CUSTOMER
-Name: ${data.name || "Not provided"}
-Preferred Contact: ${selectedContactLabel}
-${selectedContactLabel}: ${data.contact || "Not provided"}
-Country: ${data.country || "Not provided"}
-Address: ${data.address || "Not provided"}
+Name: ${data.customer_name || "Not provided"}
+Country: ${data.customer_country || "Not provided"}
+Contact method: ${data.contact_method || "Not provided"}
+Contact: ${data.contact || "Not provided"}
 
 SELECTED ANIMALS
-Total animals selected: ${totalQuantity}
+Total animals: ${Number(data.total_quantity || 0)}
 
 ${itemLines}
 
-ESTIMATES
-Profile subtotal: $${subtotal.toLocaleString()}
-Delivery review estimate: $${deliveryReviewEstimate.toLocaleString()}
-Care / travel review estimate: $${careTravelReviewEstimate.toLocaleString()}
-Grand review total: $${reviewTotal.toLocaleString()}
+PAYMENT
+Method: ${data.payment_method || "Not provided"}
+Category: ${data.payment_category || "Not provided"}
+Grand request total: $${Number(data.grand_total || 0).toLocaleString()}
+Amount submitted: $${Number(data.amount_paid || 0).toLocaleString()}
+Proof uploaded to Netlify Form: ${data.proof_uploaded ? "Yes" : "No"}
+
+${data.payment_category === "bank"
+?
+`BANK TRANSFER DETAILS
+Sender name: ${data.bank_sender_name || "Not provided"}
+Sender bank: ${data.bank_name || "Not provided"}
+Transfer reference: ${data.bank_transfer_reference || "Not provided"}
+Transfer date: ${data.bank_transfer_date || "Not provided"}`
+:
+`CRYPTO PAYMENT DETAILS
+Transaction hash/reference: ${data.crypto_transaction_id || "Not provided"}
+Proof type: Screenshot uploaded to Netlify Form` }
+
+ELIGIBILITY
+18 or older: ${data.eligibility?.age_confirmed ? "Confirmed" : "Not confirmed"}
+Veterinary access: ${data.eligibility?.veterinary_access ? "Confirmed" : "Not confirmed"}
+Responsible-care agreement: ${data.eligibility?.responsible_care ? "Confirmed" : "Not confirmed"}
+
+NOTE
+${data.payment_note || "No additional note"}
 
 STATUS
-Payment: ${data.payment || "Pending review"}
-Request status: ${data.request_status || "Request received for review"}
+${data.payment_status || "Waiting for manual verification"}
         `.trim();
 
         const response =
@@ -150,7 +123,7 @@ Request status: ${data.request_status || "Request received for review"}
 
             throw new Error(
                 result.description ||
-                "Telegram message could not be sent"
+                "Telegram payment notification failed"
             );
 
         }
@@ -168,7 +141,7 @@ Request status: ${data.request_status || "Request received for review"}
     catch(error){
 
         console.error(
-            "send-order error:",
+            "send-payment error:",
             error
         );
 

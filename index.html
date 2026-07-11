@@ -17,12 +17,15 @@
     <title>CompanionReview | Responsible Profile Discovery & Request Review</title>
 
     <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 
     <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
 
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <link rel="manifest" href="site.webmanifest">
 
     <meta
     name="description"
@@ -314,6 +317,285 @@
 
 }
     </style>
+
+
+    <style>
+        /* ==========================
+           PROFESSIONAL HOME FOOTER
+        ========================== */
+
+        .site-footer{
+            background:
+            linear-gradient(
+                145deg,
+                #0f172a,
+                #111827
+            );
+            color:#f8fafc;
+            padding:85px 0 28px;
+        }
+
+        .site-footer .container{
+            width:90%;
+            max-width:1300px;
+            margin:0 auto;
+        }
+
+        .site-footer-top{
+            display:grid;
+            grid-template-columns:
+            minmax(260px,1.5fr)
+            repeat(4,minmax(150px,1fr));
+            gap:42px;
+            align-items:start;
+        }
+
+        .site-footer-brand{
+            max-width:340px;
+        }
+
+        .site-footer-logo{
+            color:#f59e0b;
+            font-size:1.8rem;
+            margin-bottom:16px;
+        }
+
+        .site-footer-brand p{
+            color:#cbd5e1;
+            line-height:1.8;
+            font-size:.96rem;
+        }
+
+        .site-footer-badge{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+            margin-top:20px;
+            padding:9px 14px;
+            border:1px solid #334155;
+            border-radius:999px;
+            color:#fde68a;
+            background:#1e293b;
+            font-size:.83rem;
+            font-weight:700;
+        }
+
+        .site-footer-column h3{
+            color:#ffffff;
+            font-size:1rem;
+            margin-bottom:18px;
+            letter-spacing:.2px;
+        }
+
+        .site-footer-column ul{
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:grid;
+            gap:12px;
+        }
+
+        .site-footer-column li{
+            color:#cbd5e1;
+            line-height:1.6;
+            font-size:.92rem;
+        }
+
+        .site-footer-column a{
+            color:#cbd5e1;
+            text-decoration:none;
+            transition:.25s ease;
+        }
+
+        .site-footer-column a:hover{
+            color:#fbbf24;
+            padding-left:4px;
+        }
+
+        .site-footer-contact-item{
+            display:flex;
+            align-items:flex-start;
+            gap:10px;
+        }
+
+        .site-footer-contact-item span:first-child{
+            flex:0 0 22px;
+        }
+
+        .site-footer-divider{
+            height:1px;
+            margin:48px 0 24px;
+            background:rgba(255,255,255,.1);
+        }
+
+        .site-footer-bottom{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            flex-wrap:wrap;
+            gap:18px;
+        }
+
+        .site-footer-bottom p{
+            color:#94a3b8;
+            font-size:.88rem;
+        }
+
+        .site-footer-legal{
+            display:flex;
+            align-items:center;
+            justify-content:flex-end;
+            flex-wrap:wrap;
+            gap:12px 18px;
+        }
+
+        .site-footer-legal a{
+            color:#cbd5e1;
+            text-decoration:none;
+            font-size:.86rem;
+            transition:.25s ease;
+        }
+
+        .site-footer-legal a:hover{
+            color:#fbbf24;
+        }
+
+        .site-footer-highlight{
+            color:#fbbf24 !important;
+            font-weight:800;
+        }
+
+        .dark-mode .site-footer{
+            background:#020617;
+        }
+
+        .dark-mode .site-footer-badge{
+            background:#0f172a;
+            border-color:#334155;
+        }
+
+        @media(max-width:1100px){
+
+            .site-footer-top{
+                grid-template-columns:
+                repeat(3,minmax(0,1fr));
+            }
+
+            .site-footer-brand{
+                grid-column:1 / -1;
+                max-width:700px;
+            }
+
+        }
+
+        @media(max-width:760px){
+
+            .site-footer{
+                padding:65px 0 26px;
+            }
+
+            .site-footer-top{
+                grid-template-columns:
+                repeat(2,minmax(0,1fr));
+                gap:34px 24px;
+            }
+
+            .site-footer-brand{
+                grid-column:1 / -1;
+            }
+
+            .site-footer-divider{
+                margin-top:38px;
+            }
+
+            .site-footer-bottom{
+                flex-direction:column;
+                align-items:flex-start;
+            }
+
+            .site-footer-legal{
+                justify-content:flex-start;
+            }
+
+        }
+
+        @media(max-width:500px){
+
+            .site-footer .container{
+                width:92%;
+            }
+
+            .site-footer-top{
+                grid-template-columns:1fr;
+                gap:30px;
+            }
+
+            .site-footer-brand{
+                grid-column:auto;
+            }
+
+            .site-footer-column{
+                padding-bottom:6px;
+                border-bottom:1px solid rgba(255,255,255,.08);
+            }
+
+            .site-footer-column:last-child{
+                border-bottom:0;
+            }
+
+            .site-footer-legal{
+                display:grid;
+                grid-template-columns:1fr;
+                width:100%;
+                gap:10px;
+            }
+
+            .site-footer-legal a{
+                display:block;
+                width:100%;
+            }
+
+        }
+    </style>
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+            "@type": "WebSite",
+            "@id": "https://companionreviewhub.netlify.app/#website",
+            "url": "https://companionreviewhub.netlify.app/",
+            "name": "CompanionReviewHub",
+            "alternateName": "Companion Review Hub",
+            "description": "CompanionReviewHub helps visitors explore companion animal profiles, review care guidance, compare breeds, save profiles, and submit responsible requests for review.",
+            "inLanguage": "en"
+            },
+            {
+            "@type": "Organization",
+            "@id": "https://companionreviewhub.netlify.app/#organization",
+            "name": "CompanionReviewHub",
+            "url": "https://companionreviewhub.netlify.app/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://companionreviewhub.netlify.app/android-chrome-512x512.png",
+                "width": 512,
+                "height": 512
+            },
+            "description": "An online companion animal discovery and educational platform focused on profile review, responsible ownership, animal welfare guidance, and request review.",
+            "email": "mailto:CompanionReviewHubstores@proton.me",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer support",
+                "email": "CompanionReviewHubstores@proton.me",
+                "availableLanguage": [
+                "English"
+                ]
+            }
+            }
+        ]
+        }
+</script>
 
 </head>
 <body>
@@ -2110,69 +2392,39 @@
         </div>
 
     </section>
+    
     <!-- =====================
-     FOOTER
+         PROFESSIONAL FOOTER
     ====================== -->
 
-    <footer class="footer reveal">
+    <footer class="site-footer">
+
         <div class="container">
 
-            <div class="footer-grid">
+            <div class="site-footer-top">
 
-                <!-- COLUMN 1 -->
+                <div class="site-footer-brand">
 
-                <div class="footer-column">
-
-                    <h2 class="footer-logo">
-                        CompanionReview
+                    <h2 class="site-footer-logo">
+                        CompanionReviewHub
                     </h2>
 
                     <p>
-                        CompanionReview helps animal lovers review companion animal profiles, care needs, welfare reminders, and responsible request information through a simple online platform.
+                        CompanionReviewHub helps visitors explore companion animal profiles,
+                        review care information, save profiles, and submit responsible requests
+                        for review before final arrangements are considered.
                     </p>
 
-                </div>
-
-                <!-- COLUMN 2 -->
-
-                <div class="footer-column">
-
-                    <h3>
-                        Quick Links
-                    </h3>
-
-                    <ul>
-
-                        <li>
-                            <a href="#home">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="#featured">Featured Profiles</a>
-                        </li>
-
-                        <li>
-                            <a href="#about">About CompanionReview</a>
-                        </li>
-
-                        <li>
-                            <a href="#reviews">Platform Highlights</a>
-                        </li>
-
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-
-                    </ul>
+                    <div class="site-footer-badge">
+                        🛡️ Responsible profile discovery
+                    </div>
 
                 </div>
 
-                <!-- COLUMN 3 -->
-
-                <div class="footer-column">
+                <div class="site-footer-column">
 
                     <h3>
-                        Cat Profileegories
+                        Explore Profiles
                     </h3>
 
                     <ul>
@@ -2197,7 +2449,7 @@
 
                         <li>
                             <a href="pages/reptiles.html">
-                                Reptiles
+                                Reptile Profiles
                             </a>
                         </li>
 
@@ -2207,47 +2459,143 @@
                             </a>
                         </li>
 
-                    </ul>
-
-                </div>
-
-                <!-- COLUMN 4 -->
-
-                <div class="footer-column">
-
-                    <h3>
-                        Contact
-                    </h3>
-
-                    <ul>
-
                         <li>
-                            CompanionReviewHubstores@proton.me
-                        </li>
-
-                        <li>
-                            +1 (708) 768-3755
-                        </li>
-
-                        <li>
-                            Available 7 Days A Week
+                            <a href="feeds.html">
+                                Feed Guidance
+                            </a>
                         </li>
 
                     </ul>
 
                 </div>
 
-
-                <div class="footer-column">
+                <div class="site-footer-column">
 
                     <h3>
-                        Articles
+                        Help & Learning
                     </h3>
 
                     <ul>
 
                         <li>
-                            <a href="pages/health-care-article.html">Health-care-article</a>
+                            <a
+                            class="site-footer-highlight"
+                            href="pages/help-center.html">
+                                Help Center
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                            class="site-footer-highlight"
+                            href="pages/animal-care-questions.html">
+                                100 Animal Care Questions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/health-care-article.html">
+                                Animal Health Guide
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/wishlist.html">
+                                Saved Profiles
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/cart.html">
+                                Request List
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="site-footer-column">
+
+                    <h3>
+                        Trust & Policies
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="pages/trust-safety.html">
+                                Trust & Safety
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/animal-welfare-policy.html">
+                                Animal Welfare Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/legal-compliance.html">
+                                Legal Compliance
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/shipping-policy.html">
+                                Shipping Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/refund-policy.html">
+                                Refund Policy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="site-footer-column">
+
+                    <h3>
+                        Contact & Company
+                    </h3>
+
+                    <ul>
+
+                        <li class="site-footer-contact-item">
+                            <span>✉️</span>
+                            <a href="mailto:CompanionReviewHubstores@proton.me">
+                                CompanionReviewHubstores@proton.me
+                            </a>
+                        </li>
+
+                        <li class="site-footer-contact-item">
+                            <span>💬</span>
+                            <a href="https://wa.me/17087683755">
+                                +1 (708) 768-3755
+                            </a>
+                        </li>
+
+                        <li class="site-footer-contact-item">
+                            <span>🕒</span>
+                            <span>
+                                Available 7 days a week
+                            </span>
+                        </li>
+
+                        <li>
+                            <a href="pages/about.html">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="pages/contact.html">
+                                Contact Support
+                            </a>
                         </li>
 
                     </ul>
@@ -2256,23 +2604,31 @@
 
             </div>
 
-            <div class="footer-bottom">
+            <div class="site-footer-divider"></div>
+
+            <div class="site-footer-bottom">
 
                 <p>
-                    © 2026 CompanionReview. All Rights Reserved.
+                    © 2026 CompanionReviewHub. All Rights Reserved.
                 </p>
 
-                <div>
+                <div class="site-footer-legal">
 
-                <a href="pages/about.html">About Us</a>
-                <a href="pages/contact.html">Contact</a>
-                <a href="pages/trust-safety.html">Trust & Safety</a>
-                <a href="pages/terms-of-service.html">Terms Of Service</a>
-                <a href="pages/refund-policy.html">Refund Policy</a>
-                <a href="pages/shipping-policy.html">Shipping Policy</a>
-                <a href="pages/animal-welfare-policy.html">Animal Welfare Policy</a>
-                <a href="pages/legal-compliance.html">Legal Compliance</a>
-                <a href="pages/privacy-policy.html">Privacy Policy</a>
+                    <a href="pages/terms-of-service.html">
+                        Terms Of Service
+                    </a>
+
+                    <a href="pages/privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="pages/trust-safety.html">
+                        Safety
+                    </a>
+
+                    <a href="pages/legal-compliance.html">
+                        Compliance
+                    </a>
 
                 </div>
 
@@ -2281,6 +2637,7 @@
         </div>
 
     </footer>
+
 
     <!-- BACK TO TOP -->
 

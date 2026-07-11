@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Final Checkout & Payment Proof | CompanionReviewHub
+    </title>
+
+    <meta
+    name="robots"
+    content="noindex, nofollow">
+
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/final-checkout.css">
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="final-header">
+
+    <div class="final-header-inner">
+
+        <a href="../index.html" class="final-logo">
+            CompanionReviewHub
+        </a>
+
+        <button
+        id="darkModeToggle"
+        class="dark-mode-btn"
+        type="button"
+        aria-label="Toggle dark mode">
+
+            🌙
+
+        </button>
+
+    </div>
+
+</header>
+
+<main class="final-page">
+
+    <div class="final-container">
+
+        <section class="final-intro">
+
+            <span>
+                Eligibility Confirmed
+            </span>
+
+            <h1>
+                Review Your Final Summary
+            </h1>
+
+            <p>
+                Confirm the request details, select a payment method, and
+                submit proof for manual verification.
+            </p>
+
+        </section>
+
+        <div class="final-layout">
+
+            <section class="final-panel">
+
+                <h2>
+                    Customer & Request
+                </h2>
+
+                <div id="customerSummary"></div>
+
+                <h2 class="final-section-heading">
+                    Selected Animals
+                </h2>
+
+                <div id="animalSummary"></div>
+
+            </section>
+
+            <aside class="final-panel final-totals-panel">
+
+                <h2>
+                    Payment Summary
+                </h2>
+
+                <div id="totalsSummary"></div>
+
+                <div class="final-warning">
+
+                    <strong>
+                        Manual verification required
+                    </strong>
+
+                    <p>
+                        The displayed information comes from your browser.
+                        CompanionReviewHub will compare your payment proof
+                        against the original request before confirming receipt.
+                    </p>
+
+                </div>
+
+            </aside>
+
+        </div>
+
+        <section class="final-panel payment-panel">
+
+            <h2>
+                Select A Payment Method
+            </h2>
+
+            <p class="panel-intro">
+                Payment instructions appear only after a method is selected.
+                Confirm the amount and payment network carefully.
+            </p>
+
+            <label for="finalPaymentMethod">
+                Payment method
+            </label>
+
+            <select
+            id="finalPaymentMethod"
+            required>
+
+                <option value="">
+                    Select a payment method
+                </option>
+
+                <option value="bank">
+                    Bank Transfer
+                </option>
+
+                <option value="btc">
+                    Bitcoin (BTC)
+                </option>
+
+                <option value="eth">
+                    Ethereum (ETH)
+                </option>
+
+                <option value="usdt">
+                    USDT (ERC20)
+                </option>
+
+            </select>
+
+            <div
+            id="paymentDetails"
+            class="payment-details">
+
+            </div>
+
+        </section>
+
+        <section
+        id="proofPanel"
+        class="final-panel proof-panel">
+
+            <h2>
+                Submit Payment Proof
+            </h2>
+
+            <form
+            id="finalPaymentForm"
+            name="final-payment-confirmation"
+            method="POST"
+            data-netlify="true"
+            netlify
+            data-netlify-honeypot="bot-field"
+            enctype="multipart/form-data">
+
+                <input
+                type="hidden"
+                name="form-name"
+                value="final-payment-confirmation">
+
+                <p class="hidden-field">
+
+                    <label>
+                        Do not fill this out:
+                        <input name="bot-field">
+                    </label>
+
+                </p>
+
+                <input
+                type="hidden"
+                name="customer_name"
+                id="customerNameField">
+
+                <input
+                type="hidden"
+                name="customer_country"
+                id="customerCountryField">
+
+                <input
+                type="hidden"
+                name="animal_summary"
+                id="animalSummaryField">
+
+                <input
+                type="hidden"
+                name="total_animals"
+                id="totalAnimalsField">
+
+                <input
+                type="hidden"
+                name="grand_total"
+                id="grandTotalField">
+
+                <input
+                type="hidden"
+                name="eligibility_status"
+                value="Age, veterinary access and responsible-care confirmations completed">
+
+                <div class="proof-grid">
+
+                    <div>
+
+                        <label for="paymentMethodField">
+                            Payment method used
+                        </label>
+
+                        <input
+                        type="text"
+                        id="paymentMethodField"
+                        name="payment_method"
+                        readonly
+                        required>
+
+                    </div>
+
+                    <div>
+
+                        <label for="amountPaid">
+                            Amount sent
+                        </label>
+
+                        <input
+                        type="number"
+                        id="amountPaid"
+                        name="amount_paid"
+                        step="0.01"
+                        min="0"
+                        required>
+
+                    </div>
+
+                </div>
+
+                <!-- CRYPTO-ONLY FIELDS -->
+
+                <div
+                id="cryptoProofFields"
+                class="conditional-proof-fields">
+
+                    <div class="conditional-proof-heading">
+
+                        <h3>
+                            Cryptocurrency proof
+                        </h3>
+
+                        <p>
+                            Upload a clear screenshot showing the completed
+                            transfer, amount, network, and transaction status.
+                        </p>
+
+                    </div>
+
+                    <label for="cryptoTransactionId">
+                        Transaction hash or reference
+                    </label>
+
+                    <input
+                    type="text"
+                    id="cryptoTransactionId"
+                    name="crypto_transaction_id"
+                    placeholder="Optional but recommended">
+
+                    <label for="cryptoPaymentProof">
+                        Upload crypto payment screenshot
+                    </label>
+
+                    <input
+                    type="file"
+                    id="cryptoPaymentProof"
+                    name="crypto_payment_proof"
+                    accept=".jpg,.jpeg,.png,.webp"
+                    data-proof-field="crypto">
+
+                    <small class="file-help">
+                        Screenshot only: JPG, PNG, or WEBP.
+                    </small>
+
+                </div>
+
+                <!-- BANK-ONLY FIELDS -->
+
+                <div
+                id="bankProofFields"
+                class="conditional-proof-fields">
+
+                    <div class="conditional-proof-heading">
+
+                        <h3>
+                            Bank transfer proof
+                        </h3>
+
+                        <p>
+                            Provide the sender details and upload a clear
+                            transfer receipt or screenshot.
+                        </p>
+
+                    </div>
+
+                    <div class="proof-grid">
+
+                        <div>
+
+                            <label for="bankSenderName">
+                                Sender's full name
+                            </label>
+
+                            <input
+                            type="text"
+                            id="bankSenderName"
+                            name="bank_sender_name"
+                            placeholder="Name shown on the sending account">
+
+                        </div>
+
+                        <div>
+
+                            <label for="bankName">
+                                Sender's bank name
+                            </label>
+
+                            <input
+                            type="text"
+                            id="bankName"
+                            name="bank_name"
+                            placeholder="Example: Access Bank">
+
+                        </div>
+
+                        <div>
+
+                            <label for="bankTransferReference">
+                                Bank transfer reference
+                            </label>
+
+                            <input
+                            type="text"
+                            id="bankTransferReference"
+                            name="bank_transfer_reference"
+                            placeholder="Receipt or transaction reference">
+
+                        </div>
+
+                        <div>
+
+                            <label for="bankTransferDate">
+                                Transfer date
+                            </label>
+
+                            <input
+                            type="date"
+                            id="bankTransferDate"
+                            name="bank_transfer_date">
+
+                        </div>
+
+                    </div>
+
+                    <label for="bankPaymentProof">
+                        Upload bank transfer screenshot or receipt
+                    </label>
+
+                    <input
+                    type="file"
+                    id="bankPaymentProof"
+                    name="bank_payment_proof"
+                    accept=".jpg,.jpeg,.png,.webp,.pdf"
+                    data-proof-field="bank">
+
+                    <small class="file-help">
+                        JPG, PNG, WEBP, or PDF accepted.
+                    </small>
+
+                </div>
+
+                <label for="paymentNote">
+                    Additional note
+                </label>
+
+                <textarea
+                id="paymentNote"
+                name="payment_note"
+                rows="5"
+                placeholder="Add any helpful payment information."></textarea>
+
+                <label class="proof-confirmation">
+
+                    <input
+                    type="checkbox"
+                    id="proofConfirmation"
+                    required>
+
+                    <span>
+                        I confirm that the information and proof submitted are
+                        accurate. I understand that submission does not mean
+                        payment has already been verified.
+                    </span>
+
+                </label>
+
+                <button
+                type="submit"
+                id="paymentSubmitButton"
+                class="final-submit">
+
+                    Submit Payment For Verification
+
+                </button>
+
+                <p
+                id="paymentFormStatus"
+                class="payment-form-status"
+                aria-live="polite">
+
+                </p>
+
+            </form>
+
+        </section>
+
+    </div>
+
+</main>
+
+<script defer src="../assets/js/dark-mode.js"></script>
+<script defer src="../assets/js/final-checkout.js"></script>
+
+</body>
+
+</html>

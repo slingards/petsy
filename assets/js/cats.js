@@ -6828,30 +6828,11 @@ updateAnimalWishlistCount();
 
 function attachButtons(){
 
-    document
-    .querySelectorAll(
-        ".add-cart-btn"
-    )
-    .forEach(button=>{
-
-        button.onclick = ()=>{
-
-            addToCart({
-
-                name:
-                button.dataset.name,
-
-                price:
-                button.dataset.price,
-
-                image:
-                button.dataset.image
-
-            });
-
-        };
-
-    });
+    /*
+        Request buttons are handled once by assets/js/cart.js.
+        Keeping this function empty preserves existing render calls
+        without attaching a second click handler.
+    */
 
 }
 

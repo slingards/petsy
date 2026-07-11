@@ -135,6 +135,137 @@ const dogs = [
 },
 
 {
+    name: "English Springer Spaniel",
+
+    category: "sporting",
+
+    price: 2450,
+
+    image: "assets/images/dogs/english-springer-spaniel.jpg",
+
+    age: "5-6 Months",
+
+    location: "United Kingdom",
+
+    description: "An energetic, affectionate, and highly intelligent sporting dog known for its friendly temperament, excellent hunting abilities, and loyal family companionship.",
+
+    fullDescription:
+    "The English Springer Spaniel is a versatile sporting breed admired for its intelligence, affectionate nature, and endless enthusiasm. Originally developed in England as a flushing and retrieving dog, it has become a wonderful family companion thanks to its gentle personality and eagerness to please. These dogs excel in obedience, agility, scent work, field sports, and active family life. They enjoy spending time with people and thrive when given regular exercise, mental stimulation, and positive training.",
+
+    colors: [
+        "Liver & White",
+        "Black & White",
+        "Liver White & Tan",
+        "Black White & Tan",
+        "Roan",
+        "Blue Roan"
+    ],
+
+    availableAges: [
+        "8 Weeks",
+        "10 Weeks",
+        "12 Weeks",
+        "4 Months",
+        "6 Months",
+        "1 Year",
+        "Adult"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "18 - 25 kg",
+
+    height: "46 - 56 cm",
+
+    lifespan: "12 - 14 Years",
+
+    temperament:
+    "Friendly, Intelligent, Energetic, Gentle, Loyal, Playful, Eager To Please",
+
+    agility:
+    "Excellent. Performs exceptionally well in agility competitions, obedience, scent detection, field work, retrieving activities, and canine sports.",
+
+    activityLevel:
+    "High",
+
+    trainability:
+    "Excellent",
+
+    goodWithChildren:
+    "Excellent. Known for being patient and affectionate with children when properly socialized.",
+
+    goodWithPets:
+    "Excellent with early socialization and supervised introductions.",
+
+    shedding:
+    "Moderate throughout the year with seasonal increases.",
+
+    climate:
+    "Prefers cool to moderate climates but adapts well to warmer regions when provided with shade, fresh water, and appropriate care.",
+
+    health: [
+        "Veterinary health record available",
+        "Vaccination records available",
+        "Routine wellness examinations completed",
+        "Parasite prevention information available",
+        "Microchip information available where applicable",
+        "General health documentation available for review"
+    ],
+
+    documents: [
+        "Veterinary health documentation",
+        "Vaccination record",
+        "Pedigree documentation where available",
+        "Registration documentation where available",
+        "Microchip registration information where applicable",
+        "Ownership or transfer documentation",
+        "Request agreement"
+    ],
+
+    feed:
+    "A balanced diet formulated for active medium-sized sporting breeds, providing high-quality protein, healthy fats, vitamins, minerals, and omega fatty acids to support energy, coat condition, and overall wellbeing. Fresh drinking water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal (7:00 AM)",
+        "Afternoon Meal (1:00 PM)",
+        "Evening Meal (6:30 PM)"
+    ],
+
+    parents: {
+
+        father:
+        "Health-tested English Springer Spaniel with excellent field lineage, strong obedience, outstanding temperament, and proven working ability.",
+
+        mother:
+        "Healthy English Springer Spaniel with a calm family-oriented temperament, excellent maternal instincts, and documented veterinary history."
+
+    },
+
+    care: [
+        "Brush the coat several times each week to reduce tangles.",
+        "Provide at least 60–90 minutes of daily exercise.",
+        "Clean ears regularly to reduce the risk of infections.",
+        "Maintain routine veterinary examinations.",
+        "Trim nails as needed.",
+        "Provide regular mental enrichment and training.",
+        "Maintain dental hygiene with routine brushing.",
+        "Offer plenty of companionship and social interaction."
+    ],
+
+    shipping:
+    "Delivery review may be available through licensed companion animal transport providers. Where approved, travel arrangements may include veterinary documentation, health clearance, and transportation updates.",
+
+    warranty:
+    "One-year congenital health information with ongoing care guidance.",
+
+    availability:
+    "Subject to confirmation"
+},
+
+{
     name: "Greyhound",
 
     category: "hound",
@@ -9020,30 +9151,11 @@ updateAnimalWishlistCount();
 
 function attachButtons(){
 
-    document
-    .querySelectorAll(
-        ".add-cart-btn"
-    )
-    .forEach(button=>{
-
-        button.onclick = ()=>{
-
-            addToCart({
-
-                name:
-                button.dataset.name,
-
-                price:
-                button.dataset.price,
-
-                image:
-                button.dataset.image
-
-            });
-
-        };
-
-    });
+    /*
+        Request buttons are handled once by assets/js/cart.js.
+        Keeping this function empty preserves existing render calls
+        without attaching a second click handler.
+    */
 
 }
 

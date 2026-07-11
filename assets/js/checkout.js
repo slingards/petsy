@@ -178,7 +178,11 @@ document.getElementById(
 if(orderCount){
 
     orderCount.textContent =
-    cart.length;
+    cart.reduce(
+        (total,item)=>
+        total + (item.quantity || 1),
+        0
+    );
 
 }
 
@@ -419,10 +423,10 @@ if(checkoutForm){
             Number(ageInput.value)
             : 0;
 
-            if(age < 18){
+            if(!Number.isFinite(age) || age <= 0){
 
                 alert(
-                    "You must be at least 18 years old to submit a pet request."
+                    "Please enter a valid age before continuing."
                 );
 
                 if(ageInput){
@@ -594,13 +598,52 @@ if(checkoutForm){
                 const requestItems =
                 cart.map(item=>{
 
+                    const quantity =
+                    Number(item.quantity || 1);
+
+                    const unitPrice =
+                    Number(item.price || 0);
+
                     return {
-                        name:item.name,
-                        price:Number(item.price),
-                        quantity:item.quantity || 1
+                        name:
+                        item.name || "Selected Profile",
+
+                        price:
+                        unitPrice,
+
+                        quantity:
+                        quantity,
+
+                        line_total:
+                        unitPrice * quantity
                     };
 
                 });
+
+                const totalQuantity =
+                requestItems.reduce(
+                    (total,item)=>
+                    total + item.quantity,
+                    0
+                );
+
+                const deliveryReviewEstimate =
+                450;
+
+                const careTravelReviewEstimate =
+                250;
+
+                const reviewTotal =
+                subtotal +
+                deliveryReviewEstimate +
+                careTravelReviewEstimate;
+
+                const itemSummary =
+                requestItems
+                .map(item=>
+                    `${item.quantity} × ${item.name} — $${item.line_total.toLocaleString()}`
+                )
+                .join("\n");
 
                 await fetch(
                     "/.netlify/functions/send-order",
@@ -647,7 +690,19 @@ if(checkoutForm){
                             subtotal,
 
                             review_total:
-                            subtotal + 450 + 250,
+                            reviewTotal,
+
+                            total_quantity:
+                            totalQuantity,
+
+                            item_summary:
+                            itemSummary,
+
+                            delivery_review_estimate:
+                            deliveryReviewEstimate,
+
+                            care_travel_review_estimate:
+                            careTravelReviewEstimate,
 
                             items:
                             requestItems
@@ -677,6 +732,36 @@ if(checkoutForm){
                     )
                 );
 
+                formData.set(
+                    "animal_summary",
+                    itemSummary
+                );
+
+                formData.set(
+                    "total_animals",
+                    String(totalQuantity)
+                );
+
+                formData.set(
+                    "profile_subtotal",
+                    String(subtotal)
+                );
+
+                formData.set(
+                    "delivery_review_estimate",
+                    String(deliveryReviewEstimate)
+                );
+
+                formData.set(
+                    "care_travel_review_estimate",
+                    String(careTravelReviewEstimate)
+                );
+
+                formData.set(
+                    "grand_total",
+                    String(reviewTotal)
+                );
+
                 const netlifyResponse =
                 await fetch(
                     "/",
@@ -688,12 +773,85 @@ if(checkoutForm){
 
                 if(netlifyResponse.ok){
 
-                    localStorage.removeItem(
-                        "CompanionReviewHubCart"
+                    const requestSnapshot = {
+
+                        customer: {
+                            name:
+                            fullNameInput ?
+                            fullNameInput.value.trim()
+                            : "",
+
+                            age:
+                            age,
+
+                            contact_method:
+                            contactMethod.value,
+
+                            contact:
+                            contactValue,
+
+                            country:
+                            countryInput ?
+                            countryInput.value
+                            : "",
+
+                            address:
+                            addressInput ?
+                            addressInput.value.trim()
+                            : ""
+                        },
+
+                        items:
+                        requestItems,
+
+                        totals: {
+                            subtotal:
+                            subtotal,
+
+                            delivery_review_estimate:
+                            deliveryReviewEstimate,
+
+                            care_travel_review_estimate:
+                            careTravelReviewEstimate,
+
+                            grand_total:
+                            reviewTotal,
+
+                            total_quantity:
+                            totalQuantity
+                        },
+
+                        eligibility: {
+                            age_confirmed:
+                            age >= 18,
+
+                            veterinary_access:
+                            null,
+
+                            responsible_care:
+                            null
+                        },
+
+                        request_status:
+                        "Request received for eligibility review",
+
+                        created_at:
+                        new Date().toISOString()
+                    };
+
+                    localStorage.setItem(
+                        "CompanionReviewHubPendingRequest",
+                        JSON.stringify(requestSnapshot)
                     );
 
+                    /*
+                        Keep CompanionReviewHubCart until payment proof is
+                        submitted so final-checkout.html can still display
+                        the selected profiles.
+                    */
+
                     window.location.href =
-                    "order-completion.html";
+                    "request-confirmation.html";
 
                 }else{
 

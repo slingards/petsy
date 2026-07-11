@@ -342,7 +342,7 @@ function updateResults(count){
             </h3>
 
             <p>
-                These companion animal profiles are shown for review. Availability, delivery, care needs, and legal requirements may still need to be confirmed by Profilesy support.
+                These companion animal profiles are shown for review. Availability, delivery, care needs, and legal requirements may still need to be confirmed by CompanionReviewHub support.
             </p>
         `;
 
@@ -370,7 +370,7 @@ function updateResults(count){
             </h3>
 
             <p>
-                We could not find an exact match for your current search. The companion animal you are looking for may still appear in one of our full category pages, or availability may need to be confirmed by Profilesy support.
+                We could not find an exact match for your current search. The companion animal you are looking for may still appear in one of our full category pages, or availability may need to be confirmed by CompanionReviewHub support.
             </p>
 
             <p>

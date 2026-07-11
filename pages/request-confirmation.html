@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Request Eligibility Check | CompanionReviewHub
+    </title>
+
+    <meta
+    name="description"
+    content="Confirm responsible ownership requirements and prepare your CompanionReviewHub request summary.">
+
+    <meta
+    name="robots"
+    content="noindex, nofollow">
+
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/request-confirmation.css">
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="eligibility-header">
+
+    <div class="eligibility-header-inner">
+
+        <a
+        href="../index.html"
+        class="eligibility-logo">
+
+            CompanionReviewHub
+
+        </a>
+
+        <button
+        id="darkModeToggle"
+        class="dark-mode-btn"
+        type="button"
+        aria-label="Toggle dark mode">
+
+            🌙
+
+        </button>
+
+    </div>
+
+</header>
+
+<main class="eligibility-page">
+
+    <section class="eligibility-card">
+
+        <span class="eligibility-badge">
+            Responsible Ownership Check
+        </span>
+
+        <h1>
+            Confirm Your Eligibility
+        </h1>
+
+        <p class="eligibility-intro">
+            Your request was received. Before preparing the final summary,
+            confirm the following responsible-care requirements.
+        </p>
+
+        <div
+        id="requestPreview"
+        class="request-preview">
+
+            Loading your request details...
+
+        </div>
+
+        <form id="eligibilityForm">
+
+            <label class="eligibility-option">
+
+                <input
+                type="checkbox"
+                id="ageConfirmation">
+
+                <span>
+
+                    <strong>
+                        Age confirmation
+                    </strong>
+
+                    I confirm that I am at least 18 years old.
+
+                </span>
+
+            </label>
+
+            <label class="eligibility-option">
+
+                <input
+                type="checkbox"
+                id="vetConfirmation">
+
+                <span>
+
+                    <strong>
+                        Veterinary-care access
+                    </strong>
+
+                    I confirm that I have reasonable access to qualified
+                    veterinary care appropriate for the requested animal.
+
+                </span>
+
+            </label>
+
+            <label class="eligibility-option">
+
+                <input
+                type="checkbox"
+                id="responsibilityConfirmation">
+
+                <span>
+
+                    <strong>
+                        Responsible-care agreement
+                    </strong>
+
+                    I understand that housing, welfare, legal, documentation,
+                    and suitability requirements may still apply.
+
+                </span>
+
+            </label>
+
+            <div class="eligibility-notice">
+
+                <strong>
+                    Important
+                </strong>
+
+                <p>
+                    This check does not guarantee animal availability, legal
+                    eligibility, delivery, or payment acceptance. Every payment
+                    proof remains subject to manual verification.
+                </p>
+
+            </div>
+
+            <button
+            type="submit"
+            id="startEligibilityCheck"
+            class="eligibility-submit">
+
+                Prepare My Request Summary
+
+            </button>
+
+            <p
+            id="eligibilityError"
+            class="eligibility-error"
+            aria-live="polite">
+
+            </p>
+
+        </form>
+
+        <section
+        id="countdownSection"
+        class="countdown-section"
+        aria-live="polite">
+
+            <div class="countdown-ring">
+
+                <svg
+                viewBox="0 0 140 140"
+                aria-hidden="true">
+
+                    <circle
+                    class="countdown-track"
+                    cx="70"
+                    cy="70"
+                    r="58">
+
+                    </circle>
+
+                    <circle
+                    id="countdownProgress"
+                    class="countdown-progress"
+                    cx="70"
+                    cy="70"
+                    r="58">
+
+                    </circle>
+
+                </svg>
+
+                <div class="countdown-number">
+
+                    <span id="countdownValue">
+                        10
+                    </span>
+
+                    <small>
+                        seconds
+                    </small>
+
+                </div>
+
+            </div>
+
+            <h2>
+                Preparing Your Request Summary
+            </h2>
+
+            <p id="countdownStatus">
+                Reviewing the eligibility confirmations you provided.
+            </p>
+
+        </section>
+
+    </section>
+
+</main>
+
+<script defer src="../assets/js/dark-mode.js"></script>
+<script defer src="../assets/js/request-countdown.js"></script>
+
+</body>
+
+</html>

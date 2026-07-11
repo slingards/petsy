@@ -625,7 +625,16 @@ document.addEventListener(
 
         if(!button) return;
 
+        /*
+            This project previously attached request handlers in both cart.js
+            and the individual animal scripts. Capturing the click here and
+            stopping the same event prevents one click from being processed
+            twice.
+        */
+
         event.preventDefault();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
 
         const card =
         button.closest(
@@ -659,7 +668,8 @@ document.addEventListener(
 
         });
 
-    }
+    },
+    true
 );
 
 /* ==========================
