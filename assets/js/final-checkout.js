@@ -198,6 +198,30 @@ document.addEventListener(
                     "active"
                 );
 
+                /*
+                    Bank transfer is not currently available.
+                    Show only the coming-soon message and assistance link.
+                */
+
+                if(method === "bank"){
+
+                    proofPanel.classList.remove(
+                        "active"
+                    );
+
+                    resetConditionalProofFields();
+
+                    attachCopyButton();
+
+                    return;
+
+                }
+
+                /*
+                    Crypto methods reveal their QR code, wallet address,
+                    and the crypto proof-of-payment form.
+                */
+
                 proofPanel.classList.add(
                     "active"
                 );
@@ -609,30 +633,61 @@ function buildPaymentDetails(
     .toLocaleString();
 
     /*
-        Replace the placeholder account and wallet values below
-        before deployment. Never publish credentials you do not
-        intend customers to use.
+        IMPORTANT:
+        Replace the three wallet placeholders below with your real,
+        verified receiving addresses before deployment.
+
+        Put your QR images in:
+        assets/images/payments/bitcoin-qr.jpg
+        assets/images/payments/ethereum-qr.jpg
+        assets/images/payments/usdt-erc20-qr.jpg
     */
 
     const methods = {
 
         bank: {
             title:
-            "Bank Transfer Instructions",
+            "Bank Transfer — Coming Soon",
+
+            isComingSoon:
+            true,
 
             body:
             `
-                <p>
-                    Send exactly <strong>$${formattedAmount}</strong>
-                    using the bank instructions confirmed by official
-                    CompanionReviewHub support.
-                </p>
+                <div class="bank-coming-soon">
 
-                <div class="method-warning">
-                    Bank details are intentionally not hard-coded in this
-                    starter file. Replace this notice with your verified
-                    receiving account or instruct customers to obtain the
-                    details from official support.
+                    <div class="bank-coming-soon-icon">
+                        🏦
+                    </div>
+
+                    <div>
+
+                        <h4>
+                            Bank transfer is coming soon
+                        </h4>
+
+                        <p>
+                            Bank transfer is not currently available as a
+                            payment option. Please choose one of the available
+                            cryptocurrency methods.
+                        </p>
+
+                        <p>
+                            If you are having difficulty choosing the correct
+                            payment method or need assistance before continuing,
+                            reach out to CompanionReviewHub support.
+                        </p>
+
+                        <a
+                        href="../index.html#contact"
+                        class="payment-support-button">
+
+                            Reach Out For Assistance
+
+                        </a>
+
+                    </div>
+
                 </div>
             `
         },
@@ -641,8 +696,17 @@ function buildPaymentDetails(
             title:
             "Bitcoin Payment",
 
+            currency:
+            "BTC",
+
+            network:
+            "Bitcoin Network",
+
             address:
-            "REPLACE_WITH_YOUR_BITCOIN_ADDRESS",
+            "bc1qc70kuwzvaedv70n5ka8fpzex5cy87vpt433e4k",
+
+            qrImage:
+            "../assets/images/payments/bitcoin-qr.jpg",
 
             body:
             `
@@ -657,8 +721,17 @@ function buildPaymentDetails(
             title:
             "Ethereum Payment",
 
+            currency:
+            "ETH",
+
+            network:
+            "Ethereum Network",
+
             address:
-            "REPLACE_WITH_YOUR_ETHEREUM_ADDRESS",
+            "0xA1d2a35c85be0892b3aa3B861FCC0BD8412b54CC",
+
+            qrImage:
+            "../assets/images/payments/ethereum-qr.jpg",
 
             body:
             `
@@ -673,8 +746,17 @@ function buildPaymentDetails(
             title:
             "USDT Payment",
 
+            currency:
+            "USDT",
+
+            network:
+            "ERC20 Network",
+
             address:
-            "REPLACE_WITH_YOUR_USDT_ERC20_ADDRESS",
+            "0xA1d2a35c85be0892b3aa3B861FCC0BD8412b54CC",
+
+            qrImage:
+            "../assets/images/payments/usdt-erc20-qr.jpg",
 
             body:
             `
@@ -692,44 +774,91 @@ function buildPaymentDetails(
 
     if(!selected) return "";
 
-    const addressMarkup =
-    selected.address
-    ?
-    `
-        <div class="payment-address">
+    if(selected.isComingSoon){
 
-            <input
-            id="selectedPaymentAddress"
-            value="${selected.address}"
-            readonly>
+        return `
+            <h3>
+                ${selected.title}
+            </h3>
 
-            <button
-            type="button"
-            id="copyPaymentAddress">
+            ${selected.body}
+        `;
 
-                Copy
-
-            </button>
-
-        </div>
-    `
-    :
-    "";
+    }
 
     return `
-        <h3>
-            ${selected.title}
-        </h3>
+        <div class="crypto-payment-layout">
 
-        ${selected.body}
+            <div class="crypto-qr-card">
 
-        ${addressMarkup}
+                <img
+                src="${selected.qrImage}"
+                alt="${selected.title} QR code"
+                class="crypto-qr-image"
+                onerror="this.closest('.crypto-qr-card').classList.add('qr-image-missing')">
 
-        <div class="method-warning">
+                <p class="qr-missing-message">
+                    QR image could not be loaded. Confirm that the image is in
+                    the correct payments folder.
+                </p>
 
-            Confirm the receiving details, amount, currency, and network
-            before sending. Cryptocurrency transfers may be irreversible.
-            Proof submission does not mean payment has been verified.
+                <span>
+                    Scan to pay with ${selected.currency}
+                </span>
+
+            </div>
+
+            <div class="crypto-payment-information">
+
+                <h3>
+                    ${selected.title}
+                </h3>
+
+                ${selected.body}
+
+                <div class="crypto-network-row">
+
+                    <span>
+                        Network
+                    </span>
+
+                    <strong>
+                        ${selected.network}
+                    </strong>
+
+                </div>
+
+                <label for="selectedPaymentAddress">
+                    Receiving wallet address
+                </label>
+
+                <div class="payment-address">
+
+                    <input
+                    id="selectedPaymentAddress"
+                    value="${escapeText(selected.address)}"
+                    readonly>
+
+                    <button
+                    type="button"
+                    id="copyPaymentAddress">
+
+                        Copy Address
+
+                    </button>
+
+                </div>
+
+                <div class="method-warning">
+
+                    Confirm the currency, address, amount, and network before
+                    sending. Cryptocurrency transfers may be irreversible.
+                    Payment proof submission does not mean payment has already
+                    been verified.
+
+                </div>
+
+            </div>
 
         </div>
     `;
@@ -754,18 +883,51 @@ function attachCopyButton(){
         "click",
         async () => {
 
-            await navigator.clipboard.writeText(
-                input.value
-            );
+            try{
 
-            button.textContent =
-            "Copied";
+                if(
+                    navigator.clipboard &&
+                    window.isSecureContext
+                ){
+
+                    await navigator.clipboard.writeText(
+                        input.value
+                    );
+
+                }else{
+
+                    input.select();
+
+                    document.execCommand(
+                        "copy"
+                    );
+
+                    window.getSelection()?.removeAllRanges();
+
+                }
+
+                button.textContent =
+                "Copied";
+
+            }
+
+            catch(error){
+
+                console.error(
+                    "Address copy failed:",
+                    error
+                );
+
+                button.textContent =
+                "Copy Failed";
+
+            }
 
             setTimeout(
                 () => {
 
                     button.textContent =
-                    "Copy";
+                    "Copy Address";
 
                 },
                 1600

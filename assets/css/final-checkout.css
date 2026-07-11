@@ -535,3 +535,215 @@ body{
     }
 
 }
+
+
+/* =========================================================
+   FINAL CHECKOUT — CRYPTO QR + BANK COMING SOON UPDATE
+   Add this to the bottom of assets/css/final-checkout.css
+========================================================= */
+
+.crypto-payment-layout{
+    display:grid;
+    grid-template-columns:minmax(210px,.68fr) minmax(0,1.4fr);
+    gap:26px;
+    align-items:start;
+}
+
+.crypto-qr-card{
+    padding:18px;
+    border:1px solid #fed7aa;
+    border-radius:20px;
+    background:#ffffff;
+    text-align:center;
+}
+
+.crypto-qr-image{
+    display:block;
+    width:100%;
+    max-width:260px;
+    aspect-ratio:1 / 1;
+    margin:0 auto 13px;
+    border-radius:15px;
+    object-fit:contain;
+    background:#ffffff;
+}
+
+.crypto-qr-card > span{
+    display:block;
+    color:#7c2d12;
+    font-size:.9rem;
+    font-weight:800;
+}
+
+.qr-missing-message{
+    display:none;
+    margin:0 0 12px;
+    color:#b91c1c !important;
+    font-size:.86rem;
+    line-height:1.55;
+}
+
+.crypto-qr-card.qr-image-missing .crypto-qr-image{
+    display:none;
+}
+
+.crypto-qr-card.qr-image-missing .qr-missing-message{
+    display:block;
+}
+
+.crypto-payment-information h3{
+    margin-top:0;
+}
+
+.crypto-network-row{
+    display:flex;
+    justify-content:space-between;
+    gap:18px;
+    margin:18px 0;
+    padding:14px 16px;
+    border:1px solid #fed7aa;
+    border-radius:13px;
+    background:#fff7ed;
+}
+
+.crypto-network-row span{
+    color:#7c2d12;
+}
+
+.crypto-network-row strong{
+    color:#9a3412;
+    text-align:right;
+}
+
+.crypto-payment-information label{
+    display:block;
+    margin:0 0 8px;
+    color:#111827;
+    font-weight:800;
+}
+
+.bank-coming-soon{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+    padding:22px;
+    border:1px solid #fde68a;
+    border-radius:18px;
+    background:#fffbeb;
+}
+
+.bank-coming-soon-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex:0 0 52px;
+    width:52px;
+    height:52px;
+    border-radius:16px;
+    background:#fef3c7;
+    font-size:1.5rem;
+}
+
+.bank-coming-soon h4{
+    margin:0 0 10px;
+    color:#92400e;
+    font-size:1.15rem;
+}
+
+.bank-coming-soon p{
+    margin:0 0 11px;
+    color:#78350f;
+    line-height:1.7;
+}
+
+.payment-support-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:48px;
+    margin-top:5px;
+    padding:12px 20px;
+    border-radius:999px;
+    background:#d97706;
+    color:#ffffff !important;
+    font-weight:800;
+    text-decoration:none;
+    transition:.25s ease;
+}
+
+.payment-support-button:hover{
+    background:#b45309;
+    transform:translateY(-2px);
+}
+
+.dark-mode .crypto-qr-card{
+    border-color:#475569;
+    background:#f8fafc;
+}
+
+.dark-mode .crypto-network-row{
+    border-color:#475569;
+    background:#111827;
+}
+
+.dark-mode .crypto-network-row span{
+    color:#cbd5e1;
+}
+
+.dark-mode .crypto-network-row strong,
+.dark-mode .crypto-payment-information label{
+    color:#fbbf24;
+}
+
+.dark-mode .bank-coming-soon{
+    border-color:#854d0e;
+    background:#1c1917;
+}
+
+.dark-mode .bank-coming-soon-icon{
+    background:#292524;
+}
+
+.dark-mode .bank-coming-soon h4{
+    color:#fbbf24;
+}
+
+.dark-mode .bank-coming-soon p{
+    color:#d6d3d1;
+}
+
+@media(max-width:760px){
+
+    .crypto-payment-layout{
+        grid-template-columns:1fr;
+    }
+
+    .crypto-qr-card{
+        max-width:360px;
+        width:100%;
+        margin:0 auto;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .bank-coming-soon{
+        flex-direction:column;
+        padding:18px 15px;
+    }
+
+    .payment-support-button{
+        width:100%;
+    }
+
+    .crypto-network-row{
+        flex-direction:column;
+        gap:5px;
+    }
+
+    .crypto-network-row strong{
+        text-align:left;
+    }
+
+}
