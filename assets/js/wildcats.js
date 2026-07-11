@@ -120,7 +120,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -243,7 +243,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -366,7 +366,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -489,7 +489,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -613,7 +613,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -737,7 +737,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -861,7 +861,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -983,7 +983,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -1108,7 +1108,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 },
 
 {
@@ -1231,7 +1231,7 @@ const wildCats = [
     "Health information may be provided after veterinary review where legally applicable.",
 
     availability:
-    "Legal review required."
+    "Subject to confirmation."
 }
 
 ];
@@ -1315,7 +1315,7 @@ wildCatsArray.forEach(
                 data-name="${wildCat.name}"
                 data-price="${wildCat.price}"
                 data-image="../${wildCat.image}">
-                    Request Compliance Review
+                    Start Request
                 </button>
 
                     <button
