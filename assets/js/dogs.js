@@ -5435,6 +5435,135 @@ const dogs = [
 },
 
 {
+    name: "Miniature Schnauzer",
+
+    category: "terrier",
+
+    price: 1900,
+
+    image: "assets/images/dogs/Miniature-Schnauzer.jpg",
+
+    age: "3-5 Months",
+
+    location: "Germany",
+
+    description: "A spirited, intelligent, and affectionate small dog recognized for its distinctive beard, bushy eyebrows, and lively personality.",
+
+    fullDescription:
+    "The Miniature Schnauzer is a highly intelligent, energetic, and loyal companion originally developed in Germany as a farm dog and ratter. Today, it is one of the world's most popular small breeds thanks to its friendly temperament, eagerness to learn, and adaptability to both apartments and larger homes. Miniature Schnauzers are alert watchdogs that form strong bonds with their families while remaining playful and affectionate throughout their lives.",
+
+    colors: [
+        "Salt & Pepper",
+        "Black",
+        "Black & Silver",
+        "White"
+    ],
+
+    availableAges: [
+        "8 Weeks",
+        "10 Weeks",
+        "12 Weeks",
+        "4 Months",
+        "6 Months",
+        "1 Year",
+        "Adult"
+    ],
+
+    gender: [
+        "Male",
+        "Female"
+    ],
+
+    weight: "5 - 9 kg",
+
+    height: "30 - 36 cm",
+
+    lifespan: "12 - 15 Years",
+
+    temperament:
+    "Intelligent, Friendly, Alert, Fearless, Playful, Loyal, Spirited",
+
+    agility:
+    "High. Excels in obedience, agility, rally, scent work, trick training, and interactive games.",
+
+    activityLevel:
+    "Moderately High",
+
+    trainability:
+    "Excellent",
+
+    goodWithChildren:
+    "Excellent when properly socialized.",
+
+    goodWithPets:
+    "Very good with early socialization.",
+
+    shedding:
+    "Very Low. Considered a low-shedding breed but requires regular grooming.",
+
+    climate:
+    "Performs well in cool and moderate climates and adapts well to warmer regions with proper care and hydration.",
+
+    health: [
+        "Veterinarian Examined",
+        "Fully Vaccinated",
+        "Dewormed",
+        "Microchipped",
+        "Health Guaranteed",
+        "Regular Wellness Checks"
+    ],
+
+    documents: [
+        "Veterinary Health Certificate",
+        "Vaccination Record",
+        "Pedigree Certificate",
+        "Registration Papers",
+        "Microchip Registration",
+        "Transfer of Ownership Documents",
+        "Sales Agreement"
+    ],
+
+    feed:
+    "Premium small-breed dog food rich in high-quality protein, healthy fats, omega fatty acids, vitamins, and minerals to support muscle development, skin health, and a healthy coat. Fresh clean water should always be available.",
+
+    feedingSchedule: [
+        "Morning Meal (7:00 AM)",
+        "Afternoon Meal (1:00 PM)",
+        "Evening Meal (7:00 PM)"
+    ],
+
+    parents: {
+
+        father:
+        "Champion-line Miniature Schnauzer with excellent temperament, strong genetics, clear health testing, and an outstanding salt-and-pepper coat.",
+
+        mother:
+        "AKC-registered Miniature Schnauzer with a gentle personality, excellent maternal instincts, healthy bloodlines, and a well-maintained wiry coat."
+
+    },
+
+    care: [
+        "Brush coat 2–3 times weekly.",
+        "Schedule professional grooming every 6–8 weeks.",
+        "Provide daily walks and interactive play.",
+        "Offer mental stimulation through puzzle toys and obedience training.",
+        "Trim nails regularly.",
+        "Clean ears routinely.",
+        "Maintain dental hygiene with regular brushing.",
+        "Schedule routine veterinary examinations."
+    ],
+
+    shipping:
+    "Worldwide live-animal transportation available through licensed pet transport services. Every shipment includes travel documentation, veterinary clearance, and delivery updates.",
+
+    warranty:
+    "One-year congenital health guarantee with lifetime breeder support.",
+
+    availability:
+    "Available Now"
+},
+
+{
     name: "Irish Setter",
 
     category: "sporting",
