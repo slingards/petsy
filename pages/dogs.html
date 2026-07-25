@@ -1,196 +1,168 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5F5C8YT167"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-5F5C8YT167');
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){
+            dataLayer.push(arguments);
+        }
+
+        gtag(
+            "js",
+            new Date()
+        );
+
+        gtag(
+            "config",
+            "G-5F5C8YT167"
+        );
     </script>
 
     <meta charset="UTF-8">
 
     <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="manifest" href="../site.webmanifest">
-    <meta name="theme-color" content="#d97706">
+    <link
+        rel="manifest"
+        href="../site.webmanifest"
+    >
+
+    <meta
+        name="theme-color"
+        content="#d97706"
+    >
 
     <title>
-        Companion Dog Profiles & Responsible Puppy Adoption Guidance | CompanionReviewHub
+        Companion Dog Profiles & Responsible Puppy Guidance | CompanionReviewHub
     </title>
 
     <meta
-    name="description"
-    content="Explore companion dog and puppy profiles on CompanionReviewHub with responsible ownership guidance, care information, welfare reminders, and support before submitting an adoption or inquiry request.">
+        name="description"
+        content="Explore companion dog and puppy profiles with breed information, temperament, care needs, welfare guidance, availability notes and responsible request support."
+    >
 
     <meta
-    name="keywords"
-    content="companion dogs, puppy adoption guidance, dog care, responsible dog ownership, dog welfare, family dogs, CompanionReviewHub dogs">
+        name="keywords"
+        content="companion dogs, puppy profiles, dog care, responsible dog ownership, family dogs, dog breeds, CompanionReviewHub dogs"
+    >
 
     <meta
-    name="robots"
-    content="index, follow">
+        name="robots"
+        content="index, follow"
+    >
 
     <link
-    rel="canonical"
-    href="https://CompanionReviewHub.netlify.app/pages/dogs.html">
+        rel="canonical"
+        href="https://CompanionReviewHub.netlify.app/pages/dogs.html"
+    >
 
     <meta
-    property="og:title"
-    content="Companion Dog Profiles & Responsible Dog Guidance | CompanionReviewHub">
+        property="og:title"
+        content="Companion Dog Profiles | CompanionReviewHub"
+    >
 
     <meta
-    property="og:description"
-    content="Explore dog and puppy profiles with care guidance, welfare reminders, and support before making an adoption request.">
+        property="og:description"
+        content="Explore dog and puppy profiles with care guidance, welfare reminders and responsible request support."
+    >
 
     <meta
-    property="og:type"
-    content="website">
+        property="og:type"
+        content="website"
+    >
 
     <meta
-    property="og:url"
-    content="https://CompanionReviewHub.netlify.app/pages/dogs.html">
+        property="og:url"
+        content="https://CompanionReviewHub.netlify.app/pages/dogs.html"
+    >
 
     <meta
-    property="og:image"
-    content="https://CompanionReviewHub.netlify.app/assets/images/dogs/great-dane.jpg">
+        property="og:image"
+        content="https://CompanionReviewHub.netlify.app/assets/images/dogs/great-dane.jpg"
+    >
 
     <meta
-    name="twitter:card"
-    content="summary_large_image">
+        name="twitter:card"
+        content="summary_large_image"
+    >
 
     <meta
-    name="twitter:title"
-    content="Companion Dog Profiles | CompanionReviewHub">
+        name="twitter:title"
+        content="Companion Dog Profiles | CompanionReviewHub"
+    >
 
     <meta
-    name="twitter:description"
-    content="Review dog profiles, care needs, welfare guidance, and responsible ownership information on CompanionReviewHub.">
+        name="twitter:description"
+        content="Review dog profiles, care needs, welfare guidance and responsible ownership information."
+    >
 
     <meta
-    name="twitter:image"
-    content="https://CompanionReviewHub.netlify.app/assets/images/dogs/great-dane.jpg">
+        name="twitter:image"
+        content="https://CompanionReviewHub.netlify.app/assets/images/dogs/great-dane.jpg"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/style.css">
+        rel="stylesheet"
+        href="../assets/css/style.css"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/responsive.css">
+        rel="stylesheet"
+        href="../assets/css/responsive.css"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/dogs.css">
+        rel="stylesheet"
+        href="../assets/css/site-ui-fix.css"
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load dogs.css last so its scoped page fixes win. -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/dogs.css"
+    >
 
     <link
-    rel="icon"
-    type="image/png"
-    href="../favicon.png">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-    <link rel="stylesheet" href="../assets/css/site-ui-fix.css">
+    <link
+        rel="icon"
+        type="image/png"
+        href="../favicon.png"
+    >
 
-    <style>
-    /* ==========================
-       DOG CARE NOTICE
-    ========================== */
+    <link
+        rel="icon"
+        href="../favicon.ico"
+        sizes="any"
+    >
 
-    .dog-care-notice{
-        background:#fff7ed;
-        padding:45px 20px;
-    }
+    <link
+        rel="apple-touch-icon"
+        href="../apple-touch-icon.png"
+    >
 
-    .dog-care-notice .care-notice-box{
-        background:#ffffff;
-        border-left:6px solid #d97706;
-        border-radius:22px;
-        padding:35px;
-        box-shadow:0 15px 40px rgba(0,0,0,.08);
-    }
-
-    .dog-care-notice .care-notice-box h2{
-        color:#111827;
-        margin-bottom:15px;
-    }
-
-    .dog-care-notice .care-notice-box p{
-        color:#4b5563;
-        line-height:1.8;
-        margin-bottom:15px;
-    }
-
-    .dog-care-notice .care-notice-box a{
-        display:inline-block;
-        margin:10px 10px 0 0;
-        background:#d97706;
-        color:#ffffff;
-        padding:12px 18px;
-        border-radius:12px;
-        text-decoration:none;
-        font-weight:700;
-    }
-
-    .dog-care-notice .care-notice-box a:hover{
-        background:#b45309;
-    }
-
-    /* DARK MODE */
-
-    .dark-mode .dog-care-notice{
-        background:#020617;
-    }
-
-    .dark-mode .dog-care-notice .care-notice-box{
-        background:#0f172a;
-        border-left-color:#d97706;
-        box-shadow:0 15px 40px rgba(0,0,0,.4);
-    }
-
-    .dark-mode .dog-care-notice .care-notice-box h2{
-        color:#f8fafc;
-    }
-
-    .dark-mode .dog-care-notice .care-notice-box p{
-        color:#cbd5e1;
-    }
-
-    @media(max-width:768px){
-
-        .dog-care-notice .care-notice-box{
-            padding:25px 20px;
-        }
-
-        .dog-care-notice .care-notice-box a{
-            width:100%;
-            text-align:center;
-            margin-right:0;
-        }
-
-    }
-    </style>
-
-        <script type="application/ld+json">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
             {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
                 "@type": "WebPage",
                 "@id": "https://companionreviewhub.netlify.app/pages/dogs.html#webpage",
                 "url": "https://companionreviewhub.netlify.app/pages/dogs.html",
                 "name": "Dog Profiles and Responsible Dog Care | CompanionReviewHub",
-                "description": "Browse dog profiles and review breed information, temperament, feeding, health, exercise needs, care guidance, documentation, and responsible request information.",
-                "isPartOf": {
-                    "@id": "https://companionreviewhub.netlify.app/#website"
-                },
+                "description": "Browse dog profiles and review breed information, temperament, feeding, health, exercise needs, care guidance, documentation and responsible request information.",
                 "about": {
                     "@type": "Thing",
                     "name": "Companion dogs"
@@ -199,500 +171,723 @@
                     "@id": "https://companionreviewhub.netlify.app/pages/dogs.html#breadcrumb"
                 },
                 "inLanguage": "en"
-                },
-                {
+            },
+            {
                 "@type": "BreadcrumbList",
                 "@id": "https://companionreviewhub.netlify.app/pages/dogs.html#breadcrumb",
                 "itemListElement": [
                     {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://companionreviewhub.netlify.app/"
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://companionreviewhub.netlify.app/"
                     },
                     {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Dog Profiles",
-                    "item": "https://companionreviewhub.netlify.app/pages/dogs.html"
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Dog Profiles",
+                        "item": "https://companionreviewhub.netlify.app/pages/dogs.html"
                     }
                 ]
-                }
-            ]
             }
+        ]
+    }
     </script>
 
 </head>
 
-<body>
+<body class="dogs-page">
 
-<!-- HEADER -->
+    <header class="header dogs-header">
 
-<header class="header">
+        <div class="container">
 
-    <div class="container">
+            <div class="logo dogs-logo">
 
-        <div class="logo">
+                <a href="../index.html">
 
-            <a href="../index.html">
+                    <h2>
+                        CompanionReviewHub
+                    </h2>
 
-                <h2>CompanionReviewHub</h2>
-
-            </a>
-
-        </div>
-
-        <div
-        class="hamburger"
-        id="hamburger">
-
-            ☰
-
-        </div>
-
-        <nav class="nav">
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="../index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="birds.html">
-                        Birds
-                    </a>
-                </li>
-
-                <li>
-                    <a href="cats.html">
-                        Cats
-                    </a>
-                </li>
-
-                <li>
-                    <a href="wild-cats.html">
-                        Wild Cats
-                    </a>
-                </li>
-
-                <li>
-                    <a href="reptiles.html">
-                        Reptiles
-                    </a>
-                </li>
-
-                <li>
-                    <a href="cart.html">
-                        Cart
-                    </a>
-                </li>
-
-                <li>
-                    <a href="health-care-article.html">
-                        Health Care Guide
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-        <div class="header-actions">
-
-            <button
-            class="cart-btn"
-            id="openCart">
-
-                🛒
-
-                <span id="cart-count">
-                    0
-                </span>
-
-            </button>
-
-        </div>
-
-    </div>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="dogs-hero">
-
-    <div class="container">
-
-        <span>
-            Responsible Dog Discovery
-        </span>
-
-        <h1>
-            Companion Dog Profiles & Care Guidance
-        </h1>
-
-        <p>
-            Explore dog and puppy profiles, temperament details, care needs, and responsible ownership guidance before submitting an adoption or inquiry request.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- DOG WELFARE NOTICE -->
-
-<section class="dog-care-notice">
-
-    <div class="container">
-
-        <div class="care-notice-box">
-
-            <h2>
-                Dog Welfare & Ownership Notice
-            </h2>
-
-            <p>
-                Dogs and puppies require daily care, proper feeding, clean water, safe housing, exercise, training, social attention, and access to qualified veterinary support. Before requesting any dog, please review its age, breed traits, temperament, activity level, grooming needs, and long-term care requirements.
-            </p>
-
-            <p>
-                Buyers are encouraged to ask questions, request available health or vaccination records, confirm the dog’s current availability, and make sure their home, schedule, and budget are ready before completing any adoption or inquiry request.
-            </p>
-
-            <a href="animal-welfare-policy.html">
-                Read Animal Welfare Policy
-            </a>
-
-            <a href="trust-safety.html">
-                Read Trust & Safety
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- SEARCH -->
-
-<section class="dogs-search-section">
-
-    <div class="container">
-
-        <div class="search-wrapper">
-
-            <input
-
-            type="text"
-
-            id="dogSearch"
-
-            placeholder="Search companion dog profiles...">
-
-            <select id="breedFilter">
-
-                <option value="all">
-
-                    All Breeds
-
-                </option>
-
-                <option value="working">
-
-                    Working Dogs
-
-                </option>
-
-                <option value="sporting">
-
-                    Sporting Dogs
-
-                </option>
-
-                <option value="toy">
-
-                    Toy Breeds
-
-                </option>
-
-                <option value="guard">
-
-                    Guard Dogs
-
-                </option>
-
-            </select>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- RESULTS -->
-
-<section class="dogs-results">
-
-    <div class="container">
-
-        <div class="results-header">
-
-            <h2>
-
-                Companion Dog Profiles
-
-            </h2>
-
-            <span id="resultsCount">
-
-                Care review recommended
-
-            </span>
-
-        </div>
-
-        <div
-        class="dogs-grid"
-
-        id="dogsGrid">
-
-            <!-- JS GENERATED DOGS -->
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- QUICK VIEW MODAL -->
-
-<div
-class="modal"
-
-id="quickViewModal">
-
-    <div class="modal-content">
-
-        <button
-        class="modal-close">
-
-            ✕
-
-        </button>
-
-        <div class="modal-grid">
-
-            <div class="modal-image">
-
-                <img
-
-                id="modalImage"
-
-                src="../assets/images/dogs/german-shepherd.jpg"
-
-                alt="Dog">
+                </a>
 
             </div>
 
-            <div class="modal-details">
+            <nav
+                class="nav dogs-nav"
+                id="dogsNavigation"
+                aria-label="Main navigation"
+            >
 
-                <span
-                id="modalCategory">
-
-                    Dog
-
-                </span>
-
-                <h2
-                id="modalName">
-
-                </h2>
-
-                <h3
-                id="modalPrice">
-
-                </h3>
-
-                <p
-                id="modalDescription">
-
-                </p>
-
-                <ul>
+                <ul class="nav-links dogs-nav-links">
 
                     <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
 
-                        Age:
-                        <span id="modalAge">
+                    <li class="dogs-nav-dropdown">
 
-                        </span>
+                        <button
+                            type="button"
+                            class="dogs-dropdown-toggle"
+                            id="dogsBrowseToggle"
+                            aria-expanded="false"
+                            aria-controls="dogsBrowseMenu"
+                        >
+                            Browse Animals
+                            <span aria-hidden="true">▾</span>
+                        </button>
+
+                        <div
+                            class="dogs-dropdown-menu"
+                            id="dogsBrowseMenu"
+                        >
+
+                            <div class="dogs-dropdown-group">
+
+                                <strong>
+                                    Companion Animals
+                                </strong>
+
+                                <a
+                                    href="dogs.html"
+                                    aria-current="page"
+                                >
+                                    Dogs
+                                </a>
+
+                                <a href="cats.html">
+                                    Cats
+                                </a>
+
+                                <a href="birds.html">
+                                    Birds
+                                </a>
+
+                                <a href="reptiles.html">
+                                    Reptiles
+                                </a>
+
+                            </div>
+
+                            <div class="dogs-dropdown-group">
+
+                                <strong>
+                                    Regulated Wildlife
+                                </strong>
+
+                                <a href="wild-cats.html">
+                                    Exotic Felines
+                                </a>
+
+                                <a href="primates.html">
+                                    Primates
+                                </a>
+
+                                <a href="bears.html">
+                                    Bears & Pandas
+                                </a>
+
+                            </div>
+
+                        </div>
 
                     </li>
 
                     <li>
-
-                        Location:
-                        <span id="modalLocation">
-
-                        </span>
-
+                        <a href="health-care-article.html">
+                            Health Care Guide
+                        </a>
                     </li>
 
                 </ul>
 
+            </nav>
+
+            <div class="header-actions dogs-header-actions">
+
                 <button
+                    id="darkModeToggle"
+                    class="dark-mode-btn"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+                    🌙
+                </button>
 
-                id="modalAddCart"
+                <a
+                    href="wishlist.html"
+                    class="wishlist-btn"
+                    aria-label="View saved dog profiles"
+                >
+                    ❤
 
-                class="primary-btn">
+                    <span id="wishlist-count">
+                        0
+                    </span>
 
-                    Start Adoption Request
+                </a>
 
+                <button
+                    class="cart-btn"
+                    id="openCart"
+                    type="button"
+                    aria-label="Open request cart"
+                >
+                    🛒
+
+                    <span id="cart-count">
+                        0
+                    </span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="dogs-menu-btn"
+                    id="dogsMenuBtn"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="dogsNavigation"
+                >
+                    ☰
                 </button>
 
             </div>
 
         </div>
 
-    </div>
-
-</div>
+    </header>
 
 
-<!-- CART SIDEBAR -->
+    <main>
 
-<div
-class="cart-sidebar"
+        <section class="dogs-hero">
 
-id="cartSidebar">
+            <div class="container">
 
-    <div class="cart-header">
+                <span>
+                    Responsible Dog Discovery
+                </span>
 
-        <h3>
+                <h1>
+                    Companion Dog Profiles & Care Guidance
+                </h1>
 
-            Shopping Cart
+                <p>
+                    Explore dog and puppy profiles, temperament details, care needs and responsible ownership guidance before submitting an adoption or inquiry request.
+                </p>
 
-        </h3>
+            </div>
 
-        <button
-        id="closeCart">
+        </section>
 
-            ✕
 
-        </button>
+        <section class="dog-care-notice">
 
-    </div>
+            <div class="container">
 
-    <div
-    class="cart-items">
+                <div class="care-notice-box">
 
-    </div>
+                    <h2>
+                        Dog Welfare & Ownership Notice
+                    </h2>
 
-    <div
-    class="cart-footer">
+                    <p>
+                        Dogs and puppies require daily care, proper feeding, clean water, safe housing, exercise, training, social attention and qualified veterinary support. Review each breed's temperament, activity level, grooming needs and long-term care requirements before starting a request.
+                    </p>
 
-        <div
-        class="cart-total">
+                    <p>
+                        Ask for available health and vaccination records, confirm current availability and make sure your home, schedule and budget are suitable for the dog you are considering.
+                    </p>
 
-            <span>
+                    <a href="animal-welfare-policy.html">
+                        Read Animal Welfare Policy
+                    </a>
 
-                Total:
+                    <a href="trust-safety.html">
+                        Read Trust & Safety
+                    </a>
 
-            </span>
+                </div>
 
-            <strong
-            id="cartTotal">
+            </div>
 
-                $0
+        </section>
 
-            </strong>
+
+        <section class="dogs-search-section">
+
+            <div class="container">
+
+                <div class="search-wrapper">
+
+                    <input
+                        type="search"
+                        id="dogSearch"
+                        placeholder="Search by breed, country, colour or temperament..."
+                        aria-label="Search dog profiles"
+                    >
+
+                    <select
+                        id="breedFilter"
+                        aria-label="Filter dog profiles by category"
+                    >
+
+                        <option value="all">
+                            All Dog Categories
+                        </option>
+
+                        <option value="working">
+                            Working Dogs
+                        </option>
+
+                        <option value="sporting">
+                            Sporting Dogs
+                        </option>
+
+                        <option value="hound">
+                            Hounds
+                        </option>
+
+                        <option value="terrier">
+                            Terriers
+                        </option>
+
+                        <option value="toy">
+                            Toy Breeds
+                        </option>
+
+                        <option value="companion">
+                            Companion Dogs
+                        </option>
+
+                        <option value="guard">
+                            Guardian Dogs
+                        </option>
+
+                        <option value="non-sporting">
+                            Non-Sporting Dogs
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="dogs-results">
+
+            <div class="container">
+
+                <div class="results-header">
+
+                    <h2>
+                        Companion Dog Profiles
+                    </h2>
+
+                    <span id="resultsCount">
+                        Loading Dog Profiles
+                    </span>
+
+                </div>
+
+                <div
+                    class="dogs-grid"
+                    id="dogsGrid"
+                >
+                    <!-- JavaScript generates dog profile cards here. -->
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- REQUEST CART SIDEBAR -->
+
+    <aside
+        class="cart-sidebar"
+        id="cartSidebar"
+        aria-label="Request cart"
+    >
+
+        <div class="cart-header">
+
+            <h3>
+                Request Cart
+            </h3>
+
+            <button
+                id="closeCart"
+                type="button"
+                aria-label="Close request cart"
+            >
+                ✕
+            </button>
 
         </div>
 
-        <a
+        <div class="cart-items"></div>
 
-        href="cart.html"
+        <div class="cart-footer">
 
-        class="primary-btn">
+            <div class="cart-total">
 
-            View Cart
+                <span>
+                    Total:
+                </span>
 
-        </a>
+                <strong id="cartTotal">
+                    $0
+                </strong>
 
-    </div>
+            </div>
 
-</div>
+            <a
+                href="cart.html"
+                class="primary-btn"
+            >
+                View Request Cart
+            </a>
 
-<div
-class="cart-overlay">
+        </div>
 
-</div>
+    </aside>
+
+    <div class="cart-overlay"></div>
 
 
-<!-- FOOTER -->
+    <footer class="footer">
 
-<footer class="footer">
+        <div class="container">
 
-    <div class="container">
+            <div class="footer-bottom">
 
-        <div class="footer-bottom">
+                <p>
+                    © 2026 CompanionReviewHub. All Rights Reserved.
+                </p>
 
-            <p>
+                <div class="footer-links">
 
-                © 2026 CompanionReviewHub. All Rights Reserved.
+                    <a href="about.html">
+                        About Us
+                    </a>
 
-            </p>
+                    <a href="contact.html">
+                        Contact
+                    </a>
 
-            <div class="footer-links">
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="trust-safety.html">Trust & Safety</a>
-                <a href="terms-of-service.html">Terms Of Service</a>
-                <a href="refund-policy.html">Refund Policy</a>
-                <a href="shipping-policy.html">Shipping Policy</a>
-                <a href="animal-welfare-policy.html">Animal Welfare Policy</a>
-                <a href="legal-compliance.html">Legal Compliance</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="trust-safety.html">
+                        Trust & Safety
+                    </a>
+
+                    <a href="terms-of-service.html">
+                        Terms Of Service
+                    </a>
+
+                    <a href="refund-policy.html">
+                        Refund Policy
+                    </a>
+
+                    <a href="shipping-policy.html">
+                        Shipping Policy
+                    </a>
+
+                    <a href="animal-welfare-policy.html">
+                        Animal Welfare Policy
+                    </a>
+
+                    <a href="legal-compliance.html">
+                        Legal Compliance
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
 
-    </div>
-
-</footer>
+    </footer>
 
 
-<script src="../assets/js/cart.js"></script>
+    <!--
+        dogs.js renders the cards before cart.js loads.
+        This keeps both older static cart handlers and newer
+        delegated cart handlers compatible with the buttons.
+    -->
 
-<script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/dogs.js"></script>
 
-<script src="../assets/js/dogs.js"></script>
+    <script src="../assets/js/cart.js"></script>
 
-<script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
 
-<script defer src="../assets/js/dark-mode.js"></script>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6a50fa26634c491d47a3b935/1jt652afd';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+    <script>
+        const dogsMenuButton =
+        document.getElementById(
+            "dogsMenuBtn"
+        );
+
+        const dogsNavigation =
+        document.getElementById(
+            "dogsNavigation"
+        );
+
+        const dogsBrowseToggle =
+        document.getElementById(
+            "dogsBrowseToggle"
+        );
+
+        const dogsBrowseMenu =
+        document.getElementById(
+            "dogsBrowseMenu"
+        );
+
+
+        function closeDogsNavigation(){
+
+            if(
+                dogsNavigation
+            ){
+
+                dogsNavigation.classList.remove(
+                    "active"
+                );
+
+            }
+
+            if(
+                dogsMenuButton
+            ){
+
+                dogsMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        function closeDogsDropdown(){
+
+            if(
+                dogsBrowseMenu
+            ){
+
+                dogsBrowseMenu.classList.remove(
+                    "open"
+                );
+
+            }
+
+            if(
+                dogsBrowseToggle
+            ){
+
+                dogsBrowseToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        if(
+            dogsMenuButton &&
+            dogsNavigation
+        ){
+
+            dogsMenuButton.addEventListener(
+                "click",
+                () => {
+
+                    const isOpen =
+                    dogsNavigation.classList.toggle(
+                        "active"
+                    );
+
+                    dogsMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(
+                            isOpen
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        if(
+            dogsBrowseToggle &&
+            dogsBrowseMenu
+        ){
+
+            dogsBrowseToggle.addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation();
+
+                    const isOpen =
+                    dogsBrowseMenu.classList.toggle(
+                        "open"
+                    );
+
+                    dogsBrowseToggle.setAttribute(
+                        "aria-expanded",
+                        String(
+                            isOpen
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        document.addEventListener(
+            "click",
+            event => {
+
+                const insideDropdown =
+                event.target.closest(
+                    ".dogs-nav-dropdown"
+                );
+
+                const insideNavigation =
+                event.target.closest(
+                    "#dogsNavigation"
+                );
+
+                const menuButtonClicked =
+                event.target.closest(
+                    "#dogsMenuBtn"
+                );
+
+                if(
+                    !insideDropdown
+                ){
+
+                    closeDogsDropdown();
+
+                }
+
+                if(
+                    window.innerWidth <= 1050 &&
+                    !insideNavigation &&
+                    !menuButtonClicked
+                ){
+
+                    closeDogsNavigation();
+
+                }
+
+            }
+        );
+
+
+        document
+        .querySelectorAll(
+            ".dogs-dropdown-menu a"
+        )
+        .forEach(
+            link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        closeDogsDropdown();
+
+                        closeDogsNavigation();
+
+                    }
+                );
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            () => {
+
+                if(
+                    window.innerWidth > 1050
+                ){
+
+                    closeDogsNavigation();
+
+                }
+
+            }
+        );
     </script>
-    <!--End of Tawk.to Script-->
+
+
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API =
+        Tawk_API || {};
+
+        var Tawk_LoadStart =
+        new Date();
+
+        (function(){
+
+            var s1 =
+            document.createElement(
+                "script"
+            );
+
+            var s0 =
+            document.getElementsByTagName(
+                "script"
+            )[0];
+
+            s1.async =
+            true;
+
+            s1.src =
+            "https://embed.tawk.to/6a50fa26634c491d47a3b935/1jt652afd";
+
+            s1.charset =
+            "UTF-8";
+
+            s1.setAttribute(
+                "crossorigin",
+                "*"
+            );
+
+            s0.parentNode.insertBefore(
+                s1,
+                s0
+            );
+
+        })();
+    </script>
+    <!-- End of Tawk.to Script -->
 
 </body>
 

@@ -1236,224 +1236,372 @@ const wildCats = [
 
 ];
 
+/* =====================================================
+   WILD-CAT PAGE ELEMENTS
+===================================================== */
+
 const wildCatsGrid =
 document.getElementById(
-"wildCatsGrid"
+    "wildCatsGrid"
 );
 
-function renderWildCats(
-wildCatsArray
-){
-
- wildCatsGrid.innerHTML = "";
-
-wildCatsArray.forEach(
-    wildCat=>{
-
-    wildCatsGrid.innerHTML += `
-
-    <div
-
-    class="pet-card"
-
-    data-category="${wildCat.category}"
-
-    data-name="${wildCat.name.toLowerCase()}">
-
-        <img
-        src="../${wildCat.image}"
-        alt="${wildCat.name}">
-
-        <div class="pet-content">
-
-            <span class="pet-category">
-
-                Regulated Exotic Feline Profile
-
-            </span>
-
-            <h3>
-
-                ${wildCat.name}
-
-            </h3>
-
-            <p>
-
-                ${wildCat.description}
-
-            </p>
-
-            <div class="pet-info">
-
-                <span>
-
-                    ${wildCat.age}
-
-                </span>
-
-                <span>
-
-                    ${wildCat.location}
-
-                </span>
-
-            </div>
-
-            <div class="pet-footer">
-
-                <h4>
-
-                    Review estimate: $${Number(wildCat.price).toLocaleString()}
-
-                </h4>
-
-                <div class="pet-actions">
-
-                <button
-                class="add-cart-btn"
-                data-name="${wildCat.name}"
-                data-price="${wildCat.price}"
-                data-image="../${wildCat.image}">
-                    Start Request
-                </button>
-
-                    <button
-                    class="wishlist-add-btn"
-                    data-name="${wildCat.name}"
-                    data-price="${wildCat.price}"
-                    data-image="${wildCat.image}">
-                        ❤ Save For Review
-                    </button>
-                </div>
-                 <a
-                href="learn-more.html?type=wild-cats&name=${encodeURIComponent(wildCat.name)}" 
-                class="learn-more-btn" style="color:var(--primary);"> 
-                    Learn More →
-                </a>
-            </div>
-
-        </div>
-
-    </div>
-
-    `;
-
-});
-
-attachButtons();
-
-attachWishlistButtons();
-
-animateCards();
- 
-}
-
-const searchInput =
+const wildCatSearch =
 document.getElementById(
-"wildCatSearch"
+    "wildCatSearch"
 );
 
-const breedFilter =
+const wildCatFilter =
 document.getElementById(
-"wildCatFilter"
+    "wildCatFilter"
 );
 
-function filterWildCats(){
-
- const searchTerm =
-searchInput ?
-searchInput.value.toLowerCase()
-: "";
-
-const category =
-breedFilter ?
-breedFilter.value
-: "all";
-
-const filteredWildCats =
-wildCats.filter(
-    wildCat=>{
-
-    const nameMatch =
-
-    wildCat.name
-    .toLowerCase()
-    .includes(searchTerm);
-
-    const categoryMatch =
-
-    category === "all" ||
-
-    wildCat.category === category;
-
-    return (
-
-        nameMatch &&
-        categoryMatch
-
-    );
-
-});
-
-renderWildCats(
-    filteredWildCats
-);
-
-const results =
+const resultsCount =
 document.getElementById(
     "resultsCount"
 );
 
-if(results){
 
-    results.textContent =
-    `${filteredWildCats.length} Regulated Profiles`;
+/* =====================================================
+   DISPLAY HELPERS
+===================================================== */
+
+function formatWildCatPrice(wildCat){
+
+    return (
+        "Estimated Request Amount: $" +
+        Number(
+            wildCat.price || 0
+        ).toLocaleString()
+    );
 
 }
- 
+
+
+function getWildCatCategoryLabel(category){
+
+    const labels = {
+        "big-cat":
+        "Big Cat Profile",
+
+        "medium-cat":
+        "Medium Wild Cat Profile",
+
+        rare:
+        "Rare Feline Profile"
+    };
+
+    return (
+        labels[category] ||
+        "Exotic Feline Profile"
+    );
+
 }
 
-if(searchInput){
 
- searchInput.addEventListener(
-    "input",
-    filterWildCats
-);
- 
+/* =====================================================
+   RENDER PROFILES
+===================================================== */
+
+function renderWildCats(){
+
+    if(
+        !wildCatsGrid
+    ){
+
+        return;
+
+    }
+
+    wildCatsGrid.innerHTML = "";
+
+    wildCats.forEach(
+        (wildCat, index) => {
+
+            wildCatsGrid.innerHTML += `
+
+                <article
+                    class="pet-card wildcat-card"
+                    data-wildcat-index="${index}"
+                    data-category="${wildCat.category}"
+                    data-name="${wildCat.name.toLowerCase()}"
+                >
+
+                    <div class="pet-image-wrap">
+
+                        <img
+                            src="../${wildCat.image}"
+                            alt="${wildCat.name}"
+                            loading="lazy"
+                        >
+
+                        <span class="regulated-badge">
+                            Regulated Profile
+                        </span>
+
+                    </div>
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">
+                            ${getWildCatCategoryLabel(wildCat.category)}
+                        </span>
+
+                        <h3>
+                            ${wildCat.name}
+                        </h3>
+
+                        <p>
+                            ${wildCat.description}
+                        </p>
+
+                        <div class="pet-info">
+
+                            <span>
+                                ${wildCat.age}
+                            </span>
+
+                            <span>
+                                ${wildCat.location}
+                            </span>
+
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>
+                                ${formatWildCatPrice(wildCat)}
+                            </h4>
+
+                            <div class="pet-actions">
+
+                                <button
+                                    type="button"
+                                    class="add-cart-btn start-request-btn"
+                                    data-request-button="true"
+                                    data-name="${wildCat.name}"
+                                    data-price="${wildCat.price}"
+                                    data-image="../${wildCat.image}"
+                                    aria-label="Start a compliance request for ${wildCat.name}"
+                                >
+                                    Start Compliance Request
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="wishlist-add-btn"
+                                    data-name="${wildCat.name}"
+                                    data-price="${wildCat.price}"
+                                    data-image="${wildCat.image}"
+                                    aria-label="Save ${wildCat.name} for later review"
+                                >
+                                    ❤ Save Profile
+                                </button>
+
+                            </div>
+
+                            <a
+                                href="learn-more.html?type=wild-cats&name=${encodeURIComponent(wildCat.name)}"
+                                class="learn-more-btn"
+                            >
+                                Learn More →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `;
+
+        }
+    );
+
+    wildCatsGrid.innerHTML += `
+        <div
+            class="empty-results"
+            id="wildCatEmptyResults"
+            hidden
+        >
+            <h3>
+                No exotic feline profiles found
+            </h3>
+
+            <p>
+                Try another species name, country or category.
+            </p>
+        </div>
+    `;
+
+    attachWildCatWishlistButtons();
+
+    animateWildCatCards();
+
 }
 
-if(breedFilter){
 
- breedFilter.addEventListener(
-    "change",
-    filterWildCats
-);
- 
+/* =====================================================
+   SEARCH AND FILTER
+   Existing cards are hidden rather than recreated so
+   older cart handlers keep their event listeners.
+===================================================== */
+
+function filterWildCats(){
+
+    const searchTerm =
+    wildCatSearch
+    ?
+    wildCatSearch.value
+    .trim()
+    .toLowerCase()
+    :
+    "";
+
+    const selectedCategory =
+    wildCatFilter
+    ?
+    wildCatFilter.value
+    :
+    "all";
+
+    const cards =
+    document.querySelectorAll(
+        ".wildcat-card"
+    );
+
+    let visibleProfiles = 0;
+
+    cards.forEach(
+        card => {
+
+            const index =
+            Number(
+                card.dataset.wildcatIndex
+            );
+
+            const wildCat =
+            wildCats[index];
+
+            if(
+                !wildCat
+            ){
+
+                card.hidden =
+                true;
+
+                return;
+
+            }
+
+            const searchableText = `
+                ${wildCat.name}
+                ${wildCat.category}
+                ${wildCat.location}
+                ${wildCat.description}
+                ${wildCat.temperament || ""}
+                ${wildCat.colors ? wildCat.colors.join(" ") : ""}
+                ${wildCat.climate || ""}
+            `.toLowerCase();
+
+            const searchMatches =
+            searchableText.includes(
+                searchTerm
+            );
+
+            const categoryMatches =
+            selectedCategory === "all" ||
+            wildCat.category === selectedCategory ||
+            wildCat.name
+            .toLowerCase()
+            .replaceAll(" ", "-") === selectedCategory;
+
+            const shouldShow =
+            searchMatches &&
+            categoryMatches;
+
+            card.hidden =
+            !shouldShow;
+
+            if(
+                shouldShow
+            ){
+
+                visibleProfiles += 1;
+
+            }
+
+        }
+    );
+
+    const emptyResults =
+    document.getElementById(
+        "wildCatEmptyResults"
+    );
+
+    if(
+        emptyResults
+    ){
+
+        emptyResults.hidden =
+        visibleProfiles !== 0;
+
+    }
+
+    if(
+        resultsCount
+    ){
+
+        resultsCount.textContent =
+        `${visibleProfiles} Regulated Profiles`;
+
+    }
+
 }
 
-renderWildCats(
-wildCats
-);
+
+if(
+    wildCatSearch
+){
+
+    wildCatSearch.addEventListener(
+        "input",
+        filterWildCats
+    );
+
+}
 
 
+if(
+    wildCatFilter
+){
 
-/* ==========================
-WISHLIST SUPPORT
-========================== */
+    wildCatFilter.addEventListener(
+        "change",
+        filterWildCats
+    );
 
-function normalizeAnimalWishlistImagePath(path){
+}
+
+
+/* =====================================================
+   WISHLIST SUPPORT
+===================================================== */
+
+function normalizeWildCatImagePath(path){
 
     let cleanPath =
-    String(path || "")
-    .trim();
+    String(
+        path || ""
+    ).trim();
 
     const assetIndex =
     cleanPath.indexOf(
         "assets/images/"
     );
 
-    if(assetIndex !== -1){
+    if(
+        assetIndex !== -1
+    ){
 
         cleanPath =
         cleanPath.substring(
@@ -1462,62 +1610,82 @@ function normalizeAnimalWishlistImagePath(path){
 
     }
 
-    cleanPath =
-    cleanPath
+    return cleanPath
     .replace(/^\.\.\//g, "")
     .replace(/^\.\//g, "")
     .replace(/^\//g, "");
 
-    return cleanPath;
+}
+
+
+function getWildCatWishlist(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(
+                "CompanionReviewHubWishlist"
+            )
+        ) || [];
+
+    }
+    catch(error){
+
+        console.error(
+            "Unable to read the wishlist:",
+            error
+        );
+
+        return [];
+
+    }
 
 }
 
-function getAnimalWishlist(){
 
-    return JSON.parse(
-        localStorage.getItem(
-            "CompanionReviewHubWishlist"
-        )
-    ) || [];
-
-}
-
-function saveAnimalWishlist(list){
+function saveWildCatWishlist(list){
 
     localStorage.setItem(
         "CompanionReviewHubWishlist",
-        JSON.stringify(list)
+        JSON.stringify(
+            list
+        )
     );
 
-    updateAnimalWishlistCount();
+    updateWildCatWishlistCount();
 
 }
 
-function updateAnimalWishlistCount(){
+
+function updateWildCatWishlistCount(){
 
     const count =
     document.getElementById(
         "wishlist-count"
     );
 
-    if(!count) return;
+    if(
+        count
+    ){
 
-    const list =
-    getAnimalWishlist();
+        count.textContent =
+        getWildCatWishlist().length;
 
-    count.textContent =
-    list.length;
+    }
 
 }
 
-function showAnimalWishlistMessage(message){
+
+function showWildCatWishlistMessage(message){
 
     let messageBox =
     document.querySelector(
         ".wishlist-action-message"
     );
 
-    if(!messageBox){
+    if(
+        !messageBox
+    ){
 
         messageBox =
         document.createElement(
@@ -1527,62 +1695,18 @@ function showAnimalWishlistMessage(message){
         messageBox.className =
         "wishlist-action-message";
 
+        messageBox.setAttribute(
+            "role",
+            "status"
+        );
+
+        messageBox.setAttribute(
+            "aria-live",
+            "polite"
+        );
+
         document.body.appendChild(
             messageBox
-        );
-
-        const style =
-        document.createElement(
-            "style"
-        );
-
-        style.textContent =
-        `
-            .wishlist-action-message{
-                position:fixed;
-                top:100px;
-                left:50%;
-                transform:translate(-50%, -18px);
-                max-width:92%;
-                width:430px;
-                padding:15px 20px;
-                border-radius:999px;
-                background:#111827;
-                color:#ffffff;
-                text-align:center;
-                font-size:.95rem;
-                line-height:1.5;
-                box-shadow:0 18px 45px rgba(0,0,0,.22);
-                opacity:0;
-                visibility:hidden;
-                pointer-events:none;
-                z-index:99999;
-                transition:.35s ease;
-            }
-
-            .wishlist-action-message.show{
-                opacity:1;
-                visibility:visible;
-                transform:translate(-50%, 0);
-            }
-
-            .dark-mode .wishlist-action-message{
-                background:#f8fafc;
-                color:#111827;
-            }
-
-            @media(max-width:600px){
-                .wishlist-action-message{
-                    top:85px;
-                    width:calc(100% - 28px);
-                    border-radius:18px;
-                    font-size:.9rem;
-                }
-            }
-        `;
-
-        document.head.appendChild(
-            style
         );
 
     }
@@ -1599,23 +1723,26 @@ function showAnimalWishlistMessage(message){
     );
 
     messageBox.hideTimer =
-    setTimeout(()=>{
+    setTimeout(
+        () => {
 
-        messageBox.classList.remove(
-            "show"
-        );
+            messageBox.classList.remove(
+                "show"
+            );
 
-    }, 2600);
+        },
+        2600
+    );
 
 }
 
-function addProfileToWishlist(item){
+
+function addWildCatToWishlist(item){
 
     const wishlist =
-    getAnimalWishlist();
+    getWildCatWishlist();
 
     const cleanItem = {
-
         name:
         item.name,
 
@@ -1623,23 +1750,28 @@ function addProfileToWishlist(item){
         item.price,
 
         image:
-        normalizeAnimalWishlistImagePath(
+        normalizeWildCatImagePath(
             item.image
         )
-
     };
 
-    const exists =
+    const alreadySaved =
     wishlist.some(
         profile =>
-        String(profile.name).toLowerCase() ===
-        String(cleanItem.name).toLowerCase()
+        String(
+            profile.name
+        ).toLowerCase() ===
+        String(
+            cleanItem.name
+        ).toLowerCase()
     );
 
-    if(exists){
+    if(
+        alreadySaved
+    ){
 
-        showAnimalWishlistMessage(
-            "This profile is already saved for later review."
+        showWildCatWishlistMessage(
+            "This exotic feline profile is already saved."
         );
 
         return;
@@ -1650,146 +1782,123 @@ function addProfileToWishlist(item){
         cleanItem
     );
 
-    saveAnimalWishlist(
+    saveWildCatWishlist(
         wishlist
     );
 
-    showAnimalWishlistMessage(
-        "Profile saved for later review. You can view it in your wishlist."
+    showWildCatWishlistMessage(
+        "Exotic feline profile saved for later review."
     );
 
 }
 
-function attachWishlistButtons(){
+
+function attachWildCatWishlistButtons(){
 
     document
     .querySelectorAll(
         ".wishlist-add-btn"
     )
-    .forEach(button=>{
+    .forEach(
+        button => {
 
-        button.onclick = ()=>{
+            button.onclick = () => {
 
-            addProfileToWishlist({
+                addWildCatToWishlist({
+                    name:
+                    button.dataset.name,
 
-                name:
-                button.dataset.name,
+                    price:
+                    button.dataset.price,
 
-                price:
-                button.dataset.price,
+                    image:
+                    button.dataset.image
+                });
 
-                image:
-                button.dataset.image
-
-            });
-
-        };
-
-    });
-
-}
-
-updateAnimalWishlistCount();
-
-function attachButtons(){
-
-    /*
-        Request buttons are handled once by assets/js/cart.js.
-        Keeping this function empty preserves existing render calls
-        without attaching a second click handler.
-    */
-
-};
- 
-
-
-function animateCards(){
-
- const cards =
-document.querySelectorAll(
-    ".pet-card"
-);
-
-const observer =
-new IntersectionObserver(
-
-    entries => {
-
-        entries.forEach(
-            entry => {
-
-                if(
-                    entry.isIntersecting
-                ){
-
-                    entry.target
-                    .classList.add(
-                        "show"
-                    );
-
-                }
-
-            }
-        );
-
-    },
-
-    {
-        threshold:0.15
-    }
-
-);
-
-cards.forEach(card=>{
-
-    observer.observe(card);
-
-});
- 
-}
-
-const sections =
-document.querySelectorAll(
-".reveal"
-);
-
-const revealObserver =
-new IntersectionObserver(
-
- entries=>{
-
-    entries.forEach(
-        entry=>{
-
-            if(
-                entry.isIntersecting
-            ){
-
-                entry.target
-                .classList.add(
-                    "active"
-                );
-
-            }
+            };
 
         }
     );
 
-},
-
-{
-    threshold:0.1
 }
- 
-);
 
-sections.forEach(
-section=>{
 
-     revealObserver.observe(
-        section
+/* =====================================================
+   CARD ANIMATION
+===================================================== */
+
+function animateWildCatCards(){
+
+    const cards =
+    document.querySelectorAll(
+        ".wildcat-card"
+    );
+
+    if(
+        !("IntersectionObserver" in window)
+    ){
+
+        cards.forEach(
+            card =>
+            card.classList.add(
+                "show"
+            )
+        );
+
+        return;
+
+    }
+
+    const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(
+                entry => {
+
+                    if(
+                        entry.isIntersecting
+                    ){
+
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold:
+            0.08,
+
+            rootMargin:
+            "0px 0px -30px 0px"
+        }
+    );
+
+    cards.forEach(
+        card =>
+        observer.observe(
+            card
+        )
     );
 
 }
- 
-);
+
+
+/* =====================================================
+   INITIAL PAGE LOAD
+===================================================== */
+
+renderWildCats();
+
+updateWildCatWishlistCount();
+
+filterWildCats();

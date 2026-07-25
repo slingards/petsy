@@ -1,681 +1,839 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5F5C8YT167"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-5F5C8YT167');
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){
+            dataLayer.push(arguments);
+        }
+
+        gtag(
+            "js",
+            new Date()
+        );
+
+        gtag(
+            "config",
+            "G-5F5C8YT167"
+        );
     </script>
 
-<meta charset="UTF-8">
-<link rel="manifest" href="../site.webmanifest">
-<meta name="theme-color" content="#d97706">
+    <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<title>
-    Companion Cat Profiles & Responsible Cat Adoption Guidance | CompanionReviewHub
-</title>
+    <link
+        rel="manifest"
+        href="../site.webmanifest"
+    >
 
-<meta
-name="description"
-content="Explore companion cat and kitten profiles on CompanionReviewHub with responsible ownership guidance, care information, welfare reminders, and support before submitting an adoption or inquiry request.">
+    <meta
+        name="theme-color"
+        content="#d97706"
+    >
 
-<meta
-name="keywords"
-content="companion cats, kitten adoption guidance, cat care, responsible cat ownership, cat welfare, family cats, CompanionReviewHub cats">
+    <title>
+        Companion Cat Profiles & Responsible Cat Guidance | CompanionReviewHub
+    </title>
 
-<meta
-name="robots"
-content="index, follow">
+    <meta
+        name="description"
+        content="Explore companion cat and kitten profiles with breed information, care needs, welfare guidance, availability notes and responsible request support."
+    >
 
-<link
-rel="canonical"
-href="https://CompanionReviewHub.netlify.app/pages/cats.html">
+    <meta
+        name="keywords"
+        content="companion cats, kitten profiles, cat care, cat breeds, responsible cat ownership, CompanionReviewHub cats"
+    >
 
-<meta
-property="og:title"
-content="Companion Cat Profiles & Responsible Cat Guidance | CompanionReviewHub">
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-<meta
-property="og:description"
-content="Explore cat and kitten profiles with care guidance, welfare reminders, and support before making an adoption request.">
+    <link
+        rel="canonical"
+        href="https://CompanionReviewHub.netlify.app/pages/cats.html"
+    >
 
-<meta
-property="og:type"
-content="website">
+    <meta
+        property="og:title"
+        content="Companion Cat Profiles | CompanionReviewHub"
+    >
 
-<meta
-property="og:url"
-content="https://CompanionReviewHub.netlify.app/pages/cats.html">
+    <meta
+        property="og:description"
+        content="Explore cat and kitten profiles with care guidance, welfare reminders and responsible request support."
+    >
 
-<meta
-property="og:image"
-content="https://CompanionReviewHub.netlify.app/assets/images/cats/Burmese.jpg">
+    <meta
+        property="og:type"
+        content="website"
+    >
 
-<meta
-name="twitter:card"
-content="summary_large_image">
+    <meta
+        property="og:url"
+        content="https://CompanionReviewHub.netlify.app/pages/cats.html"
+    >
 
-<meta
-name="twitter:title"
-content="Companion Cat Profiles | CompanionReviewHub">
+    <meta
+        property="og:image"
+        content="https://CompanionReviewHub.netlify.app/assets/images/cats/bengal-cat.jpg"
+    >
 
-<meta
-name="twitter:description"
-content="Review cat profiles, care needs, welfare guidance, and responsible ownership information on CompanionReviewHub.">
+    <meta
+        name="twitter:card"
+        content="summary_large_image"
+    >
 
-<meta
-name="twitter:image"
-content="https://CompanionReviewHub.netlify.app/assets/images/cats/Burmese.jpg">
+    <meta
+        name="twitter:title"
+        content="Companion Cat Profiles | CompanionReviewHub"
+    >
 
-<link
-rel="stylesheet"
-href="../assets/css/style.css">
+    <meta
+        name="twitter:description"
+        content="Explore cat and kitten profiles with care guidance, welfare reminders and responsible request support."
+    >
 
-<link
-rel="stylesheet"
-href="../assets/css/responsive.css">
+    <meta
+        name="twitter:image"
+        content="https://CompanionReviewHub.netlify.app/assets/images/cats/bengal-cat.jpg"
+    >
 
-<link
-rel="stylesheet"
-href="../assets/css/cats.css">
+    <link
+        rel="stylesheet"
+        href="../assets/css/style.css"
+    >
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        rel="stylesheet"
+        href="../assets/css/responsive.css"
+    >
 
-<link
-rel="icon"
-type="image/png"
-href="../favicon.png">
+    <link
+        rel="stylesheet"
+        href="../assets/css/site-ui-fix.css"
+    >
 
-<link rel="stylesheet" href="../assets/css/site-ui-fix.css">
+    <!-- Load the page stylesheet last so its scoped fixes win. -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/cats.css"
+    >
 
-<style>
-/* ==========================
-   CAT CARE NOTICE
-========================== */
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-.cat-care-notice{
-    background:#fff7ed;
-    padding:45px 20px;
-}
+    <link
+        rel="icon"
+        type="image/png"
+        href="../favicon.png"
+    >
 
-.cat-care-notice .care-notice-box{
-    background:#ffffff;
-    border-left:6px solid #d97706;
-    border-radius:22px;
-    padding:35px;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-}
+    <link
+        rel="icon"
+        href="../favicon.ico"
+        sizes="any"
+    >
 
-.cat-care-notice .care-notice-box h2{
-    color:#111827;
-    margin-bottom:15px;
-}
-
-.cat-care-notice .care-notice-box p{
-    color:#4b5563;
-    line-height:1.8;
-    margin-bottom:15px;
-}
-
-.cat-care-notice .care-notice-box a{
-    display:inline-block;
-    margin:10px 10px 0 0;
-    background:#d97706;
-    color:#ffffff;
-    padding:12px 18px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:700;
-}
-
-.cat-care-notice .care-notice-box a:hover{
-    background:#b45309;
-}
-
-/* DARK MODE */
-
-.dark-mode .cat-care-notice{
-    background:#020617;
-}
-
-.dark-mode .cat-care-notice .care-notice-box{
-    background:#0f172a;
-    border-left-color:#d97706;
-    box-shadow:0 15px 40px rgba(0,0,0,.4);
-}
-
-.dark-mode .cat-care-notice .care-notice-box h2{
-    color:#f8fafc;
-}
-
-.dark-mode .cat-care-notice .care-notice-box p{
-    color:#cbd5e1;
-}
-
-@media(max-width:768px){
-
-    .cat-care-notice .care-notice-box{
-        padding:25px 20px;
-    }
-
-    .cat-care-notice .care-notice-box a{
-        width:100%;
-        text-align:center;
-        margin-right:0;
-    }
-
-}
-</style>
-
-<script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@graph": [
-        {
-        "@type": "WebPage",
-        "@id": "https://companionreviewhub.netlify.app/pages/cats.html#webpage",
-        "url": "https://companionreviewhub.netlify.app/pages/cats.html",
-        "name": "Cat Profiles and Responsible Cat Care | CompanionReviewHub",
-        "description": "Browse cat profiles and review breed information, temperament, feeding, health, care needs, documentation, and responsible request guidance.",
-        "isPartOf": {
-            "@id": "https://companionreviewhub.netlify.app/#website"
-        },
-        "about": {
-            "@type": "Thing",
-            "name": "Companion cats"
-        },
-        "breadcrumb": {
-            "@id": "https://companionreviewhub.netlify.app/pages/cats.html#breadcrumb"
-        },
-        "inLanguage": "en"
-        },
-        {
-        "@type": "BreadcrumbList",
-        "@id": "https://companionreviewhub.netlify.app/pages/cats.html#breadcrumb",
-        "itemListElement": [
-            {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://companionreviewhub.netlify.app/"
-            },
-            {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Cat Profiles",
-            "item": "https://companionreviewhub.netlify.app/pages/cats.html"
-            }
-        ]
-        }
-    ]
-    }
-</script>
+    <link
+        rel="apple-touch-icon"
+        href="../apple-touch-icon.png"
+    >
 
 </head>
 
-<body>
+<body class="cats-page">
 
-<header class="header">
+    <header class="header cats-header">
 
-<div class="container">
+        <div class="container">
 
-    <div class="logo">
+            <div class="logo cats-logo">
 
-        <a href="../index.html">
-
-            <h2>CompanionReviewHub</h2>
-
-        </a>
-
-    </div>
-
-    <div class="hamburger" id="hamburger">
-
-    ☰
-
-    </div>
-
-    <nav class="nav">
-
-        <ul class="nav-links">
-
-            <li>
                 <a href="../index.html">
-                    Home
+
+                    <h2>
+                        CompanionReviewHub
+                    </h2>
+
                 </a>
-            </li>
 
-            <li>
-                <a href="dogs.html">
-                    Dogs
+            </div>
+
+            <nav
+                class="nav cats-nav"
+                id="catsNavigation"
+                aria-label="Main navigation"
+            >
+
+                <ul class="nav-links cats-nav-links">
+
+                    <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="cats-nav-dropdown">
+
+                        <button
+                            type="button"
+                            class="cats-dropdown-toggle"
+                            id="catsBrowseToggle"
+                            aria-expanded="false"
+                            aria-controls="catsBrowseMenu"
+                        >
+                            Browse Animals
+                            <span aria-hidden="true">▾</span>
+                        </button>
+
+                        <div
+                            class="cats-dropdown-menu"
+                            id="catsBrowseMenu"
+                        >
+
+                            <div class="cats-dropdown-group">
+
+                                <strong>
+                                    Companion Animals
+                                </strong>
+
+                                <a
+                                    href="dogs.html"
+                                >
+                                    Dogs
+                                </a>
+
+                                <a
+                                    href="cats.html"
+                                    aria-current="page"
+                                >
+                                    Cats
+                                </a>
+
+                                <a
+                                    href="birds.html"
+                                >
+                                    Birds
+                                </a>
+
+                                <a
+                                    href="reptiles.html"
+                                >
+                                    Reptiles
+                                </a>
+
+                            </div>
+
+                            <div class="cats-dropdown-group">
+
+                                <strong>
+                                    Regulated Wildlife
+                                </strong>
+
+                                <a
+                                    href="wild-cats.html"
+                                >
+                                    Exotic Felines
+                                </a>
+
+                                <a
+                                    href="primates.html"
+                                >
+                                    Primates
+                                </a>
+
+                                <a
+                                    href="bears.html"
+                                >
+                                    Bears & Pandas
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <a href="health-care-article.html">
+                            Health Care Guide
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <div class="header-actions cats-header-actions">
+
+                <button
+                    id="darkModeToggle"
+                    class="dark-mode-btn"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+                    🌙
+                </button>
+
+                <a
+                    href="wishlist.html"
+                    class="wishlist-btn"
+                    aria-label="View saved profiles"
+                >
+                    ❤
+
+                    <span id="wishlist-count">
+                        0
+                    </span>
+
                 </a>
-            </li>
 
-            <li>
-                <a href="wild-cats.html">
-                    Wild cats
-                </a>
-            </li>
+                <button
+                    class="cart-btn"
+                    id="openCart"
+                    type="button"
+                    aria-label="Open request cart"
+                >
+                    🛒
 
-            <li>
-                <a href="birds.html">
-                    Birds
-                </a>
-            </li>
+                    <span id="cart-count">
+                        0
+                    </span>
 
-            <li>
-                <a href="reptiles.html">
-                    Reptiles
-                </a>
-            </li>
+                </button>
 
-            <li>
-                <a href="cart.html">
-                    Cart
-                </a>
-            </li>
+                <button
+                    type="button"
+                    class="cats-menu-btn"
+                    id="catsMenuBtn"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="catsNavigation"
+                >
+                    ☰
+                </button>
 
-            <li>
-                <a href="health-care-article.html">
-                    Health Care Guide
-                </a>
-            </li>
-
-            <li>
-            <a href="health-care-article.html">
-                Health Care Guide
-            </a>
-        </li>
-
-        </ul>
-
-    </nav>
-
-    <div class="header-actions">
-
-        <button
-        class="cart-btn"
-        id="openCart">
-
-            🛒
-
-            <span id="cart-count">
-                0
-            </span>
-
-        </button>
-
-    </div>
-
-</div>
-
-</header>
-
-<section class="cats-hero">
-
-<div class="container">
-
-    <span>
-        Responsible Cat Discovery
-    </span>
-
-    <h1>
-        Companion Cat Profiles & Care Guidance
-    </h1>
-
-    <p>
-        Explore cat and kitten profiles, temperament details, care needs, and responsible ownership guidance before submitting an adoption or inquiry request.
-    </p>
-
-</div>
-
-</section>
-
-<section class="cat-care-notice">
-
-    <div class="container">
-
-        <div class="care-notice-box">
-
-            <h2>
-                Cat Welfare & Ownership Notice
-            </h2>
-
-            <p>
-                Cats and kittens require daily care, clean food and water, safe housing, litter care, social attention, proper handling, and access to qualified veterinary support. Before requesting any cat, please review its age, temperament, health needs, grooming needs, and long-term care requirements.
-            </p>
-
-            <p>
-                Buyers are encouraged to ask questions, request available health or vaccination records, confirm the cat’s current availability, and make sure their home is ready before completing any adoption or inquiry request.
-            </p>
-
-            <a href="animal-welfare-policy.html">
-                Read Animal Welfare Policy
-            </a>
-
-            <a href="trust-safety.html">
-                Read Trust & Safety
-            </a>
+            </div>
 
         </div>
 
-    </div>
+    </header>
 
-</section>
 
-<section class="cats-search-section">
+    <main>
 
-<div class="container">
+        <section class="cats-hero">
 
-    <div class="search-wrapper">
+            <div class="container">
 
-        <input
+                <span>
+                    Responsible Cat Discovery
+                </span>
 
-        type="text"
+                <h1>
+                    Companion Cat Profiles & Care Guidance
+                </h1>
 
-        id="catSearch"
+                <p>
+                    Explore cat and kitten profiles, temperament details, grooming needs and responsible ownership guidance before submitting an adoption or inquiry request.
+                </p>
 
-        placeholder="Search companion cat profiles...">
+            </div>
 
-        <select id="catFilter">
+        </section>
 
-            <option value="all">
 
-                All Breeds
+        <section class="cat-care-notice">
 
-            </option>
+            <div class="container">
 
-            <option value="longhair">
+                <div class="care-notice-box">
 
-                Long Hair
+                    <h2>
+                        Cat Welfare & Ownership Notice
+                    </h2>
 
-            </option>
+                    <p>
+                        Cats and kittens require daily care, clean food and water, safe housing, litter care, social attention, proper handling and qualified veterinary support. Review each breed's temperament, grooming needs, activity level and long-term care requirements before starting a request.
+                    </p>
 
-            <option value="shorthair">
+                    <p>
+                        Ask for available health and vaccination records, confirm current availability and make sure your home, schedule and budget are suitable for the cat you are considering.
+                    </p>
 
-                Short Hair
+                    <a href="animal-welfare-policy.html">
+                        Read Animal Welfare Policy
+                    </a>
 
-            </option>
+                    <a href="trust-safety.html">
+                        Read Trust & Safety
+                    </a>
 
-            <option value="rare">
+                </div>
 
-                Rare Breeds
+            </div>
 
-            </option>
+        </section>
 
-            <option value="family">
 
-                Family Friendly
+        <section class="cats-search-section">
 
-            </option>
+            <div class="container">
 
-        </select>
+                <div class="search-wrapper">
 
-    </div>
+                    <input
+                        type="search"
+                        id="catSearch"
+                        placeholder="Search by breed, country, colour or temperament..."
+                        aria-label="Search cat profiles"
+                    >
 
-</div>
+                    <select
+                        id="catFilter"
+                        aria-label="Filter cat profiles by category"
+                    >
 
-</section>
+                        <option value="all">
+                            All Cat Categories
+                        </option>
 
-<section class="cats-results">
+                        <option value="longhair">
+                            Longhair Cats
+                        </option>
 
-<div class="container">
+                        <option value="shorthair">
+                            Shorthair Cats
+                        </option>
 
-    <div class="results-header">
+                        <option value="exotic">
+                            Exotic Companion Cats
+                        </option>
 
-        <h2>
+                    </select>
 
-            Companion Cat Profiles
+                </div>
 
-        </h2>
+            </div>
 
-        <span id="resultsCount">
+        </section>
 
-            Care review recommended
 
-        </span>
+        <section class="cats-results">
 
-    </div>
+            <div class="container">
 
-    <div
+                <div class="results-header">
 
-    class="cats-grid"
+                    <h2>
+                        Companion Cat Profiles
+                    </h2>
 
-    id="catsGrid">
+                    <span id="resultsCount">
+                        Loading Profiles
+                    </span>
 
-        <!-- JS GENERATED CATS -->
+                </div>
 
-    </div>
+                <div
+                    class="cats-grid"
+                    id="catsGrid"
+                >
+                    <!-- JavaScript generates profile cards here. -->
+                </div>
 
-</div>
+            </div>
 
-</section>
+        </section>
 
-<!-- QUICK VIEW MODAL -->
+    </main>
 
-<div
-class="modal"
 
-id="quickViewModal">
+    <aside
+        class="cart-sidebar"
+        id="cartSidebar"
+        aria-label="Request cart"
+    >
 
-<div class="modal-content">
+        <div class="cart-header">
 
-    <button
-    class="modal-close">
-
-        ✕
-
-    </button>
-
-    <div class="modal-grid">
-
-        <div class="modal-image">
-
-            <img
-
-            id="modalImage"
-
-            src="../assets/images/cats/scottish-fold.jpg"
-
-            alt="Cat">
-
-        </div>
-
-        <div class="modal-details">
-
-            <span
-            id="modalCategory">
-
-                Cat
-
-            </span>
-
-            <h2
-            id="modalName">
-
-            </h2>
-
-            <h3
-            id="modalPrice">
-
+            <h3>
+                Request Cart
             </h3>
 
-            <p
-            id="modalDescription">
-
-            </p>
-
-            <ul>
-
-                <li>
-
-                    Age:
-                    <span id="modalAge">
-
-                    </span>
-
-                </li>
-
-                <li>
-
-                    Location:
-                    <span id="modalLocation">
-
-                    </span>
-
-                </li>
-
-            </ul>
-
             <button
-
-            id="modalAddCart"
-
-            class="primary-btn">
-
-                Start Adoption Request
-
+                id="closeCart"
+                type="button"
+                aria-label="Close request cart"
+            >
+                ✕
             </button>
 
         </div>
 
-    </div>
+        <div class="cart-items"></div>
 
-</div>
+        <div class="cart-footer">
 
-</div>
+            <div class="cart-total">
 
-<!-- CART SIDEBAR -->
+                <span>
+                    Total:
+                </span>
 
-<div
-class="cart-sidebar"
+                <strong id="cartTotal">
+                    $0
+                </strong>
 
-id="cartSidebar">
+            </div>
 
-<div class="cart-header">
+            <a
+                href="cart.html"
+                class="primary-btn"
+            >
+                View Request Cart
+            </a>
 
-    <h3>
-
-        Shopping Cart
-
-    </h3>
-
-    <button
-    id="closeCart">
-
-        ✕
-
-    </button>
-
-</div>
-
-<div
-class="cart-items">
-
-</div>
-
-<div
-class="cart-footer">
-
-    <div
-    class="cart-total">
-
-        <span>
-
-            Total:
-
-        </span>
-
-        <strong
-        id="cartTotal">
-
-            $0
-
-        </strong>
-
-    </div>
-
-    <a
-
-    href="cart.html"
-
-    class="primary-btn">
-
-        View Cart
-
-    </a>
-
-</div>
-
-</div>
-
-<div
-class="cart-overlay">
-
-</div>
-
-<footer class="footer">
-
-<div class="container">
-
-    <div class="footer-bottom">
-
-        <p>
-
-            © 2026 CompanionReviewHub. All Rights Reserved.
-
-        </p>
-        <div class="footer-links">
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="trust-safety.html">Trust & Safety</a>
-        <a href="terms-of-service.html">Terms Of Service</a>
-        <a href="refund-policy.html">Refund Policy</a>
-        <a href="shipping-policy.html">Shipping Policy</a>
-        <a href="animal-welfare-policy.html">Animal Welfare Policy</a>
-        <a href="legal-compliance.html">Legal Compliance</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
         </div>
 
-    </div>
+    </aside>
 
-</div>
+    <div class="cart-overlay"></div>
 
-</footer>
 
-<script src="../assets/js/cart.js"></script>
+    <footer class="footer">
 
-<script src="../assets/js/modal.js"></script>
+        <div class="container">
 
-<script src="../assets/js/cats.js"></script>
+            <div class="footer-bottom">
 
-<script src="../assets/js/menu.js"></script>
+                <p>
+                    © 2026 CompanionReviewHub. All Rights Reserved.
+                </p>
 
-<script defer src="../assets/js/dark-mode.js"></script>
+                <div class="footer-links">
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6a50fa26634c491d47a3b935/1jt652afd';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="trust-safety.html">
+                        Trust & Safety
+                    </a>
+
+                    <a href="terms-of-service.html">
+                        Terms Of Service
+                    </a>
+
+                    <a href="refund-policy.html">
+                        Refund Policy
+                    </a>
+
+                    <a href="shipping-policy.html">
+                        Shipping Policy
+                    </a>
+
+                    <a href="animal-welfare-policy.html">
+                        Animal Welfare Policy
+                    </a>
+
+                    <a href="legal-compliance.html">
+                        Legal Compliance
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Render profiles before loading the existing cart script. -->
+
+    <script src="../assets/js/cats.js"></script>
+
+    <script src="../assets/js/cart.js"></script>
+
+    <script src="../assets/js/dark-mode.js"></script>
+
+
+    <script>
+        const catsMenuButton =
+        document.getElementById(
+            "catsMenuBtn"
+        );
+
+        const catsNavigation =
+        document.getElementById(
+            "catsNavigation"
+        );
+
+        const catsBrowseToggle =
+        document.getElementById(
+            "catsBrowseToggle"
+        );
+
+        const catsBrowseMenu =
+        document.getElementById(
+            "catsBrowseMenu"
+        );
+
+
+        function closeCatsNavigation(){
+
+            if(
+                catsNavigation
+            ){
+
+                catsNavigation.classList.remove(
+                    "active"
+                );
+
+            }
+
+            if(
+                catsMenuButton
+            ){
+
+                catsMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        function closeCatsDropdown(){
+
+            if(
+                catsBrowseMenu
+            ){
+
+                catsBrowseMenu.classList.remove(
+                    "open"
+                );
+
+            }
+
+            if(
+                catsBrowseToggle
+            ){
+
+                catsBrowseToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        if(
+            catsMenuButton &&
+            catsNavigation
+        ){
+
+            catsMenuButton.addEventListener(
+                "click",
+                () => {
+
+                    const isOpen =
+                    catsNavigation.classList.toggle(
+                        "active"
+                    );
+
+                    catsMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(
+                            isOpen
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        if(
+            catsBrowseToggle &&
+            catsBrowseMenu
+        ){
+
+            catsBrowseToggle.addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation();
+
+                    const isOpen =
+                    catsBrowseMenu.classList.toggle(
+                        "open"
+                    );
+
+                    catsBrowseToggle.setAttribute(
+                        "aria-expanded",
+                        String(
+                            isOpen
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        document.addEventListener(
+            "click",
+            event => {
+
+                const insideDropdown =
+                event.target.closest(
+                    ".cats-nav-dropdown"
+                );
+
+                const insideNavigation =
+                event.target.closest(
+                    "#catsNavigation"
+                );
+
+                const menuButtonClicked =
+                event.target.closest(
+                    "#catsMenuBtn"
+                );
+
+                if(
+                    !insideDropdown
+                ){
+
+                    closeCatsDropdown();
+
+                }
+
+                if(
+                    window.innerWidth <= 1050 &&
+                    !insideNavigation &&
+                    !menuButtonClicked
+                ){
+
+                    closeCatsNavigation();
+
+                }
+
+            }
+        );
+
+
+        document
+        .querySelectorAll(
+            ".cats-dropdown-menu a"
+        )
+        .forEach(
+            link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        closeCatsDropdown();
+
+                        closeCatsNavigation();
+
+                    }
+                );
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            () => {
+
+                if(
+                    window.innerWidth > 1050
+                ){
+
+                    closeCatsNavigation();
+
+                }
+
+            }
+        );
     </script>
-    <!--End of Tawk.to Script-->
+
+
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API =
+        Tawk_API || {};
+
+        var Tawk_LoadStart =
+        new Date();
+
+        (function(){
+
+            var s1 =
+            document.createElement(
+                "script"
+            );
+
+            var s0 =
+            document.getElementsByTagName(
+                "script"
+            )[0];
+
+            s1.async =
+            true;
+
+            s1.src =
+            "https://embed.tawk.to/6a50fa26634c491d47a3b935/1jt652afd";
+
+            s1.charset =
+            "UTF-8";
+
+            s1.setAttribute(
+                "crossorigin",
+                "*"
+            );
+
+            s0.parentNode.insertBefore(
+                s1,
+                s0
+            );
+
+        })();
+    </script>
+    <!-- End of Tawk.to Script -->
 
 </body>
+
 </html>

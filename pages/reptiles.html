@@ -1,684 +1,842 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5F5C8YT167"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-5F5C8YT167');
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){
+            dataLayer.push(arguments);
+        }
+
+        gtag(
+            "js",
+            new Date()
+        );
+
+        gtag(
+            "config",
+            "G-5F5C8YT167"
+        );
     </script>
 
     <meta charset="UTF-8">
 
     <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="manifest"
+        href="../site.webmanifest"
+    >
+
+    <meta
+        name="theme-color"
+        content="#d97706"
+    >
 
     <title>
-        Reptile Profiles & Responsible Reptile Adoption Guidance | CompanionReviewHub
+        Reptile Profiles & Responsible Reptile Guidance | CompanionReviewHub
     </title>
 
     <meta
-    name="description"
-    content="Explore reptile profiles on CompanionReviewHub with responsible ownership guidance, care information, welfare reminders, legal compliance notes, and support before submitting an adoption or inquiry request.">
+        name="description"
+        content="Explore reptile profiles with enclosure needs, feeding, temperature, humidity, welfare guidance, availability notes and responsible request support."
+    >
 
     <meta
-    name="keywords"
-    content="reptile care, reptile adoption guidance, responsible reptile ownership, pet reptile profiles, reptile welfare, lizard care, snake care, turtle care, CompanionReviewHub reptiles">
+        name="keywords"
+        content="reptile profiles, snake care, lizard care, turtle care, tortoise care, responsible reptile ownership, CompanionReviewHub reptiles"
+    >
 
     <meta
-    name="robots"
-    content="index, follow">
-
-    <link rel="manifest" href="../site.webmanifest">
-    <meta name="theme-color" content="#d97706">
+        name="robots"
+        content="index, follow"
+    >
 
     <link
-    rel="canonical"
-    href="https://CompanionReviewHub.netlify.app/pages/reptiles.html">
+        rel="canonical"
+        href="https://CompanionReviewHub.netlify.app/pages/reptiles.html"
+    >
 
     <meta
-    property="og:title"
-    content="Reptile Profiles & Responsible Reptile Guidance | CompanionReviewHub">
+        property="og:title"
+        content="Reptile Profiles | CompanionReviewHub"
+    >
 
     <meta
-    property="og:description"
-    content="Explore reptile profiles with care guidance, welfare reminders, legal compliance notes, and support before making an adoption request.">
+        property="og:description"
+        content="Explore reptile profiles with habitat, feeding, welfare and responsible request guidance."
+    >
 
     <meta
-    property="og:type"
-    content="website">
+        property="og:type"
+        content="website"
+    >
 
     <meta
-    property="og:url"
-    content="https://CompanionReviewHub.netlify.app/pages/reptiles.html">
+        property="og:url"
+        content="https://CompanionReviewHub.netlify.app/pages/reptiles.html"
+    >
 
     <meta
-    property="og:image"
-    content="https://CompanionReviewHub.netlify.app/assets/images/reptiles/ball-python.jpg">
+        property="og:image"
+        content="https://CompanionReviewHub.netlify.app/assets/images/reptiles/ball-python.jpg"
+    >
 
     <meta
-    name="twitter:card"
-    content="summary_large_image">
+        name="twitter:card"
+        content="summary_large_image"
+    >
 
     <meta
-    name="twitter:title"
-    content="Reptile Profiles | CompanionReviewHub">
+        name="twitter:title"
+        content="Reptile Profiles | CompanionReviewHub"
+    >
 
     <meta
-    name="twitter:description"
-    content="Review reptile profiles, habitat needs, care guidance, welfare reminders, and responsible ownership information on CompanionReviewHub.">
+        name="twitter:description"
+        content="Explore reptile profiles with habitat, feeding, welfare and responsible request guidance."
+    >
 
     <meta
-    name="twitter:image"
-    content="https://CompanionReviewHub.netlify.app/assets/images/reptiles/ball-python.jpg">
+        name="twitter:image"
+        content="https://CompanionReviewHub.netlify.app/assets/images/reptiles/ball-python.jpg"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/style.css">
+        rel="stylesheet"
+        href="../assets/css/style.css"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/responsive.css">
+        rel="stylesheet"
+        href="../assets/css/responsive.css"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/reptiles.css">
+        rel="stylesheet"
+        href="../assets/css/site-ui-fix.css"
+    >
 
-    <link rel="stylesheet" href="../assets/css/site-ui-fix.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load the page stylesheet last so its scoped fixes win. -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/reptiles.css"
+    >
 
     <link
-    rel="icon"
-    type="image/png"
-    href="../favicon.png">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
-    <style>
-    /* ==========================
-       REPTILE CARE NOTICE
-    ========================== */
+    <link
+        rel="icon"
+        type="image/png"
+        href="../favicon.png"
+    >
 
-    .reptile-care-notice{
-        background:#fff7ed;
-        padding:45px 20px;
-    }
+    <link
+        rel="icon"
+        href="../favicon.ico"
+        sizes="any"
+    >
 
-    .reptile-care-notice .care-notice-box{
-        background:#ffffff;
-        border-left:6px solid #d97706;
-        border-radius:22px;
-        padding:35px;
-        box-shadow:0 15px 40px rgba(0,0,0,.08);
-    }
-
-    .reptile-care-notice .care-notice-box h2{
-        color:#111827;
-        margin-bottom:15px;
-    }
-
-    .reptile-care-notice .care-notice-box p{
-        color:#4b5563;
-        line-height:1.8;
-        margin-bottom:15px;
-    }
-
-    .reptile-care-notice .care-notice-box a{
-        display:inline-block;
-        margin:10px 10px 0 0;
-        background:#d97706;
-        color:#ffffff;
-        padding:12px 18px;
-        border-radius:12px;
-        text-decoration:none;
-        font-weight:700;
-    }
-
-    .reptile-care-notice .care-notice-box a:hover{
-        background:#b45309;
-    }
-
-    /* DARK MODE */
-
-    .dark-mode .reptile-care-notice{
-        background:#020617;
-    }
-
-    .dark-mode .reptile-care-notice .care-notice-box{
-        background:#0f172a;
-        border-left-color:#d97706;
-        box-shadow:0 15px 40px rgba(0,0,0,.4);
-    }
-
-    .dark-mode .reptile-care-notice .care-notice-box h2{
-        color:#f8fafc;
-    }
-
-    .dark-mode .reptile-care-notice .care-notice-box p{
-        color:#cbd5e1;
-    }
-
-    @media(max-width:768px){
-
-        .reptile-care-notice .care-notice-box{
-            padding:25px 20px;
-        }
-
-        .reptile-care-notice .care-notice-box a{
-            width:100%;
-            text-align:center;
-            margin-right:0;
-        }
-
-    }
-    </style>
-
-
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-            "@type": "WebPage",
-            "@id": "https://companionreviewhub.netlify.app/pages/reptiles.html#webpage",
-            "url": "https://companionreviewhub.netlify.app/pages/reptiles.html",
-            "name": "Reptile Profiles and Responsible Reptile Care | CompanionReviewHub",
-            "description": "Browse reptile profiles and review species information, enclosure needs, feeding, temperature, humidity, health guidance, legal considerations, and responsible request information.",
-            "isPartOf": {
-                "@id": "https://companionreviewhub.netlify.app/#website"
-            },
-            "about": {
-                "@type": "Thing",
-                "name": "Companion reptiles"
-            },
-            "breadcrumb": {
-                "@id": "https://companionreviewhub.netlify.app/pages/reptiles.html#breadcrumb"
-            },
-            "inLanguage": "en"
-            },
-            {
-            "@type": "BreadcrumbList",
-            "@id": "https://companionreviewhub.netlify.app/pages/reptiles.html#breadcrumb",
-            "itemListElement": [
-                {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://companionreviewhub.netlify.app/"
-                },
-                {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Reptile Profiles",
-                "item": "https://companionreviewhub.netlify.app/pages/reptiles.html"
-                }
-            ]
-            }
-        ]
-        }
-    </script>
+    <link
+        rel="apple-touch-icon"
+        href="../apple-touch-icon.png"
+    >
 
 </head>
 
-<body>
+<body class="reptiles-page">
 
-<header class="header">
+    <header class="header reptiles-header">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="logo">
+            <div class="logo reptiles-logo">
 
-            <a href="../index.html">
+                <a href="../index.html">
 
-                <h2>CompanionReviewHub</h2>
+                    <h2>
+                        CompanionReviewHub
+                    </h2>
 
-            </a>
-
-        </div>
-
-        <div
-        class="hamburger"
-        id="hamburger">
-
-            ☰
-
-        </div>
-
-        <nav class="nav">
-
-            <ul class="nav-links">
-
-                <li>
-                    <a href="../index.html">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="dogs.html">
-                        Dogs
-                    </a>
-                </li>
-
-                <li>
-                    <a href="cats.html">
-                        Cats
-                    </a>
-                </li>
-
-                <li>
-                    <a href="birds.html">
-                        Birds
-                    </a>
-                </li>
-
-                <li>
-                    <a href="wild-cats.html">
-                        Wild Cats
-                    </a>
-                </li>
-
-                <li>
-                    <a href="cart.html">
-                        Cart
-                    </a>
-                </li>
-
-                <li>
-                    <a href="health-care-article.html">
-                        Health Care Guide
-                    </a>
-                </li>
-
-            </ul>
-
-        </nav>
-
-        <div class="header-actions">
-
-            <button
-            class="cart-btn"
-            id="openCart">
-
-                🛒
-
-                <span id="cart-count">
-                    0
-                </span>
-
-            </button>
-
-        </div>
-
-    </div>
-
-</header>
-
-<section class="reptiles-hero">
-
-    <div class="container">
-
-        <span>
-            Responsible Reptile Discovery
-        </span>
-
-        <h1>
-            Reptile Profiles & Care Guidance
-        </h1>
-
-        <p>
-            Explore reptile profiles, habitat needs, handling notes, temperament details, and responsible ownership guidance before submitting an adoption or inquiry request.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- REPTILE WELFARE NOTICE -->
-
-<section class="reptile-care-notice">
-
-    <div class="container">
-
-        <div class="care-notice-box">
-
-            <h2>
-                Reptile Welfare & Ownership Notice
-            </h2>
-
-            <p>
-                Reptiles require species-specific care, secure enclosures, correct temperature, humidity control, proper lighting, clean water, suitable diet, safe handling, and access to qualified reptile or exotic animal veterinary support. Before requesting any reptile, please review its habitat needs, adult size, feeding requirements, temperament, and long-term care responsibilities.
-            </p>
-
-            <p>
-                Some reptiles, turtles, tortoises, snakes, and lizards may be regulated, restricted, or require permits in certain locations. Buyers are responsible for confirming local ownership rules, transport requirements, import or export restrictions, and animal welfare laws before completing any adoption or inquiry request.
-            </p>
-
-            <a href="animal-welfare-policy.html">
-                Read Animal Welfare Policy
-            </a>
-
-            <a href="legal-compliance.html">
-                Read Legal Compliance
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="reptiles-search-section">
-
-    <div class="container">
-
-        <div class="search-wrapper">
-
-            <input
-
-            type="text"
-
-            id="reptileSearch"
-
-            placeholder="Search reptile profiles...">
-
-            <select id="reptileFilter">
-
-                <option value="all">
-
-                    All Reptiles
-
-                </option>
-
-                <option value="snake">
-
-                    Snakes
-
-                </option>
-
-                <option value="lizard">
-
-                    Lizards
-
-                </option>
-
-                <option value="turtle">
-
-                    Turtles
-
-                </option>
-
-                <option value="tortoise">
-
-                    Tortoises
-
-                </option>
-
-            </select>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="reptiles-results">
-
-    <div class="container">
-
-        <div class="results-header">
-
-            <h2>
-
-                Reptile Profiles
-
-            </h2>
-
-            <span id="resultsCount">
-
-                Habitat and care review recommended
-
-            </span>
-
-        </div>
-
-        <div
-
-        class="reptiles-grid"
-
-        id="reptilesGrid">
-
-            <!-- JS GENERATED REPTILES -->
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- QUICK VIEW MODAL -->
-
-<div
-class="modal"
-
-id="quickViewModal">
-
-    <div class="modal-content">
-
-        <button
-        class="modal-close">
-
-            ✕
-
-        </button>
-
-        <div class="modal-grid">
-
-            <div class="modal-image">
-
-                <img
-
-                id="modalImage"
-
-                src="../assets/images/reptiles/ball-python.jpg"
-
-                alt="Reptile">
+                </a>
 
             </div>
 
-            <div class="modal-details">
+            <nav
+                class="nav reptiles-nav"
+                id="reptilesNavigation"
+                aria-label="Main navigation"
+            >
 
-                <span
-                id="modalCategory">
-
-                    Reptile
-
-                </span>
-
-                <h2
-                id="modalName">
-
-                </h2>
-
-                <h3
-                id="modalPrice">
-
-                </h3>
-
-                <p
-                id="modalDescription">
-
-                </p>
-
-                <ul>
+                <ul class="nav-links reptiles-nav-links">
 
                     <li>
+                        <a href="../index.html">
+                            Home
+                        </a>
+                    </li>
 
-                        Age:
-                        <span id="modalAge">
+                    <li class="reptiles-nav-dropdown">
 
-                        </span>
+                        <button
+                            type="button"
+                            class="reptiles-dropdown-toggle"
+                            id="reptilesBrowseToggle"
+                            aria-expanded="false"
+                            aria-controls="reptilesBrowseMenu"
+                        >
+                            Browse Animals
+                            <span aria-hidden="true">▾</span>
+                        </button>
+
+                        <div
+                            class="reptiles-dropdown-menu"
+                            id="reptilesBrowseMenu"
+                        >
+
+                            <div class="reptiles-dropdown-group">
+
+                                <strong>
+                                    Companion Animals
+                                </strong>
+
+                                <a
+                                    href="dogs.html"
+                                >
+                                    Dogs
+                                </a>
+
+                                <a
+                                    href="cats.html"
+                                >
+                                    Cats
+                                </a>
+
+                                <a
+                                    href="birds.html"
+                                >
+                                    Birds
+                                </a>
+
+                                <a
+                                    href="reptiles.html"
+                                    aria-current="page"
+                                >
+                                    Reptiles
+                                </a>
+
+                            </div>
+
+                            <div class="reptiles-dropdown-group">
+
+                                <strong>
+                                    Regulated Wildlife
+                                </strong>
+
+                                <a
+                                    href="wild-cats.html"
+                                >
+                                    Exotic Felines
+                                </a>
+
+                                <a
+                                    href="primates.html"
+                                >
+                                    Primates
+                                </a>
+
+                                <a
+                                    href="bears.html"
+                                >
+                                    Bears & Pandas
+                                </a>
+
+                            </div>
+
+                        </div>
 
                     </li>
 
                     <li>
-
-                        Location:
-                        <span id="modalLocation">
-
-                        </span>
-
+                        <a href="health-care-article.html">
+                            Health Care Guide
+                        </a>
                     </li>
 
                 </ul>
 
+            </nav>
+
+            <div class="header-actions reptiles-header-actions">
+
                 <button
+                    id="darkModeToggle"
+                    class="dark-mode-btn"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+                    🌙
+                </button>
 
-                id="modalAddCart"
+                <a
+                    href="wishlist.html"
+                    class="wishlist-btn"
+                    aria-label="View saved profiles"
+                >
+                    ❤
 
-                class="primary-btn">
+                    <span id="wishlist-count">
+                        0
+                    </span>
 
-                    Start Adoption Request
+                </a>
 
+                <button
+                    class="cart-btn"
+                    id="openCart"
+                    type="button"
+                    aria-label="Open request cart"
+                >
+                    🛒
+
+                    <span id="cart-count">
+                        0
+                    </span>
+
+                </button>
+
+                <button
+                    type="button"
+                    class="reptiles-menu-btn"
+                    id="reptilesMenuBtn"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="reptilesNavigation"
+                >
+                    ☰
                 </button>
 
             </div>
 
         </div>
 
-    </div>
+    </header>
 
-</div>
 
-<!-- CART SIDEBAR -->
+    <main>
 
-<div
-class="cart-sidebar"
+        <section class="reptiles-hero">
 
-id="cartSidebar">
+            <div class="container">
 
-    <div class="cart-header">
+                <span>
+                    Responsible Reptile Discovery
+                </span>
 
-        <h3>
+                <h1>
+                    Reptile Profiles & Care Guidance
+                </h1>
 
-            Shopping Cart
+                <p>
+                    Explore reptile profiles, enclosure needs, feeding requirements, temperament details and responsible ownership guidance before submitting an adoption or inquiry request.
+                </p>
 
-        </h3>
+            </div>
 
-        <button
-        id="closeCart">
+        </section>
 
-            ✕
 
-        </button>
+        <section class="reptile-care-notice">
 
-    </div>
+            <div class="container">
 
-    <div
-    class="cart-items">
+                <div class="care-notice-box">
 
-    </div>
+                    <h2>
+                        Reptile Welfare & Ownership Notice
+                    </h2>
 
-    <div
-    class="cart-footer">
+                    <p>
+                        Reptiles require species-specific care, secure enclosures, correct temperatures, humidity control, suitable lighting, clean water, an appropriate diet, safe handling and qualified exotic-animal veterinary support.
+                    </p>
 
-        <div
-        class="cart-total">
+                    <p>
+                        Some snakes, lizards, turtles and tortoises may be regulated or require permits. Confirm local ownership, transport, import, export and welfare requirements before starting a request.
+                    </p>
 
-            <span>
+                    <a href="animal-welfare-policy.html">
+                        Read Animal Welfare Policy
+                    </a>
 
-                Total:
+                    <a href="legal-compliance.html">
+                        Read Legal Compliance
+                    </a>
 
-            </span>
+                </div>
 
-            <strong
-            id="cartTotal">
+            </div>
 
-                $0
+        </section>
 
-            </strong>
+
+        <section class="reptiles-search-section">
+
+            <div class="container">
+
+                <div class="search-wrapper">
+
+                    <input
+                        type="search"
+                        id="reptileSearch"
+                        placeholder="Search by species, country, colour, habitat or temperament..."
+                        aria-label="Search reptile profiles"
+                    >
+
+                    <select
+                        id="reptileFilter"
+                        aria-label="Filter reptile profiles by category"
+                    >
+
+                        <option value="all">
+                            All Reptiles
+                        </option>
+
+                        <option value="snake">
+                            Snakes
+                        </option>
+
+                        <option value="lizard">
+                            Lizards
+                        </option>
+
+                        <option value="turtle">
+                            Turtles
+                        </option>
+
+                        <option value="tortoise">
+                            Tortoises
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="reptiles-results">
+
+            <div class="container">
+
+                <div class="results-header">
+
+                    <h2>
+                        Reptile Profiles
+                    </h2>
+
+                    <span id="resultsCount">
+                        Loading Profiles
+                    </span>
+
+                </div>
+
+                <div
+                    class="reptiles-grid"
+                    id="reptilesGrid"
+                >
+                    <!-- JavaScript generates profile cards here. -->
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <aside
+        class="cart-sidebar"
+        id="cartSidebar"
+        aria-label="Request cart"
+    >
+
+        <div class="cart-header">
+
+            <h3>
+                Request Cart
+            </h3>
+
+            <button
+                id="closeCart"
+                type="button"
+                aria-label="Close request cart"
+            >
+                ✕
+            </button>
 
         </div>
 
-        <a
+        <div class="cart-items"></div>
 
-        href="cart.html"
+        <div class="cart-footer">
 
-        class="primary-btn">
+            <div class="cart-total">
 
-            View Cart
+                <span>
+                    Total:
+                </span>
 
-        </a>
+                <strong id="cartTotal">
+                    $0
+                </strong>
 
-    </div>
+            </div>
 
-</div>
+            <a
+                href="cart.html"
+                class="primary-btn"
+            >
+                View Request Cart
+            </a>
 
-<div
-class="cart-overlay">
+        </div>
 
-</div>
+    </aside>
 
-<footer class="footer">
+    <div class="cart-overlay"></div>
 
-    <div class="container">
 
-        <div class="footer-bottom">
+    <footer class="footer">
 
-            <p>
+        <div class="container">
 
-                © 2026 CompanionReviewHub. All Rights Reserved.
+            <div class="footer-bottom">
 
-            </p>
+                <p>
+                    © 2026 CompanionReviewHub. All Rights Reserved.
+                </p>
 
-            <div class="footer-links">
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="trust-safety.html">Trust & Safety</a>
-                <a href="terms-of-service.html">Terms Of Service</a>
-                <a href="refund-policy.html">Refund Policy</a>
-                <a href="shipping-policy.html">Shipping Policy</a>
-                <a href="animal-welfare-policy.html">Animal Welfare Policy</a>
-                <a href="legal-compliance.html">Legal Compliance</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
+                <div class="footer-links">
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="trust-safety.html">
+                        Trust & Safety
+                    </a>
+
+                    <a href="terms-of-service.html">
+                        Terms Of Service
+                    </a>
+
+                    <a href="refund-policy.html">
+                        Refund Policy
+                    </a>
+
+                    <a href="shipping-policy.html">
+                        Shipping Policy
+                    </a>
+
+                    <a href="animal-welfare-policy.html">
+                        Animal Welfare Policy
+                    </a>
+
+                    <a href="legal-compliance.html">
+                        Legal Compliance
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
 
-    </div>
+    </footer>
 
-</footer>
 
-<script src="../assets/js/cart.js"></script>
+    <!-- Render profiles before loading the existing cart script. -->
 
-<script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/reptiles.js"></script>
 
-<script src="../assets/js/reptiles.js"></script>
+    <script src="../assets/js/cart.js"></script>
 
-<script src="../assets/js/menu.js"></script>
+    <script src="../assets/js/dark-mode.js"></script>
 
-<script defer src="../assets/js/dark-mode.js"></script>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6a50fa26634c491d47a3b935/1jt652afd';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+    <script>
+        const reptilesMenuButton =
+        document.getElementById(
+            "reptilesMenuBtn"
+        );
+
+        const reptilesNavigation =
+        document.getElementById(
+            "reptilesNavigation"
+        );
+
+        const reptilesBrowseToggle =
+        document.getElementById(
+            "reptilesBrowseToggle"
+        );
+
+        const reptilesBrowseMenu =
+        document.getElementById(
+            "reptilesBrowseMenu"
+        );
+
+
+        function closeReptilesNavigation(){
+
+            if(
+                reptilesNavigation
+            ){
+
+                reptilesNavigation.classList.remove(
+                    "active"
+                );
+
+            }
+
+            if(
+                reptilesMenuButton
+            ){
+
+                reptilesMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        function closeReptilesDropdown(){
+
+            if(
+                reptilesBrowseMenu
+            ){
+
+                reptilesBrowseMenu.classList.remove(
+                    "open"
+                );
+
+            }
+
+            if(
+                reptilesBrowseToggle
+            ){
+
+                reptilesBrowseToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        if(
+            reptilesMenuButton &&
+            reptilesNavigation
+        ){
+
+            reptilesMenuButton.addEventListener(
+                "click",
+                () => {
+
+                    const isOpen =
+                    reptilesNavigation.classList.toggle(
+                        "active"
+                    );
+
+                    reptilesMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(
+                            isOpen
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        if(
+            reptilesBrowseToggle &&
+            reptilesBrowseMenu
+        ){
+
+            reptilesBrowseToggle.addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation();
+
+                    const isOpen =
+                    reptilesBrowseMenu.classList.toggle(
+                        "open"
+                    );
+
+                    reptilesBrowseToggle.setAttribute(
+                        "aria-expanded",
+                        String(
+                            isOpen
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        document.addEventListener(
+            "click",
+            event => {
+
+                const insideDropdown =
+                event.target.closest(
+                    ".reptiles-nav-dropdown"
+                );
+
+                const insideNavigation =
+                event.target.closest(
+                    "#reptilesNavigation"
+                );
+
+                const menuButtonClicked =
+                event.target.closest(
+                    "#reptilesMenuBtn"
+                );
+
+                if(
+                    !insideDropdown
+                ){
+
+                    closeReptilesDropdown();
+
+                }
+
+                if(
+                    window.innerWidth <= 1050 &&
+                    !insideNavigation &&
+                    !menuButtonClicked
+                ){
+
+                    closeReptilesNavigation();
+
+                }
+
+            }
+        );
+
+
+        document
+        .querySelectorAll(
+            ".reptiles-dropdown-menu a"
+        )
+        .forEach(
+            link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        closeReptilesDropdown();
+
+                        closeReptilesNavigation();
+
+                    }
+                );
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            () => {
+
+                if(
+                    window.innerWidth > 1050
+                ){
+
+                    closeReptilesNavigation();
+
+                }
+
+            }
+        );
     </script>
-    <!--End of Tawk.to Script-->
+
+
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API =
+        Tawk_API || {};
+
+        var Tawk_LoadStart =
+        new Date();
+
+        (function(){
+
+            var s1 =
+            document.createElement(
+                "script"
+            );
+
+            var s0 =
+            document.getElementsByTagName(
+                "script"
+            )[0];
+
+            s1.async =
+            true;
+
+            s1.src =
+            "https://embed.tawk.to/6a50fa26634c491d47a3b935/1jt652afd";
+
+            s1.charset =
+            "UTF-8";
+
+            s1.setAttribute(
+                "crossorigin",
+                "*"
+            );
+
+            s0.parentNode.insertBefore(
+                s1,
+                s0
+            );
+
+        })();
+    </script>
+    <!-- End of Tawk.to Script -->
 
 </body>
 

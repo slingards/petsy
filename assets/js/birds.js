@@ -2526,191 +2526,352 @@ const birds = [
 
 ];
 
+/* =====================================================
+   BIRD PAGE ELEMENTS
+===================================================== */
+
 const birdsGrid =
 document.getElementById(
     "birdsGrid"
 );
 
-function renderBirds(birdsArray){
-
-    if(!birdsGrid) return;
-
-    birdsGrid.innerHTML = "";
-
-    birdsArray.forEach(bird=>{
-
-        birdsGrid.innerHTML += `
-
-        <div
-        class="pet-card"
-        data-category="${bird.category}"
-        data-name="${bird.name.toLowerCase()}">
-
-            <img
-            src="../${bird.image}"
-            alt="${bird.name}">
-
-            <div class="pet-content">
-
-                <span class="pet-category">
-
-                    Bird
-
-                </span>
-
-                <h3>
-
-                    ${bird.name}
-
-                </h3>
-
-                <p>
-
-                    ${bird.description}
-
-                </p>
-
-                <div class="pet-info">
-
-                    <span>
-
-                        ${bird.age}
-
-                    </span>
-
-                    <span>
-
-                        ${bird.location}
-
-                    </span>
-
-                </div>
-
-                <div class="pet-footer">
-
-                    <h4>
-
-                        Estimated: $${Number(bird.price).toLocaleString()}
-
-                    </h4>
-
-                    <div class="pet-actions">
-
-                    <button
-                    class="add-cart-btn"
-                    data-name="${bird.name}"
-                    data-price="${bird.price}"
-                    data-image="../${bird.image}">
-                        Start Request
-                    </button>
-
-                    <button
-                    class="wishlist-add-btn"
-                    data-name="${bird.name}"
-                    data-price="${bird.price}"
-                    data-image="${bird.image}">
-                        ❤ Save Profile
-                    </button>                      
-                        </div>
-                <a href="learn-more.html?type=birds&name=${encodeURIComponent(bird.name)}" class="learn-more-btn" style="color:var(--primary);">
-                    Learn More →
-                </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        `;
-
-    });
-
-    attachButtons();
-
-    attachWishlistButtons();
-
-    animateCards();
-
-}
-
-const searchInput =
+const birdSearch =
 document.getElementById(
     "birdSearch"
 );
 
-const breedFilter =
+const birdFilter =
 document.getElementById(
     "birdFilter"
 );
 
+const resultsCount =
+document.getElementById(
+    "resultsCount"
+);
+
+
+/* =====================================================
+   DISPLAY HELPERS
+===================================================== */
+
+function formatBirdPrice(bird){
+
+    return (
+        "Estimated Request Amount: $" +
+        Number(
+            bird.price || 0
+        ).toLocaleString()
+    );
+
+}
+
+
+function getBirdCategoryLabel(category){
+
+    const labels = {
+        parrot:
+        "Parrot Profile",
+
+        small:
+        "Small Bird Profile",
+
+        songbird:
+        "Songbird Profile",
+
+        exotic:
+        "Exotic Bird Profile",
+
+        "bird-of-prey":
+        "Bird of Prey Profile"
+    };
+
+    return (
+        labels[category] ||
+        "Bird Profile"
+    );
+
+}
+
+
+/* =====================================================
+   RENDER BIRD PROFILES
+===================================================== */
+
+function renderBirds(){
+
+    if(
+        !birdsGrid
+    ){
+
+        return;
+
+    }
+
+    birdsGrid.innerHTML = "";
+
+    birds.forEach(
+        (bird, index) => {
+
+            birdsGrid.innerHTML += `
+
+                <article
+                    class="pet-card bird-card"
+                    data-bird-index="${index}"
+                    data-category="${bird.category}"
+                    data-name="${bird.name.toLowerCase()}"
+                >
+
+                    <div class="pet-image-wrap">
+
+                        <img
+                            src="../${bird.image}"
+                            alt="${bird.name}"
+                            loading="lazy"
+                        >
+
+                        <span class="profile-badge">
+                            Bird Profile
+                        </span>
+
+                    </div>
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">
+                            ${getBirdCategoryLabel(bird.category)}
+                        </span>
+
+                        <h3>
+                            ${bird.name}
+                        </h3>
+
+                        <p>
+                            ${bird.description}
+                        </p>
+
+                        <div class="pet-info">
+
+                            <span>
+                                ${bird.age}
+                            </span>
+
+                            <span>
+                                ${bird.location}
+                            </span>
+
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>
+                                ${formatBirdPrice(bird)}
+                            </h4>
+
+                            <div class="pet-actions">
+
+                                <button
+                                    type="button"
+                                    class="add-cart-btn start-request-btn"
+                                    data-request-button="true"
+                                    data-name="${bird.name}"
+                                    data-price="${bird.price}"
+                                    data-image="../${bird.image}"
+                                    aria-label="Start a request for ${bird.name}"
+                                >
+                                    Start Request
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="wishlist-add-btn"
+                                    data-name="${bird.name}"
+                                    data-price="${bird.price}"
+                                    data-image="${bird.image}"
+                                    aria-label="Save ${bird.name} for later review"
+                                >
+                                    ❤ Save Profile
+                                </button>
+
+                            </div>
+
+                            <a
+                                href="learn-more.html?type=birds&name=${encodeURIComponent(bird.name)}"
+                                class="learn-more-btn"
+                            >
+                                Learn More →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `;
+
+        }
+    );
+
+    birdsGrid.innerHTML += `
+        <div
+            class="empty-results"
+            id="birdEmptyResults"
+            hidden
+        >
+            <h3>
+                No bird profiles found
+            </h3>
+
+            <p>
+                Try another species name, country, colour or bird category.
+            </p>
+        </div>
+    `;
+
+    attachBirdWishlistButtons();
+
+    animateBirdCards();
+
+}
+
+
+/* =====================================================
+   SEARCH AND CATEGORY FILTER
+   Existing cards are hidden rather than recreated so
+   older request-cart handlers keep their listeners.
+===================================================== */
+
 function filterBirds(){
 
     const searchTerm =
-    searchInput ?
-    searchInput.value.toLowerCase()
-    : "";
+    birdSearch
+    ?
+    birdSearch.value
+    .trim()
+    .toLowerCase()
+    :
+    "";
 
-    const category =
-    breedFilter ?
-    breedFilter.value
-    : "all";
+    const selectedCategory =
+    birdFilter
+    ?
+    birdFilter.value
+    :
+    "all";
 
-    const filteredBirds =
-    birds.filter(bird=>{
-
-        const nameMatch =
-
-        bird.name
-        .toLowerCase()
-        .includes(searchTerm);
-
-        const categoryMatch =
-
-        category === "all" ||
-
-        bird.category === category;
-
-        return (
-
-            nameMatch &&
-            categoryMatch
-
-        );
-
-    });
-
-    renderBirds(
-        filteredBirds
+    const cards =
+    document.querySelectorAll(
+        ".bird-card"
     );
 
-    const results =
+    let visibleProfiles = 0;
+
+    cards.forEach(
+        card => {
+
+            const index =
+            Number(
+                card.dataset.birdIndex
+            );
+
+            const bird =
+            birds[index];
+
+            if(
+                !bird
+            ){
+
+                card.hidden =
+                true;
+
+                return;
+
+            }
+
+            const searchableText = `
+                ${bird.name}
+                ${bird.category}
+                ${bird.location}
+                ${bird.description}
+                ${bird.temperament || ""}
+                ${bird.colors ? bird.colors.join(" ") : ""}
+                ${bird.climate || ""}
+                ${bird.feed || ""}
+                ${bird.talkingAbility || ""}
+                ${bird.noiseLevel || ""}
+            `.toLowerCase();
+
+            const searchMatches =
+            searchableText.includes(
+                searchTerm
+            );
+
+            const categoryMatches =
+            selectedCategory === "all" ||
+            bird.category === selectedCategory;
+
+            const shouldShow =
+            searchMatches &&
+            categoryMatches;
+
+            card.hidden =
+            !shouldShow;
+
+            if(
+                shouldShow
+            ){
+
+                visibleProfiles += 1;
+
+            }
+
+        }
+    );
+
+    const emptyResults =
     document.getElementById(
-        "resultsCount"
+        "birdEmptyResults"
     );
 
-    if(results){
+    if(
+        emptyResults
+    ){
 
-        results.textContent =
+        emptyResults.hidden =
+        visibleProfiles !== 0;
 
-        `${filteredBirds.length} Bird Profiles`;
+    }
+
+    if(
+        resultsCount
+    ){
+
+        resultsCount.textContent =
+        `${visibleProfiles} Bird Profiles`;
 
     }
 
 }
 
-if(searchInput){
 
-    searchInput.addEventListener(
+if(
+    birdSearch
+){
+
+    birdSearch.addEventListener(
         "input",
         filterBirds
     );
 
 }
 
-if(breedFilter){
 
-    breedFilter.addEventListener(
+if(
+    birdFilter
+){
+
+    birdFilter.addEventListener(
         "change",
         filterBirds
     );
@@ -2718,23 +2879,25 @@ if(breedFilter){
 }
 
 
+/* =====================================================
+   WISHLIST SUPPORT
+===================================================== */
 
-/* ==========================
-WISHLIST SUPPORT
-========================== */
-
-function normalizeAnimalWishlistImagePath(path){
+function normalizeBirdImagePath(path){
 
     let cleanPath =
-    String(path || "")
-    .trim();
+    String(
+        path || ""
+    ).trim();
 
     const assetIndex =
     cleanPath.indexOf(
         "assets/images/"
     );
 
-    if(assetIndex !== -1){
+    if(
+        assetIndex !== -1
+    ){
 
         cleanPath =
         cleanPath.substring(
@@ -2743,62 +2906,82 @@ function normalizeAnimalWishlistImagePath(path){
 
     }
 
-    cleanPath =
-    cleanPath
+    return cleanPath
     .replace(/^\.\.\//g, "")
     .replace(/^\.\//g, "")
     .replace(/^\//g, "");
 
-    return cleanPath;
+}
+
+
+function getBirdWishlist(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(
+                "CompanionReviewHubWishlist"
+            )
+        ) || [];
+
+    }
+    catch(error){
+
+        console.error(
+            "Unable to read the wishlist:",
+            error
+        );
+
+        return [];
+
+    }
 
 }
 
-function getAnimalWishlist(){
 
-    return JSON.parse(
-        localStorage.getItem(
-            "CompanionReviewHubWishlist"
-        )
-    ) || [];
-
-}
-
-function saveAnimalWishlist(list){
+function saveBirdWishlist(list){
 
     localStorage.setItem(
         "CompanionReviewHubWishlist",
-        JSON.stringify(list)
+        JSON.stringify(
+            list
+        )
     );
 
-    updateAnimalWishlistCount();
+    updateBirdWishlistCount();
 
 }
 
-function updateAnimalWishlistCount(){
+
+function updateBirdWishlistCount(){
 
     const count =
     document.getElementById(
         "wishlist-count"
     );
 
-    if(!count) return;
+    if(
+        count
+    ){
 
-    const list =
-    getAnimalWishlist();
+        count.textContent =
+        getBirdWishlist().length;
 
-    count.textContent =
-    list.length;
+    }
 
 }
 
-function showAnimalWishlistMessage(message){
+
+function showBirdWishlistMessage(message){
 
     let messageBox =
     document.querySelector(
         ".wishlist-action-message"
     );
 
-    if(!messageBox){
+    if(
+        !messageBox
+    ){
 
         messageBox =
         document.createElement(
@@ -2808,62 +2991,18 @@ function showAnimalWishlistMessage(message){
         messageBox.className =
         "wishlist-action-message";
 
+        messageBox.setAttribute(
+            "role",
+            "status"
+        );
+
+        messageBox.setAttribute(
+            "aria-live",
+            "polite"
+        );
+
         document.body.appendChild(
             messageBox
-        );
-
-        const style =
-        document.createElement(
-            "style"
-        );
-
-        style.textContent =
-        `
-            .wishlist-action-message{
-                position:fixed;
-                top:100px;
-                left:50%;
-                transform:translate(-50%, -18px);
-                max-width:92%;
-                width:430px;
-                padding:15px 20px;
-                border-radius:999px;
-                background:#111827;
-                color:#ffffff;
-                text-align:center;
-                font-size:.95rem;
-                line-height:1.5;
-                box-shadow:0 18px 45px rgba(0,0,0,.22);
-                opacity:0;
-                visibility:hidden;
-                pointer-events:none;
-                z-index:99999;
-                transition:.35s ease;
-            }
-
-            .wishlist-action-message.show{
-                opacity:1;
-                visibility:visible;
-                transform:translate(-50%, 0);
-            }
-
-            .dark-mode .wishlist-action-message{
-                background:#f8fafc;
-                color:#111827;
-            }
-
-            @media(max-width:600px){
-                .wishlist-action-message{
-                    top:85px;
-                    width:calc(100% - 28px);
-                    border-radius:18px;
-                    font-size:.9rem;
-                }
-            }
-        `;
-
-        document.head.appendChild(
-            style
         );
 
     }
@@ -2880,23 +3019,26 @@ function showAnimalWishlistMessage(message){
     );
 
     messageBox.hideTimer =
-    setTimeout(()=>{
+    setTimeout(
+        () => {
 
-        messageBox.classList.remove(
-            "show"
-        );
+            messageBox.classList.remove(
+                "show"
+            );
 
-    }, 2600);
+        },
+        2600
+    );
 
 }
 
-function addProfileToWishlist(item){
+
+function addBirdToWishlist(item){
 
     const wishlist =
-    getAnimalWishlist();
+    getBirdWishlist();
 
     const cleanItem = {
-
         name:
         item.name,
 
@@ -2904,23 +3046,28 @@ function addProfileToWishlist(item){
         item.price,
 
         image:
-        normalizeAnimalWishlistImagePath(
+        normalizeBirdImagePath(
             item.image
         )
-
     };
 
-    const exists =
+    const alreadySaved =
     wishlist.some(
-        profile =>
-        String(profile.name).toLowerCase() ===
-        String(cleanItem.name).toLowerCase()
+        savedProfile =>
+        String(
+            savedProfile.name
+        ).toLowerCase() ===
+        String(
+            cleanItem.name
+        ).toLowerCase()
     );
 
-    if(exists){
+    if(
+        alreadySaved
+    ){
 
-        showAnimalWishlistMessage(
-            "This profile is already saved for later review."
+        showBirdWishlistMessage(
+            "This bird profile is already saved."
         );
 
         return;
@@ -2931,129 +3078,79 @@ function addProfileToWishlist(item){
         cleanItem
     );
 
-    saveAnimalWishlist(
+    saveBirdWishlist(
         wishlist
     );
 
-    showAnimalWishlistMessage(
-        "Profile saved for later review. You can view it in your wishlist."
+    showBirdWishlistMessage(
+        "Bird profile saved for later review."
     );
 
 }
 
-function attachWishlistButtons(){
+
+function attachBirdWishlistButtons(){
 
     document
     .querySelectorAll(
         ".wishlist-add-btn"
     )
-    .forEach(button=>{
+    .forEach(
+        button => {
 
-        button.onclick = ()=>{
+            button.onclick = () => {
 
-            addProfileToWishlist({
+                addBirdToWishlist({
+                    name:
+                    button.dataset.name,
 
-                name:
-                button.dataset.name,
+                    price:
+                    button.dataset.price,
 
-                price:
-                button.dataset.price,
+                    image:
+                    button.dataset.image
+                });
 
-                image:
-                button.dataset.image
+            };
 
-            });
-
-        };
-
-    });
-
-}
-
-updateAnimalWishlistCount();
-
-function attachButtons(){
-
-    /*
-        Request buttons are handled once by assets/js/cart.js.
-        Keeping this function empty preserves existing render calls
-        without attaching a second click handler.
-    */
+        }
+    );
 
 }
 
-function animateCards(){
+
+/* =====================================================
+   CARD ANIMATION
+===================================================== */
+
+function animateBirdCards(){
 
     const cards =
     document.querySelectorAll(
-        ".pet-card"
+        ".bird-card"
     );
+
+    if(
+        !("IntersectionObserver" in window)
+    ){
+
+        cards.forEach(
+            card =>
+            card.classList.add(
+                "show"
+            )
+        );
+
+        return;
+
+    }
 
     const observer =
     new IntersectionObserver(
-
         entries => {
 
             entries.forEach(
                 entry => {
-
-                    if(
-                        entry.isIntersecting
-                    ){
-
-                        entry.target
-                        .classList.add(
-                            "show"
-                        );
-
-                    }
-
-                }
-            );
-
-        },
-
-        {
-            threshold:0.15
-        }
-
-    );
-
-    cards.forEach(card=>{
-
-        observer.observe(card);
-
-    });
-
-}
-
-renderBirds(birds);
-
-
-function attachButtons(){
-
-    /*
-        Request buttons are handled once by assets/js/cart.js.
-        Keeping this function empty preserves existing render calls
-        without attaching a second click handler.
-    */
-
-}
-
-function animateCards(){
-
-    const cards =
-    document.querySelectorAll(
-        ".pet-card"
-    );
-
-    const observer =
-    new IntersectionObserver(
-
-        (entries)=>{
-
-            entries.forEach(
-                entry=>{
 
                     if(
                         entry.isIntersecting
@@ -3073,62 +3170,31 @@ function animateCards(){
             );
 
         },
-
         {
-            threshold:0.2
-        }
+            threshold:
+            0.08,
 
+            rootMargin:
+            "0px 0px -30px 0px"
+        }
     );
 
-    cards.forEach(card=>{
-
-        observer.observe(card);
-
-    });
+    cards.forEach(
+        card =>
+        observer.observe(
+            card
+        )
+    );
 
 }
 
-const sections =
-document.querySelectorAll(
-    ".reveal"
-);
 
-const revealObserver =
-new IntersectionObserver(
+/* =====================================================
+   INITIAL PAGE LOAD
+===================================================== */
 
-    entries=>{
+renderBirds();
 
-        entries.forEach(
-            entry=>{
+updateBirdWishlistCount();
 
-                if(
-                    entry.isIntersecting
-                ){
-
-                    entry.target
-                    .classList.add(
-                        "active"
-                    );
-
-                }
-
-            }
-        );
-
-    },
-
-    {
-        threshold:0.1
-    }
-
-);
-
-sections.forEach(
-    section=>{
-
-        revealObserver.observe(
-            section
-        );
-
-    }
-);
+filterBirds();

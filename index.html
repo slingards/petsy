@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CompanionReview | Animal Profiles Discovery & Request Review</title>
+    <title>CompanionReviewHub | Animal Profiles, Care & Compliance Guidance</title>
 
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -51,6 +51,12 @@
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/site-ui-fix.css">
+
+    <!-- Final homepage-only dark-mode and phone-view corrections. -->
+    <link
+        rel="stylesheet"
+        href="assets/css/home-mobile-darkmode-fixes.css"
+    >
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -316,6 +322,314 @@
     }
 
 }
+    </style>
+
+    <style>
+        /* ==========================
+           BROWSE ANIMALS NAVIGATION
+           Added without changing the
+           existing cart, wishlist,
+           dark-mode, or mobile-menu IDs.
+        ========================== */
+
+        .nav-links > li{
+            position:relative;
+        }
+
+        .nav-dropdown{
+            position:relative;
+        }
+
+        .nav-dropdown-toggle{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+            padding:0;
+            border:0;
+            background:transparent;
+            color:inherit;
+            font:inherit;
+            font-weight:500;
+            line-height:1.7;
+            cursor:pointer;
+            transition:var(--transition);
+        }
+
+        .nav-dropdown-toggle:hover,
+        .nav-dropdown-toggle:focus-visible,
+        .nav-dropdown.open .nav-dropdown-toggle{
+            color:var(--primary);
+        }
+
+        .nav-dropdown-toggle:focus-visible{
+            outline:3px solid rgba(217,119,6,.25);
+            outline-offset:6px;
+            border-radius:8px;
+        }
+
+        .dropdown-arrow,
+        .mobile-dropdown-arrow{
+            display:inline-block;
+            transition:transform .25s ease;
+        }
+
+        .nav-dropdown.open .dropdown-arrow,
+        .nav-dropdown:focus-within .dropdown-arrow{
+            transform:rotate(180deg);
+        }
+
+        .nav-dropdown-menu{
+            position:absolute;
+            top:calc(100% + 18px);
+            left:50%;
+            z-index:2200;
+
+            width:min(620px,82vw);
+            padding:18px;
+
+            display:grid;
+            grid-template-columns:repeat(2,minmax(0,1fr));
+            gap:14px;
+
+            background:#ffffff;
+            border:1px solid #e5e7eb;
+            border-radius:22px;
+            box-shadow:0 24px 60px rgba(15,23,42,.18);
+
+            opacity:0;
+            visibility:hidden;
+            pointer-events:none;
+            transform:translate(-50%,12px);
+            transition:
+            opacity .22s ease,
+            visibility .22s ease,
+            transform .22s ease;
+        }
+
+        /* Invisible bridge keeps hover open while the pointer crosses the gap. */
+        .nav-dropdown-menu::before{
+            content:"";
+            position:absolute;
+            left:0;
+            right:0;
+            top:-18px;
+            height:18px;
+        }
+
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu,
+        .nav-dropdown.open .nav-dropdown-menu{
+            opacity:1;
+            visibility:visible;
+            pointer-events:auto;
+            transform:translate(-50%,0);
+        }
+
+        .nav-dropdown-group{
+            min-width:0;
+            padding:14px;
+            border-radius:16px;
+            background:#f8fafc;
+            border:1px solid #e5e7eb;
+        }
+
+        .regulated-nav-group{
+            background:#fff7ed;
+            border-color:#fed7aa;
+        }
+
+        .dropdown-heading{
+            display:block;
+            margin:0 0 10px;
+            color:#92400e;
+            font-size:.76rem;
+            font-weight:800;
+            letter-spacing:1.2px;
+            text-transform:uppercase;
+        }
+
+        .nav-dropdown-group a{
+            display:grid;
+            gap:2px;
+            padding:11px 12px;
+            border-radius:12px;
+            color:#111827;
+            transition:var(--transition);
+        }
+
+        .nav-dropdown-group a:hover,
+        .nav-dropdown-group a:focus-visible{
+            padding-left:16px;
+            background:#ffffff;
+            color:var(--primary);
+            outline:none;
+            box-shadow:0 8px 22px rgba(15,23,42,.08);
+        }
+
+        .nav-dropdown-group a strong{
+            font-size:.94rem;
+        }
+
+        .nav-dropdown-group a small{
+            color:#64748b;
+            font-size:.76rem;
+            font-weight:500;
+            line-height:1.4;
+        }
+
+        .dark-mode .nav-dropdown-toggle{
+            color:#f8fafc;
+        }
+
+        .dark-mode .nav-dropdown-toggle:hover,
+        .dark-mode .nav-dropdown-toggle:focus-visible,
+        .dark-mode .nav-dropdown.open .nav-dropdown-toggle{
+            color:#fbbf24;
+        }
+
+        .dark-mode .nav-dropdown-menu{
+            background:#0f172a;
+            border-color:#334155;
+            box-shadow:0 24px 60px rgba(0,0,0,.48);
+        }
+
+        .dark-mode .nav-dropdown-group{
+            background:#111827;
+            border-color:#334155;
+        }
+
+        .dark-mode .regulated-nav-group{
+            background:#1e293b;
+            border-color:#92400e;
+        }
+
+        .dark-mode .dropdown-heading{
+            color:#fbbf24;
+        }
+
+        .dark-mode .nav-dropdown-group a{
+            color:#f8fafc;
+        }
+
+        .dark-mode .nav-dropdown-group a small{
+            color:#94a3b8;
+        }
+
+        .dark-mode .nav-dropdown-group a:hover,
+        .dark-mode .nav-dropdown-group a:focus-visible{
+            background:#1e293b;
+            color:#fbbf24;
+        }
+
+        @media(max-width:1312px){
+
+            .mobile-browse-group{
+                width:100%;
+            }
+
+            .mobile-browse-toggle{
+                display:flex;
+                align-items:center;
+                justify-content:space-between;
+                gap:12px;
+
+                width:100%;
+                padding:14px 16px;
+
+                border:1px solid #e5e7eb;
+                border-radius:14px;
+                background:#f8fafc;
+                color:#111827;
+
+                font:inherit;
+                font-weight:800;
+                text-align:left;
+                cursor:pointer;
+                transition:var(--transition);
+            }
+
+            .mobile-browse-toggle:hover,
+            .mobile-browse-toggle:focus-visible,
+            .mobile-browse-group.open .mobile-browse-toggle{
+                background:#fff7ed;
+                color:#92400e;
+                border-color:#fed7aa;
+                outline:none;
+            }
+
+            .mobile-browse-group.open .mobile-dropdown-arrow{
+                transform:rotate(180deg);
+            }
+
+            .mobile-browse-links{
+                display:grid;
+                gap:8px;
+                max-height:0;
+                margin-top:0;
+                overflow:hidden;
+                opacity:0;
+                transition:
+                max-height .35s ease,
+                margin-top .35s ease,
+                opacity .25s ease;
+            }
+
+            .mobile-browse-group.open .mobile-browse-links{
+                max-height:720px;
+                margin-top:10px;
+                opacity:1;
+            }
+
+            .mobile-menu .mobile-browse-links a{
+                justify-content:flex-start;
+                padding:11px 14px 11px 22px;
+                background:#ffffff;
+                font-size:.9rem;
+                text-align:left;
+            }
+
+            .mobile-dropdown-heading{
+                display:block;
+                padding:10px 6px 2px;
+                color:#92400e;
+                font-size:.72rem;
+                font-weight:900;
+                letter-spacing:1.1px;
+                text-transform:uppercase;
+            }
+
+            .dark-mode .mobile-browse-toggle{
+                background:#111827;
+                color:#f8fafc;
+                border-color:#334155;
+            }
+
+            .dark-mode .mobile-browse-toggle:hover,
+            .dark-mode .mobile-browse-toggle:focus-visible,
+            .dark-mode .mobile-browse-group.open .mobile-browse-toggle{
+                background:#1e293b;
+                color:#fbbf24;
+                border-color:#d97706;
+            }
+
+            .dark-mode .mobile-menu .mobile-browse-links a{
+                background:#0f172a;
+                color:#f8fafc;
+                border-color:#334155;
+            }
+
+            .dark-mode .mobile-dropdown-heading{
+                color:#fbbf24;
+            }
+        }
+
+        @media(max-width:480px){
+            .nav-dropdown-menu{
+                width:92vw;
+                grid-template-columns:1fr;
+            }
+        }
     </style>
 
 
@@ -598,21 +912,57 @@
 </script>
 
 </head>
-<body>
+<body class="home-professional">
 
-<div class="mobile-menu">
+<div class="mobile-menu" aria-label="Mobile navigation">
 
     <a href="index.html">Home</a>
 
-    <a href="pages/dogs.html">Dog Profiles</a>
+    <div class="mobile-browse-group">
 
-    <a href="pages/cats.html">Cat Profiles</a>
+        <button
+        type="button"
+        class="mobile-browse-toggle"
+        aria-expanded="false"
+        aria-controls="mobileBrowseAnimalsMenu">
 
-    <a href="pages/birds.html">Bird Profiles</a>
+            <span>Browse Animals</span>
+            <span class="mobile-dropdown-arrow" aria-hidden="true">▾</span>
 
-    <a href="pages/wild-cats.html">Regulated Exotic Felines</a>
+        </button>
 
-    <a href="pages/reptiles.html">Reptiles</a>
+        <div
+        class="mobile-browse-links"
+        id="mobileBrowseAnimalsMenu">
+
+            <span class="mobile-dropdown-heading">
+                Companion Animals
+            </span>
+
+            <a href="pages/dogs.html">Dog Profiles</a>
+            <a href="pages/cats.html">Cat Profiles</a>
+            <a href="pages/birds.html">Bird Profiles</a>
+            <a href="pages/reptiles.html">Reptile Profiles</a>
+
+            <span class="mobile-dropdown-heading">
+                Regulated Wildlife
+            </span>
+
+            <a href="pages/wild-cats.html">
+                Regulated Exotic Felines
+            </a>
+
+            <a href="pages/primates.html">
+                Primates
+            </a>
+
+            <a href="pages/bears.html">
+                Bears &amp; Pandas
+            </a>
+
+        </div>
+
+    </div>
 
     <a href="pages/cart.html">Cart</a>
 
@@ -639,24 +989,109 @@
         <div class="container">
 
             <div class="logo n-logo">
-                <a href="index.html">
-                    <h2>CompanionR</h2>
+                <a href="index.html" aria-label="CompanionReviewHub home">
+                    <h2>
+                        <span class="logo-full">
+                            <span>CompanionReview</span><span class="logo-hub">Hub</span>
+                        </span>
+
+                        <span
+                            class="logo-short"
+                            aria-hidden="true"
+                        >
+                            CRH
+                        </span>
+                    </h2>
                 </a>
             </div>
 
             <nav class="nav">
 
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="pages/dogs.html">Dog Profiles</a></li>
-                    <li><a href="pages/cats.html">Cat Profiles</a></li>
-                    <li><a href="pages/birds.html">Bird Profiles</a></li>
-                    <li><a href="pages/wild-cats.html">Regulated Exotic Felines</a></li>
-                    <li><a href="pages/reptiles.html">Reptiles</a></li>
-                    <a href="feeds.html">
-                        Feeds
-                    </a>
-                    <li><a href="#contact">Contact</a></li>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li class="nav-dropdown">
+
+                        <button
+                        type="button"
+                        class="nav-dropdown-toggle"
+                        aria-expanded="false"
+                        aria-controls="browseAnimalsMenu">
+
+                            <span>Browse Animals</span>
+                            <span class="dropdown-arrow" aria-hidden="true">▾</span>
+
+                        </button>
+
+                        <div
+                        class="nav-dropdown-menu"
+                        id="browseAnimalsMenu">
+
+                            <div class="nav-dropdown-group">
+
+                                <span class="dropdown-heading">
+                                    Companion Animals
+                                </span>
+
+                                <a href="pages/dogs.html">
+                                    <strong>Dogs</strong>
+                                    <small>Browse dog profiles</small>
+                                </a>
+
+                                <a href="pages/cats.html">
+                                    <strong>Cats</strong>
+                                    <small>Browse cat profiles</small>
+                                </a>
+
+                                <a href="pages/birds.html">
+                                    <strong>Birds</strong>
+                                    <small>Browse bird profiles</small>
+                                </a>
+
+                                <a href="pages/reptiles.html">
+                                    <strong>Reptiles</strong>
+                                    <small>Browse reptile profiles</small>
+                                </a>
+
+                            </div>
+
+                            <div class="nav-dropdown-group regulated-nav-group">
+
+                                <span class="dropdown-heading">
+                                    Regulated Wildlife
+                                </span>
+
+                                <a href="pages/wild-cats.html">
+                                    <strong>Exotic Felines</strong>
+                                    <small>Regulated feline profiles</small>
+                                </a>
+
+                                <a href="pages/primates.html">
+                                    <strong>Primates</strong>
+                                    <small>Monkey and great ape profiles</small>
+                                </a>
+
+                                <a href="pages/bears.html">
+                                    <strong>Bears &amp; Pandas</strong>
+                                    <small>Regulated bear profiles</small>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <a href="feeds.html">Feeds</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
 
                 </ul>
 
@@ -707,55 +1142,61 @@
 
         <div class="hero-overlay"></div>
 
-        <div class="container hero-content">
+        <div class="container">
 
-            <span class="hero-tag">
-                Responsible Profile Discovery & Request Review
-            </span>
+            <div class="hero-content">
 
-            <h1>
-                Review Companion Animal Profiles Responsibly
-            </h1>
+                <span class="hero-tag">
+                    Care • Welfare • Compliance
+                </span>
 
-            <p>
-                Browse dogs, cats, birds, reptiles, and regulated exotic feline profiles with care reminders, request review, delivery guidance, and legal compliance support.
-            </p>
+                <h1>
+                    Understand the animal before you make a request.
+                </h1>
 
-        <div class="hero-buttons">
+                <p>
+                    Compare temperament, daily care, housing, health considerations and legal requirements across companion animals and regulated wildlife.
+                </p>
 
-        <a href="#browse-pets" class="primary-btn hero-main-btn">
-            Browse Profiles
-        </a>
+                <div class="hero-buttons">
 
-        </div>
+                    <a
+                    href="#browse-pets"
+                    class="primary-btn hero-main-btn">
 
-        <div class="hero-animal-grid">
+                        Explore Animal Profiles
 
-            <a href="pages/dogs.html" class="animal-btn">
-                Dog Profiles
-            </a>
+                    </a>
 
-            <a href="pages/cats.html" class="animal-btn">
-                Cat Profiles
-            </a>
+                    <a
+                    href="#about"
+                    class="secondary-btn hero-secondary-btn">
 
-            <a href="pages/birds.html" class="animal-btn">
-                Bird Profiles
-            </a>
+                        How The Platform Works
 
-            <a href="pages/wild-cats.html" class="animal-btn">
-                Regulated Exotic Felines
-            </a>
+                    </a>
 
-            <a href="pages/reptiles.html" class="animal-btn">
-                Reptiles
-            </a>
+                </div>
 
-            <a href="feeds.html" class="animal-btn">
-                Feeds
-            </a>
+                <ul
+                class="hero-assurance"
+                aria-label="Platform review principles">
 
-        </div>
+                    <li>
+                        Care requirements first
+                    </li>
+
+                    <li>
+                        Availability reviewed before requests
+                    </li>
+
+                    <li>
+                        Legal guidance for regulated species
+                    </li>
+
+                </ul>
+
+            </div>
 
         </div>
 
@@ -771,9 +1212,23 @@
 
             <div class="search-card">
 
-                <h2>Find A Companion Profile</h2>
+                <div class="search-card-heading">
 
-                <form>
+                    <span>
+                        Profile Search
+                    </span>
+
+                    <h2>
+                        Find a Companion Profile
+                    </h2>
+
+                    <p class="search-card-intro">
+                        Filter profiles by animal type, name, country and estimated request range.
+                    </p>
+
+                </div>
+
+                <form class="profile-search-form">
 
                     <div class="search-grid">
 
@@ -796,9 +1251,12 @@
                             <label>Breed</label>
 
                             <input
-                            type="text"
-                            id="breedSearch"
-                            placeholder="Search by breed or name">
+                                type="search"
+                                id="breedSearch"
+                                placeholder="Breed or profile name"
+                                autocomplete="off"
+                                spellcheck="false"
+                            >
                         </div>
 
                         <div class="field">
@@ -2790,6 +3248,145 @@
     <script defer src="assets/js/dark-mode.js"></script>
 
     <script>
+        /* ==========================
+           BROWSE ANIMALS DROPDOWN
+           This script uses new class
+           names only, so existing site
+           buttons continue to work.
+        ========================== */
+
+        document.addEventListener("DOMContentLoaded", function(){
+
+            const desktopDropdown =
+            document.querySelector(".nav-dropdown");
+
+            const desktopToggle =
+            document.querySelector(".nav-dropdown-toggle");
+
+            const desktopMenu =
+            document.getElementById("browseAnimalsMenu");
+
+            const mobileBrowseGroup =
+            document.querySelector(".mobile-browse-group");
+
+            const mobileBrowseToggle =
+            document.querySelector(".mobile-browse-toggle");
+
+            function setDesktopDropdown(open){
+
+                if(!desktopDropdown || !desktopToggle){
+                    return;
+                }
+
+                desktopDropdown.classList.toggle("open", open);
+                desktopToggle.setAttribute(
+                    "aria-expanded",
+                    String(open)
+                );
+            }
+
+            function setMobileDropdown(open){
+
+                if(!mobileBrowseGroup || !mobileBrowseToggle){
+                    return;
+                }
+
+                mobileBrowseGroup.classList.toggle("open", open);
+                mobileBrowseToggle.setAttribute(
+                    "aria-expanded",
+                    String(open)
+                );
+            }
+
+            if(desktopToggle){
+
+                desktopToggle.addEventListener(
+                    "click",
+                    function(event){
+
+                        event.stopPropagation();
+
+                        const shouldOpen =
+                        !desktopDropdown.classList.contains("open");
+
+                        setDesktopDropdown(shouldOpen);
+                    }
+                );
+            }
+
+            if(desktopMenu){
+
+                desktopMenu.addEventListener(
+                    "click",
+                    function(event){
+
+                        if(event.target.closest("a")){
+                            setDesktopDropdown(false);
+                        }
+                    }
+                );
+            }
+
+            if(mobileBrowseToggle){
+
+                mobileBrowseToggle.addEventListener(
+                    "click",
+                    function(){
+
+                        const shouldOpen =
+                        !mobileBrowseGroup.classList.contains("open");
+
+                        setMobileDropdown(shouldOpen);
+                    }
+                );
+            }
+
+            document.addEventListener(
+                "click",
+                function(event){
+
+                    if(
+                        desktopDropdown &&
+                        !desktopDropdown.contains(event.target)
+                    ){
+                        setDesktopDropdown(false);
+                    }
+                }
+            );
+
+            document.addEventListener(
+                "keydown",
+                function(event){
+
+                    if(event.key === "Escape"){
+                        setDesktopDropdown(false);
+                        setMobileDropdown(false);
+
+                        if(desktopToggle){
+                            desktopToggle.focus();
+                        }
+                    }
+                }
+            );
+
+            window.addEventListener(
+                "resize",
+                function(){
+
+                    if(window.innerWidth > 1312){
+                        setMobileDropdown(false);
+                    }
+                    else{
+                        setDesktopDropdown(false);
+                    }
+                }
+            );
+
+        });
+    </script>
+
+
+    <script>
 
         const contactForm =
         document.getElementById(
@@ -2896,9 +3493,6 @@
     })();
     </script>
     <!--End of Tawk.to Script-->
-
-
-
 
 </body>
 </html>

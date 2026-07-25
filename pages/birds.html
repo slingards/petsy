@@ -2,134 +2,184 @@
 <html lang="en">
 
 <head>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5F5C8YT167"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
-    gtag('config', 'G-5F5C8YT167');
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag(){
+            dataLayer.push(arguments);
+        }
+
+        gtag(
+            "js",
+            new Date()
+        );
+
+        gtag(
+            "config",
+            "G-5F5C8YT167"
+        );
     </script>
 
     <meta charset="UTF-8">
 
-    <link rel="manifest" href="../site.webmanifest">
-    <meta name="theme-color" content="#d97706">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <link
+        rel="manifest"
+        href="../site.webmanifest"
+    >
 
     <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0">
+        name="theme-color"
+        content="#d97706"
+    >
 
     <title>
-        Companion Bird Profiles & Responsible Bird Adoption Guidance | CompanionReviewHub
+        Companion Bird Profiles & Responsible Bird Guidance | CompanionReviewHub
     </title>
 
     <meta
-    name="description"
-    content="Explore companion bird profiles on CompanionReviewHub with responsible ownership guidance, care information, welfare reminders, and support before submitting an adoption or inquiry request.">
-    
-    <meta
-    name="keywords"
-    content="companion birds, pet bird care, bird adoption guidance, parrot care, responsible bird ownership, bird welfare, CompanionReviewHub birds">
+        name="description"
+        content="Explore companion bird profiles with species information, care needs, welfare guidance, availability notes and responsible request support."
+    >
 
     <meta
-    name="robots"
-    content="index, follow">
+        name="keywords"
+        content="companion birds, bird profiles, parrot care, songbird care, responsible bird ownership, CompanionReviewHub birds"
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
     <link
-    rel="canonical"
-    href="https://CompanionReviewHub.netlify.app/pages/birds.html">
+        rel="canonical"
+        href="https://CompanionReviewHub.netlify.app/pages/birds.html"
+    >
 
     <meta
-    property="og:title"
-    content="Companion Bird Profiles & Responsible Bird Guidance | CompanionReviewHub">
+        property="og:title"
+        content="Companion Bird Profiles | CompanionReviewHub"
+    >
 
     <meta
-    property="og:description"
-    content="Explore companion bird profiles with care guidance, welfare reminders, and support before making an adoption request.">
+        property="og:description"
+        content="Explore bird profiles with care guidance, welfare reminders and responsible request support."
+    >
 
     <meta
-    property="og:type"
-    content="website">
+        property="og:type"
+        content="website"
+    >
 
     <meta
-    property="og:url"
-    content="https://CompanionReviewHub.netlify.app/pages/birds.html">
+        property="og:url"
+        content="https://CompanionReviewHub.netlify.app/pages/birds.html"
+    >
 
     <meta
-    property="og:image"
-    content="https://CompanionReviewHub.netlify.app/assets/images/birds/lorikeet.jpg">
+        property="og:image"
+        content="https://CompanionReviewHub.netlify.app/assets/images/birds/blue-macaw.jpg"
+    >
 
     <meta
-    name="twitter:card"
-    content="summary_large_image">
+        name="twitter:card"
+        content="summary_large_image"
+    >
 
     <meta
-    name="twitter:title"
-    content="Companion Bird Profiles | CompanionReviewHub">
+        name="twitter:title"
+        content="Companion Bird Profiles | CompanionReviewHub"
+    >
 
     <meta
-    name="twitter:description"
-    content="Review bird profiles, care needs, welfare guidance, and responsible ownership information on CompanionReviewHub.">
+        name="twitter:description"
+        content="Review bird profiles, care needs and responsible ownership guidance."
+    >
 
     <meta
-    name="twitter:image"
-    content="https://CompanionReviewHub.netlify.app/assets/images/birds/lorikeet.jpg">
+        name="twitter:image"
+        content="https://CompanionReviewHub.netlify.app/assets/images/birds/blue-macaw.jpg"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/style.css">
+        rel="stylesheet"
+        href="../assets/css/style.css"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/responsive.css">
+        rel="stylesheet"
+        href="../assets/css/responsive.css"
+    >
 
     <link
-    rel="stylesheet"
-    href="../assets/css/birds.css">
+        rel="stylesheet"
+        href="../assets/css/site-ui-fix.css"
+    >
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Load birds.css last so its scoped fixes win. -->
+    <link
+        rel="stylesheet"
+        href="../assets/css/birds.css"
+    >
 
     <link
-    rel="icon"
-    type="image/png"
-    href="../favicon.png">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
+    <link
+        rel="icon"
+        type="image/png"
+        href="../favicon.png"
+    >
 
-    <link rel="stylesheet" href="../assets/css/site-ui-fix.css">
+    <link
+        rel="icon"
+        href="../favicon.ico"
+        sizes="any"
+    >
+
+    <link
+        rel="apple-touch-icon"
+        href="../apple-touch-icon.png"
+    >
 
 </head>
 
-<body>
+<body class="birds-page">
 
-    <!-- HEADER -->
-
-    <header class="header">
+    <header class="header birds-header">
 
         <div class="container">
 
-            <div class="logo">
+            <div class="logo birds-logo">
 
                 <a href="../index.html">
 
-                    <h2>CompanionReviewHub</h2>
+                    <h2>
+                        CompanionReviewHub
+                    </h2>
 
                 </a>
 
             </div>
 
-            <div
-            class="hamburger"
-            id="hamburger">
+            <nav
+                class="nav birds-nav"
+                id="birdsNavigation"
+                aria-label="Main navigation"
+            >
 
-                ☰
-
-            </div>
-
-            <nav class="nav">
-
-                <ul class="nav-links">
+                <ul class="nav-links birds-nav-links">
 
                     <li>
                         <a href="../index.html">
@@ -137,34 +187,73 @@
                         </a>
                     </li>
 
-                    <li>
-                        <a href="dogs.html">
-                            Dogs
-                        </a>
-                    </li>
+                    <li class="birds-nav-dropdown">
 
-                    <li>
-                        <a href="cats.html">
-                            Cats
-                        </a>
-                    </li>
+                        <button
+                            type="button"
+                            class="birds-dropdown-toggle"
+                            id="birdsBrowseToggle"
+                            aria-expanded="false"
+                            aria-controls="birdsBrowseMenu"
+                        >
+                            Browse Animals
+                            <span aria-hidden="true">▾</span>
+                        </button>
 
-                    <li>
-                        <a href="wild-cats.html">
-                            Wild cats
-                        </a>
-                    </li>
+                        <div
+                            class="birds-dropdown-menu"
+                            id="birdsBrowseMenu"
+                        >
 
-                    <li>
-                        <a href="reptiles.html">
-                            Reptiles
-                        </a>
-                    </li>
+                            <div class="birds-dropdown-group">
 
-                    <li>
-                        <a href="cart.html">
-                            Cart
-                        </a>
+                                <strong>
+                                    Companion Animals
+                                </strong>
+
+                                <a href="dogs.html">
+                                    Dogs
+                                </a>
+
+                                <a href="cats.html">
+                                    Cats
+                                </a>
+
+                                <a
+                                    href="birds.html"
+                                    aria-current="page"
+                                >
+                                    Birds
+                                </a>
+
+                                <a href="reptiles.html">
+                                    Reptiles
+                                </a>
+
+                            </div>
+
+                            <div class="birds-dropdown-group">
+
+                                <strong>
+                                    Regulated Wildlife
+                                </strong>
+
+                                <a href="wild-cats.html">
+                                    Exotic Felines
+                                </a>
+
+                                <a href="primates.html">
+                                    Primates
+                                </a>
+
+                                <a href="bears.html">
+                                    Bears & Pandas
+                                </a>
+
+                            </div>
+
+                        </div>
+
                     </li>
 
                     <li>
@@ -177,12 +266,36 @@
 
             </nav>
 
-            <div class="header-actions">
+            <div class="header-actions birds-header-actions">
 
                 <button
-                class="cart-btn"
-                id="openCart">
+                    id="darkModeToggle"
+                    class="dark-mode-btn"
+                    type="button"
+                    aria-label="Toggle dark mode"
+                >
+                    🌙
+                </button>
 
+                <a
+                    href="wishlist.html"
+                    class="wishlist-btn"
+                    aria-label="View saved bird profiles"
+                >
+                    ❤
+
+                    <span id="wishlist-count">
+                        0
+                    </span>
+
+                </a>
+
+                <button
+                    class="cart-btn"
+                    id="openCart"
+                    type="button"
+                    aria-label="Open request cart"
+                >
                     🛒
 
                     <span id="cart-count">
@@ -191,307 +304,212 @@
 
                 </button>
 
+                <button
+                    type="button"
+                    class="birds-menu-btn"
+                    id="birdsMenuBtn"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                    aria-controls="birdsNavigation"
+                >
+                    ☰
+                </button>
+
             </div>
 
         </div>
 
     </header>
 
-    <!-- HERO -->
 
-    <section class="birds-hero reveal">
+    <main>
 
-        <div class="container">
+        <section class="birds-hero">
 
-            <span>
-                Responsible Bird Discovery
-            </span>
+            <div class="container">
 
-            <h1>
-                Companion Bird Profiles & Care Guidance
-            </h1>
-
-            <p>
-                Explore companion bird profiles, care needs, temperament details, and ownership guidance before submitting an adoption or inquiry request.
-            </p>
-
-        </div>
-
-    </section>
-    <section class="bird-care-notice">
-
-    <div class="container">
-
-        <div class="care-notice-box">
-
-            <h2>
-                Bird Welfare & Ownership Notice
-            </h2>
-
-            <p>
-                Birds require proper housing, daily care, clean food and water, safe handling, social interaction, and access to qualified veterinary care. Before requesting any bird, please review its care needs, lifespan, noise level, diet, and space requirements.
-            </p>
-
-            <p>
-                Some bird species may be regulated in certain locations. Buyers are responsible for following local ownership, transport, import, export, and animal welfare laws before completing any request.
-            </p>
-
-            <a href="animal-welfare-policy.html">
-                Read Animal Welfare Policy
-            </a>
-
-            <a href="legal-compliance.html">
-                Read Legal Compliance
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-    <!-- SEARCH -->
-
-    <section class="birds-search-section reveal">
-
-        <div class="container">
-
-            <div class="search-wrapper">
-
-                <input
-
-                type="text"
-
-                id="birdSearch"
-
-               placeholder="Search companion bird profiles...">
-
-                <select id="birdFilter">
-
-                    <option value="all">
-                        All Birds
-                    </option>
-
-                    <option value="parrot">
-                        Parrots
-                    </option>
-
-                    <option value="small">
-                        Small Birds
-                    </option>
-
-                    <option value="songbird">
-                        Song Birds
-                    </option>
-
-                    <option value="exotic">
-                        Exotic Birds
-                    </option>
-
-                </select>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- RESULTS -->
-
-    <section class="birds-results reveal">
-
-        <div class="container">
-
-            <div class="results-header">
-
-                <h2>
-                    Companion Bird Profiles
-                </h2>
-
-                <span id="resultsCount">
-                    Care review recommended
+                <span>
+                    Responsible Bird Discovery
                 </span>
 
-            </div>
+                <h1>
+                    Companion Bird Profiles & Care Guidance
+                </h1>
 
-            <div
-
-            class="birds-grid"
-
-            id="birdsGrid">
-
-                <!-- JS GENERATED BIRDS -->
+                <p>
+                    Explore companion bird profiles, temperament details, diet, noise level, space requirements and responsible ownership guidance before submitting an adoption or inquiry request.
+                </p>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
 
-    <!-- QUICK VIEW MODAL -->
+        <section class="bird-care-notice">
 
-    <div
+            <div class="container">
 
-    class="modal"
+                <div class="care-notice-box">
 
-    id="quickViewModal">
-
-        <div class="modal-content">
-
-            <button
-            class="modal-close">
-
-                ✕
-
-            </button>
-
-            <div class="modal-grid">
-
-                <div class="modal-image">
-
-                    <img
-
-                    id="modalImage"
-
-                    src="../assets/images/birds/blue-macaw.jpg"
-
-                    alt="Bird">
-
-                </div>
-
-                <div class="modal-details">
-
-                    <span
-                    id="modalCategory">
-
-                        Bird
-
-                    </span>
-
-                    <h2
-                    id="modalName">
-
+                    <h2>
+                        Bird Welfare & Ownership Notice
                     </h2>
 
-                    <h3
-                    id="modalPrice">
-
-                    </h3>
-
-                    <p
-                    id="modalDescription">
-
+                    <p>
+                        Birds require suitable housing, clean food and water, safe handling, social interaction, exercise, environmental enrichment and access to qualified avian veterinary care. Review each species' lifespan, noise level, diet and space needs before starting a request.
                     </p>
 
-                    <ul>
+                    <p>
+                        Some bird species may require ownership, transport, import or export documentation. Confirm all local welfare and legal requirements before completing a request.
+                    </p>
 
-                        <li>
+                    <a href="animal-welfare-policy.html">
+                        Read Animal Welfare Policy
+                    </a>
 
-                            Age:
-                            <span id="modalAge">
-
-                            </span>
-
-                        </li>
-
-                        <li>
-
-                            Location:
-                            <span id="modalLocation">
-
-                            </span>
-
-                        </li>
-
-                    </ul>
-
-                <button
-                id="modalAddCart"
-                class="primary-btn">
-
-                    Start Adoption Request
-
-                </button>
+                    <a href="legal-compliance.html">
+                        Read Legal Compliance
+                    </a>
 
                 </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </div>
 
-    <!-- CART SIDEBAR -->
+        <section class="birds-search-section">
 
-    <div
+            <div class="container">
 
-    class="cart-sidebar"
+                <div class="search-wrapper">
 
-    id="cartSidebar">
+                    <input
+                        type="search"
+                        id="birdSearch"
+                        placeholder="Search by species, country, colour, temperament or noise level..."
+                        aria-label="Search bird profiles"
+                    >
+
+                    <select
+                        id="birdFilter"
+                        aria-label="Filter bird profiles by category"
+                    >
+
+                        <option value="all">
+                            All Bird Categories
+                        </option>
+
+                        <option value="parrot">
+                            Parrots
+                        </option>
+
+                        <option value="small">
+                            Small Birds
+                        </option>
+
+                        <option value="songbird">
+                            Songbirds
+                        </option>
+
+                        <option value="exotic">
+                            Exotic Birds
+                        </option>
+
+                        <option value="bird-of-prey">
+                            Birds of Prey
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="birds-results">
+
+            <div class="container">
+
+                <div class="results-header">
+
+                    <h2>
+                        Companion Bird Profiles
+                    </h2>
+
+                    <span id="resultsCount">
+                        Loading Bird Profiles
+                    </span>
+
+                </div>
+
+                <div
+                    class="birds-grid"
+                    id="birdsGrid"
+                >
+                    <!-- JavaScript generates bird profile cards here. -->
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <aside
+        class="cart-sidebar"
+        id="cartSidebar"
+        aria-label="Request cart"
+    >
 
         <div class="cart-header">
 
             <h3>
-
-                Shopping Cart
-
+                Request Cart
             </h3>
 
             <button
-            id="closeCart">
-
+                id="closeCart"
+                type="button"
+                aria-label="Close request cart"
+            >
                 ✕
-
             </button>
 
         </div>
 
-        <div
-        class="cart-items">
+        <div class="cart-items"></div>
 
-        </div>
+        <div class="cart-footer">
 
-        <div
-        class="cart-footer">
-
-            <div
-            class="cart-total">
+            <div class="cart-total">
 
                 <span>
-
                     Total:
-
                 </span>
 
-                <strong
-                id="cartTotal">
-
+                <strong id="cartTotal">
                     $0
-
                 </strong>
 
             </div>
 
             <a
-
-            href="cart.html"
-
-            class="primary-btn">
-
-                View Cart
-
+                href="cart.html"
+                class="primary-btn"
+            >
+                View Request Cart
             </a>
 
         </div>
 
-    </div>
+    </aside>
 
-    <div
-    class="cart-overlay">
+    <div class="cart-overlay"></div>
 
-    </div>
-
-    <!-- FOOTER -->
 
     <footer class="footer">
 
@@ -500,21 +518,47 @@
             <div class="footer-bottom">
 
                 <p>
-
                     © 2026 CompanionReviewHub. All Rights Reserved.
-
                 </p>
 
                 <div class="footer-links">
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="trust-safety.html">Trust & Safety</a>
-                <a href="terms-of-service.html">Terms Of Service</a>
-                <a href="refund-policy.html">Refund Policy</a>
-                <a href="shipping-policy.html">Shipping Policy</a>
-                <a href="animal-welfare-policy.html">Animal Welfare Policy</a>
-                <a href="legal-compliance.html">Legal Compliance</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
+
+                    <a href="about.html">
+                        About Us
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="trust-safety.html">
+                        Trust & Safety
+                    </a>
+
+                    <a href="terms-of-service.html">
+                        Terms Of Service
+                    </a>
+
+                    <a href="refund-policy.html">
+                        Refund Policy
+                    </a>
+
+                    <a href="shipping-policy.html">
+                        Shipping Policy
+                    </a>
+
+                    <a href="animal-welfare-policy.html">
+                        Animal Welfare Policy
+                    </a>
+
+                    <a href="legal-compliance.html">
+                        Legal Compliance
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
                 </div>
 
             </div>
@@ -523,28 +567,268 @@
 
     </footer>
 
-    <script src="../assets/js/cart.js"></script>
 
-    <script src="../assets/js/modal.js"></script>
+    <!-- Render bird cards before loading the existing cart script. -->
 
     <script src="../assets/js/birds.js"></script>
 
-    <script src="../assets/js/menu.js"></script>
-    <script defer src="../assets/js/dark-mode.js"></script>
+    <script src="../assets/js/cart.js"></script>
 
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6a50fa26634c491d47a3b935/1jt652afd';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
+    <script src="../assets/js/dark-mode.js"></script>
+
+
+    <script>
+        const birdsMenuButton =
+        document.getElementById(
+            "birdsMenuBtn"
+        );
+
+        const birdsNavigation =
+        document.getElementById(
+            "birdsNavigation"
+        );
+
+        const birdsBrowseToggle =
+        document.getElementById(
+            "birdsBrowseToggle"
+        );
+
+        const birdsBrowseMenu =
+        document.getElementById(
+            "birdsBrowseMenu"
+        );
+
+
+        function closeBirdsNavigation(){
+
+            if(
+                birdsNavigation
+            ){
+
+                birdsNavigation.classList.remove(
+                    "active"
+                );
+
+            }
+
+            if(
+                birdsMenuButton
+            ){
+
+                birdsMenuButton.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        function closeBirdsDropdown(){
+
+            if(
+                birdsBrowseMenu
+            ){
+
+                birdsBrowseMenu.classList.remove(
+                    "open"
+                );
+
+            }
+
+            if(
+                birdsBrowseToggle
+            ){
+
+                birdsBrowseToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+            }
+
+        }
+
+
+        if(
+            birdsMenuButton &&
+            birdsNavigation
+        ){
+
+            birdsMenuButton.addEventListener(
+                "click",
+                () => {
+
+                    const isOpen =
+                    birdsNavigation.classList.toggle(
+                        "active"
+                    );
+
+                    birdsMenuButton.setAttribute(
+                        "aria-expanded",
+                        String(
+                            isOpen
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        if(
+            birdsBrowseToggle &&
+            birdsBrowseMenu
+        ){
+
+            birdsBrowseToggle.addEventListener(
+                "click",
+                event => {
+
+                    event.stopPropagation();
+
+                    const isOpen =
+                    birdsBrowseMenu.classList.toggle(
+                        "open"
+                    );
+
+                    birdsBrowseToggle.setAttribute(
+                        "aria-expanded",
+                        String(
+                            isOpen
+                        )
+                    );
+
+                }
+            );
+
+        }
+
+
+        document.addEventListener(
+            "click",
+            event => {
+
+                const insideDropdown =
+                event.target.closest(
+                    ".birds-nav-dropdown"
+                );
+
+                const insideNavigation =
+                event.target.closest(
+                    "#birdsNavigation"
+                );
+
+                const menuButtonClicked =
+                event.target.closest(
+                    "#birdsMenuBtn"
+                );
+
+                if(
+                    !insideDropdown
+                ){
+
+                    closeBirdsDropdown();
+
+                }
+
+                if(
+                    window.innerWidth <= 1050 &&
+                    !insideNavigation &&
+                    !menuButtonClicked
+                ){
+
+                    closeBirdsNavigation();
+
+                }
+
+            }
+        );
+
+
+        document
+        .querySelectorAll(
+            ".birds-dropdown-menu a"
+        )
+        .forEach(
+            link => {
+
+                link.addEventListener(
+                    "click",
+                    () => {
+
+                        closeBirdsDropdown();
+
+                        closeBirdsNavigation();
+
+                    }
+                );
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            () => {
+
+                if(
+                    window.innerWidth > 1050
+                ){
+
+                    closeBirdsNavigation();
+
+                }
+
+            }
+        );
     </script>
-    <!--End of Tawk.to Script-->
+
+
+    <!-- Start of Tawk.to Script -->
+    <script type="text/javascript">
+        var Tawk_API =
+        Tawk_API || {};
+
+        var Tawk_LoadStart =
+        new Date();
+
+        (function(){
+
+            var s1 =
+            document.createElement(
+                "script"
+            );
+
+            var s0 =
+            document.getElementsByTagName(
+                "script"
+            )[0];
+
+            s1.async =
+            true;
+
+            s1.src =
+            "https://embed.tawk.to/6a50fa26634c491d47a3b935/1jt652afd";
+
+            s1.charset =
+            "UTF-8";
+
+            s1.setAttribute(
+                "crossorigin",
+                "*"
+            );
+
+            s0.parentNode.insertBefore(
+                s1,
+                s0
+            );
+
+        })();
+    </script>
+    <!-- End of Tawk.to Script -->
 
 </body>
 

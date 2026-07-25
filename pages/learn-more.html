@@ -10,26 +10,26 @@
 
     gtag('config', 'G-5F5C8YT167');
     </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link rel="manifest" href="../site.webmanifest">
-<meta name="theme-color" content="#d97706">
+    <link rel="manifest" href="../site.webmanifest">
+    <meta name="theme-color" content="#d97706">
 
-<title>Pet Details, Care Guidance & Adoption Review | CompanionReviewHub</title>
+    <title>Pet Details, Care Guidance & Adoption Review | CompanionReviewHub</title>
 
-<meta
-name="description"
-content="Review pet details, care requirements, health document guidance, feeding information, availability notes, and responsible adoption support on CompanionReviewHub.">
+    <meta
+    name="description"
+    content="Review pet details, care requirements, health document guidance, feeding information, availability notes, and responsible adoption support on CompanionReviewHub.">
 
-<link rel="stylesheet" href="../assets/css/style.css">
-<link rel="stylesheet" href="../assets/css/responsive.css">
-<link rel="icon" type="image/png" href="../favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
 
-<link rel="icon" href="../favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <link rel="icon" href="../favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
 
 <style>
 .hamburger{
@@ -364,37 +364,72 @@ const typeAliases = {
     cat: "cats",
     bird: "birds",
     reptile: "reptiles",
+
     wildcat: "wild-cats",
     wildcats: "wild-cats",
-    "wild-cat": "wild-cats"
+    "wild-cat": "wild-cats",
+
+    bear: "bears",
+    panda: "bears",
+    pandas: "bears",
+
+    primate: "primates",
+    monkey: "primates",
+    monkeys: "primates",
+    ape: "primates",
+    apes: "primates"
 };
 
 type = typeAliases[type] || type;
 
-const script = document.createElement("script");
-
-if(type === "dogs") script.src = "../assets/js/dogs.js";
-if(type === "cats") script.src = "../assets/js/cats.js";
-if(type === "birds") script.src = "../assets/js/birds.js";
-if(type === "reptiles") script.src = "../assets/js/reptiles.js";
-if(type === "wild-cats") script.src = "../assets/js/wildcats.js";
-
-script.onload = function(){
-    loadAnimalDetails();
+const scriptSources = {
+    dogs: "../assets/js/dogs.js",
+    cats: "../assets/js/cats.js",
+    birds: "../assets/js/birds.js",
+    reptiles: "../assets/js/reptiles.js",
+    "wild-cats": "../assets/js/wildcats.js",
+    bears: "../assets/js/bears.js",
+    primates: "../assets/js/primates.js"
 };
 
-script.onerror = function(){
-    showNotFound();
-};
+const scriptSource = scriptSources[type];
 
-document.body.appendChild(script);
+if(!scriptSource){
+
+    showNotFound(
+        "This animal category is not supported yet."
+    );
+
+}
+else{
+
+    const script = document.createElement("script");
+
+    script.src = scriptSource;
+
+    script.onload = function(){
+        loadAnimalDetails();
+    };
+
+    script.onerror = function(){
+        showNotFound(
+            "The animal data file could not be loaded. Confirm that the JavaScript file exists inside assets/js."
+        );
+    };
+
+    document.body.appendChild(script);
+
+}
 
 function getAnimalList(){
+
     if(type === "dogs" && typeof dogs !== "undefined") return dogs;
     if(type === "cats" && typeof cats !== "undefined") return cats;
     if(type === "birds" && typeof birds !== "undefined") return birds;
     if(type === "reptiles" && typeof reptiles !== "undefined") return reptiles;
     if(type === "wild-cats" && typeof wildCats !== "undefined") return wildCats;
+    if(type === "bears" && typeof bears !== "undefined") return bears;
+    if(type === "primates" && typeof primates !== "undefined") return primates;
 
     return [];
 }
@@ -442,18 +477,105 @@ function fixImage(image){
     return "../" + image;
 }
 
-function showNotFound(){
+function showNotFound(
+    message = "The animal details could not be loaded."
+){
+
     const container = document.getElementById("learnMoreContainer");
+
+    if(!container){
+        return;
+    }
 
     container.innerHTML = `
         <div class="not-found">
             <h1>Animal Not Found</h1>
-            <p>The animal details could not be loaded.</p>
+            <p>${message}</p>
             <br>
-            <a href="../index.html" class="primary-btn">Back Home</a>
+            <a href="../index.html" class="primary-btn">
+                Back Home
+            </a>
         </div>
     `;
 }
+
+
+function getTypeLabel(currentType){
+
+    const labels = {
+        dogs: "Dog Profile",
+        cats: "Cat Profile",
+        birds: "Bird Profile",
+        reptiles: "Reptile Profile",
+        "wild-cats": "Regulated Exotic Feline",
+        bears: "Bear & Panda Profile",
+        primates: "Primate Profile"
+    };
+
+    return labels[currentType] ||
+    String(currentType || "Animal Profile")
+    .replaceAll("-", " ");
+
+}
+
+
+function getPriceLabel(animal){
+
+    if(animal.displayPrice){
+        return animal.displayPrice;
+    }
+
+    if(
+        animal.checkoutEnabled === false &&
+        Number(animal.price || 0) === 0
+    ){
+        return "Institutional enquiry only";
+    }
+
+    return (
+        "Estimated Request Amount: $" +
+        Number(animal.price || 0).toLocaleString()
+    );
+
+}
+
+
+function showValue(value){
+
+    if(Array.isArray(value)){
+        return value.join(", ");
+    }
+
+    return value || "Available on request";
+
+}
+
+
+function getReviewAction(animal){
+
+    if(animal.checkoutEnabled === false){
+
+        return `
+            <a
+                href="contact.html?subject=${encodeURIComponent(
+                    "Institutional enquiry: " + animal.name
+                )}"
+                class="secondary-btn"
+            >
+                Institutional Enquiry
+            </a>
+        `;
+
+    }
+
+    return `
+        <a href="cart.html" class="secondary-btn">
+            Review Request
+        </a>
+    `;
+
+}
+
 
 function loadAnimalDetails(){
 
@@ -471,7 +593,11 @@ function loadAnimalDetails(){
     const container = document.getElementById("learnMoreContainer");
 
     if(!animal){
-        showNotFound();
+
+        showNotFound(
+            `No matching profile named "${name || "Unknown"}" was found in the ${getTypeLabel(type)} data file.`
+        );
+
         return;
     }
 
@@ -485,7 +611,7 @@ function loadAnimalDetails(){
             <div class="learn-content">
 
                 <span class="learn-badge">
-                    ${type.replace("-", " ")}
+                    ${getTypeLabel(type)}
                 </span>
 
                 <h1>${animal.name}</h1>
@@ -493,7 +619,7 @@ function loadAnimalDetails(){
                 <p>${animal.description || "Companion animal profile available for review. Please confirm care needs, availability, and ownership requirements before submitting a request."}</p>
 
                 <div class="learn-price">
-                    Estimated Request Amount: $${Number(animal.price).toLocaleString()}
+                    ${getPriceLabel(animal)}
                 </div>
 
                 <div class="info-grid">
@@ -510,7 +636,7 @@ function loadAnimalDetails(){
 
                     <div class="info-card">
                         <strong>Available Colors</strong>
-                        <span>${animal.colors ? animal.colors.join(", ") : "Available on request"}</span>
+                        <span>${showValue(animal.colors)}</span>
                     </div>
 
                     <div class="info-card">
@@ -527,6 +653,50 @@ function loadAnimalDetails(){
                         <strong>Activity Level</strong>
                         <span>${animal.activityLevel || "Available on request"}</span>
                     </div>
+
+                    ${
+                        animal.scientificName
+                        ? `
+                        <div class="info-card">
+                            <strong>Scientific Name</strong>
+                            <span><em>${animal.scientificName}</em></span>
+                        </div>
+                        `
+                        : ""
+                    }
+
+                    ${
+                        animal.dietType
+                        ? `
+                        <div class="info-card">
+                            <strong>Diet Type</strong>
+                            <span>${animal.dietType}</span>
+                        </div>
+                        `
+                        : ""
+                    }
+
+                    ${
+                        animal.weight
+                        ? `
+                        <div class="info-card">
+                            <strong>Weight</strong>
+                            <span>${animal.weight}</span>
+                        </div>
+                        `
+                        : ""
+                    }
+
+                    ${
+                        animal.height
+                        ? `
+                        <div class="info-card">
+                            <strong>Height</strong>
+                            <span>${animal.height}</span>
+                        </div>
+                        `
+                        : ""
+                    }
 
                 </div>
 
@@ -550,6 +720,17 @@ function loadAnimalDetails(){
                         }
                     </ul>
                 </div>
+
+                ${
+                    animal.habitat
+                    ? `
+                    <div class="detail-section">
+                        <h3>Habitat Requirement</h3>
+                        <p>${animal.habitat}</p>
+                    </div>
+                    `
+                    : ""
+                }
 
                 <div class="detail-section">
                     <h3>Recommended Feed</h3>
@@ -583,6 +764,47 @@ function loadAnimalDetails(){
                     </ul>
                 </div>
 
+                ${
+                    animal.trainability ||
+                    animal.shedding ||
+                    animal.climate ||
+                    animal.goodWithChildren ||
+                    animal.goodWithPets
+                    ? `
+                    <div class="detail-section">
+                        <h3>Handling & Suitability</h3>
+                        <ul>
+                            ${
+                                animal.trainability
+                                ? `<li><strong>Handling:</strong> ${animal.trainability}</li>`
+                                : ""
+                            }
+                            ${
+                                animal.shedding
+                                ? `<li><strong>Shedding:</strong> ${animal.shedding}</li>`
+                                : ""
+                            }
+                            ${
+                                animal.climate
+                                ? `<li><strong>Climate:</strong> ${animal.climate}</li>`
+                                : ""
+                            }
+                            ${
+                                animal.goodWithChildren
+                                ? `<li><strong>Children:</strong> ${animal.goodWithChildren}</li>`
+                                : ""
+                            }
+                            ${
+                                animal.goodWithPets
+                                ? `<li><strong>Other Pets:</strong> ${animal.goodWithPets}</li>`
+                                : ""
+                            }
+                        </ul>
+                    </div>
+                    `
+                    : ""
+                }
+
                 <div class="detail-section">
                     <h3>Delivery, Availability & Review</h3>
                     <p>${animal.shipping || "Delivery or pickup information is available on request and may depend on location, animal welfare requirements, documentation, and legal compliance."}</p>
@@ -604,9 +826,7 @@ function loadAnimalDetails(){
                         ← Back to Listings
                     </button>
 
-                    <a href="cart.html" class="secondary-btn">
-                        Review Request
-                    </a>
+                    ${getReviewAction(animal)}
 
                 </div>
 

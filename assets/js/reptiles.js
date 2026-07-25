@@ -2470,243 +2470,370 @@ const reptiles = [
 
 ];
 
-/* ==========================
-GRID
-========================== */
+/* =====================================================
+   REPTILE PROFILES PAGE ELEMENTS
+===================================================== */
 
-const reptilesGrid =
+const reptilesGridElement =
 document.getElementById(
     "reptilesGrid"
 );
 
-/* ==========================
-RENDER REPTILES
-========================== */
-
-function renderReptiles(
-    reptilesArray
-){
-
-    if(!reptilesGrid) return;
-
-    reptilesGrid.innerHTML = "";
-
-    reptilesArray.forEach(
-        reptile=>{
-
-        reptilesGrid.innerHTML += `
-
-        <div
-
-        class="pet-card"
-
-        data-category="${reptile.category}"
-
-        data-name="${reptile.name.toLowerCase()}">
-
-            <img
-            src="../${reptile.image}"
-            alt="${reptile.name}">
-
-            <div class="pet-content">
-
-                <span class="pet-category">
-
-                    Reptile Profile
-
-                </span>
-
-                <h3>
-
-                    ${reptile.name}
-
-                </h3>
-
-                <p>
-
-                    ${reptile.description}
-
-                </p>
-
-                <div class="pet-info">
-
-                    <span>
-
-                        ${reptile.age}
-
-                    </span>
-
-                    <span>
-
-                        ${reptile.location}
-
-                    </span>
-
-                </div>
-
-                <div class="pet-footer">
-
-                    <h4>
-
-                        Estimated: $${Number(reptile.price).toLocaleString()}
-
-                    </h4>
-
-                    <div class="pet-actions">
-
-                    <button
-                    class="add-cart-btn"
-                    data-name="${reptile.name}"
-                    data-price="${reptile.price}"
-                    data-image="../${reptile.image}">
-                        Start Request
-                    </button>
-
-                    <button
-                    class="wishlist-add-btn"
-                    data-name="${reptile.name}"
-                    data-price="${reptile.price}"
-                    data-image="${reptile.image}">
-                        ❤ Save Profile
-                    </button>
-                    </div>
-
-                    <a
-                    href="learn-more.html?type=reptiles&name=${encodeURIComponent(reptile.name)}" 
-                    class="learn-more-btn" style="color:var(--primary);"> 
-                        Learn More →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-        `;
-
-    });
-
-    attachButtons();
-
-    attachWishlistButtons();
-
-    animateCards();
-
-}
-
-/* ==========================
-SEARCH
-========================== */
-
-const searchInput =
+const reptileSearchElement =
 document.getElementById(
     "reptileSearch"
 );
 
-const reptileFilter =
+const reptileFilterElement =
 document.getElementById(
     "reptileFilter"
 );
 
-function filterReptiles(){
-
-    const searchTerm =
-    searchInput.value
-    .toLowerCase();
-
-    const category =
-    reptileFilter.value;
-
-    const filteredReptiles =
-    reptiles.filter(
-        reptile=>{
-
-        const nameMatch =
-
-        reptile.name
-        .toLowerCase()
-        .includes(searchTerm);
-
-        const categoryMatch =
-
-        category === "all" ||
-
-        reptile.category === category;
-
-        return (
-
-            nameMatch &&
-            categoryMatch
-
-        );
-
-    });
-
-    renderReptiles(
-        filteredReptiles
-    );
-
-    document.getElementById(
-        "resultsCount"
-    ).textContent =
-
-    `${filteredReptiles.length} Species Available`;
-
-}
-
-/* ==========================
-EVENTS
-========================== */
-
-if(searchInput){
-
-    searchInput.addEventListener(
-        "input",
-        filterReptiles
-    );
-
-}
-
-if(reptileFilter){
-
-    reptileFilter.addEventListener(
-        "change",
-        filterReptiles
-    );
-
-}
-
-/* ==========================
-INITIAL LOAD
-========================== */
-
-renderReptiles(
-    reptiles
+const resultsCount =
+document.getElementById(
+    "resultsCount"
 );
 
-/* ==========================
-ADD TO CART
-========================== */
+
+/* =====================================================
+   DISPLAY HELPERS
+===================================================== */
+
+function formatReptilePrice(profile){
+
+    return (
+        "Estimated Request Amount: $" +
+        Number(
+            profile.price || 0
+        ).toLocaleString()
+    );
+
+}
 
 
+function getReptileCategoryLabel(category){
 
-/* ==========================
-WISHLIST SUPPORT
-========================== */
+    const labels = {
+        "snake":
+        "Snake Profile",
+        "lizard":
+        "Lizard Profile",
+        "turtle":
+        "Turtle Profile",
+        "tortoise":
+        "Tortoise Profile"
+    };
 
-function normalizeAnimalWishlistImagePath(path){
+    return (
+        labels[category] ||
+        "Reptile Profile"
+    );
+
+}
+
+
+/* =====================================================
+   RENDER PROFILES
+===================================================== */
+
+function renderReptileProfiles(){
+
+    if(
+        !reptilesGridElement
+    ){
+
+        return;
+
+    }
+
+    reptilesGridElement.innerHTML = "";
+
+    reptiles.forEach(
+        (profile, index) => {
+
+            reptilesGridElement.innerHTML += `
+
+                <article
+                    class="pet-card reptile-card"
+                    data-profile-index="${index}"
+                    data-category="${profile.category}"
+                    data-name="${profile.name.toLowerCase()}"
+                >
+
+                    <div class="pet-image-wrap">
+
+                        <img
+                            src="../${profile.image}"
+                            alt="${profile.name}"
+                            loading="lazy"
+                        >
+
+                        <span class="profile-badge">
+                            Reptile Profile
+                        </span>
+
+                    </div>
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">
+                            ${getReptileCategoryLabel(profile.category)}
+                        </span>
+
+                        <h3>
+                            ${profile.name}
+                        </h3>
+
+                        <p>
+                            ${profile.description}
+                        </p>
+
+                        <div class="pet-info">
+
+                            <span>
+                                ${profile.age}
+                            </span>
+
+                            <span>
+                                ${profile.location}
+                            </span>
+
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>
+                                ${formatReptilePrice(profile)}
+                            </h4>
+
+                            <div class="pet-actions">
+
+                                <button
+                                    type="button"
+                                    class="add-cart-btn start-request-btn"
+                                    data-request-button="true"
+                                    data-name="${profile.name}"
+                                    data-price="${profile.price}"
+                                    data-image="../${profile.image}"
+                                    aria-label="Start Request for ${profile.name}"
+                                >
+                                    Start Request
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="wishlist-add-btn"
+                                    data-name="${profile.name}"
+                                    data-price="${profile.price}"
+                                    data-image="${profile.image}"
+                                    aria-label="Save ${profile.name} for later review"
+                                >
+                                    ❤ Save Profile
+                                </button>
+
+                            </div>
+
+                            <a
+                                href="learn-more.html?type=reptiles&name=${encodeURIComponent(profile.name)}"
+                                class="learn-more-btn"
+                            >
+                                Learn More →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `;
+
+        }
+    );
+
+    reptilesGridElement.innerHTML += `
+        <div
+            class="empty-results"
+            id="reptileEmptyResults"
+            hidden
+        >
+            <h3>
+                No reptile profiles found
+            </h3>
+
+            <p>
+                Try another species name, country, colour or reptile category.
+            </p>
+        </div>
+    `;
+
+    attachReptileWishlistButtons();
+
+    animateReptileCards();
+
+}
+
+
+/* =====================================================
+   SEARCH AND FILTER
+   Existing cards are hidden instead of recreated so
+   older request-cart handlers keep their listeners.
+===================================================== */
+
+function filterReptileProfiles(){
+
+    const searchTerm =
+    reptileSearchElement
+    ?
+    reptileSearchElement.value
+    .trim()
+    .toLowerCase()
+    :
+    "";
+
+    const selectedCategory =
+    reptileFilterElement
+    ?
+    reptileFilterElement.value
+    :
+    "all";
+
+    const cards =
+    document.querySelectorAll(
+        ".reptile-card"
+    );
+
+    let visibleProfiles = 0;
+
+    cards.forEach(
+        card => {
+
+            const index =
+            Number(
+                card.dataset.profileIndex
+            );
+
+            const profile =
+            reptiles[index];
+
+            if(
+                !profile
+            ){
+
+                card.hidden =
+                true;
+
+                return;
+
+            }
+
+            const searchableText = `
+                ${profile.name}
+                ${profile.category}
+                ${profile.location}
+                ${profile.description}
+                ${profile.temperament || ""}
+                ${profile.colors ? profile.colors.join(" ") : ""}
+                ${profile.climate || ""}
+                ${profile.feed || ""}
+            `.toLowerCase();
+
+            const searchMatches =
+            searchableText.includes(
+                searchTerm
+            );
+
+            const categoryMatches =
+            selectedCategory === "all" ||
+            profile.category === selectedCategory;
+
+            const shouldShow =
+            searchMatches &&
+            categoryMatches;
+
+            card.hidden =
+            !shouldShow;
+
+            if(
+                shouldShow
+            ){
+
+                visibleProfiles += 1;
+
+            }
+
+        }
+    );
+
+    const emptyResults =
+    document.getElementById(
+        "reptileEmptyResults"
+    );
+
+    if(
+        emptyResults
+    ){
+
+        emptyResults.hidden =
+        visibleProfiles !== 0;
+
+    }
+
+    if(
+        resultsCount
+    ){
+
+        resultsCount.textContent =
+        `${visibleProfiles} Reptile Profiles`;
+
+    }
+
+}
+
+
+if(
+    reptileSearchElement
+){
+
+    reptileSearchElement.addEventListener(
+        "input",
+        filterReptileProfiles
+    );
+
+}
+
+
+if(
+    reptileFilterElement
+){
+
+    reptileFilterElement.addEventListener(
+        "change",
+        filterReptileProfiles
+    );
+
+}
+
+
+/* =====================================================
+   WISHLIST SUPPORT
+===================================================== */
+
+function normalizeReptileImagePath(path){
 
     let cleanPath =
-    String(path || "")
-    .trim();
+    String(
+        path || ""
+    ).trim();
 
     const assetIndex =
     cleanPath.indexOf(
         "assets/images/"
     );
 
-    if(assetIndex !== -1){
+    if(
+        assetIndex !== -1
+    ){
 
         cleanPath =
         cleanPath.substring(
@@ -2715,62 +2842,82 @@ function normalizeAnimalWishlistImagePath(path){
 
     }
 
-    cleanPath =
-    cleanPath
+    return cleanPath
     .replace(/^\.\.\//g, "")
     .replace(/^\.\//g, "")
     .replace(/^\//g, "");
 
-    return cleanPath;
+}
+
+
+function getReptileWishlist(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(
+                "CompanionReviewHubWishlist"
+            )
+        ) || [];
+
+    }
+    catch(error){
+
+        console.error(
+            "Unable to read the wishlist:",
+            error
+        );
+
+        return [];
+
+    }
 
 }
 
-function getAnimalWishlist(){
 
-    return JSON.parse(
-        localStorage.getItem(
-            "CompanionReviewHubWishlist"
-        )
-    ) || [];
-
-}
-
-function saveAnimalWishlist(list){
+function saveReptileWishlist(list){
 
     localStorage.setItem(
         "CompanionReviewHubWishlist",
-        JSON.stringify(list)
+        JSON.stringify(
+            list
+        )
     );
 
-    updateAnimalWishlistCount();
+    updateReptileWishlistCount();
 
 }
 
-function updateAnimalWishlistCount(){
+
+function updateReptileWishlistCount(){
 
     const count =
     document.getElementById(
         "wishlist-count"
     );
 
-    if(!count) return;
+    if(
+        count
+    ){
 
-    const list =
-    getAnimalWishlist();
+        count.textContent =
+        getReptileWishlist().length;
 
-    count.textContent =
-    list.length;
+    }
 
 }
 
-function showAnimalWishlistMessage(message){
+
+function showReptileWishlistMessage(message){
 
     let messageBox =
     document.querySelector(
         ".wishlist-action-message"
     );
 
-    if(!messageBox){
+    if(
+        !messageBox
+    ){
 
         messageBox =
         document.createElement(
@@ -2780,62 +2927,18 @@ function showAnimalWishlistMessage(message){
         messageBox.className =
         "wishlist-action-message";
 
+        messageBox.setAttribute(
+            "role",
+            "status"
+        );
+
+        messageBox.setAttribute(
+            "aria-live",
+            "polite"
+        );
+
         document.body.appendChild(
             messageBox
-        );
-
-        const style =
-        document.createElement(
-            "style"
-        );
-
-        style.textContent =
-        `
-            .wishlist-action-message{
-                position:fixed;
-                top:100px;
-                left:50%;
-                transform:translate(-50%, -18px);
-                max-width:92%;
-                width:430px;
-                padding:15px 20px;
-                border-radius:999px;
-                background:#111827;
-                color:#ffffff;
-                text-align:center;
-                font-size:.95rem;
-                line-height:1.5;
-                box-shadow:0 18px 45px rgba(0,0,0,.22);
-                opacity:0;
-                visibility:hidden;
-                pointer-events:none;
-                z-index:99999;
-                transition:.35s ease;
-            }
-
-            .wishlist-action-message.show{
-                opacity:1;
-                visibility:visible;
-                transform:translate(-50%, 0);
-            }
-
-            .dark-mode .wishlist-action-message{
-                background:#f8fafc;
-                color:#111827;
-            }
-
-            @media(max-width:600px){
-                .wishlist-action-message{
-                    top:85px;
-                    width:calc(100% - 28px);
-                    border-radius:18px;
-                    font-size:.9rem;
-                }
-            }
-        `;
-
-        document.head.appendChild(
-            style
         );
 
     }
@@ -2852,23 +2955,26 @@ function showAnimalWishlistMessage(message){
     );
 
     messageBox.hideTimer =
-    setTimeout(()=>{
+    setTimeout(
+        () => {
 
-        messageBox.classList.remove(
-            "show"
-        );
+            messageBox.classList.remove(
+                "show"
+            );
 
-    }, 2600);
+        },
+        2600
+    );
 
 }
 
-function addProfileToWishlist(item){
+
+function addReptileToWishlist(item){
 
     const wishlist =
-    getAnimalWishlist();
+    getReptileWishlist();
 
     const cleanItem = {
-
         name:
         item.name,
 
@@ -2876,23 +2982,28 @@ function addProfileToWishlist(item){
         item.price,
 
         image:
-        normalizeAnimalWishlistImagePath(
+        normalizeReptileImagePath(
             item.image
         )
-
     };
 
-    const exists =
+    const alreadySaved =
     wishlist.some(
-        profile =>
-        String(profile.name).toLowerCase() ===
-        String(cleanItem.name).toLowerCase()
+        savedProfile =>
+        String(
+            savedProfile.name
+        ).toLowerCase() ===
+        String(
+            cleanItem.name
+        ).toLowerCase()
     );
 
-    if(exists){
+    if(
+        alreadySaved
+    ){
 
-        showAnimalWishlistMessage(
-            "This profile is already saved for later review."
+        showReptileWishlistMessage(
+            "This reptile profile is already saved."
         );
 
         return;
@@ -2903,71 +3014,75 @@ function addProfileToWishlist(item){
         cleanItem
     );
 
-    saveAnimalWishlist(
+    saveReptileWishlist(
         wishlist
     );
 
-    showAnimalWishlistMessage(
-        "Profile saved for later review. You can view it in your wishlist."
+    showReptileWishlistMessage(
+        "Reptile profile saved for later review."
     );
 
 }
 
-function attachWishlistButtons(){
+
+function attachReptileWishlistButtons(){
 
     document
     .querySelectorAll(
         ".wishlist-add-btn"
     )
-    .forEach(button=>{
+    .forEach(
+        button => {
 
-        button.onclick = ()=>{
+            button.onclick = () => {
 
-            addProfileToWishlist({
+                addReptileToWishlist({
+                    name:
+                    button.dataset.name,
 
-                name:
-                button.dataset.name,
+                    price:
+                    button.dataset.price,
 
-                price:
-                button.dataset.price,
+                    image:
+                    button.dataset.image
+                });
 
-                image:
-                button.dataset.image
+            };
 
-            });
-
-        };
-
-    });
-
-}
-
-updateAnimalWishlistCount();
-
-function attachButtons(){
-
-    /*
-        Request buttons are handled once by assets/js/cart.js.
-        Keeping this function empty preserves existing render calls
-        without attaching a second click handler.
-    */
+        }
+    );
 
 }
 
-/* ==========================
-CARD ANIMATION
-========================== */
 
-function animateCards(){
+/* =====================================================
+   CARD ANIMATION
+===================================================== */
+
+function animateReptileCards(){
 
     const cards =
     document.querySelectorAll(
-        ".pet-card"
+        ".reptile-card"
     );
+
+    if(
+        !("IntersectionObserver" in window)
+    ){
+
+        cards.forEach(
+            card =>
+            card.classList.add(
+                "show"
+            )
+        );
+
+        return;
+
+    }
 
     const observer =
     new IntersectionObserver(
-
         entries => {
 
             entries.forEach(
@@ -2977,9 +3092,12 @@ function animateCards(){
                         entry.isIntersecting
                     ){
 
-                        entry.target
-                        .classList.add(
+                        entry.target.classList.add(
                             "show"
+                        );
+
+                        observer.unobserve(
+                            entry.target
                         );
 
                     }
@@ -2988,66 +3106,31 @@ function animateCards(){
             );
 
         },
-
         {
-            threshold:0.15
-        }
+            threshold:
+            0.08,
 
+            rootMargin:
+            "0px 0px -30px 0px"
+        }
     );
 
-    cards.forEach(card=>{
-
-        observer.observe(card);
-
-    });
+    cards.forEach(
+        card =>
+        observer.observe(
+            card
+        )
+    );
 
 }
 
-/* ==========================
-SECTION REVEAL
-========================== */
 
-const sections =
-document.querySelectorAll(
-    ".reveal"
-);
+/* =====================================================
+   INITIAL PAGE LOAD
+===================================================== */
 
-const revealObserver =
-new IntersectionObserver(
+renderReptileProfiles();
 
-    entries=>{
+updateReptileWishlistCount();
 
-        entries.forEach(
-            entry=>{
-
-                if(
-                    entry.isIntersecting
-                ){
-
-                    entry.target
-                    .classList.add(
-                        "active"
-                    );
-
-                }
-
-            }
-        );
-
-    },
-
-    {
-        threshold:0.1
-    }
-
-);
-
-sections.forEach(
-    section=>{
-
-        revealObserver.observe(
-            section
-        );
-
-    }
-);
+filterReptileProfiles();

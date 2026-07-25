@@ -1,4 +1,3 @@
-
 const dogs = [
 
 {
@@ -8829,120 +8828,16 @@ const dogs = [
 
 ];
 
+/* =====================================================
+   DOG PAGE ELEMENTS
+===================================================== */
 
 const dogsGrid =
 document.getElementById(
     "dogsGrid"
 );
 
-function renderDogs(dogsArray){
-
-    dogsGrid.innerHTML = "";
-
-    dogsArray.forEach(dog=>{
-
-        dogsGrid.innerHTML += `
-
-        <div
-
-        class="pet-card"
-
-        data-category="${dog.category}"
-
-        data-name="${dog.name.toLowerCase()}">
-
-            <img
-            src="../${dog.image}"
-            alt="${dog.name}">
-
-            <div class="pet-content">
-
-                <span class="pet-category">
-
-                    Dog Profile
-
-                </span>
-
-                <h3>
-
-                    ${dog.name}
-
-                </h3>
-
-                <p>
-
-                    ${dog.description}
-
-                </p>
-
-                <div class="pet-info">
-
-                    <span>
-
-                        ${dog.age}
-
-                    </span>
-
-                    <span>
-
-                        ${dog.location}
-
-                    </span>
-
-                </div>
-
-                <div class="pet-footer">
-
-                    <h4>
-
-                        Estimated: $${Number(dog.price).toLocaleString()}
-
-                    </h4>
-
-                    <div class="pet-actions">
-
-                        <button
-                        class="add-cart-btn"
-                        data-name="${dog.name}"
-                        data-price="${dog.price}"
-                        data-image="../${dog.image}">
-                            Start Request
-                        </button>
-
-                    <button
-                    class="wishlist-add-btn"
-                    data-name="${dog.name}"
-                    data-price="${dog.price}"
-                    data-image="${dog.image}">
-                        ❤ Save Profile
-                    </button>
-                    </div>
-                    <a
-                    href="learn-more.html?type=dogs&name=${encodeURIComponent(dog.name)}" 
-                    class="learn-more-btn" style="color:var(--primary);"> 
-                        Learn More →
-                    </a>
-
-                </div>
-
-            </div>
-            <div class="color-opt" style="font-style:bold;">Available color options are listed on the Learn More page. After your request is reviewed, CompanionReviewHub support may contact you through your selected contact method to discuss color options and availability.</div>
-
-        </div>
-
-        `;
-
-    });
-
-    attachButtons();
-
-    attachWishlistButtons();
-
-    animateCards();
-
-}
-
-const searchInput =
+const dogSearch =
 document.getElementById(
     "dogSearch"
 );
@@ -8952,65 +8847,335 @@ document.getElementById(
     "breedFilter"
 );
 
-function filterDogs(){
+const resultsCount =
+document.getElementById(
+    "resultsCount"
+);
 
-    const searchTerm =
-    searchInput ?
-    searchInput.value.toLowerCase()
-    : "";
 
-    const category =
-    breedFilter ?
-    breedFilter.value
-    : "all";
+/* =====================================================
+   DISPLAY HELPERS
+===================================================== */
 
-    const filteredDogs =
-    dogs.filter(dog=>{
+function formatDogPrice(dog){
 
-        const nameMatch =
-
-        dog.name
-        .toLowerCase()
-        .includes(searchTerm);
-
-        const categoryMatch =
-
-        category === "all" ||
-
-        dog.category === category;
-
-        return (
-
-            nameMatch &&
-            categoryMatch
-
-        );
-
-    });
-
-    renderDogs(
-        filteredDogs
+    return (
+        "Estimated Request Amount: $" +
+        Number(
+            dog.price || 0
+        ).toLocaleString()
     );
-
-    document.getElementById(
-        "resultsCount"
-    ).textContent =
-
-    `${filteredDogs.length} Dog Profiles`;
 
 }
 
 
-if(searchInput){
+function getDogCategoryLabel(category){
 
-    searchInput.addEventListener(
+    const labels = {
+        working:
+        "Working Dog",
+
+        sporting:
+        "Sporting Dog",
+
+        hound:
+        "Hound",
+
+        terrier:
+        "Terrier",
+
+        toy:
+        "Toy Breed",
+
+        companion:
+        "Companion Dog",
+
+        guard:
+        "Guardian Dog",
+
+        "non-sporting":
+        "Non-Sporting Dog"
+    };
+
+    return (
+        labels[category] ||
+        "Dog Profile"
+    );
+
+}
+
+
+/* =====================================================
+   RENDER DOG PROFILES
+===================================================== */
+
+function renderDogs(){
+
+    if(
+        !dogsGrid
+    ){
+
+        return;
+
+    }
+
+    dogsGrid.innerHTML = "";
+
+    dogs.forEach(
+        (dog, index) => {
+
+            dogsGrid.innerHTML += `
+
+                <article
+                    class="pet-card dog-card"
+                    data-dog-index="${index}"
+                    data-category="${dog.category}"
+                    data-name="${dog.name.toLowerCase()}"
+                >
+
+                    <div class="pet-image-wrap">
+
+                        <img
+                            src="../${dog.image}"
+                            alt="${dog.name}"
+                            loading="lazy"
+                        >
+
+                        <span class="profile-badge">
+                            Dog Profile
+                        </span>
+
+                    </div>
+
+                    <div class="pet-content">
+
+                        <span class="pet-category">
+                            ${getDogCategoryLabel(dog.category)}
+                        </span>
+
+                        <h3>
+                            ${dog.name}
+                        </h3>
+
+                        <p>
+                            ${dog.description}
+                        </p>
+
+                        <div class="pet-info">
+
+                            <span>
+                                ${dog.age}
+                            </span>
+
+                            <span>
+                                ${dog.location}
+                            </span>
+
+                        </div>
+
+                        <div class="pet-footer">
+
+                            <h4>
+                                ${formatDogPrice(dog)}
+                            </h4>
+
+                            <div class="pet-actions">
+
+                                <button
+                                    type="button"
+                                    class="add-cart-btn start-request-btn"
+                                    data-request-button="true"
+                                    data-name="${dog.name}"
+                                    data-price="${dog.price}"
+                                    data-image="../${dog.image}"
+                                    aria-label="Start a request for ${dog.name}"
+                                >
+                                    Start Request
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="wishlist-add-btn"
+                                    data-name="${dog.name}"
+                                    data-price="${dog.price}"
+                                    data-image="${dog.image}"
+                                    aria-label="Save ${dog.name} for later review"
+                                >
+                                    ❤ Save Profile
+                                </button>
+
+                            </div>
+
+                            <a
+                                href="learn-more.html?type=dogs&name=${encodeURIComponent(dog.name)}"
+                                class="learn-more-btn"
+                            >
+                                Learn More →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            `;
+
+        }
+    );
+
+    dogsGrid.innerHTML += `
+        <div
+            class="empty-results"
+            id="dogEmptyResults"
+            hidden
+        >
+            <h3>
+                No dog profiles found
+            </h3>
+
+            <p>
+                Try another breed name or dog category.
+            </p>
+        </div>
+    `;
+
+    attachDogWishlistButtons();
+
+    animateDogCards();
+
+}
+
+
+/* =====================================================
+   SEARCH AND CATEGORY FILTER
+   Cards are hidden instead of recreated so older cart
+   scripts keep their original button event listeners.
+===================================================== */
+
+function filterDogs(){
+
+    const searchTerm =
+    dogSearch
+    ?
+    dogSearch.value
+    .trim()
+    .toLowerCase()
+    :
+    "";
+
+    const selectedCategory =
+    breedFilter
+    ?
+    breedFilter.value
+    :
+    "all";
+
+    const cards =
+    document.querySelectorAll(
+        ".dog-card"
+    );
+
+    let visibleProfiles = 0;
+
+    cards.forEach(
+        card => {
+
+            const index =
+            Number(
+                card.dataset.dogIndex
+            );
+
+            const dog =
+            dogs[index];
+
+            if(
+                !dog
+            ){
+
+                card.hidden = true;
+
+                return;
+
+            }
+
+            const searchableText = `
+                ${dog.name}
+                ${dog.category}
+                ${dog.location}
+                ${dog.description}
+                ${dog.temperament || ""}
+                ${dog.colors ? dog.colors.join(" ") : ""}
+            `.toLowerCase();
+
+            const searchMatches =
+            searchableText.includes(
+                searchTerm
+            );
+
+            const categoryMatches =
+            selectedCategory === "all" ||
+            dog.category === selectedCategory;
+
+            const shouldShow =
+            searchMatches &&
+            categoryMatches;
+
+            card.hidden =
+            !shouldShow;
+
+            if(
+                shouldShow
+            ){
+
+                visibleProfiles += 1;
+
+            }
+
+        }
+    );
+
+    const emptyResults =
+    document.getElementById(
+        "dogEmptyResults"
+    );
+
+    if(
+        emptyResults
+    ){
+
+        emptyResults.hidden =
+        visibleProfiles !== 0;
+
+    }
+
+    if(
+        resultsCount
+    ){
+
+        resultsCount.textContent =
+        `${visibleProfiles} Dog Profiles`;
+
+    }
+
+}
+
+
+if(
+    dogSearch
+){
+
+    dogSearch.addEventListener(
         "input",
         filterDogs
     );
 
 }
 
-if(breedFilter){
+
+if(
+    breedFilter
+){
 
     breedFilter.addEventListener(
         "change",
@@ -9020,27 +9185,25 @@ if(breedFilter){
 }
 
 
-renderDogs(dogs);
+/* =====================================================
+   WISHLIST SUPPORT
+===================================================== */
 
-
-
-
-/* ==========================
-WISHLIST SUPPORT
-========================== */
-
-function normalizeAnimalWishlistImagePath(path){
+function normalizeDogWishlistImagePath(path){
 
     let cleanPath =
-    String(path || "")
-    .trim();
+    String(
+        path || ""
+    ).trim();
 
     const assetIndex =
     cleanPath.indexOf(
         "assets/images/"
     );
 
-    if(assetIndex !== -1){
+    if(
+        assetIndex !== -1
+    ){
 
         cleanPath =
         cleanPath.substring(
@@ -9049,62 +9212,82 @@ function normalizeAnimalWishlistImagePath(path){
 
     }
 
-    cleanPath =
-    cleanPath
+    return cleanPath
     .replace(/^\.\.\//g, "")
     .replace(/^\.\//g, "")
     .replace(/^\//g, "");
 
-    return cleanPath;
+}
+
+
+function getDogWishlist(){
+
+    try{
+
+        return JSON.parse(
+            localStorage.getItem(
+                "CompanionReviewHubWishlist"
+            )
+        ) || [];
+
+    }
+    catch(error){
+
+        console.error(
+            "Unable to read the wishlist:",
+            error
+        );
+
+        return [];
+
+    }
 
 }
 
-function getAnimalWishlist(){
 
-    return JSON.parse(
-        localStorage.getItem(
-            "CompanionReviewHubWishlist"
-        )
-    ) || [];
-
-}
-
-function saveAnimalWishlist(list){
+function saveDogWishlist(list){
 
     localStorage.setItem(
         "CompanionReviewHubWishlist",
-        JSON.stringify(list)
+        JSON.stringify(
+            list
+        )
     );
 
-    updateAnimalWishlistCount();
+    updateDogWishlistCount();
 
 }
 
-function updateAnimalWishlistCount(){
+
+function updateDogWishlistCount(){
 
     const count =
     document.getElementById(
         "wishlist-count"
     );
 
-    if(!count) return;
+    if(
+        count
+    ){
 
-    const list =
-    getAnimalWishlist();
+        count.textContent =
+        getDogWishlist().length;
 
-    count.textContent =
-    list.length;
+    }
 
 }
 
-function showAnimalWishlistMessage(message){
+
+function showDogWishlistMessage(message){
 
     let messageBox =
     document.querySelector(
         ".wishlist-action-message"
     );
 
-    if(!messageBox){
+    if(
+        !messageBox
+    ){
 
         messageBox =
         document.createElement(
@@ -9114,62 +9297,18 @@ function showAnimalWishlistMessage(message){
         messageBox.className =
         "wishlist-action-message";
 
+        messageBox.setAttribute(
+            "role",
+            "status"
+        );
+
+        messageBox.setAttribute(
+            "aria-live",
+            "polite"
+        );
+
         document.body.appendChild(
             messageBox
-        );
-
-        const style =
-        document.createElement(
-            "style"
-        );
-
-        style.textContent =
-        `
-            .wishlist-action-message{
-                position:fixed;
-                top:100px;
-                left:50%;
-                transform:translate(-50%, -18px);
-                max-width:92%;
-                width:430px;
-                padding:15px 20px;
-                border-radius:999px;
-                background:#111827;
-                color:#ffffff;
-                text-align:center;
-                font-size:.95rem;
-                line-height:1.5;
-                box-shadow:0 18px 45px rgba(0,0,0,.22);
-                opacity:0;
-                visibility:hidden;
-                pointer-events:none;
-                z-index:99999;
-                transition:.35s ease;
-            }
-
-            .wishlist-action-message.show{
-                opacity:1;
-                visibility:visible;
-                transform:translate(-50%, 0);
-            }
-
-            .dark-mode .wishlist-action-message{
-                background:#f8fafc;
-                color:#111827;
-            }
-
-            @media(max-width:600px){
-                .wishlist-action-message{
-                    top:85px;
-                    width:calc(100% - 28px);
-                    border-radius:18px;
-                    font-size:.9rem;
-                }
-            }
-        `;
-
-        document.head.appendChild(
-            style
         );
 
     }
@@ -9186,23 +9325,26 @@ function showAnimalWishlistMessage(message){
     );
 
     messageBox.hideTimer =
-    setTimeout(()=>{
+    setTimeout(
+        () => {
 
-        messageBox.classList.remove(
-            "show"
-        );
+            messageBox.classList.remove(
+                "show"
+            );
 
-    }, 2600);
+        },
+        2600
+    );
 
 }
 
-function addProfileToWishlist(item){
+
+function addDogToWishlist(item){
 
     const wishlist =
-    getAnimalWishlist();
+    getDogWishlist();
 
     const cleanItem = {
-
         name:
         item.name,
 
@@ -9210,23 +9352,28 @@ function addProfileToWishlist(item){
         item.price,
 
         image:
-        normalizeAnimalWishlistImagePath(
+        normalizeDogWishlistImagePath(
             item.image
         )
-
     };
 
-    const exists =
+    const alreadySaved =
     wishlist.some(
         profile =>
-        String(profile.name).toLowerCase() ===
-        String(cleanItem.name).toLowerCase()
+        String(
+            profile.name
+        ).toLowerCase() ===
+        String(
+            cleanItem.name
+        ).toLowerCase()
     );
 
-    if(exists){
+    if(
+        alreadySaved
+    ){
 
-        showAnimalWishlistMessage(
-            "This profile is already saved for later review."
+        showDogWishlistMessage(
+            "This dog profile is already saved for later review."
         );
 
         return;
@@ -9237,72 +9384,79 @@ function addProfileToWishlist(item){
         cleanItem
     );
 
-    saveAnimalWishlist(
+    saveDogWishlist(
         wishlist
     );
 
-    showAnimalWishlistMessage(
-        "Profile saved for later review. You can view it in your wishlist."
+    showDogWishlistMessage(
+        "Dog profile saved for later review."
     );
 
 }
 
-function attachWishlistButtons(){
+
+function attachDogWishlistButtons(){
 
     document
     .querySelectorAll(
         ".wishlist-add-btn"
     )
-    .forEach(button=>{
+    .forEach(
+        button => {
 
-        button.onclick = ()=>{
+            button.onclick = () => {
 
-            addProfileToWishlist({
+                addDogToWishlist({
+                    name:
+                    button.dataset.name,
 
-                name:
-                button.dataset.name,
+                    price:
+                    button.dataset.price,
 
-                price:
-                button.dataset.price,
+                    image:
+                    button.dataset.image
+                });
 
-                image:
-                button.dataset.image
+            };
 
-            });
-
-        };
-
-    });
-
-}
-
-updateAnimalWishlistCount();
-
-function attachButtons(){
-
-    /*
-        Request buttons are handled once by assets/js/cart.js.
-        Keeping this function empty preserves existing render calls
-        without attaching a second click handler.
-    */
+        }
+    );
 
 }
 
 
-function animateCards(){
+/* =====================================================
+   CARD ANIMATION
+===================================================== */
+
+function animateDogCards(){
 
     const cards =
     document.querySelectorAll(
-        ".pet-card"
+        ".dog-card"
     );
+
+    if(
+        !("IntersectionObserver" in window)
+    ){
+
+        cards.forEach(
+            card =>
+            card.classList.add(
+                "show"
+            )
+        );
+
+        return;
+
+    }
 
     const observer =
     new IntersectionObserver(
-
-        (entries)=>{
+        entries => {
 
             entries.forEach(
-                entry=>{
+                entry => {
 
                     if(
                         entry.isIntersecting
@@ -9322,69 +9476,31 @@ function animateCards(){
             );
 
         },
-
         {
-            threshold:0.25,
-            rootMargin:"0px 0px -50px 0px"
-        }
+            threshold:
+            0.08,
 
+            rootMargin:
+            "0px 0px -30px 0px"
+        }
     );
 
-    cards.forEach(card=>{
-
-        card.classList.remove(
-            "show"
-        );
-
+    cards.forEach(
+        card =>
         observer.observe(
             card
-        );
-
-    });
+        )
+    );
 
 }
 
-const sections =
-document.querySelectorAll(
-    ".reveal"
-);
 
-const revealObserver =
-new IntersectionObserver(
+/* =====================================================
+   INITIAL PAGE LOAD
+===================================================== */
 
-    entries=>{
+renderDogs();
 
-        entries.forEach(
-            entry=>{
+updateDogWishlistCount();
 
-                if(
-                    entry.isIntersecting
-                ){
-
-                    entry.target
-                    .classList.add(
-                        "active"
-                    );
-
-                }
-
-            }
-        );
-
-    },
-
-    {
-        threshold:0.1
-    }
-
-);
-
-sections.forEach(
-    section=>{
-
-        revealObserver.observe(
-            section
-        );
-
-    }
-);
+filterDogs();
