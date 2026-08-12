@@ -3,161 +3,163 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/</loc>
+        <loc>https://crhpets.com/</loc>
+
+
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.00</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/index</loc>
+        <loc>https://crhpets.com/index</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.95</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/dogs</loc>
+        <loc>https://crhpets.com/pages/dogs</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/cats</loc>
+        <loc>https://crhpets.com/pages/cats</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.90</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/birds</loc>
+        <loc>https://crhpets.com/pages/birds</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/reptiles</loc>
+        <loc>https://crhpets.com/pages/reptiles</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/wild-cats</loc>
+        <loc>https://crhpets.com/pages/wild-cats</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/feeds</loc>
+        <loc>https://crhpets.com/feeds</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/help-center</loc>
+        <loc>https://crhpets.com/pages/help-center</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.92</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/animal-care-questions</loc>
+        <loc>https://crhpets.com/pages/animal-care-questions</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.93</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/health-care-article</loc>
+        <loc>https://crhpets.com/pages/health-care-article</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/cart</loc>
+        <loc>https://crhpets.com/pages/cart</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.70</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/checkout</loc>
+        <loc>https://crhpets.com/pages/checkout</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.70</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/wishlist.html</loc>
+        <loc>https://crhpets.com/pages/wishlist.html</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.65</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/about</loc>
+        <loc>https://crhpets.com/pages/about</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/contact</loc>
+        <loc>https://crhpets.com/pages/contact</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/trust-safety</loc>
+        <loc>https://crhpets.com/pages/trust-safety</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.80</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/animal-welfare-policy</loc>
+        <loc>https://crhpets.com/pages/animal-welfare-policy</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/legal-compliance</loc>
+        <loc>https://crhpets.com/pages/legal-compliance</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.75</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/privacy-policy</loc>
+        <loc>https://crhpets.com/pages/privacy-policy</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.60</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/terms-of-servicel</loc>
+        <loc>https://crhpets.com/pages/terms-of-servicel</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.60</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/refund-policy</loc>
+        <loc>https://crhpets.com/pages/refund-policy</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.55</priority>
     </url>
 
     <url>
-        <loc>https://companionreviewhub.netlify.app/pages/shipping-policy</loc>
+        <loc>https://crhpets.com/pages/shipping-policy</loc>
         <lastmod>2026-07-11</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.55</priority>
