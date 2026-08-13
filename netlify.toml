@@ -12,3 +12,9 @@ Referrer-Policy = "strict-origin-when-cross-origin"
 Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
 Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+
+[[redirects]]
+  from = "https://companionreviewhub.netlify.app/*"
+  to = "https://crhpets.com/:splat"
+  status = 301
+  force = true
