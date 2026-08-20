@@ -1,6 +1,6 @@
 {
     "name": "CompanionReviewHub",
-    "short_name": "CompanionReviewHub",
+    "short_name": "CRH Pets",
     "description": "Browse companion animal profiles, compare available listings, and submit a request for review through CompanionReviewHub.",
     "start_url": "/",
     "scope": "/",
