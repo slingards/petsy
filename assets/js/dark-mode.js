@@ -1,41 +1,56 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const darkModeToggle =
-    document.getElementById("darkModeToggle");
+        document.getElementById("darkModeToggle");
 
     const savedMode =
-    localStorage.getItem("CompanionReviewHubDarkMode");
+        localStorage.getItem("CompanionReviewHubDarkMode");
 
     /*
-        Default mode is dark.
-        Only show light mode if user selected light before.
+        Default mode is LIGHT.
+
+        If the user previously selected dark mode,
+        dark mode will be restored.
+
+        If there is no saved preference,
+        the website stays in light mode.
     */
 
-    if(savedMode === "light"){
-
-        document.body.classList.remove("dark-mode");
-
-        if(darkModeToggle){
-            darkModeToggle.textContent = "🌙";
-        }
-
-    }else{
+    if (savedMode === "dark") {
 
         document.body.classList.add("dark-mode");
 
-        if(darkModeToggle){
+        if (darkModeToggle) {
             darkModeToggle.textContent = "☀️";
+        }
+
+    } else {
+
+        document.body.classList.remove("dark-mode");
+
+        if (darkModeToggle) {
+            darkModeToggle.textContent = "🌙";
         }
 
     }
 
-    if(darkModeToggle){
+
+    /*
+        Dark mode toggle
+    */
+
+    if (darkModeToggle) {
 
         darkModeToggle.addEventListener("click", () => {
 
             document.body.classList.toggle("dark-mode");
 
-            if(document.body.classList.contains("dark-mode")){
+
+            /*
+                If dark mode is ON
+            */
+
+            if (document.body.classList.contains("dark-mode")) {
 
                 localStorage.setItem(
                     "CompanionReviewHubDarkMode",
@@ -44,7 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 darkModeToggle.textContent = "☀️";
 
-            }else{
+            }
+
+
+            /*
+                If dark mode is OFF
+                → Light mode
+            */
+
+            else {
 
                 localStorage.setItem(
                     "CompanionReviewHubDarkMode",
