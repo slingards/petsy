@@ -1,0 +1,147 @@
+/* =========================================================
+   GLOBAL NAVIGATION COLOR FIX
+   Main navigation text is whitesmoke.
+   Dropdown text stays dark/readable on light backgrounds.
+   Existing hover styles are intentionally NOT overridden.
+   ========================================================= */
+
+/* Main navigation links and dropdown toggle buttons */
+.header .nav-links > li > a,
+.header .nav-links > li > button,
+.header .nav-links > li > .nav-dropdown-toggle {
+    color: whitesmoke;
+}
+
+/* Keep dropdown panels readable */
+.header .nav-links .nav-dropdown-menu a,
+.header .nav-links .dogs-dropdown-menu a,
+.header .nav-links .cats-dropdown-menu a,
+.header .nav-links .birds-dropdown-menu a,
+.header .nav-links .reptiles-dropdown-menu a,
+.header .nav-links .wildcats-dropdown-menu a,
+.header .nav-links .primates-dropdown-menu a,
+.header .nav-links .bears-dropdown-menu a {
+    color: #111827;
+}
+
+.header .nav-links .nav-dropdown-menu .dropdown-heading,
+.header .nav-links .dogs-dropdown-group strong,
+.header .nav-links .cats-dropdown-group strong,
+.header .nav-links .birds-dropdown-group strong,
+.header .nav-links .reptiles-dropdown-group strong,
+.header .nav-links .wildcats-dropdown-group strong,
+.header .nav-links .primates-dropdown-group strong,
+.header .nav-links .bears-dropdown-group strong {
+    color: #92400e;
+}
+
+/* Dark mode dropdown text */
+.dark-mode .header .nav-links .nav-dropdown-menu a,
+.dark-mode .header .nav-links .dogs-dropdown-menu a,
+.dark-mode .header .nav-links .cats-dropdown-menu a,
+.dark-mode .header .nav-links .birds-dropdown-menu a,
+.dark-mode .header .nav-links .reptiles-dropdown-menu a,
+.dark-mode .header .nav-links .wildcats-dropdown-menu a,
+.dark-mode .header .nav-links .primates-dropdown-menu a,
+.dark-mode .header .nav-links .bears-dropdown-menu a {
+    color: #f8fafc;
+}
+
+.dark-mode .header .nav-links .nav-dropdown-menu .dropdown-heading,
+.dark-mode .header .nav-links .dogs-dropdown-group strong,
+.dark-mode .header .nav-links .cats-dropdown-group strong,
+.dark-mode .header .nav-links .birds-dropdown-group strong,
+.dark-mode .header .nav-links .reptiles-dropdown-group strong,
+.dark-mode .header .nav-links .wildcats-dropdown-group strong,
+.dark-mode .header .nav-links .primates-dropdown-group strong,
+.dark-mode .header .nav-links .bears-dropdown-group strong {
+    color: #fbbf24;
+}
+
+/* =========================================================
+   MOBILE NAVIGATION OVERRIDE
+   Main desktop navigation is whitesmoke, but mobile/open
+   navigation panels use dark text on light backgrounds so
+   the menu remains readable on phones.
+   ========================================================= */
+
+@media (max-width: 1312px) {
+
+    /* Main mobile/tablet navigation links */
+    .header .nav-links > li > a,
+    .header .nav-links > li > button,
+    .header .nav-links > li > .nav-dropdown-toggle {
+        color: #111827;
+    }
+
+    /* Page-specific animal navigation */
+    .dogs-page .dogs-nav-links > li > a,
+    .dogs-page .dogs-dropdown-toggle,
+    .cats-page .cats-nav-links > li > a,
+    .cats-page .cats-dropdown-toggle,
+    .birds-page .birds-nav-links > li > a,
+    .birds-page .birds-dropdown-toggle,
+    .reptiles-page .reptiles-nav-links > li > a,
+    .reptiles-page .reptiles-dropdown-toggle,
+    .wildcats-page .wildcats-nav-links > li > a,
+    .wildcats-page .wildcats-dropdown-toggle,
+    .primates-page .primates-nav-links > li > a,
+    .primates-page .primates-dropdown-toggle,
+    .bears-page .bears-nav-links > li > a,
+    .bears-page .bears-dropdown-toggle {
+        color: #111827;
+    }
+
+    /* Keep the light mobile menu readable */
+    .mobile-menu a,
+    .mobile-menu button,
+    .mobile-browse-toggle {
+        color: #111827;
+    }
+
+    .mobile-menu .mobile-dropdown-heading,
+    .mobile-menu .mobile-browse-heading {
+        color: #92400e;
+    }
+
+    /* Generic mobile menu dropdown links */
+    .mobile-menu .mobile-browse-links a {
+        color: #111827;
+    }
+}
+
+/* Dark mode: restore light text inside mobile navigation */
+@media (max-width: 1312px) {
+
+    .dark-mode .header .nav-links > li > a,
+    .dark-mode .header .nav-links > li > button,
+    .dark-mode .header .nav-links > li > .nav-dropdown-toggle,
+    .dark-mode .dogs-page .dogs-nav-links > li > a,
+    .dark-mode .dogs-page .dogs-dropdown-toggle,
+    .dark-mode .cats-page .cats-nav-links > li > a,
+    .dark-mode .cats-page .cats-dropdown-toggle,
+    .dark-mode .birds-page .birds-nav-links > li > a,
+    .dark-mode .birds-page .birds-dropdown-toggle,
+    .dark-mode .reptiles-page .reptiles-nav-links > li > a,
+    .dark-mode .reptiles-page .reptiles-dropdown-toggle,
+    .dark-mode .wildcats-page .wildcats-nav-links > li > a,
+    .dark-mode .wildcats-page .wildcats-dropdown-toggle,
+    .dark-mode .primates-page .primates-nav-links > li > a,
+    .dark-mode .primates-page .primates-dropdown-toggle,
+    .dark-mode .bears-page .bears-nav-links > li > a,
+    .dark-mode .bears-page .bears-dropdown-toggle,
+    .dark-mode .mobile-menu a,
+    .dark-mode .mobile-menu button,
+    .dark-mode .mobile-browse-toggle {
+        color: #f8fafc;
+    }
+
+    .dark-mode .mobile-menu .mobile-dropdown-heading,
+    .dark-mode .mobile-menu .mobile-browse-heading {
+        color: #fbbf24;
+    }
+
+    .dark-mode .mobile-menu .mobile-browse-links a {
+        color: #f8fafc;
+    }
+}

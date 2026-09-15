@@ -56,10 +56,6 @@
     background:transparent;
 }
 
-.dogs-page .dogs-nav-links > li{
-    position:relative;
-}
-
 .dogs-page .dogs-nav-links > li > a,
 .dogs-page .dogs-dropdown-toggle{
     min-height:44px;
