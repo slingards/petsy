@@ -1383,7 +1383,7 @@ function renderWildCats(){
                                     data-image="../${wildCat.image}"
                                     aria-label="Start a compliance request for ${wildCat.name}"
                                 >
-                                    Start Compliance Request
+                                    Start Request
                                 </button>
 
                                 <button

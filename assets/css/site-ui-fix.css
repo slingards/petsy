@@ -225,11 +225,18 @@ button.wishlist-add-btn:hover{
 .pet-content{
     display:flex !important;
     flex-direction:column !important;
+    padding: 10px;
+    gap: 20px;
+
 }
 
 .pet-card{
+    display: flex;
+    flex-direction: column;
     border-radius:24px !important;
     overflow:hidden !important;
+    align-items: center;
+    padding: 5px;
 }
 
 .pet-card img{
