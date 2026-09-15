@@ -145,3 +145,61 @@
         color: #f8fafc;
     }
 }
+
+
+/* =========================================================
+   ADAPTIVE DESKTOP NAVIGATION
+   Light text over hero -> dark site color after hero.
+   Mobile menu keeps its existing readable colors.
+   ========================================================= */
+
+@media (min-width: 1313px) {
+
+    .header.header--scrolled .nav-links > li > a,
+    .header.header--scrolled .nav-links > li > button,
+    .header.header--scrolled .nav-links > li > .nav-dropdown-toggle {
+        color: #1e293b;
+    }
+
+    .header.header--scrolled .nav-links > li > a:hover,
+    .header.header--scrolled .nav-links > li > button:hover,
+    .header.header--scrolled .nav-links > li > .nav-dropdown-toggle:hover {
+        color: #92400e;
+    }
+
+    /* Page-specific navigation selectors have higher specificity,
+       so explicitly cover every animal navigation. */
+    .header.header--scrolled .dogs-nav-links > li > a,
+    .header.header--scrolled .dogs-nav-links > li > button,
+    .header.header--scrolled .cats-nav-links > li > a,
+    .header.header--scrolled .cats-nav-links > li > button,
+    .header.header--scrolled .birds-nav-links > li > a,
+    .header.header--scrolled .birds-nav-links > li > button,
+    .header.header--scrolled .reptiles-nav-links > li > a,
+    .header.header--scrolled .reptiles-nav-links > li > button,
+    .header.header--scrolled .wildcats-nav-links > li > a,
+    .header.header--scrolled .wildcats-nav-links > li > button,
+    .header.header--scrolled .primates-nav-links > li > a,
+    .header.header--scrolled .primates-nav-links > li > button,
+    .header.header--scrolled .bears-nav-links > li > a,
+    .header.header--scrolled .bears-nav-links > li > button {
+        color: #1e293b;
+    }
+
+    .header.header--scrolled .dogs-nav-links > li > a:hover,
+    .header.header--scrolled .dogs-nav-links > li > button:hover,
+    .header.header--scrolled .cats-nav-links > li > a:hover,
+    .header.header--scrolled .cats-nav-links > li > button:hover,
+    .header.header--scrolled .birds-nav-links > li > a:hover,
+    .header.header--scrolled .birds-nav-links > li > button:hover,
+    .header.header--scrolled .reptiles-nav-links > li > a:hover,
+    .header.header--scrolled .reptiles-nav-links > li > button:hover,
+    .header.header--scrolled .wildcats-nav-links > li > a:hover,
+    .header.header--scrolled .wildcats-nav-links > li > button:hover,
+    .header.header--scrolled .primates-nav-links > li > a:hover,
+    .header.header--scrolled .primates-nav-links > li > button:hover,
+    .header.header--scrolled .bears-nav-links > li > a:hover,
+    .header.header--scrolled .bears-nav-links > li > button:hover {
+        color: #92400e;
+    }
+}
