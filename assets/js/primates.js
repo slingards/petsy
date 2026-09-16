@@ -601,7 +601,7 @@ const monkeys = [
     true,
 
     availability:
-    "Subject to legal eligibility and confirmation"
+    "Available"
 },
 
 {
@@ -753,7 +753,7 @@ const monkeys = [
     true,
 
     availability:
-    "Subject to legal eligibility and confirmation"
+    "Available"
 },
 
 {
@@ -906,7 +906,7 @@ const monkeys = [
     true,
 
     availability:
-    "Subject to legal eligibility and confirmation"
+    "Available"
 },
 
 {
@@ -1055,7 +1055,7 @@ const monkeys = [
     false,
 
     availability:
-    "Conservation or qualified-facility review only"
+    "Available."
 }
 
 ];
@@ -1139,7 +1139,7 @@ function getPrimateButtonText(primate){
         primate.checkoutEnabled === false
     ){
 
-        return "Institutional Enquiry";
+        return "Start Request";
 
     }
 
