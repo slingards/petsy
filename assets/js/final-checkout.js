@@ -703,7 +703,7 @@ function buildPaymentDetails(
             "Bitcoin Network",
 
             address:
-            "bc1qc70kuwzvaedv70n5ka8fpzex5cy87vpt433e4k",
+            "bc1q6q8kjyukex34skxkscup0j5xyadvwsvz52f5nk",
 
             qrImage:
             "../assets/images/payments/bitcoin-qr.jpg",
@@ -728,7 +728,7 @@ function buildPaymentDetails(
             "Ethereum Network",
 
             address:
-            "0xA1d2a35c85be0892b3aa3B861FCC0BD8412b54CC",
+            "0x1e6107564e984DC2Ed7B7C141850FE37A3379CA6",
 
             qrImage:
             "../assets/images/payments/ethereum-qr.jpg",
@@ -750,10 +750,10 @@ function buildPaymentDetails(
             "USDT",
 
             network:
-            "ERC20 Network",
+            "ERC20/Ethereum Network",
 
             address:
-            "0xA1d2a35c85be0892b3aa3B861FCC0BD8412b54CC",
+            "0x1e6107564e984DC2Ed7B7C141850FE37A3379CA6",
 
             qrImage:
             "../assets/images/payments/usdt-erc20-qr.jpg",
