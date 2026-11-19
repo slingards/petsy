@@ -951,56 +951,6 @@ function loadCartPage(){
 REQUEST NOTICE ON CART PAGE
 ========================== */
 
-function addRequestReviewNotice(){
-
-    const cartPage =
-    document.querySelector(
-        ".cart-page"
-    );
-
-    if(!cartPage) return;
-
-    if(
-        document.getElementById(
-            "requestReviewNotice"
-        )
-    ){
-
-        return;
-
-    }
-
-    const notice =
-    document.createElement(
-        "div"
-    );
-
-    notice.id =
-    "requestReviewNotice";
-
-    notice.className =
-    "request-review-notice";
-
-    notice.innerHTML =
-    `
-    <h3>
-        Request Review Notice
-    </h3>
-
-    <p>
-        This page only shows the companion animal profiles you selected for review. Submitting a request does not automatically confirm availability, ownership, delivery, or approval.
-    </p>
-
-    <p>
-        Please do not send payment at this stage. CompanionReviewHub support will review your request and contact you through your selected contact method before any final arrangement is made.
-    </p>
-    `;
-
-    cartPage.prepend(
-        notice
-    );
-
-}
 
 /* ==========================
 REMOVE FROM REQUEST PAGE
